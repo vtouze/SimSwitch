@@ -66,6 +66,7 @@ public class MainMenu : MonoBehaviour
     {
         //_hasFinishedQuitAnimation = true;
         Application.OpenURL("https://teez21.itch.io/testwebgl2022");
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 
     public void QuitN()
