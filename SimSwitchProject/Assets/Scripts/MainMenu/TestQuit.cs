@@ -6,6 +6,6 @@ public class TestQuit : MonoBehaviour
 {
     public void Quit()
     {
-        Application.Quit();
+        Application.OpenURL("https://teez21.itch.io/testwebgl2022");
     }
 }

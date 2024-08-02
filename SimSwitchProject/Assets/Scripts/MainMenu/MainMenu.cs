@@ -63,7 +63,7 @@ public class MainMenu : MonoBehaviour
     public void QuitY()
     {
         //_hasFinishedQuitAnimation = true;
-        Application.Quit();
+        Application.OpenURL("https://teez21.itch.io/testwebgl2022");
     }
 
     public void QuitN()
