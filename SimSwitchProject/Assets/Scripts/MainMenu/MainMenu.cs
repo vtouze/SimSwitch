@@ -15,10 +15,11 @@ public class MainMenu : MonoBehaviour
     [Header("Text")]
     [SerializeField] private TMP_Text _settings = null;
     private float _fontSize = 75f;
-    //[Header("Animation")]
+    [Header("Animation")]
     //private float _fadeAnimationTime = 1.95f;
     //[SerializeField] private GameObject _fadeOutCircle = null;
     //private bool _hasFinishedQuitAnimation = false;
+    [SerializeField] private Animator _quitAnim = null;
 
     #endregion Fields
 
@@ -45,6 +46,7 @@ public class MainMenu : MonoBehaviour
     public void QuitChecking()
     {
         _quitCheck.SetActive(true);
+        _quitAnim.SetBool("isQuiting", true);
     }
     private void Update()
     {
@@ -68,7 +70,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitN()
     {
-        _quitCheck.SetActive(false);
+        _quitAnim.SetBool("isQuiting", false);
     }
     #endregion Quit Methods
     #endregion Methods
