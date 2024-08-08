@@ -1,4 +1,4 @@
-using System.Net;
+/*using System.Net;
 using System;
 public static class StaticInformation
 {
@@ -26,3 +26,4 @@ public static class StaticInformation
         return connectionId;
     }
 }
+*/

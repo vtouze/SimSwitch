@@ -83,7 +83,7 @@ public class ConnectionManager : WebSocketConnector
         {
             var jsonId = new Dictionary<string, string> {
                 {"type", "connection"},
-                { "id", StaticInformation.getId() },
+                //{ "id", StaticInformation.getId() },
                 { "set_heartbeat", UseHeartbeat ? "true": "false" }
             }; 
             string jsonStringId = JsonConvert.SerializeObject(jsonId);
@@ -194,10 +194,10 @@ public class ConnectionManager : WebSocketConnector
              
             if (! UseMiddleware)  
             {
-                Debug.Log("Create player direct :" + ConnectionManager.Instance.GetConnectionId());
+                Debug.Log("Create player direct :"/* + ConnectionManager.Instance.GetConnectionId()*/);
 
                   Dictionary<string, string> args = new Dictionary<string, string> {
-                    {"id", "\""+ConnectionManager.Instance.GetConnectionId()+"\""}
+                    {"id", "\""/*+ConnectionManager.Instance.GetConnectionId()*/+"\""}
                   };
                   SendExecutableAsk("create_init_player", args);
 
@@ -294,11 +294,12 @@ public class ConnectionManager : WebSocketConnector
                 DisconnectFromServer();
             }
         }));
+        Application.Quit();
     }
 
-    public string GetConnectionId() {
+    /*public string GetConnectionId() {
         return StaticInformation.getId();
-    }
+    }*/
 
 
     public bool getUseMiddleware()

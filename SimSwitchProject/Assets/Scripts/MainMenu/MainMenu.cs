@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject _settingsMenu = null;
     [SerializeField] private GameObject _quitCheck = null;
     [Header("Text")]
-    [SerializeField] private TMP_Text _settings = null;
+    //[SerializeField] private TMP_Text _settings = null;
     private float _fontSize = 75f;
     [Header("Animation")]
     //private float _fadeAnimationTime = 1.95f;
@@ -38,8 +38,8 @@ public class MainMenu : MonoBehaviour
     public void OpenSettings()
     {
         _mainMenu.SetActive(false);
-        _settingsMenu.SetActive(true);
-        _settings.fontSize = _fontSize;
+        //_settingsMenu.SetActive(true);
+        //_settings.fontSize = _fontSize;
     }
 
     #region Quit Methods
@@ -66,7 +66,7 @@ public class MainMenu : MonoBehaviour
     {
         //_hasFinishedQuitAnimation = true;
         Application.OpenURL("https://teez21.itch.io/testwebgl2022");
-        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 
     public void QuitN()
