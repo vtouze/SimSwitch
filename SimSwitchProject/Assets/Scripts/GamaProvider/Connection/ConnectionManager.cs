@@ -101,7 +101,7 @@ public class ConnectionManager : WebSocketConnector
         if (e.IsText)
         {
            
-            //Debug.Log("e.Data: " + e.Data);
+            Debug.Log("e.Data: " + e.Data);
             JObject jsonObj = JObject.Parse(e.Data);
             string type = (string)jsonObj["type"];
            
@@ -161,7 +161,8 @@ public class ConnectionManager : WebSocketConnector
             else if (type.Equals("SimulationOutput"))
             {
                 JValue content = (JValue)jsonObj["content"];
-               // Debug.Log("MessageSeparator: " + MessageSeparator);
+                Debug.Log("Simulation Output");
+                // Debug.Log("MessageSeparator: " + MessageSeparator);
                 foreach (String mes in content.ToString().Split(MessageSeparator))
                 {
                     if (!mes.IsNullOrEmpty())
@@ -310,6 +311,12 @@ public class ConnectionManager : WebSocketConnector
         Debug.Log("Reconnect");
         currentState = ConnectionState.DISCONNECTED;
         TryConnectionToServer();
+    }
+
+    private void OnDestroy()
+    {
+
+        DisconnectProperly();
     }
 }
 

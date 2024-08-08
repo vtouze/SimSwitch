@@ -40,7 +40,7 @@ public abstract class WebSocketConnector : MonoBehaviour
             }
             else 
             {
-                port = "1000";
+                port = "6868";
             }
             
         } else if (fixedProperties)
