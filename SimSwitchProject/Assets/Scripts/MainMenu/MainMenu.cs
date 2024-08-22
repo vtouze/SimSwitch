@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using Unity.VisualScripting;
@@ -10,11 +8,11 @@ public class MainMenu : MonoBehaviour
     #region Fields
     [Header("Game Object")]
     [SerializeField] private GameObject _mainMenu = null;
-    [SerializeField] private GameObject _settingsMenu = null;
+    //[SerializeField] private GameObject _settingsMenu = null;
     [SerializeField] private GameObject _quitCheck = null;
-    [Header("Text")]
-    //[SerializeField] private TMP_Text _settings = null;
-    private float _fontSize = 75f;
+    /*[Header("Text")]
+    [SerializeField] private TMP_Text _settings = null;
+    private float _fontSize = 75f;*/
     [Header("Animation")]
     //private float _fadeAnimationTime = 1.95f;
     //[SerializeField] private GameObject _fadeOutCircle = null;
