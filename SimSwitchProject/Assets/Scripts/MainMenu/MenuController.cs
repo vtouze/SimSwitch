@@ -10,13 +10,13 @@ public class MenuController : MonoBehaviour
     [SerializeField] private string portWithoutMiddleware = "6868";
     private bool useMiddleWare;
     //TextMeshProUGUI textMP;
-    Toggle m_Toggle;
+    //Toggle m_Toggle;
 
     public void Start()
     {
 
         //textMP = GameObject.FindGameObjectWithTag("textIP").GetComponent<TextMeshProUGUI>();
-        m_Toggle = GameObject.FindGameObjectWithTag("useMiddleWare").GetComponent<Toggle>();
+        //m_Toggle = GameObject.FindGameObjectWithTag("useMiddleWare").GetComponent<Toggle>();
         //GameObject ob = GameObject.FindGameObjectWithTag("textPN");
         //TextMeshProUGUI textPN = ob.GetComponent<TextMeshProUGUI>();
         //textPN.text = "Player id: " + StaticInformation.getId();
@@ -24,7 +24,7 @@ public class MenuController : MonoBehaviour
         if (!PlayerPrefs.HasKey("MIDDLEWARE") || PlayerPrefs.GetString("MIDDLEWARE").Length == 0)
             PlayerPrefs.SetString("MIDDLEWARE", "N");
         useMiddleWare = PlayerPrefs.GetString("MIDDLEWARE").Equals("Y");
-        m_Toggle.SetIsOnWithoutNotify(useMiddleWare);
+        //m_Toggle.SetIsOnWithoutNotify(useMiddleWare);
 
         string port = useMiddleWare ? portWithMiddleware : portWithoutMiddleware;
        
@@ -42,7 +42,7 @@ public class MenuController : MonoBehaviour
 
     public void OnValueMiddleWare()
     {
-        useMiddleWare = m_Toggle.isOn;
+        //useMiddleWare = m_Toggle.isOn;
         string port = useMiddleWare ? portWithMiddleware : portWithoutMiddleware;
         //textMP.text = "Current IP: " + PlayerPrefs.GetString("IP") + ":" + port;
 
