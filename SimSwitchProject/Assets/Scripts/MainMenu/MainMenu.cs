@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
     private float _fadeAnimationTime = 1.95f;
     [SerializeField] private GameObject _fadeInCircle = null;
     private bool _hasFinishedQuitAnimation = false;
+    private bool _hasFinishedPlayAnimation = false;
     [SerializeField] private Animator _quitAnim = null;
     [SerializeField] private Animator _openSettings = null;
 
@@ -32,7 +33,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Game");
+        _hasFinishedPlayAnimation = true;
     }
 
     public void OpenSettings()
@@ -60,13 +61,24 @@ public class MainMenu : MonoBehaviour
         {
             Application.Quit();
         }
+
+        if (_hasFinishedPlayAnimation == true && _fadeAnimationTime > 0)
+        {
+            _fadeInCircle.SetActive(true);
+            _fadeAnimationTime -= Time.deltaTime;
+        }
+
+        if (_fadeAnimationTime <= 0 && _hasFinishedPlayAnimation == true)
+        {
+            SceneManager.LoadScene("Survey");
+        }
     }
 
     public void QuitY()
     {
         _hasFinishedQuitAnimation = true;
         //Application.OpenURL("https://teez21.itch.io/testwebgl2022");
-        Application.Quit();
+        //Application.Quit();
     }
 
     public void QuitN()
