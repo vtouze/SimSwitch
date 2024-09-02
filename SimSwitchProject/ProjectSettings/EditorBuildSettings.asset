@@ -17,4 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Features/Survey.unity
     guid: 996f2d496246266cb88b57f916f96630
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 43f3c97d871a0099e90b62fbb197d1b4, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 77b6e595e8ec644188f3f4e6f4c2fdef, type: 2}
