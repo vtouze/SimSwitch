@@ -48,11 +48,10 @@ public class LocalizationManager : MonoBehaviour
         switch (_currentLanguageIndex)
         {
             case 0:
-                Debug.Log("English Sprite");
-                _buttonImage.sprite = _englishSprite;
+                _buttonImage.sprite = _frenchSprite;
                 break;
             case 1:
-                _buttonImage.sprite = _frenchSprite;
+                _buttonImage.sprite = _englishSprite;
                 break;
             default:
                 Debug.LogWarning("Unsupported language index.");

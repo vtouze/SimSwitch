@@ -22,6 +22,26 @@ MonoBehaviour:
     m_Localized: Play
     m_Metadata:
       m_Items: []
+  - m_Id: 250614219329536
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 250709601996800
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 250805093715968
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 255330881949696
+    m_Localized: Are you sure?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 255711460511744
+    m_Localized: Are you sure you wish to quit the game?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -19,6 +19,26 @@ MonoBehaviour:
     m_Key: Text_Play
     m_Metadata:
       m_Items: []
+  - m_Id: 250614219329536
+    m_Key: Text_Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 250709601996800
+    m_Key: Text_Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 250805093715968
+    m_Key: Text_Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 255330881949696
+    m_Key: Text_HeadertQuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 255711460511744
+    m_Key: Text_ContentQuit
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

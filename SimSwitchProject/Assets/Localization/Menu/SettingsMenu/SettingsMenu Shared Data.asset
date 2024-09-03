@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: SettingsMenu Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: SettingsMenu
+  m_TableCollectionNameGuidString: 7b06a5996ede4530ba623db50c7218bb
+  m_Entries:
+  - m_Id: 43730128896
+    m_Key: Title_Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 199837929472
+    m_Key: Text_Video
+    m_Metadata:
+      m_Items: []
+  - m_Id: 266678358016
+    m_Key: Text_Quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380931198976
+    m_Key: Text_Fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 468483100672
+    m_Key: Text_Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 583071485952
+    m_Key: Text_Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 697383047168
+    m_Key: Text_MasterVolume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 793822679040
+    m_Key: Text_Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3832193273856
+    m_Key: Dropdown_Quality_LOW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3848005799936
+    m_Key: Dropdown_Quality_MEDIUM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3874010484736
+    m_Key: Dropdown_Quality_ULTRA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4305780527104
+    m_Key: Dropdown_Quality_HIGH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4697117478912
+    m_Key: Dropdown_Quality_Label
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1588530495149047810
+  references:
+    version: 2
+    RefIds:
+    - rid: 1588530495149047810
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1725352754580

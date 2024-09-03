@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: SettingsMenu_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 7b06a5996ede4530ba623db50c7218bb, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 43730128896
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 199837929472
+    m_Localized: Video
+    m_Metadata:
+      m_Items: []
+  - m_Id: 266678358016
+    m_Localized: Quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380931198976
+    m_Localized: Fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 468483100672
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 583071485952
+    m_Localized: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 697383047168
+    m_Localized: Master
+    m_Metadata:
+      m_Items: []
+  - m_Id: 793822679040
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3832193273856
+    m_Localized: LOW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3848005799936
+    m_Localized: MEDIUM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3874010484736
+    m_Localized: ULTRA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4305780527104
+    m_Localized: HIGH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4697117478912
+    m_Localized: LOW
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

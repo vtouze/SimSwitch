@@ -22,6 +22,26 @@ MonoBehaviour:
     m_Localized: Jouer
     m_Metadata:
       m_Items: []
+  - m_Id: 250614219329536
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 250709601996800
+    m_Localized: "Cr\xE9dits"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 250805093715968
+    m_Localized: Quitter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 255330881949696
+    m_Localized: "\xCAtes-vous s\xFBr ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 255711460511744
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter le jeu ?"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

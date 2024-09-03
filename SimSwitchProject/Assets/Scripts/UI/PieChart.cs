@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,7 +6,7 @@ public class PieChart : MonoBehaviour
 {
     #region Fields
     [SerializeField] private Image[] _imagesPieChart;
-    [SerializeField] private float[] _values;
+    [SerializeField] private float[] _values; /*= {UpdatePieChart._valueA, UpdatePieChart._valueB, UpdatePieChart._valueC};*/
     #endregion Fields
 
     #region Methods
