@@ -1,5 +1,6 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 using Unity.VisualScripting;
 using TMPro;
 
@@ -10,9 +11,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject _mainMenu = null;
     [SerializeField] private GameObject _settingsMenu = null;
     [SerializeField] private GameObject _quitCheck = null;
-    [Header("Text")]
-    [SerializeField] private TMP_Text _settings = null;
-    private float _fontSize = 50f;
     [Header("Animation")]
     private float _fadeAnimationTime = 1.95f;
     [SerializeField] private GameObject _fadeInCircle = null;
@@ -33,6 +31,10 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
+        if(_openSettings.GetBool("isOpening"))
+        {
+            _openSettings.SetBool("isOpening", false);
+        }
         _hasFinishedPlayAnimation = true;
     }
 
@@ -40,7 +42,6 @@ public class MainMenu : MonoBehaviour
     {
         _settingsMenu.SetActive(true);
         _openSettings.SetBool("isOpening", true);
-        _settings.fontSize = _fontSize;
     }
 
     #region Quit Methods
@@ -70,7 +71,7 @@ public class MainMenu : MonoBehaviour
 
         if (_fadeAnimationTime <= 0 && _hasFinishedPlayAnimation == true)
         {
-            SceneManager.LoadScene("Survey");
+            SceneManager.LoadScene("Overview");
         }
     }
 

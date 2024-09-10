@@ -14,14 +14,10 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private GameObject _settingsMenu = null;
     [SerializeField] private Toggle _fullScreenToggle = null;
     [SerializeField] private Toggle _vSyncToggle = null;
-    [SerializeField] private Scrollbar _scrollbar = null;
     [Header("Resolutions")]
     public int _selectedResolutions;
     public TMP_Text _resolutionsText = null;
     public List<ResolutionIndex> _resolutions = new List<ResolutionIndex>();
-    [Header("Text")]
-    [SerializeField] private TMP_Text _back = null;
-    private float _fontSize = 75f;
     [Header("Animations")]
     [SerializeField] private Animator _closeSettings = null;
 
@@ -38,13 +34,10 @@ public class SettingsMenu : MonoBehaviour
         {
             _vSyncToggle.isOn = true;
         }
-
-        _scrollbar.value = 1;
     }
 
     public void BackMainMenu()
     {
-        _back.fontSize = _fontSize;
         _closeSettings.SetBool("isOpening", false);
     }
     public void SetFullscreen(bool isFullScreen)
