@@ -12,41 +12,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
   m_Name: MainMenu Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: MainMenu
-  m_TableCollectionNameGuidString: 6bc59ba94aee47af78d21170cf036103
+  m_TableCollectionName: MainMenuV2
+  m_TableCollectionNameGuidString: eaa1778a2ad525599b3d643e20ef76b1
   m_Entries:
-  - m_Id: 98163806208
-    m_Key: Text_Play
+  - m_Id: 118317436928
+    m_Key: Play_Button
     m_Metadata:
       m_Items: []
-  - m_Id: 250614219329536
-    m_Key: Text_Settings
+  - m_Id: 184763600896
+    m_Key: Settings_Button
     m_Metadata:
       m_Items: []
-  - m_Id: 250709601996800
-    m_Key: Text_Credits
+  - m_Id: 236340957184
+    m_Key: Credits_Button
     m_Metadata:
       m_Items: []
-  - m_Id: 250805093715968
-    m_Key: Text_Quit
+  - m_Id: 306712989696
+    m_Key: Encyclopedia_Button
     m_Metadata:
       m_Items: []
-  - m_Id: 255330881949696
-    m_Key: Text_HeadertQuit
+  - m_Id: 6860333961216
+    m_Key: Video_Button
     m_Metadata:
       m_Items: []
-  - m_Id: 255711460511744
-    m_Key: Text_ContentQuit
+  - m_Id: 6944660443136
+    m_Key: Other_Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7005272330240
+    m_Key: Fullscreen_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7078223859712
+    m_Key: Resolution_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7183375060992
+    m_Key: Quality_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8653709299712
+    m_Key: Master_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8721338257408
+    m_Key: Music_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9349808574464
+    m_Key: QuitTitle_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9623218475008
+    m_Key: QuitContent_Text
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 1588530478538031116
+    rid: 1588530676847869962
   references:
     version: 2
     RefIds:
-    - rid: 1588530478538031116
+    - rid: 1588530676847869962
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1725291660444
+        m_CustomEpoch: 1726059994476

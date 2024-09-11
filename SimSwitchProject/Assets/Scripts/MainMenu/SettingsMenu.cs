@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Audio;
+using System.Linq;
 
 
 public class SettingsMenu : MonoBehaviour
@@ -12,6 +13,9 @@ public class SettingsMenu : MonoBehaviour
     [Header("Game Object")]
     [SerializeField] private GameObject _mainMenu = null;
     [SerializeField] private GameObject _settingsMenu = null;
+    [SerializeField] private GameObject[] _tab = null;
+    [SerializeField] private Image[] _title = null;
+    [Header("Toggle")]
     [SerializeField] private Toggle _fullScreenToggle = null;
     [SerializeField] private Toggle _vSyncToggle = null;
     [Header("Resolutions")]
@@ -34,6 +38,30 @@ public class SettingsMenu : MonoBehaviour
         {
             _vSyncToggle.isOn = true;
         }
+    }
+
+    public void OpenSettingsTab(GameObject gameObject)
+    {
+        foreach (GameObject obj in _tab)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(false);
+            }
+        }
+        gameObject.SetActive(true);
+    }
+
+    public void TabSelection(Image index)
+    {
+        foreach(Image img in _title)
+        {
+            if(img != null)
+            {
+                img.color = new Color(255, 255, 255, 150);
+            }
+        }
+        index.color = new Color(255, 255, 255, 150);
     }
 
     public void BackMainMenu()

@@ -14,31 +14,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: fr
-  m_SharedData: {fileID: 11400000, guid: 6bc59ba94aee47af78d21170cf036103, type: 2}
+  m_SharedData: {fileID: 11400000, guid: eaa1778a2ad525599b3d643e20ef76b1, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 98163806208
+  - m_Id: 118317436928
     m_Localized: Jouer
     m_Metadata:
       m_Items: []
-  - m_Id: 250614219329536
-    m_Localized: Options
+  - m_Id: 184763600896
+    m_Localized: "Param\xE8tres"
     m_Metadata:
       m_Items: []
-  - m_Id: 250709601996800
+  - m_Id: 236340957184
     m_Localized: "Cr\xE9dits"
     m_Metadata:
       m_Items: []
-  - m_Id: 250805093715968
-    m_Localized: Quitter
+  - m_Id: 306712989696
+    m_Localized: "Encyclop\xE9die"
     m_Metadata:
       m_Items: []
-  - m_Id: 255330881949696
+  - m_Id: 6860333961216
+    m_Localized: "Vid\xE9o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6944660443136
+    m_Localized: Autres
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7005272330240
+    m_Localized: "Plein \xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7078223859712
+    m_Localized: "R\xE9solution"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7183375060992
+    m_Localized: "Qualit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8653709299712
+    m_Localized: Principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8721338257408
+    m_Localized: Musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9349808574464
     m_Localized: "\xCAtes-vous s\xFBr ?"
     m_Metadata:
       m_Items: []
-  - m_Id: 255711460511744
+  - m_Id: 9623218475008
     m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter le jeu ?"
     m_Metadata:
       m_Items: []

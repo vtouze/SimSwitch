@@ -47,7 +47,7 @@ public class HUDController : MonoBehaviour
 
         if (_fadeAnimationTime <= 0 && _hasFinishedQuitMenuAnimation == true)
         {
-            SceneManager.LoadScene("MainMenuV2");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 

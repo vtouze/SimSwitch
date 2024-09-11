@@ -11,13 +11,15 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject _mainMenu = null;
     [SerializeField] private GameObject _settingsMenu = null;
     [SerializeField] private GameObject _quitCheck = null;
+    [SerializeField] private GameObject _encyclopedia = null;
+    [SerializeField] private GameObject _fadeInCircle = null;
     [Header("Animation")]
     private float _fadeAnimationTime = 1.95f;
-    [SerializeField] private GameObject _fadeInCircle = null;
     private bool _hasFinishedQuitAnimation = false;
     private bool _hasFinishedPlayAnimation = false;
     [SerializeField] private Animator _quitAnim = null;
     [SerializeField] private Animator _openSettings = null;
+    [SerializeField] private Animator _openEncyclopedia = null;
 
     #endregion Fields
 
@@ -27,29 +29,55 @@ public class MainMenu : MonoBehaviour
         _mainMenu.SetActive(true);
         _settingsMenu.SetActive(false);
         _quitCheck.SetActive(false);
+        _encyclopedia.SetActive(false);
     }
+
+    #region Buttons
 
     public void Play()
     {
-        if(_openSettings.GetBool("isOpening"))
-        {
-            _openSettings.SetBool("isOpening", false);
-        }
+        CheckAnimations(_openSettings);
+        CheckAnimations(_openEncyclopedia);
+        CheckAnimations(_quitAnim);
         _hasFinishedPlayAnimation = true;
+    }
+
+    private void CheckAnimations(Animator anim)
+    {
+        if(anim.GetBool("isOpening"))
+        {
+            anim.SetBool("isOpening", false);
+        }
+    }
+
+    private void PlayAnimations(Animator anim, GameObject gameObject)
+    {
+        gameObject.SetActive(true);
+        anim.SetBool("isOpening", true);
     }
 
     public void OpenSettings()
     {
-        _settingsMenu.SetActive(true);
-        _openSettings.SetBool("isOpening", true);
+        CheckAnimations(_openEncyclopedia);
+        CheckAnimations(_quitAnim);
+        PlayAnimations(_openSettings, _settingsMenu);
     }
+
+    public void OpenEncyclopedia()
+    {
+        CheckAnimations(_openSettings);
+        CheckAnimations(_quitAnim);
+        PlayAnimations(_openEncyclopedia, _encyclopedia);
+    }
+
+    #endregion Buttons
 
     #region Quit Methods
     public void QuitChecking()
     {
-        _quitCheck.SetActive(true);
-        _quitAnim.SetBool("isQuiting", true);
+        PlayAnimations(_quitAnim, _quitCheck);
     }
+
     private void Update()
     {
         if (_hasFinishedQuitAnimation == true && _fadeAnimationTime > 0)
@@ -84,7 +112,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitN()
     {
-        _quitAnim.SetBool("isQuiting", false);
+        CheckAnimations(_quitAnim);
     }
     #endregion Quit Methods
     #endregion Methods
