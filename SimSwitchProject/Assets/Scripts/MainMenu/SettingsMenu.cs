@@ -11,10 +11,7 @@ public class SettingsMenu : MonoBehaviour
 {
     #region Fields
     [Header("Game Object")]
-    [SerializeField] private GameObject _mainMenu = null;
-    [SerializeField] private GameObject _settingsMenu = null;
     [SerializeField] private GameObject[] _tab = null;
-    [SerializeField] private Image[] _title = null;
     [Header("Toggle")]
     [SerializeField] private Toggle _fullScreenToggle = null;
     [SerializeField] private Toggle _vSyncToggle = null;
@@ -190,75 +187,3 @@ public class SettingsMenu : MonoBehaviour
     }
     #endregion Methods
 }
-
-/*In a Unity URP (Universal Render Pipeline) project, you can change the brightness of the scene using a Slider by manipulating the global lighting settings or applying post-processing effects like adjusting exposure or modifying the color 
-grading.
-
-Here's how to achieve this using a slider to adjust the brightness with post-processing in Unity:
-
-Step-by-Step Implementation:
-1. Set up Post-Processing in URP:
-First, ensure that post-processing is enabled in your project.
-
-Go to your Forward Renderer Asset (usually located in Assets > Settings) and check Post-Processing.
-Make sure you have a Volume GameObject in your scene with a Post Process Volume component. If not, create a new empty GameObject in your scene and add the Post-process Volume component.
-Set the Is Global checkbox to true to make sure the volume affects the entire scene.
-2. Add the Color Grading Effect:
-In the Post Process Volume, add a Color Grading override by clicking on Add Override > Post-processing > Color Grading.
-In the Color Grading settings, make sure Exposure is enabled.
-3. Script for Adjusting Brightness with a Slider:
-Here's the script to link the slider to the brightness control using post-processing.
-
-csharp
-Copy code
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
-
-public class BrightnessController : MonoBehaviour
-{
-    public Slider brightnessSlider; // Reference to the slider
-    public Volume postProcessVolume; // Reference to the global post-processing volume
-    private ColorAdjustments colorAdjustments;
-
-    void Start()
-    {
-        // Find the ColorAdjustments component in the post-processing volume
-        if (postProcessVolume.profile.TryGet<ColorAdjustments>(out colorAdjustments))
-        {
-            // Initialize the slider to reflect the current exposure value
-            brightnessSlider.value = colorAdjustments.postExposure.value;
-            
-            // Add a listener to detect slider value changes
-            brightnessSlider.onValueChanged.AddListener(ChangeBrightness);
-        }
-    }
-
-    // This method is called whenever the slider value changes
-    public void ChangeBrightness(float value)
-    {
-        // Adjust the post-exposure (which controls the brightness)
-        colorAdjustments.postExposure.value = value;
-    }
-}
-Explanation:
-References:
-
-brightnessSlider is the slider UI element that you want to use to adjust brightness.
-postProcessVolume is the post-processing volume that holds the Color Grading effect.
-colorAdjustments is a reference to the Color Adjustments effect, where we can change the postExposure value to control brightness.
-Start():
-
-The script finds the Color Adjustments override in the post-processing volume and uses it to modify the brightness.
-It initializes the slider to reflect the current postExposure value and sets up a listener that calls ChangeBrightness() when the slider value changes.
-ChangeBrightness(): This method takes the slider value and sets it as the new postExposure value to adjust the brightness in real time.
-
-How to Use:
-Create a UI Slider in your scene (you can do this via GameObject > UI > Slider).
-Attach the script to an empty GameObject or your UI Manager.
-Assign the slider and the Post Process Volume from the scene to the script in the Inspector.
-Set the slider min and max values in the slider component, typically between -1 and 2 (this range works well for exposure).
-Notes:
-The postExposure property directly influences the overall brightness by simulating camera exposure.
-If you want to fine-tune the brightness control, adjust the slider’s min and max values accordingly.*/

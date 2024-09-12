@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
@@ -7,74 +8,72 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float _moveSpeed = 10f;
     [SerializeField] private float _zoomSpeed = 10f;
     [SerializeField] private float _rotationSpeed = 100f;
-    [SerializeField] private Vector2 _zoomRange = new Vector2(10f, 100f);
 
-    private Vector3 _dragOrigin;
-    private Vector3 _currentRotation;
+    private CameraControls controls;
+
+    private Vector2 movementInput;
+    private Vector2 rotationInput;
+    private float zoomInput;
     #endregion Fields
 
     #region Methods
-    void Update()
+    private void Awake()
+    {
+        controls = new CameraControls();
+
+        controls.Keyboard.Movement.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
+        controls.Keyboard.Movement.canceled += ctx => movementInput = Vector2.zero;
+
+        controls.Mouse.Look.performed += ctx => rotationInput = ctx.ReadValue<Vector2>();
+        controls.Mouse.Look.canceled += ctx => rotationInput = Vector2.zero;
+
+        controls.Mouse.Zoom.performed += ctx => zoomInput = ctx.ReadValue<float>();
+        controls.Mouse.Zoom.canceled += ctx => zoomInput = 0f;
+    }
+
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
+    }
+
+    private void Update()
     {
         HandleMovement();
         HandleZoom();
         HandleRotation();
     }
 
-    void HandleMovement()
+    private void HandleMovement()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
+        Vector3 moveDirection = new Vector3(movementInput.x, 0, movementInput.y);
+        Vector3 relativeMovement = (_cameraTransform.forward * moveDirection.z) + (_cameraTransform.right * moveDirection.x);
+        relativeMovement.y = 0;
 
-        Vector3 moveDirection = (_cameraTransform.forward * moveZ) + (_cameraTransform.right * moveX);
-        moveDirection.y = 0;
+        _cameraTransform.Translate(relativeMovement * _moveSpeed * Time.deltaTime, Space.World);
+    }
 
-        _cameraTransform.Translate(moveDirection * _moveSpeed * Time.deltaTime, Space.World);
-
-        if (Input.GetMouseButtonDown(2))
+    private void HandleZoom()
+    {
+        if (zoomInput != 0)
         {
-            _dragOrigin = Input.mousePosition;
-            return;
-        }
-
-        if (Input.GetMouseButton(2))
-        {
-            Vector3 difference = _dragOrigin - Input.mousePosition;
-            _dragOrigin = Input.mousePosition;
-
-            Vector3 move = new Vector3(difference.x * _moveSpeed * Time.deltaTime, 0, difference.y * _moveSpeed * Time.deltaTime);
-            _cameraTransform.Translate(move, Space.Self);
+            _cameraTransform.position += _cameraTransform.forward * zoomInput * _zoomSpeed;
         }
     }
 
-    void HandleZoom()
+    private void HandleRotation()
     {
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
-
-        if (scroll != 0)
+        if (rotationInput != Vector2.zero)
         {
-            _cameraTransform.position += _cameraTransform.forward * scroll * _zoomSpeed;
+            float rotationX = rotationInput.x * _rotationSpeed * Time.deltaTime;
+            float rotationY = rotationInput.y * _rotationSpeed * Time.deltaTime;
 
-            float distance = Vector3.Distance(_cameraTransform.position, transform.position);
-
-            if (distance < _zoomRange.x || distance > _zoomRange.y)
-            {
-                _cameraTransform.position -= _cameraTransform.forward * scroll * _zoomSpeed;
-            }
-        }
-    }
-
-    void HandleRotation()
-    {
-        if (Input.GetMouseButton(1))
-        {
-            float rotationX = Input.GetAxis("Mouse X") * _rotationSpeed * Time.deltaTime;
-            float rotationY = Input.GetAxis("Mouse Y") * _rotationSpeed * Time.deltaTime;
-
-            _currentRotation.x -= rotationY;
-            _currentRotation.y += rotationX;
-
-            _cameraTransform.rotation = Quaternion.Euler(_currentRotation.x, _currentRotation.y, 0);
+            _cameraTransform.Rotate(Vector3.up, rotationX, Space.World);
+            _cameraTransform.Rotate(Vector3.left, rotationY);
         }
     }
     #endregion Methods
