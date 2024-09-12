@@ -30,7 +30,6 @@ public class LocalizationManager : MonoBehaviour
 
         if (localeQuery == null)
         {
-            Debug.LogError($"No locale for {code} found");
             return;
         }
 
@@ -41,7 +40,6 @@ public class LocalizationManager : MonoBehaviour
     {
         if (_buttonImage == null)
         {
-            Debug.LogWarning("ButtonImage reference is missing.");
             return;
         }
 
@@ -54,7 +52,6 @@ public class LocalizationManager : MonoBehaviour
                 _buttonImage.sprite = _englishSprite;
                 break;
             default:
-                Debug.LogWarning("Unsupported language index.");
                 break;
         }
     }

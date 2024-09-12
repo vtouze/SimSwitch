@@ -14,12 +14,12 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject _encyclopedia = null;
     [SerializeField] private GameObject _fadeInCircle = null;
     [Header("Animation")]
-    private float _fadeAnimationTime = 1.95f;
-    private bool _hasFinishedQuitAnimation = false;
-    private bool _hasFinishedPlayAnimation = false;
     [SerializeField] private Animator _quitAnim = null;
     [SerializeField] private Animator _openSettings = null;
     [SerializeField] private Animator _openEncyclopedia = null;
+    private float _fadeAnimationTime = 1.95f;
+    private bool _hasFinishedQuitAnimation = false;
+    private bool _hasFinishedPlayAnimation = false;
 
     #endregion Fields
 

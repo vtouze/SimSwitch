@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InitMainMenu : MonoBehaviour
+public class InitScene : MonoBehaviour
 {
     private float _fadeAnimationTime = 1.95f;
     [SerializeField] private GameObject _fadeOutCircle = null;

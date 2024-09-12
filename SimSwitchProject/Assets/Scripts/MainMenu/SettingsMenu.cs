@@ -19,25 +19,30 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private Toggle _fullScreenToggle = null;
     [SerializeField] private Toggle _vSyncToggle = null;
     [Header("Resolutions")]
-    public int _selectedResolutions;
-    public TMP_Text _resolutionsText = null;
-    public List<ResolutionIndex> _resolutions = new List<ResolutionIndex>();
+    [SerializeField] private TMP_Dropdown _resolutionDropdown;
+    [SerializeField] private TMP_Dropdown _qualityDropdown;
+    private Resolution[] _resolutions;
     [Header("Animations")]
     [SerializeField] private Animator _closeSettings = null;
-
+    [Header("Buttons")]
+    public List<Button> _buttons;
+    private float _clickedAlpha = 1f;
+    private float _unclickedAlpha = 0.5f;
+    [Header("Sprite")]
+    [SerializeField] private Sprite _pressedSprite = null;
+    [SerializeField] private Sprite _normalSprite = null;
+    [Header("Slider")]
+    [SerializeField] private Slider _brightnessSlider;
+    [SerializeField] private Light _directionalLight;
     #endregion Fields
 
     #region Methods
     void Start()
     {
-        if (QualitySettings.vSyncCount == 0)
-        {
-            _vSyncToggle.isOn = false;
-        }
-        else
-        {
-            _vSyncToggle.isOn = true;
-        }
+        InitResolution();
+        InitVSync(); 
+        InitQuality();
+        InitBrightness();       
     }
 
     public void OpenSettingsTab(GameObject gameObject)
@@ -52,16 +57,30 @@ public class SettingsMenu : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void TabSelection(Image index)
+    public void OnButtonClick(Button clickedButton)
     {
-        foreach(Image img in _title)
+        SetButtonAlpha(clickedButton, _clickedAlpha);
+        clickedButton.image.sprite = _pressedSprite;
+
+        foreach (Button button in _buttons)
         {
-            if(img != null)
+            if (button != clickedButton)
             {
-                img.color = new Color(255, 255, 255, 150);
+                button.image.sprite = _normalSprite;
+                SetButtonAlpha(button, _unclickedAlpha);
             }
         }
-        index.color = new Color(255, 255, 255, 150);
+    }
+
+    private void SetButtonAlpha(Button button, float alpha)
+    {
+        Image buttonImage = button.GetComponent<Image>();
+        if (buttonImage != null)
+        {
+            Color newColor = buttonImage.color;
+            newColor.a = alpha;
+            buttonImage.color = newColor;
+        }
     }
 
     public void BackMainMenu()
@@ -89,45 +108,157 @@ public class SettingsMenu : MonoBehaviour
     {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
-
-    public void ResolutionsInf()
+    private void InitVSync()
     {
-        _selectedResolutions--;
-        if (_selectedResolutions < 0)
+        if (QualitySettings.vSyncCount == 0)
         {
-            _selectedResolutions = 0;
+            _vSyncToggle.isOn = false;
         }
-        SetResolutionText();
-        SetResolution();
-    }
-
-    public void ResolutionSup()
-    {
-        _selectedResolutions++;
-        if (_selectedResolutions > _resolutions.Count - 1)
+        else
         {
-            _selectedResolutions = _resolutions.Count - 1;
+            _vSyncToggle.isOn = true;
         }
-        SetResolutionText();
-        SetResolution();
     }
 
-    public void SetResolutionText()
+    private void InitQuality()
     {
-        _resolutionsText.text = _resolutions[_selectedResolutions].horizontal.ToString() + "x" + _resolutions[_selectedResolutions].vertical.ToString();
+        string[] qualityLevels = QualitySettings.names;
+
+        _qualityDropdown.ClearOptions();
+
+        List<string> options = new List<string>(qualityLevels);
+        _qualityDropdown.AddOptions(options);
+
+        _qualityDropdown.value = QualitySettings.GetQualityLevel();
+        _qualityDropdown.RefreshShownValue();
+
+        _qualityDropdown.onValueChanged.AddListener(ChangeQuality);
     }
 
-    public void SetResolution()
+    public void ChangeQuality(int qualityIndex)
     {
-        Screen.SetResolution(_resolutions[_selectedResolutions].horizontal, _resolutions[_selectedResolutions].vertical, _fullScreenToggle.isOn);
+        QualitySettings.SetQualityLevel(qualityIndex);
+        Debug.Log("Quality Level Changed to: " + QualitySettings.names[qualityIndex]);
     }
 
+    private void InitResolution()
+    {
+        _resolutions = Screen.resolutions;
+
+        _resolutionDropdown.ClearOptions();
+
+        List<string> resolutionOptions = new List<string>();
+
+        int currentResolutionIndex = 0;
+        
+        for (int i = 0; i < _resolutions.Length; i++)
+        {
+            string resolutionOption = _resolutions[i].width + " x " + _resolutions[i].height;
+            resolutionOptions.Add(resolutionOption);
+
+            if (_resolutions[i].width == Screen.currentResolution.width &&
+                _resolutions[i].height == Screen.currentResolution.height)
+            {
+                currentResolutionIndex = i;
+            }
+        }
+
+        _resolutionDropdown.AddOptions(resolutionOptions);
+
+        _resolutionDropdown.value = currentResolutionIndex;
+        _resolutionDropdown.RefreshShownValue();
+
+        _resolutionDropdown.onValueChanged.AddListener(ChangeResolution);
+    }
+
+    public void ChangeResolution(int resolutionIndex)
+    {
+        Resolution selectedResolution = _resolutions[resolutionIndex];
+        Screen.SetResolution(selectedResolution.width, selectedResolution.height, Screen.fullScreen);
+    }
+
+    private void InitBrightness()
+    {
+        _brightnessSlider.value = _directionalLight.intensity;
+
+        _brightnessSlider.onValueChanged.AddListener(ChangeBrightness);
+    }
+
+    public void ChangeBrightness(float value)
+    {
+        _directionalLight.intensity = value;
+    }
     #endregion Methods
 }
 
-[System.Serializable]
-public class ResolutionIndex
+/*In a Unity URP (Universal Render Pipeline) project, you can change the brightness of the scene using a Slider by manipulating the global lighting settings or applying post-processing effects like adjusting exposure or modifying the color 
+grading.
+
+Here's how to achieve this using a slider to adjust the brightness with post-processing in Unity:
+
+Step-by-Step Implementation:
+1. Set up Post-Processing in URP:
+First, ensure that post-processing is enabled in your project.
+
+Go to your Forward Renderer Asset (usually located in Assets > Settings) and check Post-Processing.
+Make sure you have a Volume GameObject in your scene with a Post Process Volume component. If not, create a new empty GameObject in your scene and add the Post-process Volume component.
+Set the Is Global checkbox to true to make sure the volume affects the entire scene.
+2. Add the Color Grading Effect:
+In the Post Process Volume, add a Color Grading override by clicking on Add Override > Post-processing > Color Grading.
+In the Color Grading settings, make sure Exposure is enabled.
+3. Script for Adjusting Brightness with a Slider:
+Here's the script to link the slider to the brightness control using post-processing.
+
+csharp
+Copy code
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+
+public class BrightnessController : MonoBehaviour
 {
-    public int horizontal;
-    public int vertical;
+    public Slider brightnessSlider; // Reference to the slider
+    public Volume postProcessVolume; // Reference to the global post-processing volume
+    private ColorAdjustments colorAdjustments;
+
+    void Start()
+    {
+        // Find the ColorAdjustments component in the post-processing volume
+        if (postProcessVolume.profile.TryGet<ColorAdjustments>(out colorAdjustments))
+        {
+            // Initialize the slider to reflect the current exposure value
+            brightnessSlider.value = colorAdjustments.postExposure.value;
+            
+            // Add a listener to detect slider value changes
+            brightnessSlider.onValueChanged.AddListener(ChangeBrightness);
+        }
+    }
+
+    // This method is called whenever the slider value changes
+    public void ChangeBrightness(float value)
+    {
+        // Adjust the post-exposure (which controls the brightness)
+        colorAdjustments.postExposure.value = value;
+    }
 }
+Explanation:
+References:
+
+brightnessSlider is the slider UI element that you want to use to adjust brightness.
+postProcessVolume is the post-processing volume that holds the Color Grading effect.
+colorAdjustments is a reference to the Color Adjustments effect, where we can change the postExposure value to control brightness.
+Start():
+
+The script finds the Color Adjustments override in the post-processing volume and uses it to modify the brightness.
+It initializes the slider to reflect the current postExposure value and sets up a listener that calls ChangeBrightness() when the slider value changes.
+ChangeBrightness(): This method takes the slider value and sets it as the new postExposure value to adjust the brightness in real time.
+
+How to Use:
+Create a UI Slider in your scene (you can do this via GameObject > UI > Slider).
+Attach the script to an empty GameObject or your UI Manager.
+Assign the slider and the Post Process Volume from the scene to the script in the Inspector.
+Set the slider min and max values in the slider component, typically between -1 and 2 (this range works well for exposure).
+Notes:
+The postExposure property directly influences the overall brightness by simulating camera exposure.
+If you want to fine-tune the brightness control, adjust the slider’s min and max values accordingly.*/
