@@ -39,7 +39,7 @@ public partial class @CameraControls: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""2D Vector"",
+                    ""name"": ""ZQSD"",
                     ""id"": ""4a271cff-8386-4f28-8d1e-656e6caa33a7"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
@@ -94,7 +94,7 @@ public partial class @CameraControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""2D Vector"",
+                    ""name"": ""Arrows"",
                     ""id"": ""c00f4a27-64a4-4c55-ab95-ed8207446adb"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
@@ -155,15 +155,6 @@ public partial class @CameraControls: IInputActionCollection2, IDisposable
             ""id"": ""4b3e800e-73ef-45c3-99a4-8c322a4c42b1"",
             ""actions"": [
                 {
-                    ""name"": ""Look"",
-                    ""type"": ""Value"",
-                    ""id"": ""38da2532-3347-4c35-8ed5-35fe942a6343"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
                     ""name"": ""Zoom"",
                     ""type"": ""Value"",
                     ""id"": ""539b5191-cd52-4d4e-b2b9-89b7acd5c87c"",
@@ -174,17 +165,6 @@ public partial class @CameraControls: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""22195636-387e-45eb-acb2-184070f9f159"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard & Mouse"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""22766708-8024-4d8d-b08a-e991bac7eb3b"",
@@ -223,7 +203,6 @@ public partial class @CameraControls: IInputActionCollection2, IDisposable
         m_Keyboard_Movement = m_Keyboard.FindAction("Movement", throwIfNotFound: true);
         // Mouse
         m_Mouse = asset.FindActionMap("Mouse", throwIfNotFound: true);
-        m_Mouse_Look = m_Mouse.FindAction("Look", throwIfNotFound: true);
         m_Mouse_Zoom = m_Mouse.FindAction("Zoom", throwIfNotFound: true);
     }
 
@@ -332,13 +311,11 @@ public partial class @CameraControls: IInputActionCollection2, IDisposable
     // Mouse
     private readonly InputActionMap m_Mouse;
     private List<IMouseActions> m_MouseActionsCallbackInterfaces = new List<IMouseActions>();
-    private readonly InputAction m_Mouse_Look;
     private readonly InputAction m_Mouse_Zoom;
     public struct MouseActions
     {
         private @CameraControls m_Wrapper;
         public MouseActions(@CameraControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Look => m_Wrapper.m_Mouse_Look;
         public InputAction @Zoom => m_Wrapper.m_Mouse_Zoom;
         public InputActionMap Get() { return m_Wrapper.m_Mouse; }
         public void Enable() { Get().Enable(); }
@@ -349,9 +326,6 @@ public partial class @CameraControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_MouseActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_MouseActionsCallbackInterfaces.Add(instance);
-            @Look.started += instance.OnLook;
-            @Look.performed += instance.OnLook;
-            @Look.canceled += instance.OnLook;
             @Zoom.started += instance.OnZoom;
             @Zoom.performed += instance.OnZoom;
             @Zoom.canceled += instance.OnZoom;
@@ -359,9 +333,6 @@ public partial class @CameraControls: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IMouseActions instance)
         {
-            @Look.started -= instance.OnLook;
-            @Look.performed -= instance.OnLook;
-            @Look.canceled -= instance.OnLook;
             @Zoom.started -= instance.OnZoom;
             @Zoom.performed -= instance.OnZoom;
             @Zoom.canceled -= instance.OnZoom;
@@ -397,7 +368,6 @@ public partial class @CameraControls: IInputActionCollection2, IDisposable
     }
     public interface IMouseActions
     {
-        void OnLook(InputAction.CallbackContext context);
         void OnZoom(InputAction.CallbackContext context);
     }
 }

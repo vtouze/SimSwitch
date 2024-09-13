@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.Audio;
 using System.Linq;
@@ -40,6 +41,7 @@ public class SettingsMenu : MonoBehaviour
         InitVSync(); 
         InitQuality();
         InitBrightness();       
+    
     }
 
     public void OpenSettingsTab(GameObject gameObject)

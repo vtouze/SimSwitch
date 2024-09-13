@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject _quitCheck = null;
     [SerializeField] private GameObject _encyclopedia = null;
     [SerializeField] private GameObject _fadeInCircle = null;
+    [SerializeField] private CameraController _cameraController = null;
     [Header("Animation")]
     [SerializeField] private Animator _quitAnim = null;
     [SerializeField] private Animator _openSettings = null;
@@ -30,6 +31,7 @@ public class MainMenu : MonoBehaviour
         _settingsMenu.SetActive(false);
         _quitCheck.SetActive(false);
         _encyclopedia.SetActive(false);
+        _cameraController._isMenuing = true;
     }
 
     #region Buttons
@@ -75,6 +77,8 @@ public class MainMenu : MonoBehaviour
     #region Quit Methods
     public void QuitChecking()
     {
+        CheckAnimations(_openEncyclopedia);
+        CheckAnimations(_openSettings);
         PlayAnimations(_quitAnim, _quitCheck);
     }
 

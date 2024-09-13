@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6944660443136
-    m_Localized: Other
+    m_Localized: Controls
     m_Metadata:
       m_Items: []
   - m_Id: 7005272330240
@@ -68,6 +68,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9623218475008
     m_Localized: Are you sure you wish to quit the game?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755650909229056
+    m_Localized: Forward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755842131742720
+    m_Localized: Left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755898104729600
+    m_Localized: Backward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755966459301888
+    m_Localized: Right
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756130796326912
+    m_Localized: Mouse Sensitivity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756326758404096
+    m_Localized: Camera Rotation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756414213836800
+    m_Localized: Camera
     m_Metadata:
       m_Items: []
   references:

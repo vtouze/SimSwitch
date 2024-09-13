@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6944660443136
-    m_Key: Other_Button
+    m_Key: Controls_Button
     m_Metadata:
       m_Items: []
   - m_Id: 7005272330240
@@ -65,6 +65,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9623218475008
     m_Key: QuitContent_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756414213836800
+    m_Key: Camera_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755650909229056
+    m_Key: Forward_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755842131742720
+    m_Key: Left_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755898104729600
+    m_Key: Backward_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755966459301888
+    m_Key: Right_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756130796326912
+    m_Key: MouseSensitivity_Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756326758404096
+    m_Key: CameraRotation_Text
     m_Metadata:
       m_Items: []
   m_Metadata:

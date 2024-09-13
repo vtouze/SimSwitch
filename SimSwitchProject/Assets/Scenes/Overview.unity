@@ -480,9 +480,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cameraTransform: {fileID: 861872907}
   _moveSpeed: 10
-  _zoomSpeed: 10
+  _zoomSpeed: 0.1
   _rotationSpeed: 100
-  _zoomRange: {x: 10, y: 100}
+  _mouseSensitivity: 1
+  _movementActionReference: {fileID: -4840414250705860996, guid: 1303d80bae90e54e2977ded71ddcc218, type: 3}
+  _zoomActionReference: {fileID: 7006808058186956238, guid: 1303d80bae90e54e2977ded71ddcc218, type: 3}
 --- !u!114 &861872909
 MonoBehaviour:
   m_ObjectHideFlags: 0

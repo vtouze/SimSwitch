@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6944660443136
-    m_Localized: Autres
+    m_Localized: "Contr\xF4les"
     m_Metadata:
       m_Items: []
   - m_Id: 7005272330240
@@ -68,6 +68,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9623218475008
     m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter le jeu ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755650909229056
+    m_Localized: Avant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755842131742720
+    m_Localized: Gauche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755898104729600
+    m_Localized: "Arri\xE8re"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 755966459301888
+    m_Localized: Droite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756130796326912
+    m_Localized: "Sensibilit\xE9 de la souris"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756326758404096
+    m_Localized: "Rotation de la cam\xE9ra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 756414213836800
+    m_Localized: "Cam\xE9ra"
     m_Metadata:
       m_Items: []
   references:

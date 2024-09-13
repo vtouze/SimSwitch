@@ -4,41 +4,44 @@ using UnityEngine.InputSystem;
 public class CameraController : MonoBehaviour
 {
     #region Fields
+    [Header("Movement & Rotation")]
     [SerializeField] private Transform _cameraTransform;
     [SerializeField] private float _moveSpeed = 10f;
     [SerializeField] private float _zoomSpeed = 10f;
-    [SerializeField] private float _rotationSpeed = 100f;
-
-    private CameraControls controls;
-
-    private Vector2 movementInput;
-    private Vector2 rotationInput;
-    private float zoomInput;
+    public float _rotationSpeed = 100f;
+    public float _mouseSensitivity = 1f;
+    private Vector3 _currentRotation;
+    public bool _isMenuing = false;
+    
+    [Header("Input")]
+    public InputActionReference _movementActionReference;
+    public InputActionReference _zoomActionReference;
+    private Vector2 _movementInput;
+    private float _zoomInput;
     #endregion Fields
 
     #region Methods
     private void Awake()
     {
-        controls = new CameraControls();
+        LoadSettings();
 
-        controls.Keyboard.Movement.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
-        controls.Keyboard.Movement.canceled += ctx => movementInput = Vector2.zero;
+        _movementActionReference.action.performed += ctx => _movementInput = ctx.ReadValue<Vector2>();
+        _movementActionReference.action.canceled += ctx => _movementInput = Vector2.zero;
 
-        controls.Mouse.Look.performed += ctx => rotationInput = ctx.ReadValue<Vector2>();
-        controls.Mouse.Look.canceled += ctx => rotationInput = Vector2.zero;
-
-        controls.Mouse.Zoom.performed += ctx => zoomInput = ctx.ReadValue<float>();
-        controls.Mouse.Zoom.canceled += ctx => zoomInput = 0f;
+        _zoomActionReference.action.performed += ctx => _zoomInput = ctx.ReadValue<float>();
+        _zoomActionReference.action.canceled += ctx => _zoomInput = 0f;
     }
 
     private void OnEnable()
     {
-        controls.Enable();
+        _movementActionReference.action.Enable();
+        _zoomActionReference.action.Enable();
     }
 
     private void OnDisable()
     {
-        controls.Disable();
+        _movementActionReference.action.Disable();
+        _zoomActionReference.action.Disable();
     }
 
     private void Update()
@@ -50,7 +53,7 @@ public class CameraController : MonoBehaviour
 
     private void HandleMovement()
     {
-        Vector3 moveDirection = new Vector3(movementInput.x, 0, movementInput.y);
+        Vector3 moveDirection = new Vector3(_movementInput.x, 0, _movementInput.y);
         Vector3 relativeMovement = (_cameraTransform.forward * moveDirection.z) + (_cameraTransform.right * moveDirection.x);
         relativeMovement.y = 0;
 
@@ -59,21 +62,43 @@ public class CameraController : MonoBehaviour
 
     private void HandleZoom()
     {
-        if (zoomInput != 0)
+        if (_zoomInput != 0 && !_isMenuing)
         {
-            _cameraTransform.position += _cameraTransform.forward * zoomInput * _zoomSpeed;
+            _cameraTransform.position += _cameraTransform.forward * _zoomInput * _zoomSpeed;
         }
     }
 
     private void HandleRotation()
     {
-        if (rotationInput != Vector2.zero)
+        if (Input.GetMouseButton(1))
         {
-            float rotationX = rotationInput.x * _rotationSpeed * Time.deltaTime;
-            float rotationY = rotationInput.y * _rotationSpeed * Time.deltaTime;
+            float rotationX = Input.GetAxis("Mouse X") * _rotationSpeed * _mouseSensitivity * Time.deltaTime;
+            float rotationY = Input.GetAxis("Mouse Y") * _rotationSpeed * _mouseSensitivity * Time.deltaTime;
 
-            _cameraTransform.Rotate(Vector3.up, rotationX, Space.World);
-            _cameraTransform.Rotate(Vector3.left, rotationY);
+            _currentRotation.x -= rotationY;
+            _currentRotation.y += rotationX;
+
+            _cameraTransform.rotation = Quaternion.Euler(_currentRotation.x, _currentRotation.y, 0);
+        }
+    }
+
+    public void SaveSettings()
+    {
+        PlayerPrefs.SetFloat("RotationSpeed", _rotationSpeed);
+        PlayerPrefs.SetFloat("MouseSensitivity", _mouseSensitivity);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadSettings()
+    {
+        if (PlayerPrefs.HasKey("RotationSpeed"))
+        {
+            _rotationSpeed = PlayerPrefs.GetFloat("RotationSpeed");
+        }
+
+        if (PlayerPrefs.HasKey("MouseSensitivity"))
+        {
+            _mouseSensitivity = PlayerPrefs.GetFloat("MouseSensitivity");
         }
     }
     #endregion Methods
