@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 254827506}
   - component: {fileID: 254827505}
+  - component: {fileID: 254827507}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -216,6 +217,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &254827507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254827504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &712753149
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,9 +624,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9b45ec1ac136bbcab2838e08dcb08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customCursor: {fileID: 2800000, guid: d7bf7ecf141ffdda8b9ab914c20b6857, type: 3}
-  hotSpot: {x: 0, y: 0}
-  defaultCursor: {fileID: 2800000, guid: b54aa63dcdc9f8d27add142ef10c92a7, type: 3}
+  _customCursor: {fileID: 2800000, guid: d7bf7ecf141ffdda8b9ab914c20b6857, type: 3}
+  _hotSpot: {x: 5, y: 5}
+  _defaultCursor: {fileID: 2800000, guid: b54aa63dcdc9f8d27add142ef10c92a7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

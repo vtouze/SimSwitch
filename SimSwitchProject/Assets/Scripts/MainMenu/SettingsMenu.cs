@@ -1,12 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
 using TMPro;
-using UnityEngine.Audio;
-using System.Linq;
-
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -14,7 +9,6 @@ public class SettingsMenu : MonoBehaviour
     [Header("Game Object")]
     [SerializeField] private GameObject[] _tab = null;
     [Header("Toggle")]
-    [SerializeField] private Toggle _fullScreenToggle = null;
     [SerializeField] private Toggle _vSyncToggle = null;
     [Header("Resolutions")]
     [SerializeField] private TMP_Dropdown _resolutionDropdown;
