@@ -11,7 +11,7 @@ Library: /home/stage/Documents/SimSwitch/SimSwitchProject/Temp/BurstOutput/Data/
 --float-mode=Fast
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/home/stage/Documents/SimSwitch/SimSwitchProject/Temp/Burst
---key-folder=/home/stage/Documents/Unity/2022.3.40f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
+--key-folder=/home/stage/Documents/2022.3.40f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
 --decode-folder=/home/stage/Documents/SimSwitch/SimSwitchProject/Library/Burst
 --output=/home/stage/Documents/SimSwitch/SimSwitchProject/Temp/BurstOutput/Data/Plugins/lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -30,7 +30,7 @@ Library: /home/stage/Documents/SimSwitch/SimSwitchProject/Temp/BurstOutput/Data/
 --float-mode=Fast
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/home/stage/Documents/SimSwitch/SimSwitchProject/Temp/Burst
---key-folder=/home/stage/Documents/Unity/2022.3.40f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
+--key-folder=/home/stage/Documents/2022.3.40f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
 --decode-folder=/home/stage/Documents/SimSwitch/SimSwitchProject/Library/Burst
 --output=/home/stage/Documents/SimSwitch/SimSwitchProject/Temp/BurstOutput/Data/Plugins/lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -47,7 +47,7 @@ Library: /home/stage/Documents/SimSwitch/SimSwitchProject/Temp/BurstOutput/Data/
 --target-framework=NetFramework
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/home/stage/Documents/SimSwitch/SimSwitchProject/Temp/Burst
---key-folder=/home/stage/Documents/Unity/2022.3.40f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
+--key-folder=/home/stage/Documents/2022.3.40f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
 --decode-folder=/home/stage/Documents/SimSwitch/SimSwitchProject/Library/Burst
 --output=/home/stage/Documents/SimSwitch/SimSwitchProject/Temp/BurstOutput/Data/Plugins/lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -70,7 +70,7 @@ Library: /home/stage/Documents/SimSwitch/SimSwitchProject/Temp/BurstOutput/Data/
 --target-framework=NetFramework
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/home/stage/Documents/SimSwitch/SimSwitchProject/Temp/Burst
---key-folder=/home/stage/Documents/Unity/2022.3.40f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
+--key-folder=/home/stage/Documents/2022.3.40f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport
 --decode-folder=/home/stage/Documents/SimSwitch/SimSwitchProject/Library/Burst
 --output=/home/stage/Documents/SimSwitch/SimSwitchProject/Temp/BurstOutput/Data/Plugins/lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/

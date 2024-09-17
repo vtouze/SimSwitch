@@ -2381,13 +2381,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 839014507611658711}
   - {fileID: 7614406201813089242}
   - {fileID: 3023958246437120911}
   - {fileID: 6267304980847185964}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &4412231683766102618
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2963,13 +2963,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 6267304980847185964}
   - {fileID: 3023958246437120911}
   - {fileID: 7614406201813089242}
   - {fileID: 839014507611658711}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &1073322896163748798
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15034,13 +15034,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 6267304980847185964}
   - {fileID: 839014507611658711}
   - {fileID: 7614406201813089242}
   - {fileID: 3023958246437120911}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &5463287964022271895
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16398,13 +16398,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 7614406201813089242}
   - {fileID: 839014507611658711}
   - {fileID: 6267304980847185964}
   - {fileID: 3023958246437120911}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &2893595695450953009
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18718,13 +18718,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 7614406201813089242}
   - {fileID: 3023958246437120911}
   - {fileID: 6267304980847185964}
   - {fileID: 839014507611658711}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &3444587322744267446
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22373,13 +22373,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 839014507611658711}
   - {fileID: 7614406201813089242}
   - {fileID: 3023958246437120911}
   - {fileID: 6267304980847185964}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &300863895046833902
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22680,13 +22680,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 7614406201813089242}
   - {fileID: 839014507611658711}
   - {fileID: 6267304980847185964}
   - {fileID: 3023958246437120911}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &3456683270847257883
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25478,13 +25478,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 7614406201813089242}
   - {fileID: 3023958246437120911}
   - {fileID: 6267304980847185964}
   - {fileID: 839014507611658711}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &6111247964592234671
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29333,13 +29333,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 839014507611658711}
   - {fileID: 7614406201813089242}
   - {fileID: 3023958246437120911}
   - {fileID: 6267304980847185964}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &6311094743486323045
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29663,13 +29663,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 3023958246437120911}
   - {fileID: 7614406201813089242}
   - {fileID: 839014507611658711}
   - {fileID: 6267304980847185964}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &21622900448826711
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34042,13 +34042,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 3023958246437120911}
   - {fileID: 6267304980847185964}
   - {fileID: 839014507611658711}
   - {fileID: 7614406201813089242}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &2990288564420315397
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34978,13 +34978,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 3023958246437120911}
   - {fileID: 7614406201813089242}
   - {fileID: 839014507611658711}
   - {fileID: 6267304980847185964}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &7504935894711129358
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40212,13 +40212,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 3023958246437120911}
   - {fileID: 7614406201813089242}
   - {fileID: 839014507611658711}
   - {fileID: 6267304980847185964}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &5364914714266208404
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41605,13 +41605,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
   - {fileID: 7614406201813089242}
   - {fileID: 3023958246437120911}
   - {fileID: 6267304980847185964}
   - {fileID: 839014507611658711}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &8385260674543557815
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -45276,13 +45276,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca2b2654c9af4e51bbab4811f92cf90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
+  _waypoints:
+  - {fileID: 839014507611658711}
   - {fileID: 7614406201813089242}
   - {fileID: 3023958246437120911}
   - {fileID: 6267304980847185964}
-  - {fileID: 839014507611658711}
-  moveSpeed: 5
-  waypointThreshold: 0.5
+  _moveSpeed: 5
+  _waypointThreshold: 0.5
 --- !u!54 &7885081516164060365
 Rigidbody:
   m_ObjectHideFlags: 0
