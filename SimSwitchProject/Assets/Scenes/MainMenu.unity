@@ -5650,7 +5650,6 @@ MonoBehaviour:
   - {fileID: 889475213}
   - {fileID: 43558553}
   - {fileID: 755769871}
-  _fullScreenToggle: {fileID: 1277721087}
   _vSyncToggle: {fileID: 478366608}
   _resolutionDropdown: {fileID: 918036257}
   _qualityDropdown: {fileID: 2040662392}

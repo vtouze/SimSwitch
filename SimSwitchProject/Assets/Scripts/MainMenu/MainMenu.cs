@@ -31,8 +31,13 @@ public class MainMenu : MonoBehaviour
         _cameraController._isMenuing = true;
     }
 
-    #region Buttons
+    private void Update()
+    {
+        QuitToDesktopAnimation();
+        SwitchSceneAnimation();
+    }
 
+    #region Buttons
     public void Play()
     {
         CheckAnimations(_openSettings);
@@ -69,9 +74,6 @@ public class MainMenu : MonoBehaviour
         PlayAnimations(_openEncyclopedia, _encyclopedia);
     }
 
-    #endregion Buttons
-
-    #region Quit Methods
     public void QuitChecking()
     {
         CheckAnimations(_openEncyclopedia);
@@ -79,19 +81,21 @@ public class MainMenu : MonoBehaviour
         PlayAnimations(_quitAnim, _quitCheck);
     }
 
-    private void Update()
+    #endregion Buttons
+    #region Quit Methods
+    public void QuitY()
     {
-        if (_hasFinishedQuitAnimation == true && _fadeAnimationTime > 0)
-        {
-            _fadeInCircle.SetActive(true);
-            _fadeAnimationTime -= Time.deltaTime;
-        }
+        _hasFinishedQuitAnimation = true;
+        //Application.OpenURL("https://teez21.itch.io/testwebgl2022");
+    }
 
-        if (_fadeAnimationTime <= 0 && _hasFinishedQuitAnimation == true)
-        {
-            Application.Quit();
-        }
+    public void QuitN()
+    {
+        CheckAnimations(_quitAnim);
+    }
 
+    private void SwitchSceneAnimation()
+    {
         if (_hasFinishedPlayAnimation == true && _fadeAnimationTime > 0)
         {
             _fadeInCircle.SetActive(true);
@@ -104,16 +108,22 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void QuitY()
+    private void QuitToDesktopAnimation()
     {
-        _hasFinishedQuitAnimation = true;
-        //Application.OpenURL("https://teez21.itch.io/testwebgl2022");
-        //Application.Quit();
-    }
+        if (_hasFinishedQuitAnimation == true && _fadeAnimationTime > 0)
+        {
+            _fadeInCircle.SetActive(true);
+            _fadeAnimationTime -= Time.deltaTime;
+        }
 
-    public void QuitN()
-    {
-        CheckAnimations(_quitAnim);
+        if (_fadeAnimationTime <= 0 && _hasFinishedQuitAnimation == true)
+        {
+            #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+            #else
+                Application.Quit();
+            #endif
+        }
     }
     #endregion Quit Methods
     #endregion Methods

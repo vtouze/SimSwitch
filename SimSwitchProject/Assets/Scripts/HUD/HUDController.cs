@@ -24,29 +24,24 @@ public class HUDController : MonoBehaviour
 
     private void Update()
     {
-        if (_hasFinishedQuitDesktopAnimation == true && _fadeAnimationTime > 0)
-        {
-            _fadeInCircle.SetActive(true);
-            _fadeAnimationTime -= Time.deltaTime;
-        }
-
-        if (_fadeAnimationTime <= 0 && _hasFinishedQuitDesktopAnimation == true)
-        {
-            Application.Quit();
-        }
-
-        if (_hasFinishedQuitMenuAnimation == true && _fadeAnimationTime > 0)
-        {
-            _fadeInCircle.SetActive(true);
-            _fadeAnimationTime -= Time.deltaTime;
-        }
-
-        if (_fadeAnimationTime <= 0 && _hasFinishedQuitMenuAnimation == true)
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
+        QuickEscape();
+        QuitToDesktopAnimation();
+        QuitToMainMenuAnimation();
     }
 
+
+    private void QuickEscape()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(_openPauseMenu.GetBool("isOpeningPauseMenu"))
+            {
+                _openPauseMenu.SetBool("isOpeningPauseMenu", false);
+            }
+        }
+    }
+    
+    #region Pause Menu
     public void OpenPauseMenu()
     {
         _pauseMenu.SetActive(true);
@@ -62,6 +57,7 @@ public class HUDController : MonoBehaviour
         _pauseMenu.gameObject.GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
+    #region Quit Methods
     public void QuitToMainMenu()
     {
         _hasFinishedQuitMenuAnimation = true;
@@ -71,5 +67,39 @@ public class HUDController : MonoBehaviour
     {
         _hasFinishedQuitDesktopAnimation = true;
     }
+
+    private void QuitToDesktopAnimation()
+    {
+        if (_hasFinishedQuitDesktopAnimation == true && _fadeAnimationTime > 0)
+        {
+            _fadeInCircle.SetActive(true);
+            _fadeAnimationTime -= Time.deltaTime;
+        }
+
+        if (_fadeAnimationTime <= 0 && _hasFinishedQuitDesktopAnimation == true)
+        {
+            #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+            #else
+                Application.Quit();
+            #endif
+        }
+    }
+
+    private void QuitToMainMenuAnimation()
+    {
+        if (_hasFinishedQuitMenuAnimation == true && _fadeAnimationTime > 0)
+        {
+            _fadeInCircle.SetActive(true);
+            _fadeAnimationTime -= Time.deltaTime;
+        }
+
+        if (_fadeAnimationTime <= 0 && _hasFinishedQuitMenuAnimation == true)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
+    #endregion Quit Methods
+    #endregion Pause Menu
     #endregion Methods
 }
