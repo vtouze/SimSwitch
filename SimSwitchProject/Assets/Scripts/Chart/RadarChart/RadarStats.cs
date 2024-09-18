@@ -1,104 +1,44 @@
 using System;
 using UnityEngine;
 
-public class RadarStats {
+[System.Serializable]
+public class RadarStat {
+    public string Name;
+    public int Value;
+}
+
+public class RadarStats : MonoBehaviour {
+
+    public RadarStat[] radarStats;
 
     public event EventHandler OnStatsChanged;
 
-    public static int STAT_MIN = 0;
-    public static int STAT_MAX = 20;
-
-    public enum Type {
-        Attack,
-        Defence,
-        Speed,
-        Mana,
-        Health,
-        A,
-        B,
-        C,
-        D,
+    private void Awake() {
+        // Initialize or handle any setup if necessary
     }
 
-    private SingleStat attackStat;
-    private SingleStat defenceStat;
-    private SingleStat speedStat;
-    private SingleStat manaStat;
-    private SingleStat healthStat;
-    private SingleStat _a;
-    private SingleStat _b;
-    private SingleStat _c;
-    private SingleStat _d;
-
-
-
-    public RadarStats(int attackStatAmount, int defenceStatAmount, int speedStatAmount, int manaStatAmount, int healthStatAmount, int a, int b, int c, int d) {
-        attackStat = new SingleStat(attackStatAmount);
-        defenceStat = new SingleStat(defenceStatAmount);
-        speedStat = new SingleStat(speedStatAmount);
-        manaStat = new SingleStat(manaStatAmount);
-        healthStat = new SingleStat(healthStatAmount);
-        _a = new SingleStat(a);
-        _b = new SingleStat(b);
-        _c = new SingleStat(c);
-        _d = new SingleStat(d);
+    public int GetEdgesCount() {
+        return radarStats.Length;
     }
 
-
-    private SingleStat GetSingleStat(Type statType) {
-        switch (statType) {
-        default:
-        case Type.Attack:       return attackStat;
-        case Type.Defence:      return defenceStat;
-        case Type.Speed:        return speedStat;
-        case Type.Mana:         return manaStat;
-        case Type.Health:       return healthStat;
-        case Type.A:            return _a;
-        case Type.B:            return _b;
-        case Type.C:            return _c;
-        case Type.D:            return _d;
+    public void SetStatAmount(int index, int statAmount) {
+        if (index >= 0 && index < radarStats.Length) {
+            radarStats[index].Value = Mathf.Clamp(statAmount, 0, 20);
+            OnStatsChanged?.Invoke(this, EventArgs.Empty);
         }
     }
-    
-    public void SetStatAmount(Type statType, int statAmount) {
-        GetSingleStat(statType).SetStatAmount(statAmount);
-        if (OnStatsChanged != null) OnStatsChanged(this, EventArgs.Empty);
-    }
 
-    public void IncreaseStatAmount(Type statType) {
-        SetStatAmount(statType, GetStatAmount(statType) + 1);
-    }
-
-    public void DecreaseStatAmount(Type statType) {
-        SetStatAmount(statType, GetStatAmount(statType) - 1);
-    }
-
-    public int GetStatAmount(Type statType) {
-        return GetSingleStat(statType).GetStatAmount();
-    }
-
-    public float GetStatAmountNormalized(Type statType) {
-        return GetSingleStat(statType).GetStatAmountNormalized();
-    }
-
-    private class SingleStat {
-
-        private int stat;
-
-        public SingleStat(int statAmount) {
-            SetStatAmount(statAmount);
+    public int GetStatAmount(int index) {
+        if (index >= 0 && index < radarStats.Length) {
+            return radarStats[index].Value;
         }
+        return 0;
+    }
 
-        public void SetStatAmount(int statAmount) {
-            stat = Mathf.Clamp(statAmount, STAT_MIN, STAT_MAX);
+    public float GetStatAmountNormalized(int index) {
+        if (index >= 0 && index < radarStats.Length) {
+            return (float)radarStats[index].Value / 20; // Assuming 20 is the max value
         }
-
-        public int GetStatAmount() {
-            return stat;
-        }
-
-        public float GetStatAmountNormalized() {
-            return (float)stat / STAT_MAX;
-        }
+        return 0f;
     }
 }

@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Transform _cameraTransform;
     [SerializeField] private float _moveSpeed = 10f;
     [SerializeField] private float _zoomSpeed = 10f;
+    //[HideInInspector]
     public float _rotationSpeed = 100f;
     public float _mouseSensitivity = 1f;
     private Vector3 _currentRotation;
