@@ -4,31 +4,31 @@ public class RadarChartEnums : MonoBehaviour
 {
     public enum RadarChart3Edges
     {
-        Aspect1 = 6,
-        Aspect2 = 9,
+        Aspect1 = 5,
+        Aspect2 = 10,
         Aspect3 = 15,
     }
 
     public enum RadarChart5Edges
     {
-        Aspect1 = 8,
-        Aspect2 = 2,
-        Aspect3 = 18,
-        Aspect4 = 14,
+        Aspect1 = 4,
+        Aspect2 = 8,
+        Aspect3 = 12,
+        Aspect4 = 16,
         Aspect5 = 20,
     }
 
     public enum RadarChart9Edges
     {
-        Aspect1 = 4,
-        Aspect2 = 10,
-        Aspect3 = 7,
-        Aspect4 = 16,
-        Aspect5 = 9,
-        Aspect6 = 11,
-        Aspect7 = 7,
-        Aspect8 = 19,
-        Aspect9 = 3
+        Aspect1 = 2,
+        Aspect2 = 4,
+        Aspect3 = 6,
+        Aspect4 = 8,
+        Aspect5 = 10,
+        Aspect6 = 12,
+        Aspect7 = 14,
+        Aspect8 = 16,
+        Aspect9 = 18,
     }
 
     public enum NumberOfEdges
