@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class HUDController : MonoBehaviour
@@ -6,6 +7,7 @@ public class HUDController : MonoBehaviour
     [Header("Game Objects")]
     [SerializeField] private GameObject _hud = null;
     [SerializeField] private GameObject _pauseMenu = null;
+    [SerializeField] private CameraController _cameraController = null;
 
     [Header("Animations")]
     [SerializeField] private Animator _openPauseMenu = null;
@@ -34,29 +36,48 @@ public class HUDController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(_openPauseMenu.GetBool("isOpeningPauseMenu"))
+            if(_openPauseMenu.GetBool("isOpeningMenu"))
             {
-                _openPauseMenu.SetBool("isOpeningPauseMenu", false);
+                _openPauseMenu.SetBool("isOpeningMenu", false);
             }
         }
     }
     
-    #region Pause Menu
-    public void OpenPauseMenu()
+    #region Menu
+    public void OpenMenuListener(GameObject gameObject)
     {
-        _pauseMenu.SetActive(true);
-        _openPauseMenu.SetBool("isOpeningPauseMenu", true);
-        _pauseMenu.gameObject.GetComponent<CanvasGroup>().interactable = true;
-        _pauseMenu.gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        OpenMenu(_cameraController, gameObject);
     }
 
-    public void ClosePauseMenu()
+    public void CloseMenuListener(GameObject gameobject)
     {
-        _openPauseMenu.SetBool("isOpeningPauseMenu", false);
-        _pauseMenu.gameObject.GetComponent<CanvasGroup>().interactable = false;
-        _pauseMenu.gameObject.GetComponent<CanvasGroup>().blocksRaycasts = false;
+        CloseMenu(_cameraController, gameobject);
     }
 
+    public void OpenMenu(CameraController cameraController, GameObject gameObject)
+    {
+        cameraController._isMenuing = true;
+        gameObject.SetActive(true);
+        gameObject.GetComponent<Animator>().SetBool("isOpeningMenu", true);
+        gameObject.GetComponent<CanvasGroup>().interactable = true;
+        gameObject.GetComponent<CanvasGroup>().interactable = true;
+    }
+
+    public void CloseMenu(CameraController cameraController, GameObject gameObject)
+    {
+        StartCoroutine(AnimationExit(gameObject));
+        cameraController._isMenuing = false;
+        gameObject.GetComponent<Animator>().SetBool("isOpeningMenu", false);
+        gameObject.GetComponent<CanvasGroup>().interactable = true;
+        gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+    }
+
+    IEnumerator AnimationExit(GameObject gameObject)
+    {
+        yield return new WaitForSeconds(1);
+        gameObject.SetActive(false);
+    }
+    #endregion Menu
     #region Quit Methods
     public void QuitToMainMenu()
     {
@@ -100,6 +121,5 @@ public class HUDController : MonoBehaviour
         }
     }
     #endregion Quit Methods
-    #endregion Pause Menu
     #endregion Methods
 }

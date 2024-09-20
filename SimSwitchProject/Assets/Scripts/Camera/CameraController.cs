@@ -8,11 +8,10 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Transform _cameraTransform;
     [SerializeField] private float _moveSpeed = 10f;
     [SerializeField] private float _zoomSpeed = 10f;
-    //[HideInInspector]
     public float _rotationSpeed = 100f;
     public float _mouseSensitivity = 1f;
     private Vector3 _currentRotation;
-    public bool _isMenuing = false;
+    [HideInInspector] public bool _isMenuing = false;
     
     [Header("Input")]
     public InputActionReference _movementActionReference;
@@ -54,11 +53,15 @@ public class CameraController : MonoBehaviour
 
     private void HandleMovement()
     {
+        if(!_isMenuing)
+        {
+
         Vector3 moveDirection = new Vector3(_movementInput.x, 0, _movementInput.y);
         Vector3 relativeMovement = (_cameraTransform.forward * moveDirection.z) + (_cameraTransform.right * moveDirection.x);
         relativeMovement.y = 0;
 
         _cameraTransform.Translate(relativeMovement * _moveSpeed * Time.deltaTime, Space.World);
+        }
     }
 
     private void HandleZoom()
@@ -71,7 +74,7 @@ public class CameraController : MonoBehaviour
 
     private void HandleRotation()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) & !_isMenuing)
         {
             float rotationX = Input.GetAxis("Mouse X") * _rotationSpeed * _mouseSensitivity * Time.deltaTime;
             float rotationY = Input.GetAxis("Mouse Y") * _rotationSpeed * _mouseSensitivity * Time.deltaTime;

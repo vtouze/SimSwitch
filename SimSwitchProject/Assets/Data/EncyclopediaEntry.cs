@@ -1,7 +1,6 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Encyclopedia Entry", menuName = "Encyclopedia/Entry")]
+[CreateAssetMenu(fileName = "Encylopedia Entry", menuName = "ScriptableObjects/EncylopediaEntry", order = 2)]
 public class EncyclopediaEntry : ScriptableObject
 {
     public string _entryName;
