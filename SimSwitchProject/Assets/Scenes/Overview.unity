@@ -3105,7 +3105,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 327826957}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1458726369}
+        m_TargetAssemblyTypeName: LawsMenu, Assembly-CSharp
+        m_MethodName: LowButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &348812141
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,6 +7413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 865270454}
   - component: {fileID: 865270455}
+  - component: {fileID: 865270456}
   m_Layer: 5
   m_Name: TaxFuel
   m_TagString: Untagged
@@ -7455,6 +7468,36 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &865270456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865270453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ba81672b22dec4ebe3bfec29d81d63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nullBackground: {fileID: 21300000, guid: a5e3c66009a053d809a1a486cc20eb2e, type: 3}
+  _lowBackground: {fileID: 21300000, guid: 82898a4e1eee5a4adb3710eee7b95a6a, type: 3}
+  _mediumBackground: {fileID: 21300000, guid: 1a3a854e62d70ca7aa8137d8631728fa, type: 3}
+  _highBackground: {fileID: 21300000, guid: cca86ee8b7ff6b7ffaf1512ead9c2ae5, type: 3}
+  _lowIconNormal: {fileID: 21300000, guid: 223de5b3c157135e690a803938984a00, type: 3}
+  _lowIconSelected: {fileID: 21300000, guid: 647401ee54833774aa6def080f488175, type: 3}
+  _mediumIconNormal: {fileID: 21300000, guid: 67d8eadca489953a7a497857583eb415, type: 3}
+  _mediumIconSelected: {fileID: 21300000, guid: 7e11738e36f53c78095ccaecb8045f0c, type: 3}
+  _highIconNormal: {fileID: 21300000, guid: 421dae90960e9c6eda4cb6996b3cc21b, type: 3}
+  _highIconSelected: {fileID: 21300000, guid: 39cf65e1c8c982ba8b526fecdc311f0a, type: 3}
+  _horizontalBoxButtons:
+  - {fileID: 2080897005}
+  - {fileID: 912289071}
+  - {fileID: 1423652086}
+  _icons:
+  - {fileID: 1903571347}
+  - {fileID: 1937320465}
+  - {fileID: 348812143}
 --- !u!1 &904670797
 GameObject:
   m_ObjectHideFlags: 0
@@ -7714,7 +7757,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 912289069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 865270456}
+        m_TargetAssemblyTypeName: LawsMenu, Assembly-CSharp
+        m_MethodName: MediumButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &913176245
 GameObject:
   m_ObjectHideFlags: 0
@@ -10103,7 +10158,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1152337248}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1458726369}
+        m_TargetAssemblyTypeName: LawsMenu, Assembly-CSharp
+        m_MethodName: MediumButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1184142132
 GameObject:
   m_ObjectHideFlags: 0
@@ -12130,7 +12197,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1397767186}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1458726369}
+        m_TargetAssemblyTypeName: LawsMenu, Assembly-CSharp
+        m_MethodName: HighButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1423652082
 GameObject:
   m_ObjectHideFlags: 0
@@ -12251,7 +12330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1423652084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 865270456}
+        m_TargetAssemblyTypeName: LawsMenu, Assembly-CSharp
+        m_MethodName: HighButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1432081864
 GameObject:
   m_ObjectHideFlags: 0
@@ -12651,6 +12742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1458726367}
   - component: {fileID: 1458726368}
+  - component: {fileID: 1458726369}
   m_Layer: 5
   m_Name: ParkingPricing
   m_TagString: Untagged
@@ -12705,6 +12797,36 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1458726369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458726366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ba81672b22dec4ebe3bfec29d81d63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nullBackground: {fileID: 21300000, guid: a5e3c66009a053d809a1a486cc20eb2e, type: 3}
+  _lowBackground: {fileID: 21300000, guid: 82898a4e1eee5a4adb3710eee7b95a6a, type: 3}
+  _mediumBackground: {fileID: 21300000, guid: 1a3a854e62d70ca7aa8137d8631728fa, type: 3}
+  _highBackground: {fileID: 21300000, guid: cca86ee8b7ff6b7ffaf1512ead9c2ae5, type: 3}
+  _lowIconNormal: {fileID: 21300000, guid: 223de5b3c157135e690a803938984a00, type: 3}
+  _lowIconSelected: {fileID: 21300000, guid: 647401ee54833774aa6def080f488175, type: 3}
+  _mediumIconNormal: {fileID: 21300000, guid: 67d8eadca489953a7a497857583eb415, type: 3}
+  _mediumIconSelected: {fileID: 21300000, guid: 7e11738e36f53c78095ccaecb8045f0c, type: 3}
+  _highIconNormal: {fileID: 21300000, guid: 421dae90960e9c6eda4cb6996b3cc21b, type: 3}
+  _highIconSelected: {fileID: 21300000, guid: 39cf65e1c8c982ba8b526fecdc311f0a, type: 3}
+  _horizontalBoxButtons:
+  - {fileID: 327826959}
+  - {fileID: 1152337250}
+  - {fileID: 1397767188}
+  _icons:
+  - {fileID: 1105734300}
+  - {fileID: 1877122262}
+  - {fileID: 1307120998}
 --- !u!1 &1462592440
 GameObject:
   m_ObjectHideFlags: 0
@@ -18534,7 +18656,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2080897003}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 865270456}
+        m_TargetAssemblyTypeName: LawsMenu, Assembly-CSharp
+        m_MethodName: LowButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2085267226
 GameObject:
   m_ObjectHideFlags: 0
