@@ -9,6 +9,7 @@ public class HUDController : MonoBehaviour
     [SerializeField] private GameObject _pauseMenu = null;
     [SerializeField] private CameraController _cameraController = null;
     [SerializeField] private GameObject _newspaperMenu = null;
+    [SerializeField] private GameObject _lawsMenu = null;
 
     [Header("Animations")]
     [SerializeField] private Animator _openPauseMenu = null;
@@ -24,6 +25,7 @@ public class HUDController : MonoBehaviour
         _hud.SetActive(true);
         _pauseMenu.SetActive(false);
         _newspaperMenu.SetActive(false);
+        _lawsMenu.SetActive(false);
     }
 
     private void Update()

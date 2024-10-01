@@ -16,14 +16,31 @@ public class LawsMenu : MonoBehaviour
     [SerializeField] private Sprite _highIconNormal = null;
     [SerializeField] private Sprite _highIconSelected = null;
 
-    [SerializeField] private Button[] _horizontalBoxButtons = null;
-    [SerializeField] private Image[] _icons = null;
+    private Button[] _horizontalBoxButtons;
+    private Image[] _icons;
 
     private int _selectedButtonIndex = -1;
     #endregion Fields
 
     void Start()
     {
+        _horizontalBoxButtons = new Button[3];
+        _icons = new Image[3];
+
+        _horizontalBoxButtons[0] = transform.Find("PriorityButtons/Low_Background").GetComponent<Button>();
+        _icons[0] = transform.Find("PriorityButtons/Low_Background/Low_Icon").GetComponent<Image>();
+
+        _horizontalBoxButtons[1] = transform.Find("PriorityButtons/Medium_Background").GetComponent<Button>();
+        _icons[1] = transform.Find("PriorityButtons/Medium_Background/Medium_Icon").GetComponent<Image>();
+
+        _horizontalBoxButtons[2] = transform.Find("PriorityButtons/High_Background").GetComponent<Button>();
+        _icons[2] = transform.Find("PriorityButtons/High_Background/High_Icon").GetComponent<Image>();
+
+        _horizontalBoxButtons[0].onClick.AddListener(LowButton);
+        _horizontalBoxButtons[1].onClick.AddListener(MediumButton);
+        _horizontalBoxButtons[2].onClick.AddListener(HighButton);
+
+        _selectedButtonIndex = 1;
         UpdateButtons(_selectedButtonIndex);
     }
 
