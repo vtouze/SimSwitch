@@ -22,6 +22,7 @@ public class LawsMenu : MonoBehaviour
     private int _selectedButtonIndex = -1;
     #endregion Fields
 
+    #region Methods
     void Start()
     {
         _horizontalBoxButtons = new Button[3];
@@ -106,4 +107,5 @@ public class LawsMenu : MonoBehaviour
             default: return null;
         }
     }
+    #endregion Methods
 }
