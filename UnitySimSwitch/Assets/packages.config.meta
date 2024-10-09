@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 86a43bffc64f64e04b63c2b9dcb33b12
+guid: b289e7c5722c18a1883830cd10c1a76e
 labels:
 - NuGetForUnity
 PluginImporter:
@@ -15,17 +15,6 @@ PluginImporter:
   platformData:
   - first:
       Any: 
-    second:
-      enabled: 0
-      settings: {}
-  - first:
-      Editor: Editor
-    second:
-      enabled: 0
-      settings:
-        DefaultValueInitialized: true
-  - first:
-      Windows Store Apps: WindowsStoreApps
     second:
       enabled: 1
       settings: {}
