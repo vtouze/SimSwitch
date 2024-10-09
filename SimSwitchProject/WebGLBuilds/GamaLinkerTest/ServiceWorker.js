@@ -1,9 +1,9 @@
-const cacheName = "DefaultCompany-SimSwitchProject-0.1";
+const cacheName = "IRD-Montpellier-SimSwitchProject-0.1";
 const contentToCache = [
-    "Build/WebGL Builds.loader.js",
-    "Build/WebGL Builds.framework.js.unityweb",
-    "Build/WebGL Builds.data.unityweb",
-    "Build/WebGL Builds.wasm.unityweb",
+    "Build/GamaLinkerTest.loader.js",
+    "Build/GamaLinkerTest.framework.js.unityweb",
+    "Build/GamaLinkerTest.data.unityweb",
+    "Build/GamaLinkerTest.wasm.unityweb",
     "TemplateData/style.css"
 
 ];
