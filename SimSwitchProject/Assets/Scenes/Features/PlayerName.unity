@@ -625,7 +625,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _customCursor: {fileID: 2800000, guid: d7bf7ecf141ffdda8b9ab914c20b6857, type: 3}
-  _hotSpot: {x: 5, y: 5}
   _defaultCursor: {fileID: 2800000, guid: b54aa63dcdc9f8d27add142ef10c92a7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1366
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 56
+  controlID: 118
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 54
+  controlID: 41
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -122,8 +122,8 @@ MonoBehaviour:
     y: 0
     width: 605
     height: 1316
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -149,8 +149,8 @@ MonoBehaviour:
     y: 0
     width: 493
     height: 814
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 55
+  controlID: 42
   draggingID: 0
 --- !u!114 &12
 MonoBehaviour:
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 23
+  controlID: 43
   draggingID: 0
 --- !u!114 &13
 MonoBehaviour:
@@ -1216,9 +1216,9 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 1
-    m_SearchArea: 1
+    m_SearchArea: 3
     m_Folders:
-    - Assets/GamaLinker/Prefabs/GAMA Link
+    - Assets/GamaLinker/Prefabs/Visual Prefabs/City/Shader
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1226,16 +1226,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 77
   m_LastFolders:
-  - Assets/GamaLinker/Prefabs/GAMA Link
+  - Assets/GamaLinker/Prefabs/Visual Prefabs/City/Shader
   m_LastFoldersGridSize: 77
   m_LastProjectPath: /home/stage/Documents/SimSwitch/SimSwitchProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 127}
-    m_SelectedIDs: 1a770000
-    m_LastClickedID: 30490
-    m_ExpandedIDs: 00000000aa760000bc760000c8760000d4760000d6760000e2760000ea760000167700001e7700003c8d000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 3}
+    m_SelectedIDs: d6760000
+    m_LastClickedID: 30422
+    m_ExpandedIDs: 0000000020700000227000002470000026700000287000002a700000847600008a7600009a760000a4760000bc760000cc760000e2760000da9b2b00dc9b2b00669c2b0000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1263,7 +1263,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aa760000
+    m_ExpandedIDs: 0000000020700000227000002470000026700000287000002a700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1403,9 +1403,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1a770000
+      m_SelectedIDs: 6c020000
       m_LastClickedID: 0
-      m_ExpandedIDs: 20e5ffff3aefffff9af4ffff74f5ffffb0f6ffff2cfbffffe26e0000ae8c0000ea8d0000728e0000
+      m_ExpandedIDs: d251feffec51feff1252feff5c52feffa654feffc855fefff055feffd457feffee57feff927dfeffda7dfeff6e7efeffae7efeffd67efefffe7efeff0e8ffefff28ffeffc6aefeff92b7feffdeb7feff36bdfeff88bdfeffb4befeffe4c0feff08c4feff46c4feffb2c4feff6ce1feff2cfbffffde6e00009a9b2b00
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1421,7 +1421,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 6}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1824,9 +1824,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: -21.017096, z: 90}
+    m_Target: {x: 26.813, y: 7.5, z: -59.1539}
     speed: 2
-    m_Value: {x: 0, y: -21.017096, z: 90}
+    m_Value: {x: 26.813, y: 7.5, z: -59.1539}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1876,9 +1876,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 129.956
+    m_Target: 10.805092
     speed: 2
-    m_Value: 129.956
+    m_Value: 10.805092
   m_Ortho:
     m_Target: 1
     speed: 2

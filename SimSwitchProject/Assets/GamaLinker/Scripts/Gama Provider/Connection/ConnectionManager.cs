@@ -8,7 +8,6 @@ using System.Linq;
 
 public class ConnectionManager : WebSocketConnector
 {
-     
     private ConnectionState currentState;
 
     // called when the connection state is manually changed
