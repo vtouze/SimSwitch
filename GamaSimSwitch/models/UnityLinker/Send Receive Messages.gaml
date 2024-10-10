@@ -1,10 +1,3 @@
-/**
-* Name: SendAndReceiveMessage
-* Show how to send and receive a message from Unity. It works with the Scene "Assets/Scenes/Code Example/Send Receive Message" from the Unity Template
-* Author: Patrick Taillandier
-* Tags: Unity, messages
-*/
-
 model SendAndReceiveMessagecant
 
 
@@ -46,9 +39,8 @@ species unity_player parent: abstract_unity_player;
 experiment SimpleMessage type: gui ;
 
 
-//default Unity (VR) experiment that inherit from the SimpleMessage experiment
 //The unity type allows to create at the initialization one unity_linker agent
-experiment vr_xp parent:SimpleMessage autorun: false type: unity {
+experiment unity_xp parent:SimpleMessage autorun: false type: unity {
 	//minimal time between two simulation step
 	float minimum_cycle_duration <- 0.05;
 

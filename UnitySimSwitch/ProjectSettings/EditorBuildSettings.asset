@@ -18,10 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Features/Loading/Loading_B.unity
     guid: 77dde739725b6cacdbb76c926933d4fc
   - enabled: 1
-    path: Assets/GamaLinker/Scenes/ExampleMessageExchange.unity
+    path: Assets/Scenes/ExampleMessageExchange.unity
     guid: cb429c3fbf9374a52ae523abd6cf69a0
   - enabled: 1
-    path: Assets/GamaLinker/Scenes/ExampleReceiveDynamicData.unity
+    path: Assets/Scenes/ExampleReceiveDynamicData.unity
     guid: 79e8a5505fa0d44f8a69aaed6bb3343f
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 43f3c97d871a0099e90b62fbb197d1b4, type: 2}
