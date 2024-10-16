@@ -1,5 +1,7 @@
-model SendAndReceiveMessagecant
+model SendAndReceiveMessages
 
+import "../UnityLinker/Simulation.gaml"
+import "../SimSwitch/Population.gaml"
 
 //Species that will make the link between GAMA and Unity. It has to inherit from the built-in species asbtract_unity_linker
 species unity_linker parent: abstract_unity_linker {
@@ -13,20 +15,26 @@ species unity_linker parent: abstract_unity_linker {
 	
 	
 	//reflex activated only when there is at least one player and every 100 cycles
-	reflex send_message when: every(100 #cycle) and not empty(unity_player){
-		
-		int test <- 2109;
-		
-		//send a message to all players; the message should be a map (key: name of the attribute; value: value of this attribute)
+	action cc {
+		city c <- world.CITY_BUILDER();
+    	ask world {do POP_SYNTH(c);}
+		write "Population has been initialized";
+    	
+    	//send a message to all players; the message should be a map (key: name of the attribute; value: value of this attribute)
 		//the name of the attribute should be the same as the variable in the serialized class in Unity (c# script) 
-		write "Send message: "  + cycle + test;
-		do send_message players: unity_player as list mes: ["cycle":: cycle, "test"::test];
-
+		write "Send message: "  + cycle;
+		do send_message players: unity_player as list mes: ["city":: c, "district"::c.q, "households"::household];
+		
 	}
 	
 	//action that will be called by the Unity player to send a message to the GAMA simulation
 	action receive_message (string id, string mes) {
 		write "Player " + id + " send the message: " + mes;
+	}
+	
+	action receive_experiment (string status, string exp_id){
+		write status + ": " + exp_id;
+		do send_message players: unity_player as list mes: ["status"::status];
 	}
 }
 
@@ -55,7 +63,7 @@ experiment unity_xp parent:SimpleMessage autorun: false type: unity {
 		}
 	}
 
-	//action called by the middleware when a plyer is remove from the simulation
+	//action called by the middleware when a player is remove from the simulation
 	action remove_player(string id_input) {
 		if (not empty(unity_player)) {
 			ask first(unity_player where (each.name = id_input)) {

@@ -17,8 +17,6 @@ public abstract class WebSocketConnector : MonoBehaviour
 
     public static string PlayerName = "Web Client";
 
-     
-
     public int numErrorsBeforeDeconnection = 10;
     protected int numErrors = 0;
 
@@ -39,7 +37,7 @@ public abstract class WebSocketConnector : MonoBehaviour
         websocket.OnMessage += (byte[] msg) =>
         {
             string mes = Encoding.UTF8.GetString(msg);
-           // Debug.Log("WS received message: " + mes);
+            Debug.Log("WS received message: " + mes);
              ManageMessage(mes);
         };
 

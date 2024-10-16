@@ -25,8 +25,8 @@ public class ConnectionManager : WebSocketConnector
     public static ConnectionManager Instance = null;
 
     public String AgentToSendInfo = "simulation[0].unity_linker[0]";
-    public String MessageSeparator = "|||";
-      
+    public String MessageSeparator = "|||";      
+    public String ExpID = "0";
 
     // ############################################# UNITY FUNCTIONS #############################################
     void Awake() {
@@ -163,12 +163,63 @@ public class ConnectionManager : WebSocketConnector
             {"type", "ask"},
             {"action", action},
             {"args", argsJSON},
-            {"agent", AgentToSendInfo }
+            {"agent", AgentToSendInfo}
         };
 
         string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
 
         SendMessageToServer(jsonStringExpression);
+    }
+
+    public void SendSimulationStatus(string action, Dictionary<string,string> arguments)
+    {
+        string argsJSON = JsonConvert.SerializeObject(arguments);
+        Dictionary<string, string> jsonExpression = null;
+        jsonExpression = new Dictionary<string, string> {
+            {"type", "status"},
+            {"action", action},
+            {"args", argsJSON}
+        };
+
+        string jsonStringExpression = JsonConvert.SerializeObject(argsJSON);
+        SendMessageToServer(argsJSON);
+        Debug.Log(argsJSON);
+    }
+
+    public void SendPauseMessage()
+    {
+        Dictionary<string, string> jsonExpression = null;   
+        jsonExpression = new Dictionary<string, string>{
+            {"type", "pause"},
+            {"exp_id", "0"}
+        };
+        string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
+        SendMessageToServer(jsonStringExpression);
+        Debug.Log(jsonStringExpression);
+    }
+
+    public void SendStartMessage()
+    {
+        Dictionary<string, string> jsonExpression = null;   
+        jsonExpression = new Dictionary<string, string>{
+            {"type", "play"},
+            {"exp_id", "0"}
+        };
+        string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
+        SendMessageToServer(jsonStringExpression);
+        Debug.Log(jsonStringExpression);
+    }
+
+    public void SendStopMessage()
+    {
+        Dictionary<string, string> jsonExpression = null;   
+        jsonExpression = new Dictionary<string, string>{
+            {"type", "stop"},
+            {"exp_id", "0"}
+        };
+        string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
+        SendMessageToServer(jsonStringExpression);
+        Debug.Log(jsonStringExpression);
     }
 
     public void DisconnectProperly() {

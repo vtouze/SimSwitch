@@ -1,19 +1,15 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 public class SendReceiveMessageExample : SimulationManager
 {
+    GAMAMessage message = null;
+    string _expID = "0";
 
- GAMAMessage message = null;
-      
     protected override void ManageOtherMessages(string content)
     {
         message = GAMAMessage.CreateFromJSON(content);
     }
 
-    //action activated at the end of the update phase (every frame)
     protected override void OtherUpdate()
     {
 
@@ -37,14 +33,61 @@ public class SendReceiveMessageExample : SimulationManager
                 Debug.Log("received from GAMA: test " + message.test);
                 message = null;
             }
-
-
         }
     }
 
+    public void SetSimulationStatus(string status)
+    {
+        if(IsGameState(GameState.GAME))
+        {
+            Dictionary<string, string> args = new Dictionary<string, string> {
+         {"type", status},
+         {"exp_id", _expID}};
 
+            Debug.Log("sent to GAMA: " + status + ": " + _expID);
+            //ConnectionManager.Instance.SendExecutableAsk("receive_experiment", args);
+            ConnectionManager.Instance.SendSimulationStatus("receive_experiment", args);
+            /*Debug.Log("sent to GAMA: " + "pause" + ": " + "0");
+            ConnectionManager.Instance.PauseSimulation("receive_experiment");*/
+        }
+    }
+
+    public void LoadSimulationButton()
+    {
+        if(IsGameState(GameState.GAME))
+        {
+            Debug.Log("sent to GAMA: " + "load"/* + ": " + "0"*/);
+            //ConnectionManager.Instance.LoadSimulation("receive_experiment");
+        }
+    }
+
+    public void PauseSimulationButton()
+    {
+        if(IsGameState(GameState.GAME))
+        {
+            Debug.Log("sent to GAMA: " + "pause");
+            ConnectionManager.Instance.SendPauseMessage();
+        }
+    }
+
+    public void StopSimulationButton()
+    {
+        if(IsGameState(GameState.GAME))
+        {
+            Debug.Log("sent to GAMA: " + "pause");
+            ConnectionManager.Instance.SendStopMessage();
+        }
+    }
+
+    public void StartSimulationButton()
+    {
+        if(IsGameState(GameState.GAME))
+        {
+            Debug.Log("sent to GAMA: " + "pause");
+            ConnectionManager.Instance.SendStartMessage();
+        }
+    }
 }
-
 
 [System.Serializable]
 public class GAMAMessage
