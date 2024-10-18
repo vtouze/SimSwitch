@@ -11,7 +11,16 @@ species unity_linker parent: abstract_unity_linker {
 	//in this model, no information will be automatically sent to the Player at every step, so we set do_info_world to false
 	bool do_send_world <- false;
 	
-	
+	/**************************************
+	 * DAILY INFORMATION FROM GAMA TO UNITY
+	 */
+	reflex daily {
+		do send_message players: unity_player as list mes: ["VIRGILE"::"DAILY",
+			"day"::current_date.day,
+			"month"::current_date.month,
+			"year"::current_date.year
+		];
+	}
 	
 	
 	//reflex activated only when there is at least one player and every 100 cycles
