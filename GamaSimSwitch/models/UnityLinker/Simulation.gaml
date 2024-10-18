@@ -16,7 +16,7 @@ global {
 	int test <- 2109;
 	
 	date starting_date <- #now; 
-	float step <- 1#day;
+	float step <- 6#hours/*1#day*/;
 	
 	city thecity;
 	

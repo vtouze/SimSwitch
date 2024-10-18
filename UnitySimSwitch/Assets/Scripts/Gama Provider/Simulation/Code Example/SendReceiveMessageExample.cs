@@ -3,7 +3,7 @@ using UnityEngine;
 public class SendReceiveMessageExample : SimulationManager
 {
     GAMAMessage message = null;
-    
+       
     protected override void ManageOtherMessages(string content)
     {
         message = GAMAMessage.CreateFromJSON(content);

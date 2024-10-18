@@ -174,7 +174,7 @@ public class ConnectionManager : WebSocketConnector
     public void SendExecutableAction(string action)
     {
         Dictionary<string, string> jsonExpression = new Dictionary<string, string>{
-            {"type", "ask"},
+            {"type", "do"},
             {"action", action}
         };
         string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
@@ -192,7 +192,6 @@ public class ConnectionManager : WebSocketConnector
         SendMessageToServer(jsonStringExpression);
         Debug.Log(jsonStringExpression);
     }
-
     public void SendLoadMessage()
     {
         Dictionary<string, string> jsonExpression = new Dictionary<string, string>{

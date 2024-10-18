@@ -837,6 +837,8 @@ public class SimulationManager : MonoBehaviour
                 return;
             }
 
+            Debug.Log(firstKey + " / " + content);
+
         }
 
 
