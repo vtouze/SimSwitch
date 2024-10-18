@@ -37,8 +37,8 @@ public abstract class WebSocketConnector : MonoBehaviour
         websocket.OnMessage += (byte[] msg) =>
         {
             string mes = Encoding.UTF8.GetString(msg);
-            Debug.Log("WS received message: " + mes);
-             ManageMessage(mes);
+            //Debug.Log("WS received message: " + mes);
+            ManageMessage(mes);
         };
 
         // Add OnError event listener

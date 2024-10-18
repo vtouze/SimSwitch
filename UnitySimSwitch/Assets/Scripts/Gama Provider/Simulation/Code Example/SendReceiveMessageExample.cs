@@ -3,8 +3,7 @@ using UnityEngine;
 public class SendReceiveMessageExample : SimulationManager
 {
     GAMAMessage message = null;
-    string _expID = "0";
-
+    
     protected override void ManageOtherMessages(string content)
     {
         message = GAMAMessage.CreateFromJSON(content);
@@ -29,26 +28,11 @@ public class SendReceiveMessageExample : SimulationManager
             }
             if (message != null)
             {
-                Debug.Log("received from GAMA: cycle " + message.cycle);
-                Debug.Log("received from GAMA: test " + message.test);
+                Debug.Log("received from GAMA: cycle " + message.city);
+                Debug.Log("received from GAMA: test " + message.district);
+                Debug.Log("received from GAMA: test " + message.households);
                 message = null;
             }
-        }
-    }
-
-    public void SetSimulationStatus(string status)
-    {
-        if(IsGameState(GameState.GAME))
-        {
-            Dictionary<string, string> args = new Dictionary<string, string> {
-         {"type", status},
-         {"exp_id", _expID}};
-
-            Debug.Log("sent to GAMA: " + status + ": " + _expID);
-            //ConnectionManager.Instance.SendExecutableAsk("receive_experiment", args);
-            ConnectionManager.Instance.SendSimulationStatus("receive_experiment", args);
-            /*Debug.Log("sent to GAMA: " + "pause" + ": " + "0");
-            ConnectionManager.Instance.PauseSimulation("receive_experiment");*/
         }
     }
 
@@ -56,35 +40,23 @@ public class SendReceiveMessageExample : SimulationManager
     {
         if(IsGameState(GameState.GAME))
         {
-            Debug.Log("sent to GAMA: " + "load"/* + ": " + "0"*/);
-            //ConnectionManager.Instance.LoadSimulation("receive_experiment");
+            ConnectionManager.Instance.SendLoadMessage();
         }
     }
 
-    public void PauseSimulationButton()
+    public void SendStatusButton(string status)
     {
         if(IsGameState(GameState.GAME))
         {
-            Debug.Log("sent to GAMA: " + "pause");
-            ConnectionManager.Instance.SendPauseMessage();
+            ConnectionManager.Instance.SendStatusMessage(status);
         }
     }
 
-    public void StopSimulationButton()
+    public void GenerateButton()
     {
         if(IsGameState(GameState.GAME))
         {
-            Debug.Log("sent to GAMA: " + "pause");
-            ConnectionManager.Instance.SendStopMessage();
-        }
-    }
-
-    public void StartSimulationButton()
-    {
-        if(IsGameState(GameState.GAME))
-        {
-            Debug.Log("sent to GAMA: " + "pause");
-            ConnectionManager.Instance.SendStartMessage();
+            ConnectionManager.Instance.SendExecutableAction("cc");
         }
     }
 }
@@ -92,8 +64,9 @@ public class SendReceiveMessageExample : SimulationManager
 [System.Serializable]
 public class GAMAMessage
 {  
-    public int cycle;
-    public int test;
+    public string city;
+    public string district;
+    public string households;
 
     public static GAMAMessage CreateFromJSON(string jsonString)
     {

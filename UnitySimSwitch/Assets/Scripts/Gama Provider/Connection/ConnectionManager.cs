@@ -26,7 +26,8 @@ public class ConnectionManager : WebSocketConnector
 
     public String AgentToSendInfo = "simulation[0].unity_linker[0]";
     public String MessageSeparator = "|||";      
-    public String ExpID = "0";
+    public String _modelPath = "/home/stage/Documents/SimSwitch/GamaSimSwitch/models/UnityLinker/SendReceiveMessages.gaml";
+    public String _experimentName = "unity_xp";
 
     // ############################################# UNITY FUNCTIONS #############################################
     void Awake() {
@@ -158,8 +159,7 @@ public class ConnectionManager : WebSocketConnector
     public void SendExecutableAsk(string action, Dictionary<string,string> arguments)
     {
         string argsJSON = JsonConvert.SerializeObject(arguments);
-        Dictionary<string, string> jsonExpression = null;
-        jsonExpression = new Dictionary<string, string> {
+        Dictionary<string, string> jsonExpression = new Dictionary<string, string> {
             {"type", "ask"},
             {"action", action},
             {"args", argsJSON},
@@ -171,26 +171,21 @@ public class ConnectionManager : WebSocketConnector
         SendMessageToServer(jsonStringExpression);
     }
 
-    public void SendSimulationStatus(string action, Dictionary<string,string> arguments)
+    public void SendExecutableAction(string action)
     {
-        string argsJSON = JsonConvert.SerializeObject(arguments);
-        Dictionary<string, string> jsonExpression = null;
-        jsonExpression = new Dictionary<string, string> {
-            {"type", "status"},
-            {"action", action},
-            {"args", argsJSON}
+        Dictionary<string, string> jsonExpression = new Dictionary<string, string>{
+            {"type", "ask"},
+            {"action", action}
         };
-
-        string jsonStringExpression = JsonConvert.SerializeObject(argsJSON);
-        SendMessageToServer(argsJSON);
-        Debug.Log(argsJSON);
+        string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
+        SendMessageToServer(jsonStringExpression);
+        Debug.Log(jsonStringExpression);
     }
 
-    public void SendPauseMessage()
+    public void SendStatusMessage(string type)
     {
-        Dictionary<string, string> jsonExpression = null;   
-        jsonExpression = new Dictionary<string, string>{
-            {"type", "pause"},
+        Dictionary<string, string> jsonExpression = new Dictionary<string, string>{
+            {"type", type},
             {"exp_id", "0"}
         };
         string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
@@ -198,24 +193,12 @@ public class ConnectionManager : WebSocketConnector
         Debug.Log(jsonStringExpression);
     }
 
-    public void SendStartMessage()
+    public void SendLoadMessage()
     {
-        Dictionary<string, string> jsonExpression = null;   
-        jsonExpression = new Dictionary<string, string>{
-            {"type", "play"},
-            {"exp_id", "0"}
-        };
-        string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
-        SendMessageToServer(jsonStringExpression);
-        Debug.Log(jsonStringExpression);
-    }
-
-    public void SendStopMessage()
-    {
-        Dictionary<string, string> jsonExpression = null;   
-        jsonExpression = new Dictionary<string, string>{
-            {"type", "stop"},
-            {"exp_id", "0"}
+        Dictionary<string, string> jsonExpression = new Dictionary<string, string>{
+            {"type", "load"},
+            {"model", _modelPath},
+            {"experiment", _experimentName}
         };
         string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
         SendMessageToServer(jsonStringExpression);
