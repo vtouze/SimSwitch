@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -13,16 +14,18 @@ public class SendReceiveDaily : SimulationManager
 
     private bool _isPaused = false;
 
-    private string[] daysOfWeek = new string[]
+    private string[] _daysOfWeek = new string[]
     {
         "Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."
     };
 
-    private string[] months = new string[]
+    private string[] _months = new string[]
     {
         "Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.",
         "Jul.", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."
     };
+
+    private Dictionary<string, string> _emptyString = new Dictionary<string, string>{};
     #endregion Fields
 
     #region Methods
@@ -33,22 +36,22 @@ public class SendReceiveDaily : SimulationManager
 
     protected override void OtherUpdate()
     {
-        if (IsGameState(GameState.GAME))
+        if(IsGameState(GameState.GAME))
         {
-            if (_dailyMessage != null)
+            if(_dailyMessage != null)
             {
-                ConnectionManager.Instance.SendExecutableAction("daily");
+                ConnectionManager.Instance.SendExecutableAsk("daily", _emptyString);
                 _dayText.text = _dailyMessage._day.ToString();
 
                 int dayOfWeekIndex = (_dailyMessage._dayOfWeek % 7);
-                if (dayOfWeekIndex >= 0 && dayOfWeekIndex < daysOfWeek.Length)
+                if(dayOfWeekIndex >= 0 && dayOfWeekIndex < _daysOfWeek.Length)
                 {
-                    _dayOfWeekText.text = daysOfWeek[dayOfWeekIndex];
+                    _dayOfWeekText.text = _daysOfWeek[dayOfWeekIndex];
                 }
 
-                if (_dailyMessage._month >= 1 && _dailyMessage._month <= 12)
+                if(_dailyMessage._month >= 1 && _dailyMessage._month <= 12)
                 {
-                    _monthText.text = months[_dailyMessage._month - 1];
+                    _monthText.text = _months[_dailyMessage._month - 1];
                 }
                 _yearText.text = _dailyMessage._year.ToString();
 
@@ -59,7 +62,7 @@ public class SendReceiveDaily : SimulationManager
 
     public void SetPause()
     {
-        if (_isPaused)
+        if(_isPaused)
         {
             _isPaused = false;
             ConnectionManager.Instance.SendStatusMessage("play");
@@ -70,6 +73,25 @@ public class SendReceiveDaily : SimulationManager
             ConnectionManager.Instance.SendStatusMessage("pause");
         }
     }
+
+    public void Test()
+    {
+        if(IsGameState(GameState.GAME))
+        ConnectionManager.Instance.SendExecutableAction("test");
+    }
+
+    public void IncreaseSpeedStep()
+    {
+        if(IsGameState(GameState.GAME))
+        ConnectionManager.Instance.SendExecutableAsk("increase_cycle_speed", _emptyString);
+    }
+
+    public void SlowDownSpeedStep()
+    {
+        if(IsGameState(GameState.GAME))
+        ConnectionManager.Instance.SendExecutableAsk("slow_down_cycle_speed", _emptyString);
+    }
+
     #endregion Methods
 }
 

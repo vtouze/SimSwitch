@@ -1,11 +1,3 @@
-/**
-* Name: Simulation
-* Based on the internal empty template. 
-* Author: stage
-* Tags: 
-*/
-
-
 model Simulation
 
 import "../SimSwitch/Population.gaml"
@@ -13,8 +5,6 @@ import "../SimSwitch/City.gaml"
 import "../SimSwitch/Transport.gaml"
 
 global {
-	int test <- 2109;
-	
 	date starting_date <- #now; 
 	float step <- 6#hours/*1#day*/;
 	

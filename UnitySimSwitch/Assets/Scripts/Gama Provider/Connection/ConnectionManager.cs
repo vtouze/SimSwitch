@@ -149,11 +149,13 @@ public class ConnectionManager : WebSocketConnector
         Dictionary<string, string> jsonExpression = null;
         jsonExpression = new Dictionary<string, string> {
             {"type", "expression"},
+            {"exp_id", "0"},
             {"expr", expression}
         };
 
         string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
         SendMessageToServer(jsonStringExpression);
+        Debug.Log(jsonStringExpression);
     }
 
     public void SendExecutableAsk(string action, Dictionary<string,string> arguments)
@@ -175,11 +177,10 @@ public class ConnectionManager : WebSocketConnector
     {
         Dictionary<string, string> jsonExpression = new Dictionary<string, string>{
             {"type", "do"},
-            {"action", action}
+            {"action", action},
         };
         string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
         SendMessageToServer(jsonStringExpression);
-        Debug.Log(jsonStringExpression);
     }
 
     public void SendStatusMessage(string type)
@@ -190,7 +191,6 @@ public class ConnectionManager : WebSocketConnector
         };
         string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
         SendMessageToServer(jsonStringExpression);
-        Debug.Log(jsonStringExpression);
     }
     public void SendLoadMessage()
     {
@@ -201,7 +201,6 @@ public class ConnectionManager : WebSocketConnector
         };
         string jsonStringExpression = JsonConvert.SerializeObject(jsonExpression);
         SendMessageToServer(jsonStringExpression);
-        Debug.Log(jsonStringExpression);
     }
 
     public void DisconnectProperly() {
