@@ -5,13 +5,15 @@ public class FollowWaypoint : MonoBehaviour
     #region Fields
     RectTransform _goal;
     float _speed = 50.0f;
-    float _accuracy = 5.0f;
+    float _accuracy = 1.0f;
     public GameObject _waypointsManager;
     private GameObject[] _waypoints;
     private GameObject _currentNode;
     private int _currentWaypoint = 0;
     private Graph _graph;
     private RectTransform _rectTransform;
+    [SerializeField] private int _targetWaypoint = 20;
+    private System.Random _random = new System.Random();
     #endregion Fields
 
     #region Methods
@@ -23,12 +25,15 @@ public class FollowWaypoint : MonoBehaviour
 
         _rectTransform = GetComponent<RectTransform>();
 
-        Invoke("GoToEast", 1);
+        Invoke("MoveTo", 1);
     }
 
-    public void GoToEast()
+    public void MoveTo()
     {
-        _graph.AStar(_currentNode, _waypoints[20]);
+        _targetWaypoint = _random.Next(0, _waypoints.Length);
+        Debug.Log("New target waypoint: " + _waypoints[_targetWaypoint].name);
+
+        _graph.AStar(_currentNode, _waypoints[_targetWaypoint]);
         _currentWaypoint = 0;
     }
 
@@ -39,9 +44,7 @@ public class FollowWaypoint : MonoBehaviour
             return;
         }
 
-        if (Vector2.Distance(
-            _graph._pathList[_currentWaypoint].GetId().GetComponent<RectTransform>().anchoredPosition,
-            _rectTransform.anchoredPosition) < _accuracy)
+        if (Vector2.Distance(_graph._pathList[_currentWaypoint].GetId().GetComponent<RectTransform>().anchoredPosition, _rectTransform.anchoredPosition) < _accuracy)
         {
             _currentNode = _graph._pathList[_currentWaypoint].GetId();
             _currentWaypoint++;
@@ -54,6 +57,11 @@ public class FollowWaypoint : MonoBehaviour
             direction.Normalize();
 
             _rectTransform.anchoredPosition += direction * _speed * Time.deltaTime;
+        }
+
+        if (_currentWaypoint == _graph._pathList.Count)
+        {
+            MoveTo();
         }
     }
     #endregion Methods

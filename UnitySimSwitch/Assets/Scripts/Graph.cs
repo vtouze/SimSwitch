@@ -128,8 +128,7 @@ public class Graph
 
     private float GetDistance(Node a, Node b)
     {
-        return Vector2.Distance(a.GetId().GetComponent<RectTransform>().anchoredPosition,
-                                b.GetId().GetComponent<RectTransform>().anchoredPosition);
+        return Vector2.Distance(a.GetId().GetComponent<RectTransform>().anchoredPosition, b.GetId().GetComponent<RectTransform>().anchoredPosition);
     }
 
     private int GetLowestF(List<Node> l)
