@@ -4,17 +4,24 @@ using UnityEngine;
 public class Graph
 {
     #region Fields
-    List<Edge> _edges = new List<Edge>();
-    List<Node> _nodes = new List<Node>();
+    private List<Edge> _edges = new List<Edge>();
+    private List<Node> _nodes = new List<Node>();
     public List<Node> _pathList = new List<Node>();
+
+    private Dictionary<GameObject, Node> nodeDictionary = new Dictionary<GameObject, Node>();
+
     public Graph() {}
     #endregion Fields
 
     #region Methods
     public void AddNode(GameObject id)
     {
-        Node node = new Node(id);
-        _nodes.Add(node);
+        if (!nodeDictionary.ContainsKey(id))
+        {
+            Node node = new Node(id);
+            _nodes.Add(node);
+            nodeDictionary.Add(id, node);
+        }
     }
 
     public void AddEdge(GameObject fromNode, GameObject toNode)
@@ -24,23 +31,16 @@ public class Graph
 
         if (from != null && to != null)
         {
-            Edge e = new Edge(from, to);
-            _edges.Add(e);
-            from._edgeList.Add(e);
+            Edge edge = new Edge(from, to);
+            _edges.Add(edge);
+            from._edgeList.Add(edge);
         }
     }
 
     private Node FindNode(GameObject id)
     {
-        foreach (Node n in _nodes)
-        {
-            if (n.GetId() == id)
-            {
-                return n;
-            }
-        }
-
-        return null;
+        nodeDictionary.TryGetValue(id, out Node foundNode);
+        return foundNode;
     }
 
     public bool AStar(GameObject startID, GameObject endID)
@@ -53,104 +53,97 @@ public class Graph
             return false;
         }
 
-        List<Node> open = new List<Node>();
-        List<Node> closed = new List<Node>();
-        float tentative_g_score = 0;
-        bool tentative_is_better;
+        foreach (Node node in _nodes)
+        {
+            node.ResetCosts();
+            node.ClearPath();
+        }
+
+        List<Node> openSet = new List<Node> { start };
+        HashSet<Node> closedSet = new HashSet<Node>();
 
         start._g = 0;
         start._h = GetDistance(start, end);
         start._f = start._h;
 
-        open.Add(start);
-        while (open.Count > 0)
+        while (openSet.Count > 0)
         {
-            int i = GetLowestF(open);
-            Node thisNode = open[i];
-            if (thisNode.GetId() == endID)
+            int currentIndex = GetLowestF(openSet);
+            Node currentNode = openSet[currentIndex];
+
+            if (currentNode.GetId() == endID)
             {
                 ReconstructPath(start, end);
                 return true;
             }
 
-            open.RemoveAt(i);
-            closed.Add(thisNode);
-            Node neighbour;
-            foreach (Edge e in thisNode._edgeList)
-            {
-                neighbour = e._endNode;
+            openSet.RemoveAt(currentIndex);
+            closedSet.Add(currentNode);
 
-                if (closed.IndexOf(neighbour) > -1)
+            foreach (Edge edge in currentNode._edgeList)
+            {
+                Node neighbor = edge._endNode;
+
+                if (closedSet.Contains(neighbor))
                 {
                     continue;
                 }
 
-                tentative_g_score = thisNode._g + GetDistance(thisNode, neighbour);
-                if (open.IndexOf(neighbour) == -1)
+                float tentativeGScore = currentNode._g + GetDistance(currentNode, neighbor);
+
+                if (!openSet.Contains(neighbor))
                 {
-                    open.Add(neighbour);
-                    tentative_is_better = true;
+                    openSet.Add(neighbor);
                 }
-                else if (tentative_g_score < neighbour._g)
+                else if (tentativeGScore >= neighbor._g)
                 {
-                    tentative_is_better = true;
+                    continue;
                 }
-                else
-                {
-                    tentative_is_better = false;
-                }
-                if (tentative_is_better)
-                {
-                    neighbour._cameFrom = thisNode;
-                    neighbour._g = tentative_g_score;
-                    neighbour._h = GetDistance(thisNode, end);
-                    neighbour._f = neighbour._g + neighbour._h;
-                }
+
+                neighbor._cameFrom = currentNode;
+                neighbor._g = tentativeGScore;
+                neighbor._h = GetDistance(neighbor, end);
+                neighbor._f = neighbor._g + neighbor._h;
             }
         }
+
         return false;
     }
 
-    public void ReconstructPath(Node startID, Node endID)
+    public void ReconstructPath(Node startNode, Node endNode)
     {
         _pathList.Clear();
-        _pathList.Add(endID);
+        Node currentNode = endNode;
 
-        var p = endID._cameFrom;
-        while (p != startID && p != null)
+        while (currentNode != null)
         {
-            _pathList.Insert(0, p);
-            p = p._cameFrom;
+            _pathList.Insert(0, currentNode);
+            if (currentNode == startNode) break;
+            currentNode = currentNode._cameFrom;
         }
-
-        _pathList.Insert(0, startID);
     }
 
     private float GetDistance(Node a, Node b)
     {
-        return Vector2.Distance(a.GetId().GetComponent<RectTransform>().anchoredPosition, b.GetId().GetComponent<RectTransform>().anchoredPosition);
+        return Vector2.Distance(a.GetId().GetComponent<RectTransform>().anchoredPosition, 
+                                b.GetId().GetComponent<RectTransform>().anchoredPosition);
     }
 
-    private int GetLowestF(List<Node> l)
+    private int GetLowestF(List<Node> list)
     {
-        float lowestF = 0;
-        int count = 0;
-        int iteratorCount = 0;
+        float lowestF = float.MaxValue;
+        int lowestIndex = -1;
 
-        lowestF = l[0]._f;
-
-        for (int i = 1; i < l.Count; i++)
+        for (int i = 0; i < list.Count; i++)
         {
-            if (l[0]._f < lowestF)
+            if (list[i]._f < lowestF)
             {
-                lowestF = l[i]._f;
-                iteratorCount = count;
+                lowestF = list[i]._f;
+                lowestIndex = i;
             }
-
-            count++;
         }
 
-        return iteratorCount;
+        return lowestIndex;
     }
     #endregion Methods
 }

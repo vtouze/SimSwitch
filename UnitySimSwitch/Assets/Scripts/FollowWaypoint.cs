@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FollowWaypoint : MonoBehaviour
@@ -16,14 +17,21 @@ public class FollowWaypoint : MonoBehaviour
     private int _currentWaypoint = 0;
     private Graph _graph;
     private RectTransform _rectTransform;
-    [SerializeField] private int _targetWaypoint = 20;
+    private int _targetWaypoint = 20;
     private System.Random _random = new System.Random();
-    private float _slowDownFactor = 0.25f;
+    private List<Node> _vehiclePath = new List<Node>();
+    private float _minDistanceToOtherVehicle = 100.0f;
+    private FollowWaypoint[] allVehicles;
+    private float _speedCheckInterval = 0.5f;
+    private float _speedCheckTimer = 0.0f;
+
     #endregion Fields
 
     #region Methods
     private void Start()
     {
+        allVehicles = FindObjectsOfType<FollowWaypoint>();
+
         switch (vehicleType)
         {
             case VehicleType.Bike:
@@ -40,76 +48,145 @@ public class FollowWaypoint : MonoBehaviour
 
         _waypoints = _waypointsManager.GetComponent<WaypointsManager>()._waypoints;
         _graph = _waypointsManager.GetComponent<WaypointsManager>()._graph;
-        _currentNode = _waypoints[0];
 
         _rectTransform = GetComponent<RectTransform>();
 
-        Invoke("MoveTo", 1);
+        _currentNode = FindClosestWaypoint();
+        MoveTo();
+    }
+
+    private GameObject FindClosestWaypoint()
+    {
+        GameObject closestWaypoint = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (GameObject waypoint in _waypoints)
+        {
+            float distance = Vector2.Distance(_rectTransform.anchoredPosition, waypoint.GetComponent<RectTransform>().anchoredPosition);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestWaypoint = waypoint;
+            }
+        }
+        Debug.Log(vehicleType + " starting at closest waypoint: " + closestWaypoint.name);
+        return closestWaypoint;
     }
 
     public void MoveTo()
     {
-        _targetWaypoint = _random.Next(0, _waypoints.Length);
-        Debug.Log("New target waypoint: " + _waypoints[_targetWaypoint].name);
-
-        _graph.AStar(_currentNode, _waypoints[_targetWaypoint]);
-
-        if (_graph._pathList.Count > 0)
+        foreach (Node node in _vehiclePath)
         {
-            _currentNode = _graph._pathList[0].GetId();
-            _currentWaypoint = 1;
+            node.ClearPath();
         }
-    }
 
-
-    private void LateUpdate()
-    {
-        if (_graph._pathList.Count == 0 || _currentWaypoint == _graph._pathList.Count)
+        if (_currentNode == null)
         {
+            Debug.LogError(vehicleType + " current node is null!");
             return;
         }
 
-        if (Vector2.Distance(
-            _graph._pathList[_currentWaypoint].GetId().GetComponent<RectTransform>().anchoredPosition,
-            _rectTransform.anchoredPosition) < _accuracy)
+        _targetWaypoint = _random.Next(0, _waypoints.Length);
+        Debug.Log(vehicleType + " new target waypoint: " + _waypoints[_targetWaypoint]?.name ?? "null");
+
+        if (_waypoints[_targetWaypoint] == null)
         {
-            _currentNode = _graph._pathList[_currentWaypoint].GetId();
-            _currentWaypoint++;
+            Debug.LogError(vehicleType + " target waypoint is null!");
+            return;
         }
 
-        if (_currentWaypoint < _graph._pathList.Count)
+        bool pathFound = _graph.AStar(_currentNode, _waypoints[_targetWaypoint]);
+        Debug.Log(vehicleType + " AStar path found: " + pathFound);
+
+        if (pathFound)
         {
-            _goal = _graph._pathList[_currentWaypoint].GetId().GetComponent<RectTransform>();
+            _vehiclePath = new List<Node>(_graph._pathList);
+        
+            if (_vehiclePath.Count > 0)
+            {
+                Debug.Log(vehicleType + " path length: " + _vehiclePath.Count);
+                _currentNode = _vehiclePath[0].GetId();
+                _currentWaypoint = 1;
+                Debug.Log(vehicleType + " starting at: " + _currentNode.name);
+            }
+            else
+            {
+                Debug.LogError(vehicleType + " AStar returned an empty path!");
+            }
+        }
+        else
+        {
+            Debug.LogError(vehicleType + " failed to find a path!");
+        }
+    }
+
+    private void LateUpdate()
+    {
+        _speedCheckTimer += Time.deltaTime;
+        if (_speedCheckTimer >= _speedCheckInterval)
+        {
+            AdjustSpeedIfNeeded();
+            _speedCheckTimer = 0.0f;
+        }
+
+        if (_vehiclePath.Count == 0 || _currentWaypoint >= _vehiclePath.Count)
+        {
+            Debug.Log(vehicleType + " has no path or reached the end of path. Reassigning path...");
+            MoveTo();
+            return;
+        }
+
+        //Debug.Log(vehicleType + " moving towards waypoint: " + _currentWaypoint + " --> " + (_vehiclePath.Count - 1));
+
+        if (Vector2.Distance(
+            _vehiclePath[_currentWaypoint].GetId().GetComponent<RectTransform>().anchoredPosition,
+            _rectTransform.anchoredPosition) < _accuracy)
+        {
+            Debug.Log(vehicleType + " reached waypoint: " + _currentWaypoint);
+
+            _currentNode = _vehiclePath[_currentWaypoint].GetId();
+            _currentWaypoint++;
+
+            Debug.Log(vehicleType + " moving to next waypoint: " + _currentWaypoint);
+        }
+
+        if (_currentWaypoint < _vehiclePath.Count)
+        {
+            _goal = _vehiclePath[_currentWaypoint].GetId().GetComponent<RectTransform>();
             Vector2 direction = _goal.anchoredPosition - _rectTransform.anchoredPosition;
             direction.Normalize();
 
-            AdjustSpeedIfNeeded();
-
             _rectTransform.anchoredPosition += direction * _speed * Time.deltaTime;
-        }
-
-        if (_currentWaypoint == _graph._pathList.Count)
-        {
-            MoveTo();
         }
     }
 
     private void AdjustSpeedIfNeeded()
     {
-        FollowWaypoint[] allVehicles = FindObjectsOfType<FollowWaypoint>();
+        FollowWaypoint closestVehicle = null;
+        float closestDistance = float.MaxValue;
+
         foreach (var vehicle in allVehicles)
         {
             if (vehicle != this)
             {
                 float distanceToOtherVehicle = Vector2.Distance(_rectTransform.anchoredPosition, vehicle._rectTransform.anchoredPosition);
-                if (distanceToOtherVehicle < 5.0f)
+                if (distanceToOtherVehicle < _minDistanceToOtherVehicle && distanceToOtherVehicle < closestDistance)
                 {
-                    _speed = _baseSpeed * _slowDownFactor;
-                    return;
+                    closestDistance = distanceToOtherVehicle;
+                    closestVehicle = vehicle;
                 }
             }
         }
-        _speed = _baseSpeed;
+
+        if (closestVehicle != null)
+        {
+            Debug.Log(vehicleType + " slowing down to match speed with another vehicle. Distance: " + closestDistance);
+            _speed = closestVehicle._speed;
+        }
+        else
+        {
+            _speed = _baseSpeed;
+        }
     }
     #endregion Methods
 }
