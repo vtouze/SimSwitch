@@ -75,90 +75,99 @@ public class FollowWaypoint : MonoBehaviour
 
     public void MoveTo()
     {
-        foreach (Node node in _vehiclePath)
+        if(GameManager.Instance.IsPaused == false)
         {
-            node.ClearPath();
-        }
-
-        if (_currentNode == null)
-        {
-            Debug.LogError(vehicleType + " current node is null!");
-            return;
-        }
-
-        _targetWaypoint = _random.Next(0, _waypoints.Length);
-        Debug.Log(vehicleType + " new target waypoint: " + _waypoints[_targetWaypoint]?.name ?? "null");
-
-        if (_waypoints[_targetWaypoint] == null)
-        {
-            Debug.LogError(vehicleType + " target waypoint is null!");
-            return;
-        }
-
-        bool pathFound = _graph.AStar(_currentNode, _waypoints[_targetWaypoint]);
-        Debug.Log(vehicleType + " AStar path found: " + pathFound);
-
-        if (pathFound)
-        {
-            _vehiclePath = new List<Node>(_graph._pathList);
-        
-            if (_vehiclePath.Count > 0)
+            foreach (Node node in _vehiclePath)
             {
-                Debug.Log(vehicleType + " path length: " + _vehiclePath.Count);
-                _currentNode = _vehiclePath[0].GetId();
-                _currentWaypoint = 1;
-                Debug.Log(vehicleType + " starting at: " + _currentNode.name);
+                node.ClearPath();
+            }
+
+            if (_currentNode == null)
+            {
+                Debug.LogError(vehicleType + " current node is null!");
+                return;
+            }
+
+            _targetWaypoint = _random.Next(0, _waypoints.Length);
+            Debug.Log(vehicleType + " new target waypoint: " + _waypoints[_targetWaypoint]?.name ?? "null");
+
+            if (_waypoints[_targetWaypoint] == null)
+            {
+                Debug.LogError(vehicleType + " target waypoint is null!");
+                return;
+            }
+
+            bool pathFound = _graph.AStar(_currentNode, _waypoints[_targetWaypoint]);
+            Debug.Log(vehicleType + " AStar path found: " + pathFound);
+
+            if (pathFound)
+            {
+                _vehiclePath = new List<Node>(_graph._pathList);
+        
+                if (_vehiclePath.Count > 0)
+                {
+                    Debug.Log(vehicleType + " path length: " + _vehiclePath.Count);
+                    _currentNode = _vehiclePath[0].GetId();
+                    _currentWaypoint = 1;
+                    Debug.Log(vehicleType + " starting at: " + _currentNode.name);
+                }
+                else
+                {
+                    Debug.LogError(vehicleType + " AStar returned an empty path!");
+                }
             }
             else
             {
-                Debug.LogError(vehicleType + " AStar returned an empty path!");
+                Debug.LogError(vehicleType + " failed to find a path!");
             }
-        }
-        else
-        {
-            Debug.LogError(vehicleType + " failed to find a path!");
         }
     }
 
     private void LateUpdate()
     {
-        _speedCheckTimer += Time.deltaTime;
-        if (_speedCheckTimer >= _speedCheckInterval)
+        if(GameManager.Instance.IsPaused == false)
         {
-            AdjustSpeedIfNeeded();
-            _speedCheckTimer = 0.0f;
-        }
+            _speedCheckTimer += Time.deltaTime;
+            if (_speedCheckTimer >= _speedCheckInterval)
+            {
+                AdjustSpeedIfNeeded();
+                _speedCheckTimer = 0.0f;
+            }
 
-        if (_vehiclePath.Count == 0 || _currentWaypoint >= _vehiclePath.Count)
-        {
-            Debug.Log(vehicleType + " has no path or reached the end of path. Reassigning path...");
-            MoveTo();
-            return;
-        }
+            if (_vehiclePath.Count == 0 || _currentWaypoint >= _vehiclePath.Count)
+            {
+                Debug.Log(vehicleType + " has no path or reached the end of path. Reassigning path...");
+                MoveTo();
+                return;
+            }
 
-        //Debug.Log(vehicleType + " moving towards waypoint: " + _currentWaypoint + " --> " + (_vehiclePath.Count - 1));
+            if (Vector2.Distance(
+                _vehiclePath[_currentWaypoint].GetId().GetComponent<RectTransform>().anchoredPosition,
+                _rectTransform.anchoredPosition) < _accuracy)
+            {
+                Debug.Log(vehicleType + " reached waypoint: " + _currentWaypoint);
 
-        if (Vector2.Distance(
-            _vehiclePath[_currentWaypoint].GetId().GetComponent<RectTransform>().anchoredPosition,
-            _rectTransform.anchoredPosition) < _accuracy)
-        {
-            Debug.Log(vehicleType + " reached waypoint: " + _currentWaypoint);
+                _currentNode = _vehiclePath[_currentWaypoint].GetId();
+                _currentWaypoint++;
 
-            _currentNode = _vehiclePath[_currentWaypoint].GetId();
-            _currentWaypoint++;
+                Debug.Log(vehicleType + " moving to next waypoint: " + _currentWaypoint);
+            }
 
-            Debug.Log(vehicleType + " moving to next waypoint: " + _currentWaypoint);
-        }
+            if (_currentWaypoint < _vehiclePath.Count)
+            {
+                _goal = _vehiclePath[_currentWaypoint].GetId().GetComponent<RectTransform>();
+                Vector2 direction = _goal.anchoredPosition - _rectTransform.anchoredPosition;
+                direction.Normalize();
 
-        if (_currentWaypoint < _vehiclePath.Count)
-        {
-            _goal = _vehiclePath[_currentWaypoint].GetId().GetComponent<RectTransform>();
-            Vector2 direction = _goal.anchoredPosition - _rectTransform.anchoredPosition;
-            direction.Normalize();
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                _rectTransform.rotation = Quaternion.Slerp(_rectTransform.rotation, Quaternion.Euler(0, 0, angle + 180f), Time.deltaTime * 5f);
 
-            _rectTransform.anchoredPosition += direction * _speed * Time.deltaTime;
+
+                _rectTransform.anchoredPosition += direction * _speed * Time.deltaTime;
+            }
         }
     }
+
 
     private void AdjustSpeedIfNeeded()
     {

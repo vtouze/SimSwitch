@@ -38,7 +38,7 @@ public class SendReceiveDaily : SimulationManager
     {
         if(IsGameState(GameState.GAME))
         {
-            if(_dailyMessage != null)
+            if(_dailyMessage != null && GameManager.Instance.IsPaused == false)
             {
                 ConnectionManager.Instance.SendExecutableAsk("daily", _emptyString);
                 _dayText.text = _dailyMessage._day.ToString();
@@ -62,16 +62,7 @@ public class SendReceiveDaily : SimulationManager
 
     public void SetPause()
     {
-        if(_isPaused)
-        {
-            _isPaused = false;
-            ConnectionManager.Instance.SendStatusMessage("play");
-        }
-        else
-        {
-            _isPaused = true;
-            ConnectionManager.Instance.SendStatusMessage("pause");
-        }
+        GameManager.Instance.TogglePause();
     }
 
     public void Test()
