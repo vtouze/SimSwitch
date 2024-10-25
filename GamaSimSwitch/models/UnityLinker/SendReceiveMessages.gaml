@@ -37,23 +37,26 @@ species unity_linker parent: abstract_unity_linker {
 	}
 
     action increase_cycle_speed {
-        if (minimum_cycle_duration < 5.0) {
-            minimum_cycle_duration <- minimum_cycle_duration * 2;
-            minimum_cycle_duration <- min(minimum_cycle_duration, 5.0);
-            write "Increased cycle duration (slower speed): " + minimum_cycle_duration;
-        } else {
-            write "Maximum cycle duration reached.";
+    	ask world{
+    		if (minimum_cycle_duration < 5.0) {
+            	minimum_cycle_duration <- min(minimum_cycle_duration * 2, 5.0);
+            	write "Increased cycle duration (slower speed): " + minimum_cycle_duration;
+        	}else {
+            	write "Maximum cycle duration reached.";
+    		}
         }
     }
 
     action slow_down_cycle_speed {
-        if (minimum_cycle_duration > 0.01) {
-            minimum_cycle_duration <- minimum_cycle_duration / 2;
-            minimum_cycle_duration <- max(minimum_cycle_duration, 0.01);
-            write "Decreased cycle duration (faster speed): " + minimum_cycle_duration;
-        } else {
-            write "Minimum cycle duration reached.";
-        }
+    	ask world{
+    		if (minimum_cycle_duration > 0.01) {
+            	minimum_cycle_duration <- max(minimum_cycle_duration / 2, 0.01);
+            	write "Decreased cycle duration (faster speed): " + minimum_cycle_duration;
+        	} else {
+            	write "Minimum cycle duration reached.";
+        	}
+    	}
+
     }
 
 	action test {

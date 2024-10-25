@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class FollowWaypoint : MonoBehaviour
@@ -24,7 +25,6 @@ public class FollowWaypoint : MonoBehaviour
     private FollowWaypoint[] allVehicles;
     private float _speedCheckInterval = 0.5f;
     private float _speedCheckTimer = 0.0f;
-
     #endregion Fields
 
     #region Methods

@@ -12,8 +12,6 @@ public class SendReceiveDaily : SimulationManager
     [SerializeField] private TMP_Text _monthText = null;
     [SerializeField] private TMP_Text _yearText = null;
 
-    private bool _isPaused = false;
-
     private string[] _daysOfWeek = new string[]
     {
         "Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."
@@ -40,7 +38,6 @@ public class SendReceiveDaily : SimulationManager
         {
             if(_dailyMessage != null && GameManager.Instance.IsPaused == false)
             {
-                ConnectionManager.Instance.SendExecutableAsk("daily", _emptyString);
                 _dayText.text = _dailyMessage._day.ToString();
 
                 int dayOfWeekIndex = (_dailyMessage._dayOfWeek % 7);
@@ -74,13 +71,13 @@ public class SendReceiveDaily : SimulationManager
     public void IncreaseSpeedStep()
     {
         if(IsGameState(GameState.GAME))
-        ConnectionManager.Instance.SendExecutableAsk("increase_cycle_speed", _emptyString);
+        ConnectionManager.Instance.SendExecutableAsk("slow_down_cycle_speed", _emptyString);
     }
 
     public void SlowDownSpeedStep()
     {
         if(IsGameState(GameState.GAME))
-        ConnectionManager.Instance.SendExecutableAsk("slow_down_cycle_speed", _emptyString);
+        ConnectionManager.Instance.SendExecutableAsk("increase_cycle_speed", _emptyString);
     }
 
     #endregion Methods
