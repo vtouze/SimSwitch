@@ -13,7 +13,7 @@ public class FollowWaypoint : MonoBehaviour
     private float _speed;
     private float _accuracy = 1.0f;
     public GameObject _waypointsManager;
-    private GameObject[] _waypoints;
+    private GameObject[] _waypoints;    
     private GameObject _currentNode;
     private int _currentWaypoint = 0;
     private Graph _graph;
@@ -22,15 +22,21 @@ public class FollowWaypoint : MonoBehaviour
     private System.Random _random = new System.Random();
     private List<Node> _vehiclePath = new List<Node>();
     private float _minDistanceToOtherVehicle = 100.0f;
-    private FollowWaypoint[] allVehicles;
+    private FollowWaypoint[] _allVehicles;
     private float _speedCheckInterval = 0.5f;
     private float _speedCheckTimer = 0.0f;
+
+    [Header("Animations")]
+    [SerializeField] private Animator _happyAnimator;
+    [SerializeField] private Animator _angryAnimator;
+    private float _minAnimationInterval = 5.0f;
+    private float _maxAnimationInterval = 45.0f;
     #endregion Fields
 
     #region Methods
     private void Start()
     {
-        allVehicles = FindObjectsOfType<FollowWaypoint>();
+        _allVehicles = FindObjectsOfType<FollowWaypoint>();
 
         switch (vehicleType)
         {
@@ -53,6 +59,8 @@ public class FollowWaypoint : MonoBehaviour
 
         _currentNode = FindClosestWaypoint();
         MoveTo();
+
+        StartCoroutine(DisplayRandomEmotion());
     }
 
     private GameObject FindClosestWaypoint()
@@ -162,19 +170,17 @@ public class FollowWaypoint : MonoBehaviour
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 _rectTransform.rotation = Quaternion.Slerp(_rectTransform.rotation, Quaternion.Euler(0, 0, angle + 180f), Time.deltaTime * 5f);
 
-
                 _rectTransform.anchoredPosition += direction * _speed * Time.deltaTime;
             }
         }
     }
-
 
     private void AdjustSpeedIfNeeded()
     {
         FollowWaypoint closestVehicle = null;
         float closestDistance = float.MaxValue;
 
-        foreach (var vehicle in allVehicles)
+        foreach (var vehicle in _allVehicles)
         {
             if (vehicle != this)
             {
@@ -195,6 +201,27 @@ public class FollowWaypoint : MonoBehaviour
         else
         {
             _speed = _baseSpeed;
+        }
+    }
+
+    private IEnumerator DisplayRandomEmotion()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(_minAnimationInterval, _maxAnimationInterval));
+
+            if (_random.Next(2) == 0)
+            {
+                _happyAnimator.SetTrigger("DisplayHappy");
+                yield return new WaitForSeconds(_happyAnimator.GetCurrentAnimatorStateInfo(0).length);
+                _happyAnimator.ResetTrigger("DisplayHappy");
+            }
+            else
+            {
+                _angryAnimator.SetTrigger("DisplayAnger");
+                yield return new WaitForSeconds(_angryAnimator.GetCurrentAnimatorStateInfo(0).length);
+                _angryAnimator.ResetTrigger("DisplayAnger");
+            }
         }
     }
     #endregion Methods
