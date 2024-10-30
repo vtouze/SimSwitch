@@ -5,13 +5,20 @@ using UnityEngine;
 public class FollowWaypoint : MonoBehaviour
 {
     #region Fields
+    
     public enum VehicleType { Bike, Bus, Car }
+    [Header("Vehicles")]
     public VehicleType vehicleType;
-
     private RectTransform _goal;
     private float _baseSpeed;
     private float _speed;
     private float _accuracy = 1.0f;
+    private List<Node> _vehiclePath = new List<Node>();
+    private float _minDistanceToOtherVehicle = 100.0f;
+    private FollowWaypoint[] _allVehicles;
+    private float _speedCheckInterval = 0.5f;
+    private float _speedCheckTimer = 0.0f;
+    [Header("Waypoints")]
     public GameObject _waypointsManager;
     private GameObject[] _waypoints;    
     private GameObject _currentNode;
@@ -20,12 +27,6 @@ public class FollowWaypoint : MonoBehaviour
     private RectTransform _rectTransform;
     private int _targetWaypoint = 20;
     private System.Random _random = new System.Random();
-    private List<Node> _vehiclePath = new List<Node>();
-    private float _minDistanceToOtherVehicle = 100.0f;
-    private FollowWaypoint[] _allVehicles;
-    private float _speedCheckInterval = 0.5f;
-    private float _speedCheckTimer = 0.0f;
-
     [Header("Animations")]
     [SerializeField] private Animator _happyAnimator;
     [SerializeField] private Animator _angryAnimator;
