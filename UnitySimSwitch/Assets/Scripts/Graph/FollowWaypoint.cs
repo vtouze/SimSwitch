@@ -32,6 +32,9 @@ public class FollowWaypoint : MonoBehaviour
     [SerializeField] private Animator _angryAnimator;
     private float _minAnimationInterval = 5.0f;
     private float _maxAnimationInterval = 45.0f;
+    [Header("Satisfaction Settings")]
+    public float satisfaction = 50f;
+    [SerializeField] private SatisfactionBarController satisfactionUI;
     #endregion Fields
 
     #region Methods
@@ -62,6 +65,8 @@ public class FollowWaypoint : MonoBehaviour
         MoveTo();
 
         StartCoroutine(DisplayRandomEmotion());
+
+        satisfactionUI.UpdateSatisfactionBar(satisfaction);
     }
 
     private GameObject FindClosestWaypoint()
@@ -204,10 +209,9 @@ public class FollowWaypoint : MonoBehaviour
             _speed = _baseSpeed;
         }
     }
-
     private IEnumerator DisplayRandomEmotion()
     {
-        while (true)
+        while (true && GameManager.Instance.IsPaused == false)
         {
             yield return new WaitForSeconds(Random.Range(_minAnimationInterval, _maxAnimationInterval));
 
@@ -216,14 +220,24 @@ public class FollowWaypoint : MonoBehaviour
                 _happyAnimator.SetTrigger("DisplayHappy");
                 yield return new WaitForSeconds(_happyAnimator.GetCurrentAnimatorStateInfo(0).length);
                 _happyAnimator.ResetTrigger("DisplayHappy");
+
+                ChangeSatisfaction(20);
             }
             else
             {
                 _angryAnimator.SetTrigger("DisplayAnger");
                 yield return new WaitForSeconds(_angryAnimator.GetCurrentAnimatorStateInfo(0).length);
                 _angryAnimator.ResetTrigger("DisplayAnger");
+
+                ChangeSatisfaction(-5);
             }
         }
+    }
+
+    private void ChangeSatisfaction(int amount)
+    {
+        satisfaction = Mathf.Clamp(satisfaction + amount, 0, 100);
+        satisfactionUI.UpdateSatisfactionBar(satisfaction);
     }
     #endregion Methods
 }
