@@ -4,7 +4,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    private bool _isPaused = false;
+    private bool _isPaused = true;
 
     private void Awake()
     {

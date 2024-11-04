@@ -5,7 +5,6 @@ using UnityEngine;
 public class FollowWaypoint : MonoBehaviour
 {
     #region Fields
-    
     public enum VehicleType { Bike, Bus, Car }
     [Header("Vehicles")]
     public VehicleType vehicleType;
@@ -69,6 +68,7 @@ public class FollowWaypoint : MonoBehaviour
         satisfactionUI.UpdateSatisfactionBar(satisfaction);
     }
 
+    #region Waypoints
     private GameObject FindClosestWaypoint()
     {
         GameObject closestWaypoint = null;
@@ -209,11 +209,16 @@ public class FollowWaypoint : MonoBehaviour
             _speed = _baseSpeed;
         }
     }
+    #endregion Waypoints
+
+    #region Emotions Animations
     private IEnumerator DisplayRandomEmotion()
     {
-        while (true && GameManager.Instance.IsPaused == false)
+        while (true)
         {
             yield return new WaitForSeconds(Random.Range(_minAnimationInterval, _maxAnimationInterval));
+            if (GameManager.Instance.IsPaused)
+            continue;
 
             if (_random.Next(2) == 0)
             {
@@ -239,5 +244,6 @@ public class FollowWaypoint : MonoBehaviour
         satisfaction = Mathf.Clamp(satisfaction + amount, 0, 100);
         satisfactionUI.UpdateSatisfactionBar(satisfaction);
     }
+    #endregion Emotions Animations
     #endregion Methods
 }
