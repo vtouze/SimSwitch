@@ -62172,7 +62172,6 @@ GameObject:
   - component: {fileID: 1952197621}
   - component: {fileID: 1952197620}
   - component: {fileID: 1952197619}
-  - component: {fileID: 1952197622}
   m_Layer: 5
   m_Name: ArrowBackHome_Button
   m_TagString: Untagged
@@ -62293,20 +62292,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952197617}
   m_CullTransparentMesh: 1
---- !u!114 &1952197622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952197617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424adfae285b2cc67a1a828ae1478eea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sizeUp: {x: 1.4, y: 1.4, z: 1}
-  animationDuration: 0.2
 --- !u!1 &1952839679
 GameObject:
   m_ObjectHideFlags: 0
