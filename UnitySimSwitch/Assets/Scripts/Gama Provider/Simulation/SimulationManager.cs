@@ -8,22 +8,22 @@ public class SimulationManager : MonoBehaviour
 {
    
     [Header("Base GameObjects")]
-    [SerializeField] protected GameObject player;
-    [SerializeField] protected GameObject Ground;
-    [SerializeField] protected Boolean loadPlayerPositionFromGAMA = false;
+    /*[SerializeField]*/ protected GameObject player;
+    /*[SerializeField]*/ protected GameObject Ground;
+    /*[SerializeField]*/ protected Boolean loadPlayerPositionFromGAMA = false;
 
 
     // optional: define a scale between GAMA and Unity for the location given
     [Header("Coordinate conversion parameters")]
-    [SerializeField] protected float GamaCRSCoefX = 1.0f;
-    [SerializeField] protected float GamaCRSCoefY = 1.0f;
-    [SerializeField] protected float GamaCRSOffsetX = 0.0f;
-    [SerializeField] protected float GamaCRSOffsetY = 0.0f;
+    /*[SerializeField]*/ protected float GamaCRSCoefX = 1.0f;
+    /*[SerializeField]*/ protected float GamaCRSCoefY = 1.0f;
+    /*[SerializeField]*/ protected float GamaCRSOffsetX = 0.0f;
+    /*[SerializeField]*/ protected float GamaCRSOffsetY = 0.0f;
 
 
     
     // Z offset and scale
-    [SerializeField] protected float GamaCRSOffsetZ = 0.0f;
+    /*[SerializeField]*/ protected float GamaCRSOffsetZ = 0.0f;
 
     protected List<GameObject> toFollow;
 

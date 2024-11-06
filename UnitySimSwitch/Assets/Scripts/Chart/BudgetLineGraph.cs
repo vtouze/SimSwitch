@@ -1,15 +1,18 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class BudgetLineGraph : MonoBehaviour
 {
     [SerializeField] private LineRenderer lineRenderer;
-    [SerializeField] private float timeBetweenPoints = 1.0f;
-    [SerializeField] private float scaleY = 0.1f;
-
+    [SerializeField] private float timeBetweenPoints = 68f;
+    [SerializeField] private float scaleY = 0.5f;
+    [SerializeField] private TMP_Text _budgetText = null;
+    
     private List<float> budgetValues = new List<float>();
     private float nextUpdateTime = 0f;
     private int weekCount = 0;
+    public float budget;
 
     private void Start()
     {
@@ -17,21 +20,24 @@ public class BudgetLineGraph : MonoBehaviour
         {
             lineRenderer = gameObject.AddComponent<LineRenderer>();
         }
-        
+
         lineRenderer.positionCount = 0;
-        lineRenderer.startWidth = 0.2f;
-        lineRenderer.endWidth = 0.2f;
+        lineRenderer.startWidth = 5f;
+        lineRenderer.endWidth = 5f;
         lineRenderer.useWorldSpace = false;
         lineRenderer.numCapVertices = 10;
         lineRenderer.numCornerVertices = 10;
+
+        budget = Random.Range(0, 100);
+        AddNewPoint(budget);
     }
 
     private void Update()
     {
         if (Time.time >= nextUpdateTime)
         {
-            AddNewPoint(Random.Range(0, 100));
-
+            budget = Random.Range(0, 100);
+            AddNewPoint(budget);
             nextUpdateTime = Time.time + 7f;
         }
     }
@@ -44,12 +50,12 @@ public class BudgetLineGraph : MonoBehaviour
         Vector3 newPosition = new Vector3(weekCount * timeBetweenPoints, budget * scaleY, 0);
         lineRenderer.SetPosition(weekCount, newPosition);
 
-        if (weekCount > 0)
-        {
-            Vector3 previousPosition = lineRenderer.GetPosition(weekCount - 1);
-            Debug.DrawLine(previousPosition, newPosition, Color.red, 7f);
-        }
-
         weekCount++;
+        //UpdateBudgetText();
     }
+
+    /*private void UpdateBudgetText()
+    {
+        _budgetText.text = "Budget: " + budget.ToString("F2");
+    }*/
 }

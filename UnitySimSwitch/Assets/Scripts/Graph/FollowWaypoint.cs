@@ -6,7 +6,9 @@ public class FollowWaypoint : MonoBehaviour
 {
     #region Fields
     public enum VehicleType { Bike, Bus, Car }
+
     [Header("Vehicles")]
+    public VehicleManager _vehicleManager = null;
     public VehicleType vehicleType;
     private RectTransform _goal;
     private float _baseSpeed;
@@ -14,32 +16,54 @@ public class FollowWaypoint : MonoBehaviour
     private float _accuracy = 1.0f;
     private List<Node> _vehiclePath = new List<Node>();
     private float _minDistanceToOtherVehicle = 100.0f;
-    private FollowWaypoint[] _allVehicles;
     private float _speedCheckInterval = 0.5f;
     private float _speedCheckTimer = 0.0f;
+
     [Header("Waypoints")]
     public GameObject _waypointsManager;
-    private GameObject[] _waypoints;    
+    private GameObject[] _waypoints;
     private GameObject _currentNode;
     private int _currentWaypoint = 0;
     private Graph _graph;
     private RectTransform _rectTransform;
     private int _targetWaypoint = 20;
     private System.Random _random = new System.Random();
+
     [Header("Animations")]
     [SerializeField] private Animator _happyAnimator;
     [SerializeField] private Animator _angryAnimator;
     private float _minAnimationInterval = 5.0f;
     private float _maxAnimationInterval = 45.0f;
-    [Header("Satisfaction Settings")]
-    public float satisfaction = 50f;
+
+    [Header("Satisfaction")]
     [SerializeField] private SatisfactionBarController satisfactionUI;
+
+    private int _speedChangeCount = 0;
+    private const int MaxSpeedChangeCount = 5;
+
     #endregion Fields
+
+    #region Properties
+    public float Speed
+    {
+        get { return _speed; }
+        set
+        {
+            _speed = Mathf.Clamp(value, 30f, 400f);
+        }
+    }
+
+    public float BaseSpeed
+    {
+        get { return _baseSpeed; }
+        set { _baseSpeed = value; }
+    }
+    #endregion Properties
 
     #region Methods
     private void Start()
     {
-        _allVehicles = FindObjectsOfType<FollowWaypoint>();
+        _vehicleManager.RegisterVehicle(this);
 
         switch (vehicleType)
         {
@@ -53,7 +77,8 @@ public class FollowWaypoint : MonoBehaviour
                 _baseSpeed = 50.0f;
                 break;
         }
-        _speed = _baseSpeed;
+
+        Speed = _baseSpeed;
 
         _waypoints = _waypointsManager.GetComponent<WaypointsManager>()._waypoints;
         _graph = _waypointsManager.GetComponent<WaypointsManager>()._graph;
@@ -65,7 +90,7 @@ public class FollowWaypoint : MonoBehaviour
 
         StartCoroutine(DisplayRandomEmotion());
 
-        satisfactionUI.UpdateSatisfactionBar(satisfaction);
+        satisfactionUI.ChangeSatisfaction(0);
     }
 
     #region Waypoints
@@ -83,74 +108,48 @@ public class FollowWaypoint : MonoBehaviour
                 closestWaypoint = waypoint;
             }
         }
-        Debug.Log(vehicleType + " starting at closest waypoint: " + closestWaypoint.name);
         return closestWaypoint;
     }
 
     public void MoveTo()
     {
-        if(GameManager.Instance.IsPaused == false)
+        if (GameManager.Instance.IsPaused == false)
         {
             foreach (Node node in _vehiclePath)
             {
                 node.ClearPath();
             }
 
-            if (_currentNode == null)
-            {
-                Debug.LogError(vehicleType + " current node is null!");
-                return;
-            }
-
             _targetWaypoint = _random.Next(0, _waypoints.Length);
-            Debug.Log(vehicleType + " new target waypoint: " + _waypoints[_targetWaypoint]?.name ?? "null");
-
-            if (_waypoints[_targetWaypoint] == null)
-            {
-                Debug.LogError(vehicleType + " target waypoint is null!");
-                return;
-            }
 
             bool pathFound = _graph.AStar(_currentNode, _waypoints[_targetWaypoint]);
-            Debug.Log(vehicleType + " AStar path found: " + pathFound);
 
             if (pathFound)
             {
                 _vehiclePath = new List<Node>(_graph._pathList);
-        
+
                 if (_vehiclePath.Count > 0)
                 {
-                    Debug.Log(vehicleType + " path length: " + _vehiclePath.Count);
                     _currentNode = _vehiclePath[0].GetId();
                     _currentWaypoint = 1;
-                    Debug.Log(vehicleType + " starting at: " + _currentNode.name);
                 }
-                else
-                {
-                    Debug.LogError(vehicleType + " AStar returned an empty path!");
-                }
-            }
-            else
-            {
-                Debug.LogError(vehicleType + " failed to find a path!");
             }
         }
     }
 
     private void LateUpdate()
     {
-        if(GameManager.Instance.IsPaused == false)
+        if (GameManager.Instance.IsPaused == false)
         {
             _speedCheckTimer += Time.deltaTime;
             if (_speedCheckTimer >= _speedCheckInterval)
             {
-                AdjustSpeedIfNeeded();
+                AdjustSpeed();
                 _speedCheckTimer = 0.0f;
             }
 
             if (_vehiclePath.Count == 0 || _currentWaypoint >= _vehiclePath.Count)
             {
-                Debug.Log(vehicleType + " has no path or reached the end of path. Reassigning path...");
                 MoveTo();
                 return;
             }
@@ -159,12 +158,8 @@ public class FollowWaypoint : MonoBehaviour
                 _vehiclePath[_currentWaypoint].GetId().GetComponent<RectTransform>().anchoredPosition,
                 _rectTransform.anchoredPosition) < _accuracy)
             {
-                Debug.Log(vehicleType + " reached waypoint: " + _currentWaypoint);
-
                 _currentNode = _vehiclePath[_currentWaypoint].GetId();
                 _currentWaypoint++;
-
-                Debug.Log(vehicleType + " moving to next waypoint: " + _currentWaypoint);
             }
 
             if (_currentWaypoint < _vehiclePath.Count)
@@ -174,26 +169,30 @@ public class FollowWaypoint : MonoBehaviour
                 direction.Normalize();
 
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                _rectTransform.rotation = Quaternion.Slerp(_rectTransform.rotation, Quaternion.Euler(0, 0, angle + 180f), Time.deltaTime * 5f);
+
+                float rotationSpeed = _speed * 0.1f;
+                _rectTransform.rotation = Quaternion.Slerp(_rectTransform.rotation, Quaternion.Euler(0, 0, angle + 180f), Time.deltaTime * rotationSpeed);
 
                 _rectTransform.anchoredPosition += direction * _speed * Time.deltaTime;
             }
         }
     }
 
-    private void AdjustSpeedIfNeeded()
+
+    private void AdjustSpeed()
     {
         FollowWaypoint closestVehicle = null;
         float closestDistance = float.MaxValue;
 
-        foreach (var vehicle in _allVehicles)
+        foreach (var vehicle in VehicleManager.Instance.GetAllVehicles())
         {
             if (vehicle != this)
             {
-                float distanceToOtherVehicle = Vector2.Distance(_rectTransform.anchoredPosition, vehicle._rectTransform.anchoredPosition);
-                if (distanceToOtherVehicle < _minDistanceToOtherVehicle && distanceToOtherVehicle < closestDistance)
+                float distanceToOtherVehicleAlongPath = GetDistanceAlongPath(vehicle);
+            
+                if (distanceToOtherVehicleAlongPath < _minDistanceToOtherVehicle && distanceToOtherVehicleAlongPath < closestDistance)
                 {
-                    closestDistance = distanceToOtherVehicle;
+                    closestDistance = distanceToOtherVehicleAlongPath;
                     closestVehicle = vehicle;
                 }
             }
@@ -201,17 +200,41 @@ public class FollowWaypoint : MonoBehaviour
 
         if (closestVehicle != null)
         {
-            Debug.Log(vehicleType + " slowing down to match speed with another vehicle. Distance: " + closestDistance);
-            _speed = closestVehicle._speed;
+            Speed = closestVehicle.Speed;
+            _speedChangeCount = 0;
         }
         else
         {
-            _speed = _baseSpeed;
+            Speed = BaseSpeed;
         }
     }
+    private float GetDistanceAlongPath(FollowWaypoint vehicle)
+    {
+        float totalDistance = 0f;
+
+        int currentWaypointIndex = vehicle._currentWaypoint;
+        int myCurrentWaypointIndex = _currentWaypoint;
+
+        while (myCurrentWaypointIndex < _vehiclePath.Count && currentWaypointIndex < vehicle._vehiclePath.Count)
+        {
+            GameObject myWaypoint = _vehiclePath[myCurrentWaypointIndex].GetId();
+            GameObject otherWaypoint = vehicle._vehiclePath[currentWaypointIndex].GetId();
+
+            float distanceBetweenWaypoints = Vector2.Distance(myWaypoint.GetComponent<RectTransform>().anchoredPosition, 
+                                                           otherWaypoint.GetComponent<RectTransform>().anchoredPosition);
+        
+            totalDistance += distanceBetweenWaypoints;
+
+            myCurrentWaypointIndex++;
+            currentWaypointIndex++;
+        }
+
+        return totalDistance;
+    }
+
     #endregion Waypoints
 
-    #region Emotions Animations
+    #region Emotions
     private IEnumerator DisplayRandomEmotion()
     {
         while (true)
@@ -226,7 +249,7 @@ public class FollowWaypoint : MonoBehaviour
                 yield return new WaitForSeconds(_happyAnimator.GetCurrentAnimatorStateInfo(0).length);
                 _happyAnimator.ResetTrigger("DisplayHappy");
 
-                ChangeSatisfaction(20);
+                satisfactionUI.ChangeSatisfaction(20);
             }
             else
             {
@@ -234,16 +257,10 @@ public class FollowWaypoint : MonoBehaviour
                 yield return new WaitForSeconds(_angryAnimator.GetCurrentAnimatorStateInfo(0).length);
                 _angryAnimator.ResetTrigger("DisplayAnger");
 
-                ChangeSatisfaction(-5);
+                satisfactionUI.ChangeSatisfaction(-15);
             }
         }
     }
-
-    private void ChangeSatisfaction(int amount)
-    {
-        satisfaction = Mathf.Clamp(satisfaction + amount, 0, 100);
-        satisfactionUI.UpdateSatisfactionBar(satisfaction);
-    }
-    #endregion Emotions Animations
+    #endregion Emotions
     #endregion Methods
 }
