@@ -12,8 +12,13 @@ global {
 	
 	// ONLY 3 MODES
 	mode ACTIVE;
+	string ACTIVEMODE <- "ACTIVE MODE";
+	
 	mode PUBLICTRANSPORT;
+	string PUBLICTRANSPORTMODE <- "PUBLIC TRANSPORT";
+	
 	mode CAR;
+	string CARMODE <- "CAR MODE";
 	
 	// INCOMES X MODES = cost
 	matrix<float> MOBCOST; 

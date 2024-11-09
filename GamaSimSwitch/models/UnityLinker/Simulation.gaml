@@ -1,12 +1,13 @@
 model Simulation
 
-import "../SimSwitch/Population.gaml"
-import "../SimSwitch/City.gaml"
-import "../SimSwitch/Transport.gaml"
+import "../SimSwitch/Entities/Population.gaml"
+import "../SimSwitch/Entities/City.gaml"
+import "../SimSwitch/Entities/Transport.gaml"
 
 global {
+	
 	date starting_date <- #now; 
-	float step <- 6#hours/*1#day*/;
+	float step <- 1#day;
 	
 	city thecity;
 	
