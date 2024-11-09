@@ -1,9 +1,10 @@
 model SendAndReceiveMessages
 
 import "../UnityLinker/Simulation.gaml"
-import "../SimSwitch/Population.gaml"
+import "MessageTAGs.gaml"
 
 species unity_linker parent: abstract_unity_linker {
+	
 	string player_species <- string(unity_player);
 	bool do_send_world <- false;
 
@@ -11,11 +12,18 @@ species unity_linker parent: abstract_unity_linker {
 	 * DAILY INFORMATION FROM GAMA TO UNITY
 	 */
 	reflex daily {
-		do send_message players: unity_player as list mes: ["VIRGILE"::"DAILY",
-			"_day"::current_date.day,
-			"_dayOfWeek"::current_date.day_of_week,
-			"_month"::current_date.month,
-			"_year"::current_date.year
+		
+		do send_message players: unity_player as list mes: [
+			DAILYMESS::SIMDATE, // TODO : we have to change this so we recognise what it is
+			_D::current_date.day,
+			_DW::current_date.day_of_week,
+			_M::current_date.month,
+			_Y::current_date.year
+		];
+		
+		do send_message players: unity_player as list mes: [
+			DAILYMESS::SIMBUDGET, 
+			_Budg::thecity.citymayor.budget
 		];
 	}
 
