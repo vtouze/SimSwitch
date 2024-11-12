@@ -115,6 +115,9 @@ public class ConnectionManager : WebSocketConnector
                     case "json_output":
                         JObject content = (JObject)jsonObj["contents"];
                         String firstKey = content.Properties().Select(pp => pp.Name).FirstOrDefault();
+                        Debug.Log("First key: " + firstKey);
+                        String firstValue = content.Properties().Select(pp => pp.Value.ToString()).FirstOrDefault();
+                        Debug.Log(firstValue);
                         OnServerMessageReceived?.Invoke(firstKey, content.ToString());
                         break;
 
