@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using CodeMonkey.Utils;
 
 public class Window_Graph : MonoBehaviour {
@@ -29,7 +30,8 @@ public class Window_Graph : MonoBehaviour {
     private float xSize;
     private bool startYScaleAtZero;
 
-    private int currentDay = 1;
+    private int currentWeek = 1;
+    private int startWeek = 1;
 
     private void Awake() {
         instance = this;
@@ -46,17 +48,17 @@ public class Window_Graph : MonoBehaviour {
         yLabelList = new List<RectTransform>();
         graphVisualObjectList = new List<IGraphVisualObject>();
         
-        IGraphVisual lineGraphVisual = new LineGraphVisual(graphContainer, dotSprite, Color.green, new Color(1, 1, 1, .5f));
+        IGraphVisual lineGraphVisual = new LineGraphVisual(graphContainer, dotSprite, Color.red, new Color(79, 76, 69, 1f));
         
         HideTooltip();
 
         List<int> valueList = new List<int>() { 5, 98, 56, 45, 30, 22, 17, 15, 13, 17, 25, 37, 40, 36, 33 };
-        ShowGraph(valueList, lineGraphVisual, -1, (int _i) => "Day " + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
+        ShowGraph(valueList, lineGraphVisual, -1, (int _i) => "Week " + (_i + startWeek), (float _f) => "$" + Mathf.RoundToInt(_f));
     
         FunctionPeriodic.Create(() => {
             AddNewPoint(UnityEngine.Random.Range(1, 100));
-            currentDay++;
-        }, 1f);
+            currentWeek++;
+        }, 5f);
     }   
 
     public static void ShowTooltip_Static(string tooltipText, Vector2 anchoredPosition) {
@@ -68,7 +70,7 @@ public class Window_Graph : MonoBehaviour {
 
         tooltipGameObject.GetComponent<RectTransform>().anchoredPosition = anchoredPosition;
 
-        Text tooltipUIText = tooltipGameObject.transform.Find("text").GetComponent<Text>();
+        TMP_Text tooltipUIText = tooltipGameObject.transform.Find("text").GetComponent<TMP_Text>();
         tooltipUIText.text = tooltipText;
 
         float textPaddingSize = 4f;
@@ -92,7 +94,7 @@ public class Window_Graph : MonoBehaviour {
 
     private void AddNewPoint(int newValue) {
         valueList.Add(newValue);
-        ShowGraph(valueList, graphVisual, maxVisibleValueAmount, (int _i) => "Day " + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
+        ShowGraph(valueList, graphVisual, maxVisibleValueAmount, (int _i) => "Week " + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
     }
 
     private void SetGetAxisLabelX(Func<int, string> getAxisLabelX) {
@@ -170,14 +172,14 @@ public class Window_Graph : MonoBehaviour {
             RectTransform labelX = Instantiate(labelTemplateX);
             labelX.SetParent(graphContainer, false);
             labelX.gameObject.SetActive(true);
-            labelX.anchoredPosition = new Vector2(xPosition, -7f);
-            labelX.GetComponent<Text>().text = getAxisLabelX(currentDay - valueList.Count + i + 1);
+            labelX.anchoredPosition = new Vector2(xPosition, -20f);
+            labelX.GetComponent<TMP_Text>().text = getAxisLabelX(currentWeek - valueList.Count + i + 1);
             gameObjectList.Add(labelX.gameObject);
 
             RectTransform dashX = Instantiate(dashTemplateX);
             dashX.SetParent(dashContainer, false);
             dashX.gameObject.SetActive(true);
-            dashX.anchoredPosition = new Vector2(xPosition, -3f);
+            dashX.anchoredPosition = new Vector2(xPosition, 2f);
             gameObjectList.Add(dashX.gameObject);
 
             xIndex++;
@@ -189,15 +191,15 @@ public class Window_Graph : MonoBehaviour {
             labelY.SetParent(graphContainer, false);
             labelY.gameObject.SetActive(true);
             float normalizedValue = i * 1f / separatorCount;
-            labelY.anchoredPosition = new Vector2(-7f, normalizedValue * graphHeight);
-            labelY.GetComponent<Text>().text = getAxisLabelY(yMinimum + (normalizedValue * (yMaximum - yMinimum)));
+            labelY.anchoredPosition = new Vector2(-35f, normalizedValue * graphHeight);
+            labelY.GetComponent<TMP_Text>().text = getAxisLabelY(yMinimum + (normalizedValue * (yMaximum - yMinimum)));
             yLabelList.Add(labelY);
             gameObjectList.Add(labelY.gameObject);
 
             RectTransform dashY = Instantiate(dashTemplateY);
             dashY.SetParent(dashContainer, false);
             dashY.gameObject.SetActive(true);
-            dashY.anchoredPosition = new Vector2(-4f, normalizedValue * graphHeight);
+            dashY.anchoredPosition = new Vector2(0f, normalizedValue * graphHeight);
             gameObjectList.Add(dashY.gameObject);
         }
     }
@@ -236,7 +238,7 @@ public class Window_Graph : MonoBehaviour {
 
             for (int i = 0; i < yLabelList.Count; i++) {
                 float normalizedValue = i * 1f / yLabelList.Count;
-                yLabelList[i].GetComponent<Text>().text = getAxisLabelY(yMinimum + (normalizedValue * (yMaximum - yMinimum)));
+                yLabelList[i].GetComponent<TMP_Text>().text = getAxisLabelY(yMinimum + (normalizedValue * (yMaximum - yMinimum)));
             }
         }
     }
@@ -326,7 +328,7 @@ public class Window_Graph : MonoBehaviour {
             gameObject.GetComponent<Image>().color = dotColor;
             RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
             rectTransform.anchoredPosition = anchoredPosition;
-            rectTransform.sizeDelta = new Vector2(11, 11);
+            rectTransform.sizeDelta = new Vector2(15, 15);
             rectTransform.anchorMin = new Vector2(0, 0);
             rectTransform.anchorMax = new Vector2(0, 0);
             
@@ -345,7 +347,7 @@ public class Window_Graph : MonoBehaviour {
             float distance = Vector2.Distance(dotPositionA, dotPositionB);
             rectTransform.anchorMin = new Vector2(0, 0);
             rectTransform.anchorMax = new Vector2(0, 0);
-            rectTransform.sizeDelta = new Vector2(distance, 3f);
+            rectTransform.sizeDelta = new Vector2(distance, 5f);
             rectTransform.anchoredPosition = dotPositionA + dir * distance * .5f;
             rectTransform.localEulerAngles = new Vector3(0, 0, UtilsClass.GetAngleFromVectorFloat(dir));
             return gameObject;
