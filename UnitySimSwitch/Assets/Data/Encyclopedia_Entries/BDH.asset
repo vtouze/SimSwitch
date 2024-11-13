@@ -10,14 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be4c63ed5097086ecb8db68925c044a0, type: 3}
-  m_Name: Biais de Halo
+  m_Name: BDH
   m_EditorClassIdentifier: 
   _entryName: Biais de Halo
   _coverImage: {fileID: 21300000, guid: e4f6e98877e49a1d78d2b2f5db11e7d3, type: 3}
-  _description: 'Le biais de Halo c'est pas bien'
-  _articles: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada
-    gravida diam, non tempus eros elementum vel. Phasellus pulvinar non nisl in scelerisque.
-    Nulla ac tortor dui. Morbi varius nec sem sed luctus. Nulla id turpis rhoncus,
-    luctus augue quis, efficitur purus. Duis at sapien ac sapien consequat tempus
-    in ut dolor. Nam euismod mauris sit amet molestie porta. Etiam non mollis nisl.
-    Ut diam nibh, facilisis at lorem pharetra, pellentesque sagittis augue.  '
+  _description: Le biais de Halo c
+  _articles: 

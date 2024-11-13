@@ -104,7 +104,7 @@ public class MainMenu : MonoBehaviour
 
         if (_fadeAnimationTime <= 0 && _hasFinishedPlayAnimation == true)
         {
-            SceneManager.LoadScene("Overview");
+            SceneManager.LoadScene("OverviewV2");
         }
     }
 

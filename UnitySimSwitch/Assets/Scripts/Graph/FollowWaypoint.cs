@@ -32,7 +32,7 @@ public class FollowWaypoint : MonoBehaviour
     [Header("Animations")]
     [SerializeField] private Animator _happyAnimator;
     [SerializeField] private Animator _angryAnimator;
-    private float _minAnimationInterval = 5.0f;
+    private float _minAnimationInterval = 25.0f;
     private float _maxAnimationInterval = 45.0f;
 
     [Header("Satisfaction")]
