@@ -9424,6 +9424,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0.15605101
       objectReference: {fileID: 0}
+    - target: {fileID: 1436217666775088369, guid: cfb3b40879c317ebbbfd6ff705090d1c, type: 3}
+      propertyPath: _entries.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 96ee1a397061e05888bc2b71026923cd, type: 2}
+    - target: {fileID: 1436217666775088369, guid: cfb3b40879c317ebbbfd6ff705090d1c, type: 3}
+      propertyPath: _entries.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 969fc704f416735baa01a543793019c7, type: 2}
     - target: {fileID: 1560083286548450385, guid: cfb3b40879c317ebbbfd6ff705090d1c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

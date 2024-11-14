@@ -38,7 +38,7 @@ public class EncyclopediaManager : MonoBehaviour
         foreach (EncyclopediaEntry entry in _entries)
         {
             GameObject newButton = Instantiate(_buttonPrefab, _buttonListParent);
-            newButton.GetComponentInChildren<TMP_Text>().text = entry._entryName;
+            newButton.GetComponentInChildren<TMP_Text>().text = entry._elementName;
 
             newButton.GetComponent<Button>().onClick.AddListener(() => DisplayEntry(entry));
         }
@@ -47,9 +47,9 @@ public class EncyclopediaManager : MonoBehaviour
     void DisplayEntry(EncyclopediaEntry entry)
     {
         _coverImage.sprite = entry._coverImage;
-        _entryTitle.text = entry._entryName;
+        _entryTitle.text = entry._elementName;
         _entryDescription.text = entry._description;
-        _entryArticle.text = entry._articles;
+        _entryArticle.text = entry._listArticles;
     }
     #endregion Methods
 }

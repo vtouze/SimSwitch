@@ -32,10 +32,10 @@ public class NewspaperDisplay : MonoBehaviour
     public void DisplayEvent(NewspaperEvent newspaperEvent)
     {
         _coverImage.sprite = newspaperEvent._coverImage;
-        _entryNameText.text = newspaperEvent._entryName;
+        _entryNameText.text = newspaperEvent._eventName;
         _dateText.text = newspaperEvent._date;
-        _subtitleText.text = newspaperEvent._subTitle;
-        _coverDescriptionText.text = newspaperEvent._coverDescription;
+        _subtitleText.text = newspaperEvent._subheading;
+        _coverDescriptionText.text = newspaperEvent._captionImage;
         _descriptionText.text = newspaperEvent._description;
 
         SetEventEffect(_moneyIcon, _moneyText, newspaperEvent._moneyChange);

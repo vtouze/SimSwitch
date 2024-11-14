@@ -40,8 +40,8 @@ public class NewspaperHome : MonoBehaviour
             subtitle.transform.SetParent(subtitleBackground.transform, false);
             button.transform.SetParent(article.transform, false);
 
-            title.GetComponentInChildren<TMP_Text>().text = _events[index]._entryName;
-            subtitle.GetComponent<TMP_Text>().text = _events[index]._subTitle;
+            title.GetComponentInChildren<TMP_Text>().text = _events[index]._eventName;
+            subtitle.GetComponent<TMP_Text>().text = _events[index]._subheading;
             cover.GetComponent<Image>().sprite = _events[index]._coverImage;
 
             button.GetComponent<Button>().onClick.AddListener(() => _newspaperController.ShowEventContent(index));

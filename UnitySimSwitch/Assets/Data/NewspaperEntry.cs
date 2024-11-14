@@ -3,11 +3,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewspaperEvent", menuName = "ScriptableObjects/NewspaperEvent", order = 1)]
 public class NewspaperEvent : ScriptableObject
 {
-    public string _entryName;
+    public string _eventName;
     public string _date;
-    public string _subTitle;
+    public string _subheading;
     public Sprite _coverImage;
-    public string _coverDescription;
+    public string _captionImage;
     public string _description;
 
     public int _moneyChange;

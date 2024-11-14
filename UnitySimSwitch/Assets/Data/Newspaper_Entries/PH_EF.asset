@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
+  m_Name: PH_EF
+  m_EditorClassIdentifier: 
+  _eventName: EF
+  _date: September 23, 2024
+  _subheading: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
+    pulvinar non nisl in sceler.
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel.
+    Phasellus pulvinar non nisl in sceler.
+  _description: Etiam faucibus augue luctus, varius libero vehicula, dignissim diam.
+    Sed mollis ex eu metus consectetur mollis. Vestibulum eu quam at diam rutrum
+    euismod id sed nulla. Mauris aliquet lacinia elit. Aenean sollicitudin, elit
+    vitae placerat mollis, ante justo bibendum lorem, sed imperdiet justo nisi vitae
+    lorem. Nulla sem eros, malesuada non ultricies eu, semper at mi. Fusce mattis
+    ipsum dui, ut gravida metus luctus at. Aenean mattis eu leo ac mattis. Sed suscipit
+    volutpat diam eu rhoncus. Orci varius natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. In cursus a ligula at iaculis. Vestibulum at
+    metus aliquet, varius velit a, ullamcorper velit. In hac habitasse platea dictumst.
+    Sed quis tellus odio. Donec ante orci, porttitor at porttitor ut, porta nec dui.
+  _moneyChange: 0
+  _satisfactionChange: 10
+  _sustainabilityChange: -40

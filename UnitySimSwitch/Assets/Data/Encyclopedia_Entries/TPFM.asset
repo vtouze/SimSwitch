@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be4c63ed5097086ecb8db68925c044a0, type: 3}
   m_Name: TPFM
   m_EditorClassIdentifier: 
-  _entryName: Les transports publiques en France
+  _elementName: '[FR] Transports publiques'
   _coverImage: {fileID: 21300000, guid: e4f6e98877e49a1d78d2b2f5db11e7d3, type: 3}
-  _description: 'Les français utilisent massivement les transports en commun: deuxième poste de dépance en mobilité des ménages (SOURCE).
-    Bien que l'usage des transports en commun urbain voient leur usage augmenté, c'est sur les transports longues inter-ubrains qu'on observe la plus
-    nette progression'
-  _articles: 'Les transports publiques en france [blabla chatGPT]
-    
-    Le saviez vous ? ±75% des transports en commun en France sont en Ile-de-France'
+  _description: "Les fran\xE7ais utilisent massivement les transports en commun:
+    deuxi\xE8me poste de d\xE9pance en mobilit\xE9 des m\xE9nages (SOURCE). Bien
+    que l"
+  _listArticles: 
