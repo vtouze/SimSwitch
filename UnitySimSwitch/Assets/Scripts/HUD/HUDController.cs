@@ -104,7 +104,6 @@ public class HUDController : MonoBehaviour
         }
     }
     #endregion Menu
-
     #region Quit Methods
     public void QuitToMainMenu()
     {

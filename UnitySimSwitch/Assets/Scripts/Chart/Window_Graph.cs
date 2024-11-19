@@ -32,6 +32,7 @@ public class Window_Graph : MonoBehaviour {
 
     private int currentWeek = 1;
     private int startWeek = 1;
+    private int budget = 0;
 
     private void Awake() {
         instance = this;
@@ -47,19 +48,25 @@ public class Window_Graph : MonoBehaviour {
         gameObjectList = new List<GameObject>();
         yLabelList = new List<RectTransform>();
         graphVisualObjectList = new List<IGraphVisualObject>();
-        
+
         IGraphVisual lineGraphVisual = new LineGraphVisual(graphContainer, dotSprite, Color.red, new Color(79, 76, 69, 1f));
         
         HideTooltip();
 
-        List<int> valueList = new List<int>() { 5, 98, 56, 45, 30, 22, 17, 15, 13, 17, 25, 37, 40, 36, 33 };
-        ShowGraph(valueList, lineGraphVisual, -1, (int _i) => "Week " + (_i + startWeek), (float _f) => "$" + Mathf.RoundToInt(_f));
-    
+        List<int> valueList = new List<int>() { 5, 98, 56, 45, 30, 22, 17, 15, 13, 17, 25, 37, 40, 36, budget };
+        ShowGraph(valueList, lineGraphVisual, -1, (int _i) => "Week " + (_i + startWeek), (float _f) => "€" + Mathf.RoundToInt(_f));
+
         FunctionPeriodic.Create(() => {
-            AddNewPoint(UnityEngine.Random.Range(1, 100));
+            UpdateBudget();
+            AddNewPoint(budget);
             currentWeek++;
         }, 5f);
-    }   
+    }
+
+    private void UpdateBudget() {
+        budget += UnityEngine.Random.Range(-50, 50);
+    }
+      
 
     public static void ShowTooltip_Static(string tooltipText, Vector2 anchoredPosition) {
         instance.ShowTooltip(tooltipText, anchoredPosition);
@@ -94,7 +101,7 @@ public class Window_Graph : MonoBehaviour {
 
     private void AddNewPoint(int newValue) {
         valueList.Add(newValue);
-        ShowGraph(valueList, graphVisual, maxVisibleValueAmount, (int _i) => "Week " + (_i + 1), (float _f) => "$" + Mathf.RoundToInt(_f));
+        ShowGraph(valueList, graphVisual, maxVisibleValueAmount, (int _i) => "Week " + (_i + 1), (float _f) => "€" + Mathf.RoundToInt(_f));
     }
 
     private void SetGetAxisLabelX(Func<int, string> getAxisLabelX) {
