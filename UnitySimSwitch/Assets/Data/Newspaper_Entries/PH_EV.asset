@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
-  m_Name: PH_EV
+  m_Name: Popularity_ranking
   m_EditorClassIdentifier: 
   _eventName: Classement de popularité : votre ville brille
   _date: September 21, 2024
