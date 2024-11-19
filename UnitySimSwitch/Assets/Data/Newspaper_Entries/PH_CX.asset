@@ -10,25 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
-  m_Name: PH_CX
+  m_Name: Economic_inflation
   m_EditorClassIdentifier: 
-  _eventName: CX
+  _eventName: Contexte inflationniste : une année sous pression économique
   _date: September 21, 2024
-  _subheading: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
-    pulvinar non nisl in sceler.
+  _subheading: L’année 2024 se caractérise par un contexte économique particulièrement tendu, marqué par une forte inflation qui affecte le pouvoir d’achat des ménages et plonge une partie de la population dans l’incertitude. Si l’inflation est un phénomène souvent cyclique, sa recrudescence cette année semble avoir des causes multiples, et ses effets se font ressentir dans de nombreux secteurs de la vie quotidienne.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: Etiam faucibus augue luctus, varius libero vehicula, dignissim diam.
-    Sed mollis ex eu metus consectetur mollis. Vestibulum eu quam at diam rutrum
-    euismod id sed nulla. Mauris aliquet lacinia elit. Aenean sollicitudin, elit
-    vitae placerat mollis, ante justo bibendum lorem, sed imperdiet justo nisi vitae
-    lorem. Nulla sem eros, malesuada non ultricies eu, semper at mi. Fusce mattis
-    ipsum dui, ut gravida metus luctus at. Aenean mattis eu leo ac mattis. Sed suscipit
-    volutpat diam eu rhoncus. Orci varius natoque penatibus et magnis dis parturient
-    montes, nascetur ridiculus mus. In cursus a ligula at iaculis. Vestibulum at
-    metus aliquet, varius velit a, ullamcorper velit. In hac habitasse platea dictumst.
-    Sed quis tellus odio. Donec ante orci, porttitor at porttitor ut, porta nec dui.
+  _description: Une inflation qui frappe tous les secteurs : L'inflation, qui a atteint un taux de 6,2 % en moyenne sur les six premiers mois de l'année, touche de plein fouet les consommateurs, mais également les entreprises. En tête des hausses les plus marquées, les prix de l’alimentation et de l’énergie continuent d’augmenter à un rythme soutenu. Les produits de première nécessité, comme le pain, le lait ou les fruits et légumes, voient leur coût grimper de manière exponentielle, pesant lourdement sur les budgets des foyers. Le secteur de l’énergie n’est pas épargné, avec une hausse continue des prix du gaz, de l’électricité, et du carburant, alimentée par des tensions géopolitiques persistantes et un marché mondial de l’énergie toujours instable. Cette hausse a des répercussions directes sur les coûts de production, ce qui, in fine, génère un cercle vicieux de hausse des prix. À cela s’ajoutent les coûts du logement, qui connaissent eux aussi une tendance haussière. Les loyers et les prix de l’immobilier continuent d'augmenter dans de nombreuses grandes villes, exacerbant les difficultés d’accès à un logement décent pour de plus en plus de Français.
+Les conséquences sur le quotidien des Français : Face à cette inflation, les ménages doivent s’adapter pour faire face à l’augmentation des prix. Pour certains, cela se traduit par une révision des priorités budgétaires : les loisirs et les achats non essentiels sont souvent mis de côté au profit des dépenses indispensables. Les familles à revenus modestes, en particulier, sont celles qui subissent le plus durement cette hausse des prix, parfois au détriment de leur qualité de vie. Les économistes s’accordent à dire que cette inflation, bien que partiellement liée à la reprise post-COVID et à la guerre en Ukraine, trouve également ses racines dans des mécanismes structurels. La chaîne de production mondiale reste fragile, les coûts de transport sont élevés, et les perturbations dans les chaînes d'approvisionnement ne sont toujours pas complètement résolues.
+Les réponses des autorités publiques : Face à cette situation, le gouvernement a mis en place plusieurs mesures pour atténuer l’impact de l'inflation sur les foyers. Des aides directes, comme les chèques énergie ou la revalorisation des prestations sociales, ont été renforcées. De plus, des plafonds ont été instaurés sur certains produits de première nécessité pour éviter une flambée des prix incontrôlable. Cependant, ces mesures, bien que salutaires, ne suffisent pas toujours à compenser la baisse du pouvoir d'achat pour une grande partie de la population. Les syndicats et les associations de consommateurs appellent à des mesures plus ambitieuses, notamment une augmentation générale des salaires pour faire face à la hausse des prix.
+Les perspectives à court et moyen terme : Le plus grand défi pour les mois à venir sera de stabiliser la situation sans plonger l’économie dans une récession. Les experts s’attendent à une légère décélération de l’inflation d'ici la fin de l'année, mais les pressions restent fortes, notamment dans le secteur de l’énergie et des matières premières. Les autorités monétaires, de leur côté, poursuivent leurs efforts pour maîtriser l’inflation en relevant progressivement les taux d'intérêt, une politique qui, bien qu'efficace sur le papier, a également des répercussions sur l'accès au crédit et peut freiner la consommation.
+Conclusion : une situation qui fragilise. Si l’inflation fait partie des phénomènes économiques cycliques, la situation actuelle, marquée par une forte pression sur les prix, fragilise de nombreuses familles, et alimente un climat d’incertitude économique. Si des réponses gouvernementales ont été mises en place, il reste à savoir si elles seront suffisantes pour endiguer cette spirale inflationniste et redonner du pouvoir d'achat aux Français. En attendant, la population continue de naviguer dans un environnement économique incertain, où la gestion quotidienne devient chaque jour un peu plus compliquée.
+//Effet : hausse des coûts de fonctionnement et des coûts pour les utilisateurs
   _moneyChange: 40
   _satisfactionChange: -5
   _sustainabilityChange: 60
