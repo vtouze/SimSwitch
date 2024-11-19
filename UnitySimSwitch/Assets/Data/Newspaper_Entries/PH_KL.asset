@@ -10,25 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
-  m_Name: PH_KL
+  m_Name: Massive_strikes
   m_EditorClassIdentifier: 
-  _eventName: KL
+  _eventName: Grèves massives : le pays paralysé, la population contrainte de trouver des alternatives
   _date: September 26, 2024
-  _subheading: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
-    pulvinar non nisl in sceler.
+  _subheading: Depuis plusieurs jours, la France est secouée par une grève d’une ampleur historique. Trains, métros, bus, et même certains vols sont à l’arrêt, tandis que des milliers de travailleurs manifestent dans les rues pour défendre leurs droits face aux réformes annoncées. Le pays, littéralement bloqué, se retrouve plongé dans une crise de mobilité qui pousse chacun à improviser des solutions pour se déplacer autrement.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel.
     Phasellus pulvinar non nisl in sceler.
-  _description: Etiam faucibus augue luctus, varius libero vehicula, dignissim diam.
-    Sed mollis ex eu metus consectetur mollis. Vestibulum eu quam at diam rutrum
-    euismod id sed nulla. Mauris aliquet lacinia elit. Aenean sollicitudin, elit
-    vitae placerat mollis, ante justo bibendum lorem, sed imperdiet justo nisi vitae
-    lorem. Nulla sem eros, malesuada non ultricies eu, semper at mi. Fusce mattis
-    ipsum dui, ut gravida metus luctus at. Aenean mattis eu leo ac mattis. Sed suscipit
-    volutpat diam eu rhoncus. Orci varius natoque penatibus et magnis dis parturient
-    montes, nascetur ridiculus mus. In cursus a ligula at iaculis. Vestibulum at
-    metus aliquet, varius velit a, ullamcorper velit. In hac habitasse platea dictumst.
-    Sed quis tellus odio. Donec ante orci, porttitor at porttitor ut, porta nec dui.
+  _description: Un quotidien réinventé pour les travailleurs : Avec des transports en commun hors service, les Français redoublent d’ingéniosité pour se rendre au travail. Les villes assistent à une explosion des déplacements à vélo, en trottinette ou même en covoiturage. Dans les grandes agglomérations, les plateformes de VTC et les vélos en libre-service affichent complet dès les premières heures de la journée. Certaines entreprises, anticipant les difficultés de leurs salariés, ont assoupli les horaires et mis en place le télétravail pour réduire les déplacements.
+Embouteillages et marche forcée en centre-ville : Les axes routiers sont saturés, et les bouchons s’étendent sur des kilomètres aux abords des grandes villes, créant une circulation chaotique. Dans certains quartiers, les habitants n’ont d’autre choix que de marcher pour atteindre leur destination. « J’ai dû marcher une heure pour rejoindre mon bureau », témoigne une employée parisienne. Beaucoup s’organisent en groupes de marche ou se relayent pour proposer des covoiturages improvisés, une solidarité qui aide à surmonter la situation.
+Un impact économique et social majeur : Les grèves impactent durement les commerces et les professionnels, avec des retards de livraison et une fréquentation réduite dans les zones commerciales. Les autorités locales multiplient les appels à la patience et invitent à limiter les déplacements non essentiels. Pendant ce temps, les discussions entre syndicats et gouvernement s’intensifient, mais aucun accord ne semble encore en vue. Le pays reste suspendu, espérant une issue favorable pour mettre fin à ce blocage qui pèse sur l’ensemble de la société. En attendant, la France continue de se réinventer au rythme des manifestations et des embouteillages, résolue à faire face, jour après jour, à cette crise de mobilité sans précédent. Depuis plusieurs jours, une vague de grèves sans précédent paralyse la France, plongeant le pays dans une crise de mobilité inédite. Les transports en commun sont quasiment à l’arrêt : trains, métros, bus, et même certaines lignes de tramway ne circulent plus. Les syndicats, qui réclament des améliorations salariales et des conditions de travail revues à la hausse, ont décidé de durcir le mouvement, forçant les usagers à chercher des solutions de rechange. Pour les travailleurs et les étudiants, cette grève pose des défis quotidiens. Les bouchons sur les routes se sont intensifiés, les vélos et trottinettes se sont multipliés dans les rues, et le covoiturage devient une option de plus en plus prisée. Certains, qui n'ont d'autre choix, prennent même leur mal en patience et marchent plusieurs kilomètres pour rejoindre leur lieu de travail. Les entreprises, de leur côté, s’adaptent tant bien que mal : télétravail généralisé, horaires décalés, réunions en visioconférence, tout est mis en place pour minimiser l'impact de cette paralysie. Les grèves actuelles soulèvent des tensions, et les usagers expriment un mélange de soutien et de frustration. D’un côté, beaucoup comprennent les revendications des grévistes, souvent issues de secteurs publics en difficulté depuis longtemps. De l'autre, l'ampleur de l’impact quotidien pousse certains à exprimer leur exaspération face à cette situation devenue presque insoutenable. Dans ce contexte, les autorités tentent de dialoguer pour éviter un enlisement, mais la reprise normale des services semble encore lointaine. En attendant, le quotidien des Français s’adapte, démontrant une nouvelle fois leur résilience, mais aussi la fragilité de notre société lorsque les rouages des transports viennent à se bloquer.
+ //Effet : baisse de popularité des transports en commun / Pas de TP dispo (temps sur 2 semaines)
   _moneyChange: 80
   _satisfactionChange: -40
   _sustainabilityChange: 10
