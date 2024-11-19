@@ -10,25 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
-  m_Name: PH_MN
+  m_Name: fuel_rise
   m_EditorClassIdentifier: 
-  _eventName: MN
+  _eventName: Hausse du prix du carburant : une flambée sans précédent
   _date: September 26, 2024
-  _subheading: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
-    pulvinar non nisl in sceler.
+  _subheading: Les automobilistes français le constatent amèrement à chaque passage à la pompe : les prix de l’essence et du diesel atteignent des sommets inégalés. Avec une hausse de plusieurs centimes par litre chaque semaine, les coûts des carburants pèsent de plus en plus lourd sur le budget des ménages. Cette flambée du pétrole est liée aux tensions sur le marché international, où la demande croissante et les perturbations dans l’approvisionnement font grimper les prix.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: Etiam faucibus augue luctus, varius libero vehicula, dignissim diam.
-    Sed mollis ex eu metus consectetur mollis. Vestibulum eu quam at diam rutrum
-    euismod id sed nulla. Mauris aliquet lacinia elit. Aenean sollicitudin, elit
-    vitae placerat mollis, ante justo bibendum lorem, sed imperdiet justo nisi vitae
-    lorem. Nulla sem eros, malesuada non ultricies eu, semper at mi. Fusce mattis
-    ipsum dui, ut gravida metus luctus at. Aenean mattis eu leo ac mattis. Sed suscipit
-    volutpat diam eu rhoncus. Orci varius natoque penatibus et magnis dis parturient
-    montes, nascetur ridiculus mus. In cursus a ligula at iaculis. Vestibulum at
-    metus aliquet, varius velit a, ullamcorper velit. In hac habitasse platea dictumst.
-    Sed quis tellus odio. Donec ante orci, porttitor at porttitor ut, porta nec dui.
+  _description: Des conséquences lourdes pour les ménages et les entreprises : La hausse des prix du carburant impacte directement le pouvoir d’achat des ménages, en particulier pour ceux vivant en zones rurales ou périurbaines, où la voiture est souvent indispensable. « Chaque plein me coûte désormais près de 20 % de plus qu’il y a un an, c’est devenu difficile de boucler le budget », confie un père de famille. De nombreux travailleurs ressentent la même pression, d’autant plus que les augmentations se répercutent également sur le coût des biens de consommation, via la hausse des coûts de transport.
+Des appels à l’aide de la part des associations et des syndicats : Face à cette situation, plusieurs associations de consommateurs et syndicats demandent au gouvernement des mesures pour alléger la facture des particuliers, tels que des aides ciblées ou une baisse temporaire des taxes sur le carburant. Dans un contexte où la transition écologique pousse à envisager des solutions alternatives à la voiture thermique, beaucoup plaident cependant pour un soutien accru au développement des infrastructures de transport en commun et des aides pour l’achat de véhicules électriques.
+Un défi pour la transition énergétique : Cette flambée des prix du carburant rappelle l’urgence de diversifier les sources d’énergie et de réduire la dépendance aux énergies fossiles. Mais en attendant que les solutions alternatives soient accessibles à tous, les consommateurs subissent les effets d’un marché du pétrole toujours plus instable. Pour de nombreux Français, cette flambée reste un symbole de précarité énergétique, les laissant suspendus aux fluctuations du marché, dans l’espoir de retrouver une certaine stabilité à la pompe.
+//effet : augmentation du prix de l’usage de la voiture 
   _moneyChange: 80
   _satisfactionChange: -40
   _sustainabilityChange: 10
