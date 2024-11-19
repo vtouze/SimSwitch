@@ -10,25 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
-  m_Name: PH_AB
+  m_Name: Refinery_strikes
   m_EditorClassIdentifier: 
-  _eventName: AB
+  _eventName: Grèves dans les raffineries : La France face à une pénurie de carburant
   _date: September 21, 2024
-  _subheading: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
-    pulvinar non nisl in sceler.
+  _subheading: Depuis plusieurs jours, une série de grèves secoue les raffineries françaises, perturbant gravement la production et la distribution de carburant sur l'ensemble du territoire. Ces mouvements sociaux, initiés par les syndicats pour protester contre les conditions de travail et les politiques salariales, ont déjà conduit à des pénuries dans de nombreuses stations-service.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel.
     Phasellus pulvinar non nisl in sceler.
-  _description: Etiam faucibus augue luctus, varius libero vehicula, dignissim diam.
-    Sed mollis ex eu metus consectetur mollis. Vestibulum eu quam at diam rutrum
-    euismod id sed nulla. Mauris aliquet lacinia elit. Aenean sollicitudin, elit
-    vitae placerat mollis, ante justo bibendum lorem, sed imperdiet justo nisi vitae
-    lorem. Nulla sem eros, malesuada non ultricies eu, semper at mi. Fusce mattis
-    ipsum dui, ut gravida metus luctus at. Aenean mattis eu leo ac mattis. Sed suscipit
-    volutpat diam eu rhoncus. Orci varius natoque penatibus et magnis dis parturient
-    montes, nascetur ridiculus mus. In cursus a ligula at iaculis. Vestibulum at
-    metus aliquet, varius velit a, ullamcorper velit. In hac habitasse platea dictumst.
-    Sed quis tellus odio. Donec ante orci, porttitor at porttitor ut, porta nec dui.
+  _description: Une grève généralisée : Les raffineries, véritables poumons de l'approvisionnement énergétique du pays, sont au cœur du conflit. Plusieurs sites industriels majeurs sont actuellement à l'arrêt ou fonctionnent à une capacité réduite, ce qui entrave l'approvisionnement en essence et en diesel. De nombreuses régions, notamment en Île-de-France et dans le sud de la France, font face à des pénuries de carburant, avec des files d'attente devant les stations-service qui ne parviennent pas à répondre à la demande.
+Les syndicats, qui réclament des hausses de salaires et de meilleures conditions de travail, dénoncent une situation de plus en plus tendue dans un secteur en pleine mutation, marqué par les enjeux écologiques et les incertitudes économiques. "Nous n'avons d'autre choix que d'agir pour préserver nos droits", a déclaré un porte-parole syndical, soulignant la nécessité d'une reconnaissance de l'effort fourni par les travailleurs du secteur pétrolier.
+Impact sur l’économie et la vie quotidienne. Les conséquences de ces grèves se font rapidement sentir sur le quotidien des Français. Les automobilistes se retrouvent confrontés à des pénuries dans les stations-service, certains étant contraints de faire de longues distances pour trouver du carburant. Dans les grandes villes, des tensions se créent, alimentées par les craintes d’une prolongation du mouvement. Le gouvernement a déjà appelé au calme et à la négociation, mais la situation reste tendue.
+Outre les répercussions immédiates sur la consommation de carburant, ces grèves pourraient avoir des effets sur l'ensemble de l'économie. La baisse de l'approvisionnement en carburant affecte non seulement les particuliers, mais également les transports publics, les entreprises de livraison, et l'industrie en général. Vers un compromis ou une intensification du conflit ?
+Le gouvernement, de son côté, surveille de près la situation. Si des négociations ont commencé entre les syndicats et les entreprises pétrolières, aucune issue satisfaisante n’a encore été trouvée. Les autorités espèrent un retour à la normalité dans les prochains jours, mais les grèves pourraient se durcir si les revendications des travailleurs ne sont pas entendues.
+Dans un climat économique déjà fragile, la France semble une nouvelle fois se retrouver à la croisée des chemins, où le dialogue social et les revendications des travailleurs doivent s'équilibrer avec les impératifs d’approvisionnement et de stabilité nationale.
+//Effet : baisse de popularité de la voiture
   _moneyChange: 40
   _satisfactionChange: -5
   _sustainabilityChange: 60
