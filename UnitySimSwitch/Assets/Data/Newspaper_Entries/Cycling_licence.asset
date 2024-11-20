@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
+  m_Name: Cycling_licence
+  m_EditorClassIdentifier: 
+  _eventName: "Un permis cycliste \xE0 points pour encadrer l'usage du v\xE9lo en
+    ville"
+  _date: September 26, 2024
+  _subheading: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
+    pulvinar non nisl in sceler.
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: "Face \xE0 l\u2019augmentation du nombre de cyclistes et des accidents
+    les impliquant, l\u2019\xC9tat a pris une mesure in\xE9dite : l\u2019instauration
+    d\u2019un permis cycliste \xE0 points pour tous ceux qui souhaitent circuler
+    \xE0 v\xE9lo sur la voie publique. Ce dispositif vise \xE0 responsabiliser les
+    cyclistes, \xE0 garantir la s\xE9curit\xE9 sur les routes, et \xE0 mieux encadrer
+    l\u2019usage d\u2019un mode de transport en pleine expansion. "
+  _description: "Un permis pour encadrer la s\xE9curit\xE9 des cyclistes et des pi\xE9tons
+    : Ce permis \xE0 points, qui fonctionnera de mani\xE8re similaire \xE0 celui
+    des automobilistes, attribuera initialement un capital de points \xE0 chaque
+    cycliste. En cas d\u2019infractions comme le non-respect des feux rouges, la
+    circulation sur les trottoirs, ou le t\xE9l\xE9phone au guidon, des points seront
+    retir\xE9s, assortis d\u2019\xE9ventuelles amendes. Si le cycliste perd tous
+    ses points, il sera temporairement interdit de circuler \xE0 v\xE9lo sur la voie
+    publique jusqu\u2019\xE0 la r\xE9cup\xE9ration de ses points apr\xE8s un stage
+    de sensibilisation.  Une r\xE9ponse \xE0 l\u2019augmentation des accidents de
+    v\xE9lo : Les autorit\xE9s justifient cette mesure par la hausse du nombre d\u2019accidents
+    impliquant des cyclistes, qui partagent de plus en plus les voies avec les automobilistes
+    et les pi\xE9tons. En instaurant ce permis, l\u2019\xC9tat esp\xE8re sensibiliser
+    les cyclistes aux r\xE8gles de circulation et r\xE9duire les comportements \xE0
+    risque. \xAB Le v\xE9lo est un moyen de transport \xE9cologique et accessible,
+    mais il doit \xEAtre utilis\xE9 de mani\xE8re responsable \xBB, explique le minist\xE8re
+    des Transports.  Des r\xE9actions partag\xE9es dans le milieu cycliste : Cette
+    nouvelle r\xE9glementation suscite des r\xE9actions contrast\xE9es. Si certains
+    saluent la volont\xE9 d\u2019instaurer une meilleure s\xE9curit\xE9, d\u2019autres
+    craignent qu\u2019elle ne dissuade l\u2019usage du v\xE9lo et p\xE9nalise un
+    mode de transport d\xE9j\xE0 fragile. Des associations de cyclistes d\xE9noncent
+    une mesure excessive et plaident plut\xF4t pour l\u2019am\xE9lioration des infrastructures,
+    comme la cr\xE9ation de pistes cyclables s\xE9curis\xE9es et la signalisation
+    renforc\xE9e, pour mieux prot\xE9ger les usagers. Le permis cycliste \xE0 points
+    sera test\xE9 dans plusieurs grandes villes avant d\u2019\xEAtre potentiellement
+    g\xE9n\xE9ralis\xE9 \xE0 l\u2019ensemble du territoire. En attendant, cette nouvelle
+    r\xE9glementation marque un tournant dans l\u2019approche de la mobilit\xE9 douce
+    en France, avec l\u2019ambition de rendre les routes plus s\xFBres pour tous,
+    cyclistes compris. //Effet : diminution de la popularit\xE9 du v\xE9lo / diminution
+    des accidents en v\xE9lo"
+  _moneyChange: 0
+  _satisfactionChange: 0
+  _sustainabilityChange: 0

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
+  m_Name: Epidemic_fear
+  m_EditorClassIdentifier: 
+  _eventName: "Crainte d\u2019une nouvelle \xE9pid\xE9mie : un nouveau virus en Chine
+    inqui\xE8te l\u2019Europe"
+  _date: September 26, 2024
+  _subheading: "Alors que le monde s\u2019efforce encore de surmonter les s\xE9quelles
+    de la pand\xE9mie de COVID-19, des rumeurs inqui\xE9tantes circulent : un nouveau
+    virus aurait fait son apparition en Chine, et les experts craignent qu\u2019il
+    puisse bient\xF4t atteindre l\u2019Europe. Les autorit\xE9s sanitaires internationales
+    sont en alerte, et les premi\xE8res mesures de pr\xE9vention se mettent en place.
+    Pour les citoyens europ\xE9ens, encore marqu\xE9s par les confinements et les
+    restrictions li\xE9s au COVID, cette nouvelle annonce suscite inqui\xE9tudes
+    et interrogations."
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
+    pulvinar non nisl in sceler.
+  _description: "Un virus en circulation et des informations limit\xE9es : \xC0 ce
+    stade, peu d\u2019informations officielles ont filtr\xE9 sur la nature et la
+    dangerosit\xE9 de ce nouveau virus. Les autorit\xE9s chinoises et l\u2019Organisation
+    mondiale de la sant\xE9 (OMS) surveillent de pr\xE8s la situation et \xE9tudient
+    les premi\xE8res donn\xE9es, mais restent prudentes. Certains experts craignent
+    un virus respiratoire aux sympt\xF4mes proches de ceux du COVID-19, ce qui pourrait
+    compliquer son diagnostic et sa gestion. Les laboratoires de recherche intensifient
+    les analyses pour mieux comprendre son mode de transmission et son potentiel
+    de propagation. Retour de la vigilance sanitaire en Europe : En Europe, des protocoles
+    de pr\xE9caution sont d\xE9j\xE0 en discussion. Les a\xE9roports renforcent les
+    contr\xF4les sur les vols en provenance de Chine, et certains gouvernements \xE9voquent
+    la r\xE9introduction de mesures de d\xE9pistage et d\u2019isolement si n\xE9cessaire.
+    Les syst\xE8mes de sant\xE9 se pr\xE9parent \xE0 un \xE9ventuel afflux de patients
+    en cas de propagation du virus, m\xEAme si aucun cas n\u2019a pour le moment
+    \xE9t\xE9 d\xE9tect\xE9 sur le continent. Une population inqui\xE8te mais plus
+    pr\xE9par\xE9e : Pour les citoyens, l\u2019\xE9ventualit\xE9 d\u2019une nouvelle
+    \xE9pid\xE9mie ravive des souvenirs r\xE9cents et difficiles. Cependant, les
+    mentalit\xE9s ont \xE9volu\xE9, et les Europ\xE9ens sont d\xE9sormais plus familiaris\xE9s
+    avec les gestes barri\xE8res et les protocoles sanitaires. \xAB Nous avons appris
+    \xE0 vivre avec la menace sanitaire \xBB, confie une infirmi\xE8re parisienne,
+    \xAB mais l\u2019espoir de tourner la page s\u2019\xE9loigne avec ces nouvelles
+    inqui\xE9tantes. \xBB Face \xE0 cette situation, la prudence reste de mise. Les
+    autorit\xE9s recommandent d\u2019\xE9viter les d\xE9placements inutiles et de
+    suivre l\u2019\xE9volution des informations officielles. Si la menace d\u2019une
+    \xE9pid\xE9mie reste pour l\u2019instant hypoth\xE9tique, l\u2019Europe, \xE9chaud\xE9e
+    par le COVID-19, se tient pr\xEAte \xE0 r\xE9agir pour \xE9viter un nouveau sc\xE9nario
+    pand\xE9mique. //Effet : baisse de la popularit\xE9 des transports en commun
+    / diminution des d\xE9placements"
+  _moneyChange: 0
+  _satisfactionChange: 0
+  _sustainabilityChange: 0

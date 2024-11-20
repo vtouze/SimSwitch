@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
+  m_Name: Autonomous_vehicles
+  m_EditorClassIdentifier: 
+  _eventName: "Les v\xE9hicules autonomes autoris\xE9s sur le march\xE9 fran\xE7ais
+    : un tournant pour la mobilit\xE9"
+  _date: September 26, 2024
+  _subheading: "La France franchit une nouvelle \xE9tape dans la r\xE9volution technologique
+    des transports : les v\xE9hicules autonomes sont d\xE9sormais autoris\xE9s \xE0
+    circuler en ville. Cette avanc\xE9e r\xE9glementaire marque un moment cl\xE9
+    pour l'industrie automobile, ouvrant la voie \xE0 une mobilit\xE9 plus intelligente,
+    plus s\xFBre et, \xE0 terme, plus \xE9cologique. Ce feu vert donn\xE9 aux v\xE9hicules
+    sans conducteur positionne la France parmi les premiers pays en Europe \xE0 adopter
+    officiellement cette innovation."
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
+    pulvinar non nisl in sceler.
+  _description: "Une technologie encadr\xE9e et des usages limit\xE9s : L\u2019autorisation
+    des v\xE9hicules autonomes en France est strictement encadr\xE9e par des r\xE8gles
+    de s\xE9curit\xE9 et des restrictions d\u2019usage pour assurer la s\xE9curit\xE9
+    de tous. Dans un premier temps, seules certaines cat\xE9gories de v\xE9hicules
+    sont autoris\xE9es, notamment dans des zones sp\xE9cifiques ou pour des trajets
+    pr\xE9d\xE9finis. Par exemple, les v\xE9hicules autonomes pourront \xEAtre d\xE9ploy\xE9s
+    pour le transport de passagers dans des zones urbaines bien encadr\xE9es ou sur
+    des lignes de bus sans conducteur dans des zones de faible trafic. Les constructeurs
+    devront \xE9galement prouver que leurs v\xE9hicules r\xE9pondent \xE0 des standards
+    de s\xE9curit\xE9 extr\xEAmement stricts avant toute mise en circulation. Un
+    espoir pour la s\xE9curit\xE9 et l\u2019environnement : Les promoteurs des v\xE9hicules
+    autonomes avancent plusieurs arguments en faveur de cette technologie : r\xE9duction
+    des accidents li\xE9s aux erreurs humaines, baisse des \xE9missions de gaz \xE0
+    effet de serre par une conduite optimis\xE9e, et optimisation des flux de circulation.
+    Selon les experts, les v\xE9hicules autonomes pourraient contribuer \xE0 diminuer
+    le nombre d\u2019accidents sur les routes en \xE9liminant les facteurs li\xE9s
+    \xE0 la fatigue, aux distractions ou aux exc\xE8s de vitesse. Un d\xE9fi technologique
+    et social : Si cette autorisation marque une avanc\xE9e, elle soul\xE8ve aussi
+    des questions sur la place de l\u2019homme dans le v\xE9hicule, la gestion de
+    la cybers\xE9curit\xE9, et la responsabilit\xE9 en cas d\u2019accident. Par ailleurs,
+    cette technologie encore co\xFBteuse reste inaccessible pour beaucoup, et son
+    adoption pourrait creuser des in\xE9galit\xE9s d\u2019acc\xE8s \xE0 la mobilit\xE9.
+    Les premi\xE8res exp\xE9rimentations \xE0 grande \xE9chelle permettront d\u2019observer
+    l\u2019accueil des citoyens face \xE0 ces voitures du futur. Pour l\u2019instant,
+    la France ouvre la route \xE0 une nouvelle \xE8re de mobilit\xE9, entre promesses
+    technologiques et d\xE9fis sociaux \xE0 relever pour que ces v\xE9hicules sans
+    conducteur trouvent leur place dans le quotidien. //Effet : diminution des accidents
+    en voiture / ouverture de nouveaux projets ?"
+  _moneyChange: 0
+  _satisfactionChange: 0
+  _sustainabilityChange: 0

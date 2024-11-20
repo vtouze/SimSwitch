@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
+  m_Name: Fuel_rise
+  m_EditorClassIdentifier: 
+  _eventName: "Hausse du prix du carburant : une flamb\xE9e sans pr\xE9c\xE9dent"
+  _date: September 26, 2024
+  _subheading: "Les automobilistes fran\xE7ais le constatent am\xE8rement \xE0 chaque
+    passage \xE0 la pompe : les prix de l\u2019essence et du diesel atteignent des
+    sommets in\xE9gal\xE9s. Avec une hausse de plusieurs centimes par litre chaque
+    semaine, les co\xFBts des carburants p\xE8sent de plus en plus lourd sur le budget
+    des m\xE9nages. Cette flamb\xE9e du p\xE9trole est li\xE9e aux tensions sur le
+    march\xE9 international, o\xF9 la demande croissante et les perturbations dans
+    l\u2019approvisionnement font grimper les prix."
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
+    pulvinar non nisl in sceler.
+  _description: "Des cons\xE9quences lourdes pour les m\xE9nages et les entreprises
+    : La hausse des prix du carburant impacte directement le pouvoir d\u2019achat
+    des m\xE9nages, en particulier pour ceux vivant en zones rurales ou p\xE9riurbaines,
+    o\xF9 la voiture est souvent indispensable. \xAB Chaque plein me co\xFBte d\xE9sormais
+    pr\xE8s de 20 % de plus qu\u2019il y a un an, c\u2019est devenu difficile de
+    boucler le budget \xBB, confie un p\xE8re de famille. De nombreux travailleurs
+    ressentent la m\xEAme pression, d\u2019autant plus que les augmentations se r\xE9percutent
+    \xE9galement sur le co\xFBt des biens de consommation, via la hausse des co\xFBts
+    de transport. Des appels \xE0 l\u2019aide de la part des associations et des
+    syndicats : Face \xE0 cette situation, plusieurs associations de consommateurs
+    et syndicats demandent au gouvernement des mesures pour all\xE9ger la facture
+    des particuliers, tels que des aides cibl\xE9es ou une baisse temporaire des
+    taxes sur le carburant. Dans un contexte o\xF9 la transition \xE9cologique pousse
+    \xE0 envisager des solutions alternatives \xE0 la voiture thermique, beaucoup
+    plaident cependant pour un soutien accru au d\xE9veloppement des infrastructures
+    de transport en commun et des aides pour l\u2019achat de v\xE9hicules \xE9lectriques.
+    Un d\xE9fi pour la transition \xE9nerg\xE9tique : Cette flamb\xE9e des prix du
+    carburant rappelle l\u2019urgence de diversifier les sources d\u2019\xE9nergie
+    et de r\xE9duire la d\xE9pendance aux \xE9nergies fossiles. Mais en attendant
+    que les solutions alternatives soient accessibles \xE0 tous, les consommateurs
+    subissent les effets d\u2019un march\xE9 du p\xE9trole toujours plus instable.
+    Pour de nombreux Fran\xE7ais, cette flamb\xE9e reste un symbole de pr\xE9carit\xE9
+    \xE9nerg\xE9tique, les laissant suspendus aux fluctuations du march\xE9, dans
+    l\u2019espoir de retrouver une certaine stabilit\xE9 \xE0 la pompe. //effet :
+    augmentation du prix de l\u2019usage de la voiture"
+  _moneyChange: 0
+  _satisfactionChange: 0
+  _sustainabilityChange: 0

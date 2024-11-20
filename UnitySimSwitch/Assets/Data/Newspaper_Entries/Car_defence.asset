@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
+  m_Name: Car_defence
+  m_EditorClassIdentifier: 
+  _eventName: "Mouvement de d\xE9fense de la voiture : des actions coup de poing
+    contre la r\xE9duction de l\u2019espace d\xE9di\xE9"
+  _date: September 26, 2024
+  _subheading: "Face \xE0 la multiplication des pistes cyclables, des zones pi\xE9tonnes
+    et des espaces r\xE9serv\xE9s aux transports en commun, certains automobilistes
+    expriment leur m\xE9contentement. Un mouvement baptis\xE9 \"D\xE9fense de la
+    voiture\" a r\xE9cemment vu le jour, rassemblant des passionn\xE9s qui estiment
+    que leur \"espace vital\" est menac\xE9 par les politiques en faveur des mobilit\xE9s
+    douces. Leur revendication est claire : rendre aux voitures l\u2019espace qu\u2019elles
+    occupaient auparavant. Mais ces actions, parfois virulentes, suscitent la controverse."
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
+    pulvinar non nisl in sceler.
+  _description: "Des actions cibl\xE9es contre les infrastructures pour mobilit\xE9s
+    douces : Le mouvement a d\xE9j\xE0 lanc\xE9 plusieurs op\xE9rations coups de
+    poing. Certaines infrastructures d\xE9di\xE9es aux v\xE9los ou aux pi\xE9tons
+    ont \xE9t\xE9 vandalis\xE9es, et des bornes de recharge pour v\xE9hicules \xE9lectriques
+    ont \xE9t\xE9 d\xE9grad\xE9es. Les manifestants estiment que ces infrastructures
+    empi\xE8tent sur leur droit \xE0 circuler librement et affirment que l\u2019espace
+    public est devenu \xAB hostile \xBB \xE0 la voiture. Ces actions, qui se veulent
+    symboliques, sont souvent men\xE9es de nuit et visent principalement les grandes
+    villes o\xF9 les plans de pi\xE9tonnisation sont les plus avanc\xE9s. Un d\xE9bat
+    entre libert\xE9 de circulation et transition \xE9cologique : Cette mont\xE9e
+    en tension met en lumi\xE8re le d\xE9bat entre deux visions de la mobilit\xE9.
+    D\u2019un c\xF4t\xE9, les partisans de la transition \xE9cologique plaident pour
+    des villes moins pollu\xE9es et des rues plus s\xFBres, en encourageant les mobilit\xE9s
+    douces comme le v\xE9lo ou la marche. De l\u2019autre, les d\xE9fenseurs de la
+    voiture estiment que cette transformation se fait au d\xE9triment de leur libert\xE9
+    de d\xE9placement. \xAB La voiture reste un outil essentiel, surtout pour ceux
+    qui habitent en p\xE9riph\xE9rie. Nous ne pouvons pas tous passer au v\xE9lo
+    ou aux transports en commun \xBB, souligne un membre du mouvement. Des r\xE9actions
+    partag\xE9es et des appels au dialogue : Ces actions, bien que minoritaires,
+    suscitent des r\xE9actions partag\xE9es dans l\u2019opinion publique. Certaines
+    associations d\u2019automobilistes demandent davantage de concertation et de
+    solutions de transition qui tiennent compte des besoins de chacun, tandis que
+    les municipalit\xE9s rappellent que la r\xE9duction de la place de la voiture
+    est une r\xE9ponse aux enjeux de pollution et de s\xE9curit\xE9 urbaine. En r\xE9action
+    aux d\xE9gradations, des maires de grandes villes appellent au dialogue et rappellent
+    que les infrastructures pour mobilit\xE9s douces sont l\xE0 pour rester. Dans
+    ce contexte tendu, le d\xE9fi sera de trouver un \xE9quilibre entre les diff\xE9rents
+    usagers de la route et de faire cohabiter ces visions de la mobilit\xE9 urbaine
+    sans recourir \xE0 des actions radicales. //Effet : d\xE9gradation des infrastructures
+    actives & tp / augmentation ins\xE9curit\xE9 TP et infra actives"
+  _moneyChange: 0
+  _satisfactionChange: 0
+  _sustainabilityChange: 0

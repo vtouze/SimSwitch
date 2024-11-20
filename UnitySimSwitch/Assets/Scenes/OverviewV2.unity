@@ -24176,12 +24176,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _newspaperDisplay: {fileID: 25305170}
   _events:
-  - {fileID: 11400000, guid: 1c047358ee12ed5bbbc51b3823119521, type: 2}
+  - {fileID: 11400000, guid: 49cacc128d4bd3049932dde955617dd6, type: 2}
   - {fileID: 11400000, guid: 1aba131f8095dfff9b5786d0c87e772e, type: 2}
-  - {fileID: 11400000, guid: 95e4ba8fd2c1b2c8195ca045f8a35217, type: 2}
+  - {fileID: 11400000, guid: b4958538690cf7f4189c47ca250991b8, type: 2}
+  - {fileID: 11400000, guid: 9c48d8e1ce5fe364282cf0fb2e4effbb, type: 2}
+  - {fileID: 11400000, guid: 7038e30f19b65074a81bc5a6606748c9, type: 2}
+  - {fileID: 11400000, guid: 7145349995e53424692a52261dbef6d4, type: 2}
+  - {fileID: 11400000, guid: 31195c130b32a1a418b4361e53fa0e44, type: 2}
+  - {fileID: 11400000, guid: cfbf96ef8f763bf4d857ce1c190d3ee1, type: 2}
+  - {fileID: 11400000, guid: 00443e9737cb48a4d814e0563de810bc, type: 2}
   - {fileID: 11400000, guid: 11c0ecb386a5955f9b874aeb1ddc2af7, type: 2}
-  - {fileID: 11400000, guid: a5a2ef5db75839cb38820372cd568529, type: 2}
+  - {fileID: 11400000, guid: f2c637b07f4471d4eaeca8443bf988ff, type: 2}
   - {fileID: 11400000, guid: f3af761c903ca5d1bbb958d147a13363, type: 2}
+  - {fileID: 11400000, guid: 5210e9f23694a9a4ca21663ee7069989, type: 2}
+  - {fileID: 11400000, guid: 84d1c253d03a6534faa23b3cb7961a3f, type: 2}
+  - {fileID: 11400000, guid: c51d006cec6c0724ebbc3c2e5e9012d9, type: 2}
+  - {fileID: 11400000, guid: a5a2ef5db75839cb38820372cd568529, type: 2}
+  - {fileID: 11400000, guid: 1c047358ee12ed5bbbc51b3823119521, type: 2}
+  - {fileID: 11400000, guid: 95e4ba8fd2c1b2c8195ca045f8a35217, type: 2}
   _homeMenu: {fileID: 710220958}
   _bodyMenu: {fileID: 1781081500}
   _newspaperPanel: {fileID: 838186469}

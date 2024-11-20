@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
+  m_Name: Electronic_tensions
+  m_EditorClassIdentifier: 
+  _eventName: "Tensions sur les circuits \xE9lectroniques : la p\xE9nurie fait flamber
+    les prix des composants"
+  _date: September 26, 2024
+  _subheading: "Le secteur de l'\xE9lectronique fait face \xE0 une crise sans pr\xE9c\xE9dent
+    : les composants \xE9lectroniques se font rares et les prix s\u2019envolent.
+    En raison d'une demande exponentielle et d'une offre limit\xE9e, les entreprises
+    peinent \xE0 se procurer les puces, semi-conducteurs, et autres \xE9l\xE9ments
+    essentiels \xE0 la fabrication de produits allant des smartphones aux automobiles.
+    Cette p\xE9nurie frappe de plein fouet les industries technologiques, qui se
+    retrouvent dans l'incapacit\xE9 de r\xE9pondre aux besoins du march\xE9."
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
+    pulvinar non nisl in sceler.
+  _description: "Une demande en forte hausse et des capacit\xE9s de production limit\xE9es
+    : La crise a pour origine une combinaison de facteurs. La pand\xE9mie de COVID-19
+    a fait exploser la demande en appareils \xE9lectroniques, notamment pour le t\xE9l\xE9travail
+    et les loisirs num\xE9riques. Dans le m\xEAme temps, les usines de production,
+    concentr\xE9es principalement en Asie, ont \xE9t\xE9 ralenties par des mesures
+    sanitaires strictes et par des probl\xE8mes logistiques li\xE9s aux restrictions
+    de circulation. R\xE9sultat : une demande qui d\xE9passe largement la capacit\xE9
+    de production mondiale. Des secteurs industriels en difficult\xE9 : Les r\xE9percussions
+    de cette p\xE9nurie se font sentir dans divers secteurs. Les constructeurs automobiles,
+    fortement d\xE9pendants des composants \xE9lectroniques pour leurs v\xE9hicules,
+    ont d\xFB r\xE9duire leur production, certains allant m\xEAme jusqu'\xE0 suspendre
+    temporairement certaines lignes d\u2019assemblage. Les fabricants de t\xE9l\xE9phones,
+    d\u2019ordinateurs et de consoles de jeu sont \xE9galement touch\xE9s, ce qui
+    entra\xEEne des retards dans les sorties de nouveaux produits et des prix en
+    hausse pour les mod\xE8les existants.  Une flamb\xE9e des prix et des d\xE9lais
+    de livraison qui s\u2019allongent : Face \xE0 cette tension sur l\u2019offre,
+    les prix des composants ont consid\xE9rablement augment\xE9, ce qui pourrait
+    \xEAtre r\xE9percut\xE9 sur les consommateurs. Les d\xE9lais de livraison, autrefois
+    de quelques semaines, s'\xE9tendent d\xE9sormais sur plusieurs mois pour certains
+    composants. \xAB Les co\xFBts de production explosent, et il devient difficile
+    de garantir des d\xE9lais raisonnables \xBB, explique un responsable d\u2019une
+    entreprise technologique. Vers un r\xE9\xE9quilibrage du march\xE9 ? Les grands
+    fabricants de semi-conducteurs ont annonc\xE9 des investissements massifs pour
+    augmenter leurs capacit\xE9s de production, mais les experts estiment qu\u2019il
+    faudra attendre au moins un ou deux ans avant de voir un r\xE9\xE9quilibrage
+    du march\xE9. En attendant, la p\xE9nurie oblige les entreprises \xE0 revoir
+    leur production et \xE0 privil\xE9gier les composants pour leurs mod\xE8les les
+    plus rentables, en esp\xE9rant que le march\xE9 finira par retrouver sa stabilit\xE9.
+    Dans ce contexte tendu, les consommateurs risquent de voir les prix des produits
+    \xE9lectroniques grimper, tandis que les entreprises devront s\u2019adapter \xE0
+    cette nouvelle r\xE9alit\xE9 du march\xE9. //Effet : augmentation du prix des
+    projets technologiques / des v\xE9hicules de type voiture"
+  _moneyChange: 0
+  _satisfactionChange: 0
+  _sustainabilityChange: 0

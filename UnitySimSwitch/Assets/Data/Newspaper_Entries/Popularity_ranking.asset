@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
+  m_Name: Popularity_ranking
+  m_EditorClassIdentifier: 
+  _eventName: "Classement de popularit\xE9 : votre ville brille"
+  _date: September 21, 2024
+  _subheading: "Dans un classement publi\xE9 cette semaine par l'un des plus grands
+    quotidiens nationaux, votre ville figure parmi les meilleures m\xE9tropoles du
+    pays. Un honneur bien m\xE9rit\xE9, selon les crit\xE8res retenus, mais qui soul\xE8ve
+    \xE9galement quelques interrogations quant \xE0 la mani\xE8re dont ces classements
+    influencent l'image et l'ambiance d'une ville. Le classement en question prend
+    en compte une s\xE9rie de m\xE9triques : qualit\xE9 de vie, accessibilit\xE9
+    des services publics, taux de criminalit\xE9, qualit\xE9 de l'environnement,
+    opportunit\xE9s \xE9conomiques, et m\xEAme l'attrait culturel. Sur ces crit\xE8res,
+    votre m\xE9tropole se distingue, s\xE9duisant ainsi non seulement les habitants,
+    mais aussi les touristes et investisseurs potentiels."
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
+    pulvinar non nisl in sceler.
+  _description: "Une notori\xE9t\xE9 qui booste l'ambiance locale : Sans surprise,
+    ce type de reconnaissance a un impact imm\xE9diat sur l'atmosph\xE8re de la ville.
+    Les commer\xE7ants se r\xE9jouissent de la hausse des visiteurs, les projets
+    urbains se multiplient, et les habitants affichent une certaine fiert\xE9 de
+    vivre dans une ville \"class\xE9e parmi les meilleures\". Cette notori\xE9t\xE9
+    nouvelle g\xE9n\xE8re un vent de positivisme et d'optimisme, renfor\xE7ant le
+    sentiment d'appartenance des citoyens \xE0 leur m\xE9tropole. Cependant, comme
+    toujours avec les classements, il faut prendre du recul. Car derri\xE8re cette
+    image \xE9clatante, certains soulignent que la m\xE9thodologie des classements
+    peut parfois \xEAtre trop r\xE9ductrice. Ces index se basent sur des crit\xE8res
+    quantifiables, mais ils ne rendent pas toujours compte de la complexit\xE9 de
+    la vie urbaine, ni de la diversit\xE9 des r\xE9alit\xE9s v\xE9cues par les habitants.
+    Des m\xE9triques contestables ? Si l'indice de qualit\xE9 de vie se base sur
+    des \xE9l\xE9ments comme la s\xE9curit\xE9, les infrastructures ou les services
+    de sant\xE9, il omet souvent des facteurs plus subjectifs, comme le co\xFBt de
+    la vie ou l'acc\xE8s au logement. De plus, le classement peut accorder une place
+    disproportionn\xE9e \xE0 des \xE9l\xE9ments qui ne concernent qu'une portion
+    de la population, laissant de c\xF4t\xE9 les quartiers plus pr\xE9caires ou moins
+    bien desservis. Ainsi, certaines voix s\u2019\xE9l\xE8vent pour rappeler que
+    ces classements peuvent faire abstraction des in\xE9galit\xE9s sociales et \xE9conomiques
+    qui persistent dans la ville. Par ailleurs, le fait de mesurer une ville uniquement
+    \xE0 travers des statistiques ne prend pas en compte les aspects immat\xE9riels
+    qui fa\xE7onnent le quotidien : la convivialit\xE9, l\u2019esprit d\u2019initiative
+    des citoyens, ou encore la richesse des \xE9changes culturels. En ce sens, un
+    classement peut bien refl\xE9ter la \"bonne sant\xE9\" d\u2019une m\xE9tropole
+    selon des crit\xE8res objectifs, mais il peut aussi fausser la perception du
+    bien-\xEAtre collectif. Un double tranchant pour l'image urbaine : En fin de
+    compte, ce classement des meilleures villes ne doit pas \xEAtre vu comme une
+    v\xE9rit\xE9 absolue, mais plut\xF4t comme un instantan\xE9 de la ville \xE0
+    un moment donn\xE9. Ce qui compte avant tout, c'est de veiller \xE0 ce que cette
+    reconnaissance ne se traduise pas par un simple miroir aux alouettes, mais bien
+    par un r\xE9el engagement \xE0 am\xE9liorer la vie quotidienne de tous les habitants,
+    et pas seulement de ceux qui habitent dans les zones les mieux not\xE9es. La
+    popularit\xE9 g\xE9n\xE9r\xE9e par un tel classement peut sans doute insuffler
+    un esprit positif et dynamiser les projets \xE0 venir. Mais \xE0 mesure que la
+    ville attire l'attention, il est crucial de veiller \xE0 ce que ses transformations
+    restent au service de l'ensemble de sa population, et non seulement d'une image
+    flatteuse destin\xE9e \xE0 satisfaire les classements. En somme, le classement
+    est un tremplin, mais ne doit pas devenir un pi\xE8ge pour l'\xE2me de la ville.
+    // Effet : augmentation de la population"
+  _moneyChange: 0
+  _satisfactionChange: 0
+  _sustainabilityChange: 0

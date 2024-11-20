@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
+  m_Name: Massive_strikes
+  m_EditorClassIdentifier: 
+  _eventName: "Gr\xE8ves massives : le pays paralys\xE9, la population contrainte
+    de trouver des alternatives"
+  _date: September 26, 2024
+  _subheading: "Depuis plusieurs jours, la France est secou\xE9e par une gr\xE8ve
+    d\u2019une ampleur historique. Trains, m\xE9tros, bus, et m\xEAme certains vols
+    sont \xE0 l\u2019arr\xEAt, tandis que des milliers de travailleurs manifestent
+    dans les rues pour d\xE9fendre leurs droits face aux r\xE9formes annonc\xE9es.
+    Le pays, litt\xE9ralement bloqu\xE9, se retrouve plong\xE9 dans une crise de
+    mobilit\xE9 qui pousse chacun \xE0 improviser des solutions pour se d\xE9placer
+    autrement."
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
+    pulvinar non nisl in sceler.
+  _description: "Un quotidien r\xE9invent\xE9 pour les travailleurs : Avec des transports
+    en commun hors service, les Fran\xE7ais redoublent d\u2019ing\xE9niosit\xE9 pour
+    se rendre au travail. Les villes assistent \xE0 une explosion des d\xE9placements
+    \xE0 v\xE9lo, en trottinette ou m\xEAme en covoiturage. Dans les grandes agglom\xE9rations,
+    les plateformes de VTC et les v\xE9los en libre-service affichent complet d\xE8s
+    les premi\xE8res heures de la journ\xE9e. Certaines entreprises, anticipant les
+    difficult\xE9s de leurs salari\xE9s, ont assoupli les horaires et mis en place
+    le t\xE9l\xE9travail pour r\xE9duire les d\xE9placements. Embouteillages et marche
+    forc\xE9e en centre-ville : Les axes routiers sont satur\xE9s, et les bouchons
+    s\u2019\xE9tendent sur des kilom\xE8tres aux abords des grandes villes, cr\xE9ant
+    une circulation chaotique. Dans certains quartiers, les habitants n\u2019ont
+    d\u2019autre choix que de marcher pour atteindre leur destination. \xAB J\u2019ai
+    d\xFB marcher une heure pour rejoindre mon bureau \xBB, t\xE9moigne une employ\xE9e
+    parisienne. Beaucoup s\u2019organisent en groupes de marche ou se relayent pour
+    proposer des covoiturages improvis\xE9s, une solidarit\xE9 qui aide \xE0 surmonter
+    la situation. Un impact \xE9conomique et social majeur : Les gr\xE8ves impactent
+    durement les commerces et les professionnels, avec des retards de livraison et
+    une fr\xE9quentation r\xE9duite dans les zones commerciales. Les autorit\xE9s
+    locales multiplient les appels \xE0 la patience et invitent \xE0 limiter les
+    d\xE9placements non essentiels. Pendant ce temps, les discussions entre syndicats
+    et gouvernement s\u2019intensifient, mais aucun accord ne semble encore en vue.
+    Le pays reste suspendu, esp\xE9rant une issue favorable pour mettre fin \xE0
+    ce blocage qui p\xE8se sur l\u2019ensemble de la soci\xE9t\xE9. En attendant,
+    la France continue de se r\xE9inventer au rythme des manifestations et des embouteillages,
+    r\xE9solue \xE0 faire face, jour apr\xE8s jour, \xE0 cette crise de mobilit\xE9
+    sans pr\xE9c\xE9dent. Depuis plusieurs jours, une vague de gr\xE8ves sans pr\xE9c\xE9dent
+    paralyse la France, plongeant le pays dans une crise de mobilit\xE9 in\xE9dite.
+    Les transports en commun sont quasiment \xE0 l\u2019arr\xEAt : trains, m\xE9tros,
+    bus, et m\xEAme certaines lignes de tramway ne circulent plus. Les syndicats,
+    qui r\xE9clament des am\xE9liorations salariales et des conditions de travail
+    revues \xE0 la hausse, ont d\xE9cid\xE9 de durcir le mouvement, for\xE7ant les
+    usagers \xE0 chercher des solutions de rechange. Pour les travailleurs et les
+    \xE9tudiants, cette gr\xE8ve pose des d\xE9fis quotidiens. Les bouchons sur les
+    routes se sont intensifi\xE9s, les v\xE9los et trottinettes se sont multipli\xE9s
+    dans les rues, et le covoiturage devient une option de plus en plus pris\xE9e.
+    Certains, qui n'ont d'autre choix, prennent m\xEAme leur mal en patience et marchent
+    plusieurs kilom\xE8tres pour rejoindre leur lieu de travail. Les entreprises,
+    de leur c\xF4t\xE9, s\u2019adaptent tant bien que mal : t\xE9l\xE9travail g\xE9n\xE9ralis\xE9,
+    horaires d\xE9cal\xE9s, r\xE9unions en visioconf\xE9rence, tout est mis en place
+    pour minimiser l'impact de cette paralysie. Les gr\xE8ves actuelles soul\xE8vent
+    des tensions, et les usagers expriment un m\xE9lange de soutien et de frustration.
+    D\u2019un c\xF4t\xE9, beaucoup comprennent les revendications des gr\xE9vistes,
+    souvent issues de secteurs publics en difficult\xE9 depuis longtemps. De l'autre,
+    l'ampleur de l\u2019impact quotidien pousse certains \xE0 exprimer leur exasp\xE9ration
+    face \xE0 cette situation devenue presque insoutenable. Dans ce contexte, les
+    autorit\xE9s tentent de dialoguer pour \xE9viter un enlisement, mais la reprise
+    normale des services semble encore lointaine. En attendant, le quotidien des
+    Fran\xE7ais s\u2019adapte, d\xE9montrant une nouvelle fois leur r\xE9silience,
+    mais aussi la fragilit\xE9 de notre soci\xE9t\xE9 lorsque les rouages des transports
+    viennent \xE0 se bloquer.  //Effet : baisse de popularit\xE9 des transports en
+    commun / Pas de TP dispo (temps sur 2 semaines)"
+  _moneyChange: 0
+  _satisfactionChange: 0
+  _sustainabilityChange: 0

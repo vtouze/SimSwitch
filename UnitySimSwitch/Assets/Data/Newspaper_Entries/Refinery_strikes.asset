@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
+  m_Name: Refinery_strikes
+  m_EditorClassIdentifier: 
+  _eventName: "Gr\xE8ves dans les raffineries : La France face \xE0 une p\xE9nurie
+    de carburant"
+  _date: September 21, 2024
+  _subheading: "Depuis plusieurs jours, une s\xE9rie de gr\xE8ves secoue les raffineries
+    fran\xE7aises, perturbant gravement la production et la distribution de carburant
+    sur l'ensemble du territoire. Ces mouvements sociaux, initi\xE9s par les syndicats
+    pour protester contre les conditions de travail et les politiques salariales,
+    ont d\xE9j\xE0 conduit \xE0 des p\xE9nuries dans de nombreuses stations-service."
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
+    pulvinar non nisl in sceler.
+  _description: "Une gr\xE8ve g\xE9n\xE9ralis\xE9e : Les raffineries, v\xE9ritables
+    poumons de l'approvisionnement \xE9nerg\xE9tique du pays, sont au c\u0153ur du
+    conflit. Plusieurs sites industriels majeurs sont actuellement \xE0 l'arr\xEAt
+    ou fonctionnent \xE0 une capacit\xE9 r\xE9duite, ce qui entrave l'approvisionnement
+    en essence et en diesel. De nombreuses r\xE9gions, notamment en \xCEle-de-France
+    et dans le sud de la France, font face \xE0 des p\xE9nuries de carburant, avec
+    des files d'attente devant les stations-service qui ne parviennent pas \xE0 r\xE9pondre
+    \xE0 la demande. Les syndicats, qui r\xE9clament des hausses de salaires et de
+    meilleures conditions de travail, d\xE9noncent une situation de plus en plus
+    tendue dans un secteur en pleine mutation, marqu\xE9 par les enjeux \xE9cologiques
+    et les incertitudes \xE9conomiques. \"Nous n'avons d'autre choix que d'agir pour
+    pr\xE9server nos droits\", a d\xE9clar\xE9 un porte-parole syndical, soulignant
+    la n\xE9cessit\xE9 d'une reconnaissance de l'effort fourni par les travailleurs
+    du secteur p\xE9trolier. Impact sur l\u2019\xE9conomie et la vie quotidienne.
+    Les cons\xE9quences de ces gr\xE8ves se font rapidement sentir sur le quotidien
+    des Fran\xE7ais. Les automobilistes se retrouvent confront\xE9s \xE0 des p\xE9nuries
+    dans les stations-service, certains \xE9tant contraints de faire de longues distances
+    pour trouver du carburant. Dans les grandes villes, des tensions se cr\xE9ent,
+    aliment\xE9es par les craintes d\u2019une prolongation du mouvement. Le gouvernement
+    a d\xE9j\xE0 appel\xE9 au calme et \xE0 la n\xE9gociation, mais la situation
+    reste tendue. Outre les r\xE9percussions imm\xE9diates sur la consommation de
+    carburant, ces gr\xE8ves pourraient avoir des effets sur l'ensemble de l'\xE9conomie.
+    La baisse de l'approvisionnement en carburant affecte non seulement les particuliers,
+    mais \xE9galement les transports publics, les entreprises de livraison, et l'industrie
+    en g\xE9n\xE9ral. Vers un compromis ou une intensification du conflit ? Le gouvernement,
+    de son c\xF4t\xE9, surveille de pr\xE8s la situation. Si des n\xE9gociations
+    ont commenc\xE9 entre les syndicats et les entreprises p\xE9troli\xE8res, aucune
+    issue satisfaisante n\u2019a encore \xE9t\xE9 trouv\xE9e. Les autorit\xE9s esp\xE8rent
+    un retour \xE0 la normalit\xE9 dans les prochains jours, mais les gr\xE8ves pourraient
+    se durcir si les revendications des travailleurs ne sont pas entendues. Dans
+    un climat \xE9conomique d\xE9j\xE0 fragile, la France semble une nouvelle fois
+    se retrouver \xE0 la crois\xE9e des chemins, o\xF9 le dialogue social et les
+    revendications des travailleurs doivent s'\xE9quilibrer avec les imp\xE9ratifs
+    d\u2019approvisionnement et de stabilit\xE9 nationale. //Effet : baisse de popularit\xE9
+    de la voiture"
+  _moneyChange: 0
+  _satisfactionChange: 0
+  _sustainabilityChange: 0

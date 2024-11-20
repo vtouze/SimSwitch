@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
+  m_Name: Google_invest
+  m_EditorClassIdentifier: 
+  _eventName: "Google investit dans la mobilit\xE9 : un engagement vers le futur,
+    mais \xE0 quel prix ?"
+  _date: September 24, 2024
+  _subheading: " Depuis quelques ann\xE9es, Google n\u2019h\xE9site plus \xE0 se
+    positionner comme un acteur majeur dans le domaine de la mobilit\xE9. En effet,
+    le g\xE9ant de la tech a r\xE9cemment annonc\xE9 un investissement strat\xE9gique
+    dans des projets de mobilit\xE9 reposant sur les nouvelles technologies. Objectif
+    : subventionner des initiatives innovantes capables de transformer la mani\xE8re
+    dont nous nous d\xE9pla\xE7ons. Mais derri\xE8re cette volont\xE9 affich\xE9e
+    d'am\xE9liorer la mobilit\xE9 urbaine, se cache une question qui taraude : quel
+    est l'int\xE9r\xEAt r\xE9el de Google dans cette d\xE9marche ?"
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
+    pulvinar non nisl in sceler.
+  _description: "Des projets ambitieux pour repenser les transports : Google, par
+    le biais de sa filiale Sidewalk Labs et de partenariats avec des entreprises
+    sp\xE9cialis\xE9es, cherche \xE0 encourager des solutions plus \xE9cologiques
+    et intelligentes, comme les v\xE9hicules autonomes, la mobilit\xE9 partag\xE9e
+    ou encore les syst\xE8mes de transport en commun intelligents. Dans le cadre
+    de ce programme, le g\xE9ant am\xE9ricain propose des subventions aux startups
+    et projets de recherche qui repoussent les limites de la technologie pour offrir
+    des alternatives durables \xE0 la voiture individuelle. L\u2019ambition affich\xE9e
+    par Google est de r\xE9duire la congestion dans les villes, de promouvoir l'efficacit\xE9
+    \xE9nerg\xE9tique, et de permettre des d\xE9placements plus fluides et moins
+    polluants. L\u2019entreprise voit dans ces technologies de mobilit\xE9 le moyen
+    d'optimiser les infrastructures urbaines tout en contribuant \xE0 la lutte contre
+    le r\xE9chauffement climatique. Un investissement teint\xE9 d\u2019intentions
+    commerciales : Toutefois, loin de se contenter d\u2019une simple volont\xE9 philanthropique,
+    Google suit de pr\xE8s le d\xE9veloppement de ces projets. Si la promesse de
+    transformer la mobilit\xE9 est s\xE9duisante, certains observateurs pointent
+    le fait que ces investissements sont aussi une mani\xE8re pour Google de renforcer
+    sa position dominante dans les donn\xE9es urbaines. La collecte d\u2019informations
+    sur les flux de transport, les habitudes de d\xE9placements, et les infrastructures
+    de chaque ville donne \xE0 Google un pouvoir in\xE9dit sur les usages quotidiens
+    des citoyens. Le g\xE9ant pourrait ainsi enrichir ses services de cartographie
+    et de g\xE9olocalisation, tout en consolidant son \xE9cosyst\xE8me d\u2019applications,
+    comme Google Maps ou Waze, qui seraient de plus en plus au c\u0153ur de la mobilit\xE9
+    intelligente. De plus, \xE0 travers ses initiatives, Google s\u2019assure de
+    jouer un r\xF4le central dans le d\xE9veloppement des infrastructures technologiques
+    de demain, voire de s'impliquer directement dans la mise en place de ces nouvelles
+    solutions de transport. Si le projet semble en phase avec une vision durable
+    de l'avenir, il n'en demeure pas moins qu'il aligne parfaitement les int\xE9r\xEAts
+    commerciaux de Google. Vers un futur o\xF9 mobilit\xE9 et technologie se confondent
+    ? Rien ne laisse penser que ces investissements dans la mobilit\xE9 se limiteront
+    \xE0 des subventions ponctuelles. En r\xE9alit\xE9, Google semble bel et bien
+    d\xE9cid\xE9 \xE0 prendre une place de leader dans la reconfiguration des modes
+    de transport urbains. Mais alors que l\u2019on c\xE9l\xE8bre cette \xE9volution
+    vers des villes plus intelligentes et interconnect\xE9es, il convient de se demander
+    \xE0 quel point nous serons pr\xEAts \xE0 accepter un tel degr\xE9 de contr\xF4le
+    technologique sur nos vies quotidiennes. Si l\u2019on peut saluer l\u2019innovation
+    et les potentialit\xE9s offertes par ces nouvelles technologies, il est important
+    de rester vigilant sur les d\xE9rives possibles. L\u2019engagement de Google
+    dans la mobilit\xE9 pourrait bien red\xE9finir nos d\xE9placements\u2026 mais
+    aussi notre relation \xE0 la donn\xE9e, \xE0 la surveillance, et \xE0 l\u2019automatisation.
+    Reste \xE0 savoir si cet investissement dans la mobilit\xE9, pr\xE9sent\xE9 comme
+    un pas vers le futur, servira avant tout l\u2019int\xE9r\xEAt public, ou si l\u2019intention
+    cach\xE9e est de faire de la mobilit\xE9 une nouvelle source de profits pour
+    Google. //Effet : baisse du cout des projets \xAB technologiques \xBB"
+  _moneyChange: 0
+  _satisfactionChange: 0
+  _sustainabilityChange: 0
