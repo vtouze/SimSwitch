@@ -23,6 +23,10 @@ MonoBehaviour:
     m_Key: New Entry
     m_Metadata:
       m_Items: []
+  - m_Id: 28979742110932992
+    m_Key: OverviewV2/Managers/WaypointsManager
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1588530478538031109
