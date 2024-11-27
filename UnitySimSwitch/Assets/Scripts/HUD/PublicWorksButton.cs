@@ -9,15 +9,15 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
     private static Image globalImageToMove;
     private static bool isAnyImageFollowing = false;
 
+    private RoadSegment selectedRoadSegment;
+
     private void Update()
     {
         if (isAnyImageFollowing && globalImageToMove != null)
         {
             Vector3 pos = Input.mousePosition;
-
             pos += new Vector3(offset.x, offset.y, 0);
             pos.z = 0f;
-
             globalImageToMove.transform.position = pos;
         }
     }
@@ -25,7 +25,6 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Image buttonImage = GetComponent<Image>();
-
         if (buttonImage == null)
         {
             Debug.LogWarning("PublicWorksButton: No Image component found on this GameObject.");
@@ -68,7 +67,25 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
             Destroy(globalImageToMove.gameObject);
             globalImageToMove = null;
         }
-
         isAnyImageFollowing = false;
+    }
+
+    public void ApplyPublicWorksToRoad(RoadSegment roadSegment)
+    {
+        if (roadSegment == null)
+        {
+            Debug.LogWarning("PublicWorksButton: No road segment provided.");
+            return;
+        }
+
+        if (selectedRoadSegment != roadSegment)
+        {
+            selectedRoadSegment = roadSegment;
+            selectedRoadSegment.ApplyPublicWorks();
+        }
+        else
+        {
+            Debug.Log("PublicWorksButton: The selected road is already under public works.");
+        }
     }
 }
