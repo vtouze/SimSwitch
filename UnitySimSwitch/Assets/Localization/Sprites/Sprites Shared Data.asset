@@ -27,9 +27,61 @@ MonoBehaviour:
     m_Key: OverviewV2/Managers/WaypointsManager
     m_Metadata:
       m_Items: []
+  - m_Id: 31537591596900352
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu/Households_Background/Households_Body/Households_Selection/HorizontalBox_HouseholdsCard/Couple-51+-NoChild_Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31537630167719936
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu/Households_Background/Households_Body/Households_Selection/HorizontalBox_HouseholdsCard/Couple-3150-Child_Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31537686451085312
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu/Households_Background/Households_Body/Households_Selection/HorizontalBox_HouseholdsCard/Couple-3150-NoChild_Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31537739408367616
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu/Households_Background/Households_Body/Households_Selection/HorizontalBox_HouseholdsCard/Single-51+-NoChild_Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31537777157103616
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu/Households_Background/Households_Body/Households_Selection/HorizontalBox_HouseholdsCard/Single-51+-Child_Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31537837932568576
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu/Households_Background/Households_Body/Households_Selection/HorizontalBox_HouseholdsCard/Single-3150-NoChild_Card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31539099323359232
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu/Households_Background/Households_Body/Households_Entities/ArrowsBox/Arrow_Backward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31539152188366848
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu/Households_Background/Households_Body/Households_Entities/ArrowsBox/Arrow_Backward
+      1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31539192420130816
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu/Households_Background/Households_Body/Households_Entities/ArrowsBox/Arrow_Backward
+      2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31539254990757888
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu/Households_Background/Households_Body/Households_Entities/ArrowsBox/Arrow_Forward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31539901559496704
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31539911336419328
+    m_Key: OverviewV3/Canvas/-----------------------------MENU-------------------------------/HouseholdsMenu
+      1
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1588530478538031109
+    - rid: 4360484543144132642
   m_KeyGenerator:
     rid: 1588530478538031105
   references:
@@ -49,3 +101,33 @@ MonoBehaviour:
           - fr
         m_TypeString: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
+    - rid: 4360484543144132642
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 31537591596900352
+          m_TableCodes:
+          - en
+          - fr
+        - m_KeyId: 31537630167719936
+          m_TableCodes:
+          - en
+          - fr
+        - m_KeyId: 31537686451085312
+          m_TableCodes:
+          - en
+          - fr
+        - m_KeyId: 31537739408367616
+          m_TableCodes:
+          - en
+          - fr
+        - m_KeyId: 31537777157103616
+          m_TableCodes:
+          - en
+          - fr
+        - m_KeyId: 31537837932568576
+          m_TableCodes:
+          - en
+          - fr
+        m_TypeString: HouseholdsEntry, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null

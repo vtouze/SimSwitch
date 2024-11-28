@@ -25,19 +25,19 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Image buttonImage = GetComponent<Image>();
-        if (buttonImage == null)
+        /*if (buttonImage == null)
         {
             Debug.LogWarning("PublicWorksButton: No Image component found on this GameObject.");
             return;
-        }
+        }*/
 
         if (isAnyImageFollowing && globalImageToMove != null)
         {
-            if (globalImageToMove.sprite == buttonImage.sprite)
+            /*if (globalImageToMove.sprite == buttonImage.sprite)
             {
                 Debug.Log("PublicWorksButton: Same sprite is already being followed. No action taken.");
                 return;
-            }
+            }*/
 
             StopFollowing();
         }
@@ -46,11 +46,11 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
         globalImageToMove.raycastTarget = false;
 
         Canvas canvas = GetComponentInParent<Canvas>();
-        if (canvas == null)
+        /*if (canvas == null)
         {
             Debug.LogError("PublicWorksButton: Canvas not found in parent hierarchy.");
             return;
-        }
+        }*/
 
         globalImageToMove.transform.SetParent(canvas.transform, false);
         globalImageToMove.sprite = buttonImage.sprite;
@@ -72,20 +72,20 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
 
     public void ApplyPublicWorksToRoad(RoadSegment roadSegment)
     {
-        if (roadSegment == null)
+        /*if (roadSegment == null)
         {
             Debug.LogWarning("PublicWorksButton: No road segment provided.");
             return;
-        }
+        }*/
 
         if (selectedRoadSegment != roadSegment)
         {
             selectedRoadSegment = roadSegment;
             selectedRoadSegment.ApplyPublicWorks();
         }
-        else
+        /*else
         {
             Debug.Log("PublicWorksButton: The selected road is already under public works.");
-        }
+        }*/
     }
 }
