@@ -5,19 +5,29 @@ using UnityEngine.EventSystems;
 public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
 {
     public Vector2 offset = new Vector2(20, 20);
+    public PublicWorksType publicWorksType;
 
     private static Image globalImageToMove;
     private static bool isAnyImageFollowing = false;
+    public static PublicWorksType? selectedPublicWorksType = null;
 
-    private RoadSegment selectedRoadSegment;
+    public GameObject cancelImage;
+
+    private static PublicWorksButton lastSelectedButton = null;
+
+    private void Start()
+    {
+        if (cancelImage != null)
+        {
+            cancelImage.SetActive(false);
+        }
+    }
 
     private void Update()
     {
         if (isAnyImageFollowing && globalImageToMove != null)
         {
-            Vector3 pos = Input.mousePosition;
-            pos += new Vector3(offset.x, offset.y, 0);
-            pos.z = 0f;
+            Vector3 pos = Input.mousePosition + new Vector3(offset.x, offset.y, 0);
             globalImageToMove.transform.position = pos;
         }
     }
@@ -25,20 +35,23 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Image buttonImage = GetComponent<Image>();
-        /*if (buttonImage == null)
+
+        if (buttonImage == null)
         {
             Debug.LogWarning("PublicWorksButton: No Image component found on this GameObject.");
             return;
-        }*/
+        }
 
-        if (isAnyImageFollowing && globalImageToMove != null)
+        if (selectedPublicWorksType == publicWorksType)
         {
-            /*if (globalImageToMove.sprite == buttonImage.sprite)
-            {
-                Debug.Log("PublicWorksButton: Same sprite is already being followed. No action taken.");
-                return;
-            }*/
+            Debug.Log($"PublicWorksButton: Deselecting {publicWorksType}");
+            StopFollowing();
+            HideFeedback();
+            return;
+        }
 
+        if (isAnyImageFollowing)
+        {
             StopFollowing();
         }
 
@@ -46,11 +59,11 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
         globalImageToMove.raycastTarget = false;
 
         Canvas canvas = GetComponentInParent<Canvas>();
-        /*if (canvas == null)
+        if (canvas == null)
         {
             Debug.LogError("PublicWorksButton: Canvas not found in parent hierarchy.");
             return;
-        }*/
+        }
 
         globalImageToMove.transform.SetParent(canvas.transform, false);
         globalImageToMove.sprite = buttonImage.sprite;
@@ -58,6 +71,18 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
         globalImageToMove.transform.SetAsLastSibling();
 
         isAnyImageFollowing = true;
+        selectedPublicWorksType = publicWorksType;
+
+        ShowFeedback();
+
+        if (lastSelectedButton != null && lastSelectedButton != this)
+        {
+            lastSelectedButton.HideFeedback();
+        }
+
+        lastSelectedButton = this;
+
+        Debug.Log($"PublicWorksButton: Selected {publicWorksType}");
     }
 
     public static void StopFollowing()
@@ -68,24 +93,31 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
             globalImageToMove = null;
         }
         isAnyImageFollowing = false;
+        selectedPublicWorksType = null;
+
+        Debug.Log("PublicWorksButton: Stopped following. Public works type deselected.");
     }
 
-    public void ApplyPublicWorksToRoad(RoadSegment roadSegment)
+    private void ShowFeedback()
     {
-        /*if (roadSegment == null)
+        if (cancelImage != null)
         {
-            Debug.LogWarning("PublicWorksButton: No road segment provided.");
-            return;
-        }*/
-
-        if (selectedRoadSegment != roadSegment)
-        {
-            selectedRoadSegment = roadSegment;
-            selectedRoadSegment.ApplyPublicWorks();
+            cancelImage.SetActive(true);
         }
-        /*else
-        {
-            Debug.Log("PublicWorksButton: The selected road is already under public works.");
-        }*/
     }
+
+    private void HideFeedback()
+    {
+        if (cancelImage != null)
+        {
+            cancelImage.SetActive(false); 
+        }
+    }
+}
+
+public enum PublicWorksType
+{
+    BIKE,
+    CAR,
+    BUS
 }
