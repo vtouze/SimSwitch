@@ -38,10 +38,21 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private Color originalColor;
     private Sprite currentTransportSprite;
 
+    // Outline component reference
+    private Outline roadOutline;
+
     private void Start()
     {
         roadImage = GetComponent<Image>();
         originalColor = roadImage.color;
+        roadOutline = GetComponent<Outline>(); // Get the Outline component
+
+        if (roadOutline != null)
+        {
+            roadOutline.enabled = false; // Disable the outline at the start
+            roadOutline.effectDistance = new Vector2(5, 5); // Set outline width (optional)
+        }
+
         Debug.Log($"RoadSelection initialized on {gameObject.name}. Original color set to {originalColor}");
 
         // Hide the progress bar parent at the start
@@ -55,8 +66,14 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (!isSelected && !isUnderConstruction)
         {
-            roadImage.color = Color.yellow;
-            Debug.Log($"Mouse entered {gameObject.name}. Highlight color applied.");
+            // Enable the outline on hover with a white color
+            if (roadOutline != null)
+            {
+                roadOutline.enabled = true;
+                roadOutline.effectColor = Color.white; // Set outline color to white
+            }
+
+            Debug.Log($"Mouse entered {gameObject.name}. Outline enabled.");
         }
     }
 
@@ -64,8 +81,13 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (!isSelected && !isUnderConstruction)
         {
-            roadImage.color = originalColor;
-            Debug.Log($"Mouse exited {gameObject.name}. Reverted to original color.");
+            // Disable the outline when the mouse exits
+            if (roadOutline != null)
+            {
+                roadOutline.enabled = false;
+            }
+
+            Debug.Log($"Mouse exited {gameObject.name}. Outline disabled.");
         }
     }
 
@@ -92,6 +114,12 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         isUnderConstruction = true;
         roadImage.sprite = constructionRoadSprite; // Set the road to construction sprite
+
+        // Disable the outline when construction starts
+        if (roadOutline != null)
+        {
+            roadOutline.enabled = false; // Hide the outline during construction
+        }
 
         // Set the corresponding transport sprite
         currentTransportSprite = GetTransportSprite(type);
@@ -191,7 +219,8 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             road.isSelected = false;
             road.roadImage.color = road.originalColor;
-            Debug.Log($"Deselected {road.gameObject.name}. Reverted to original color.");
+            road.roadOutline.enabled = false; // Disable outline when deselected
+            Debug.Log($"Deselected {road.gameObject.name}. Reverted to original color and outline disabled.");
         }
     }
 }
