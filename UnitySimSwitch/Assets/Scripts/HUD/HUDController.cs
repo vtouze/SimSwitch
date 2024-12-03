@@ -76,14 +76,12 @@ public class HUDController : MonoBehaviour
         cameraController._isMenuing = true;
         menu.SetActive(true);
         
-        // Enables menu opening animation if Animator is present.
         Animator animator = menu.GetComponent<Animator>();
         if (animator != null)
         {
             animator.SetBool("isOpeningMenu", true);
         }
         
-        // Enables interaction and raycasts if CanvasGroup is present.
         CanvasGroup canvasGroup = menu.GetComponent<CanvasGroup>();
         if (canvasGroup != null)
         {
@@ -100,14 +98,12 @@ public class HUDController : MonoBehaviour
         StartCoroutine(AnimationExit(menu));
         cameraController._isMenuing = false;
         
-        // Disables menu opening animation if Animator is present.
         Animator animator = menu.GetComponent<Animator>();
         if (animator != null)
         {
             animator.SetBool("isOpeningMenu", false);
         }
         
-        // Disables interaction and raycasts if CanvasGroup is present.
         CanvasGroup canvasGroup = menu.GetComponent<CanvasGroup>();
         if (canvasGroup != null)
         {

@@ -13,13 +13,13 @@ species unity_linker parent: abstract_unity_linker {
 	 */
 	reflex daily {
 		
-		/*do send_message players: unity_player as list mes: [
+		do send_message players: unity_player as list mes: [
 			DAILYMESS::SIMDATE, // TODO : we have to change this so we recognise what it is
 			_D::current_date.day,
 			_DW::current_date.day_of_week,
 			_M::current_date.month,
 			_Y::current_date.year
-		];*/
+		];
 		
 		do send_message players: unity_player as list mes: [
 			DAILYMESS::SIMBUDGET, 

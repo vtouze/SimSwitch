@@ -1,79 +1,111 @@
 using UnityEngine;
-using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Image))]
 public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
+    #region Fields
+
     private Image roadImage;
     private bool isSelected = false;
     private bool isUnderConstruction = false;
-    private float constructionTime = 10f; // Time in seconds for the construction
+    private float constructionTime = 10f;
     private float currentConstructionTime = 0f;
 
-    [Header("UI Elements")]
-    public Image progressBar; // Circular progress bar
-    public Sprite constructionRoadSprite; // Construction sprite
+    [Header("Construction")]
+    [SerializeField] private Sprite constructionRoadSprite;
+    [SerializeField] private GameObject _constructionOverlay = null;
+    [SerializeField] private TMP_Text constructionText;
+    private Image progressBar;
 
-    [Header("Transport Sprites")]
-    public Sprite bikeSprite;
-    public Sprite carSprite;
-    public Sprite busSprite;
+    [Header("Road Sprites")]
+    [SerializeField] private Sprite bikeSprite;
+    [SerializeField] private Sprite carSprite;
+    [SerializeField] private Sprite busSprite;
 
-    [Header("Transport GameObject")]
-    public GameObject transportGameObject; // Single transport GameObject for all types
+    private GameObject transportGameObject;
 
-    [Header("Icons")]
-    public Sprite bikeIcon;
-    public Sprite carIcon;
-    public Sprite busIcon;
+    [Header("Transports Icons")]
+    [SerializeField] private Sprite bikeIcon;
+    [SerializeField] private Sprite carIcon;
+    [SerializeField] private Sprite busIcon;
 
-    [Header("Progress Bar Parent")]
-    [SerializeField] private GameObject progressBarParent; // Parent GameObject of the progress bar
+    [Header("Overlay Buttons")]
+    [SerializeField] private Button validateButton;
+    [SerializeField] private Button abortButton;
 
-    [Header("Animator")]
-    public Animator progressBarAnimator; // Animator component for the progress bar animation
+    private GameObject progressBarParent;
+    private Animator progressBarAnimator;
+    private Animator progressBarParentAnimator;
 
     private Color originalColor;
     private Sprite currentTransportSprite;
-
-    // Outline component reference
     private Outline roadOutline;
+    private PublicWorksType selectedType;
+
+    [Header("Road Entries")]
+    [SerializeField] private RoadsEntries bikeEntries;
+    [SerializeField] private RoadsEntries carEntries;
+    [SerializeField] private RoadsEntries busEntries;
+
+    #endregion Fields
 
     private void Start()
     {
+        Transform constructionBar = gameObject.transform.GetChild(0).transform;
+        if (constructionBar != null)
+        {
+            progressBarParent = constructionBar.gameObject;
+            progressBarAnimator = constructionBar.GetComponent<Animator>();
+            progressBarParentAnimator = constructionBar.GetComponent<Animator>();
+
+            Transform pbFill = gameObject.transform.GetChild(0).GetChild(2).transform;
+            if (pbFill != null)
+            {
+                progressBar = pbFill.GetComponent<Image>();
+            }
+
+            Transform transportsIcon = gameObject.transform.GetChild(0).GetChild(1).transform;
+            if (transportsIcon != null)
+            {
+                transportGameObject = transportsIcon.gameObject;
+            }
+        }
+
+        _constructionOverlay.SetActive(false);
         roadImage = GetComponent<Image>();
         originalColor = roadImage.color;
-        roadOutline = GetComponent<Outline>(); // Get the Outline component
+        roadOutline = GetComponent<Outline>();
 
         if (roadOutline != null)
         {
-            roadOutline.enabled = false; // Disable the outline at the start
-            roadOutline.effectDistance = new Vector2(5, 5); // Set outline width (optional)
+            roadOutline.enabled = false;
+            roadOutline.effectDistance = new Vector2(5, 5);
         }
 
-        Debug.Log($"RoadSelection initialized on {gameObject.name}. Original color set to {originalColor}");
-
-        // Hide the progress bar parent at the start
         if (progressBarParent != null)
         {
             progressBarParent.SetActive(false);
         }
+
+        validateButton.onClick.AddListener(ValidateConstruction);
+        abortButton.onClick.AddListener(AbortConstruction);
     }
+
+    #region PointerHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!isSelected && !isUnderConstruction)
         {
-            // Enable the outline on hover with a white color
             if (roadOutline != null)
             {
                 roadOutline.enabled = true;
-                roadOutline.effectColor = Color.white; // Set outline color to white
             }
-
-            Debug.Log($"Mouse entered {gameObject.name}. Outline enabled.");
         }
     }
 
@@ -81,110 +113,228 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (!isSelected && !isUnderConstruction)
         {
-            // Disable the outline when the mouse exits
             if (roadOutline != null)
             {
                 roadOutline.enabled = false;
             }
-
-            Debug.Log($"Mouse exited {gameObject.name}. Outline disabled.");
         }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log($"Clicked on {gameObject.name}.");
-
         if (!isUnderConstruction && PublicWorksButton.selectedPublicWorksType != null)
         {
-            StartConstruction((PublicWorksType)PublicWorksButton.selectedPublicWorksType);
-            Debug.Log($"Started construction for {PublicWorksButton.selectedPublicWorksType} on {gameObject.name}.");
-        }
-        else
-        {
-            Debug.LogWarning("No Public Works type selected or road is under construction.");
+            selectedType = (PublicWorksType)PublicWorksButton.selectedPublicWorksType;
+            _constructionOverlay.SetActive(true);
+            ShowPreConstructionUI(selectedType);
+
+            Animator anim = _constructionOverlay.GetComponent<Animator>();
+            if (anim != null)
+            {
+                anim.SetBool("isOpeningMenu", true);
+            }
+
+            ConstructionManager.Instance.AddTransportType(selectedType);
+
+            UpdateConstructionText();
         }
 
         DeselectAllRoads();
         isSelected = true;
-        Debug.Log($"{gameObject.name} is now selected.");
+    }
+
+    #endregion PointerHandler
+
+    #region OverlayActions
+
+    private void ValidateConstruction()
+    {
+        CloseConstructionOverlay();
+
+        StartConstruction(selectedType);
+
+        PublicWorksButton.StopFollowing();
+        PublicWorksButton.lastSelectedButton?.HideFeedback();
+    }
+
+    private void AbortConstruction()
+    {
+        CloseConstructionOverlay();
+
+        PublicWorksButton.StopFollowing();
+        PublicWorksButton.lastSelectedButton?.HideFeedback();
+
+        isSelected = false;
+    }
+
+    private void CloseConstructionOverlay()
+    {
+        Animator anim = _constructionOverlay.GetComponent<Animator>();
+        if (anim != null)
+        {
+            anim.SetBool("isOpeningMenu", false);
+        }
+    }
+
+    #endregion OverlayActions
+
+    #region Construction
+
+    private void ShowPreConstructionUI(PublicWorksType type)
+    {
+        currentTransportSprite = GetTransportSprite(type);
+        transportGameObject.GetComponent<Image>().sprite = currentTransportSprite;
+        SetTransportIcon(type);
+
+        if (progressBarParent != null)
+        {
+            progressBarParent.SetActive(true);
+            progressBar.fillAmount = 0;
+        }
     }
 
     private void StartConstruction(PublicWorksType type)
     {
         isUnderConstruction = true;
-        roadImage.sprite = constructionRoadSprite; // Set the road to construction sprite
+        roadImage.sprite = constructionRoadSprite;
 
-        // Disable the outline when construction starts
         if (roadOutline != null)
         {
-            roadOutline.enabled = false; // Hide the outline during construction
+            roadOutline.enabled = false;
         }
 
-        // Set the corresponding transport sprite
-        currentTransportSprite = GetTransportSprite(type);
-        transportGameObject.GetComponent<Image>().sprite = currentTransportSprite; // Update transport sprite directly
+        constructionTime = GetConstructionTimeForType(type);
 
-        // Set the corresponding transport icon
-        SetTransportIcon(type);
-
-        // Show the progress bar parent and start the construction timer (coroutine)
-        if (progressBarParent != null)
-        {
-            progressBarParent.SetActive(true);
-            TriggerProgressBarAnimation(); // Trigger animation when progress bar is visible
-        }
-
+        TriggerProgressBarAnimation();
+        TriggerIdleAnimation(true);
         StartCoroutine(ConstructionTimer());
     }
+
+    private float GetConstructionTimeForType(PublicWorksType type)
+    {
+        switch (type)
+        {
+            case PublicWorksType.BIKE:
+                return bikeEntries._duration * 15;
+            case PublicWorksType.CAR:
+                return carEntries._duration * 15;
+            case PublicWorksType.BUS:
+                return busEntries._duration * 15;
+            default:
+                return 10f;
+        }
+    }
+
 
     private IEnumerator ConstructionTimer()
     {
         currentConstructionTime = 0f;
 
-        // Update the progress bar until the construction is complete
         while (currentConstructionTime < constructionTime)
         {
             currentConstructionTime += Time.deltaTime;
-            float progress = currentConstructionTime / constructionTime;
-            progressBar.fillAmount = progress;
-
+            progressBar.fillAmount = currentConstructionTime / constructionTime;
             yield return null;
         }
 
-        // When construction is done
         CompleteConstruction();
     }
 
     private void CompleteConstruction()
     {
-        // Set the road to the selected transport type sprite
         roadImage.sprite = currentTransportSprite;
         isUnderConstruction = false;
-        Debug.Log($"{gameObject.name} construction completed.");
 
-        // Hide the progress bar parent when construction is finished
         if (progressBarParent != null)
         {
             progressBarParent.SetActive(false);
+            TriggerIdleAnimation(false);
         }
     }
 
-    private void SetTransportIcon(PublicWorksType type)
+    #endregion Construction
+
+    private void TriggerIdleAnimation(bool state)
+    {
+        if (progressBarParentAnimator != null)
+        {
+            progressBarParentAnimator.SetBool("isIdle", state);
+        }
+    }
+
+    private void TriggerProgressBarAnimation()
+    {
+        if (progressBarAnimator != null)
+        {
+            progressBarAnimator.SetTrigger("StartProgress");
+        }
+    }
+
+    private void DeselectAllRoads()
+    {
+        RoadSelection[] allRoads = FindObjectsOfType<RoadSelection>();
+        foreach (RoadSelection road in allRoads)
+        {
+            road.isSelected = false;
+            road.roadImage.color = road.originalColor;
+            road.roadOutline.enabled = false;
+        }
+    }
+
+    private void UpdateConstructionText()
+    {
+        Dictionary<PublicWorksType, RoadsEntries> transportEntries = new Dictionary<PublicWorksType, RoadsEntries>
+        {   
+            { PublicWorksType.BIKE, bikeEntries },
+            { PublicWorksType.CAR, carEntries },
+            { PublicWorksType.BUS, busEntries }
+        };
+
+        var (totalCost, totalDuration) = ConstructionManager.Instance.GetTotalCostAndDuration(transportEntries);
+
+        string transportNames = ConstructionManager.Instance.GetSelectedTransportTypesAsString();
+        string formattedCost = FormatCost(totalCost);
+
+        string constructionTextFormatted = (ConstructionManager.Instance.SelectedTransportTypes.Count > 1) ? "Construction" + "s" : "Construction";
+
+        string durationText = totalDuration > 1 ? "years" : "year";
+
+        constructionText.text = $"{constructionTextFormatted} for: {transportNames}\n" +
+                                $"Total Cost: {formattedCost}\n" +
+                                $"Total Duration: {totalDuration} {durationText}";
+    }
+
+
+    #region Misc
+    private string FormatCost(float cost)
+    {
+        if (cost >= 1000000)
+        {
+            return (cost / 1000000).ToString("0.##") + "M";
+        }
+        else if (cost >= 1000)
+        {
+            return (cost / 1000).ToString("0.##") + "k";
+        }
+        else
+        {
+            return cost.ToString("0.##");
+        }
+    } 
+
+
+        private void SetTransportIcon(PublicWorksType type)
     {
         switch (type)
         {
             case PublicWorksType.BIKE:
-                transportGameObject.GetComponent<Image>().sprite = bikeIcon; // Set the transport icon to bike
+                transportGameObject.GetComponent<Image>().sprite = bikeIcon;
                 break;
             case PublicWorksType.CAR:
-                transportGameObject.GetComponent<Image>().sprite = carIcon; // Set the transport icon to car
+                transportGameObject.GetComponent<Image>().sprite = carIcon;
                 break;
             case PublicWorksType.BUS:
-                transportGameObject.GetComponent<Image>().sprite = busIcon; // Set the transport icon to bus
-                break;
-            default:
-                Debug.LogWarning("Unknown Public Works type.");
+                transportGameObject.GetComponent<Image>().sprite = busIcon;
                 break;
         }
     }
@@ -203,24 +353,5 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                 return null;
         }
     }
-
-    private void TriggerProgressBarAnimation()
-    {
-        if (progressBarAnimator != null)
-        {
-            progressBarAnimator.SetTrigger("StartProgress"); // Trigger the "StartProgress" animation (assuming it's set in the Animator)
-        }
-    }
-
-    private void DeselectAllRoads()
-    {
-        RoadSelection[] allRoads = FindObjectsOfType<RoadSelection>();
-        foreach (RoadSelection road in allRoads)
-        {
-            road.isSelected = false;
-            road.roadImage.color = road.originalColor;
-            road.roadOutline.enabled = false; // Disable outline when deselected
-            Debug.Log($"Deselected {road.gameObject.name}. Reverted to original color and outline disabled.");
-        }
-    }
+    #endregion Misc
 }

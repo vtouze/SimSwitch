@@ -13,7 +13,7 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
 
     public GameObject cancelImage;
 
-    private static PublicWorksButton lastSelectedButton = null;
+    public static PublicWorksButton lastSelectedButton = null;
 
     private void Start()
     {
@@ -36,15 +36,8 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
     {
         Image buttonImage = GetComponent<Image>();
 
-        if (buttonImage == null)
-        {
-            Debug.LogWarning("PublicWorksButton: No Image component found on this GameObject.");
-            return;
-        }
-
         if (selectedPublicWorksType == publicWorksType)
         {
-            Debug.Log($"PublicWorksButton: Deselecting {publicWorksType}");
             StopFollowing();
             HideFeedback();
             return;
@@ -59,11 +52,6 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
         globalImageToMove.raycastTarget = false;
 
         Canvas canvas = GetComponentInParent<Canvas>();
-        if (canvas == null)
-        {
-            Debug.LogError("PublicWorksButton: Canvas not found in parent hierarchy.");
-            return;
-        }
 
         globalImageToMove.transform.SetParent(canvas.transform, false);
         globalImageToMove.sprite = buttonImage.sprite;
@@ -81,8 +69,6 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
         }
 
         lastSelectedButton = this;
-
-        Debug.Log($"PublicWorksButton: Selected {publicWorksType}");
     }
 
     public static void StopFollowing()
@@ -94,11 +80,9 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
         }
         isAnyImageFollowing = false;
         selectedPublicWorksType = null;
-
-        Debug.Log("PublicWorksButton: Stopped following. Public works type deselected.");
     }
 
-    private void ShowFeedback()
+    public void ShowFeedback()
     {
         if (cancelImage != null)
         {
@@ -106,7 +90,7 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    private void HideFeedback()
+    public void HideFeedback()
     {
         if (cancelImage != null)
         {
