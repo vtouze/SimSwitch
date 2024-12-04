@@ -46,6 +46,8 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private Sprite currentTransportSprite;
     private Outline roadOutline;
     private PublicWorksType selectedType;
+    private PublicWorksType? currentTransportType = null;
+
 
     [Header("Road Entries")]
     [SerializeField] private RoadsEntries bikeEntries;
@@ -120,21 +122,34 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         }
     }
 
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (!isUnderConstruction && PublicWorksButton.selectedPublicWorksType != null)
         {
+            if (roadOutline != null)
+            {
+                roadOutline.enabled = false;
+            }
+            
             selectedType = (PublicWorksType)PublicWorksButton.selectedPublicWorksType;
+        
+            if (currentTransportType.HasValue)
+            {
+                ConstructionManager.Instance.RemoveTransportType(currentTransportType.Value);
+            }
+
+            currentTransportType = selectedType;
+            ConstructionManager.Instance.AddTransportType(selectedType);
+
             _constructionOverlay.SetActive(true);
             ShowPreConstructionUI(selectedType);
-
+        
             Animator anim = _constructionOverlay.GetComponent<Animator>();
             if (anim != null)
             {
                 anim.SetBool("isOpeningMenu", true);
             }
-
-            ConstructionManager.Instance.AddTransportType(selectedType);
 
             UpdateConstructionText();
         }
@@ -150,12 +165,14 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private void ValidateConstruction()
     {
         CloseConstructionOverlay();
-
+        currentTransportType = null;
+        ConstructionManager.Instance.ClearTransportTypes();
         StartConstruction(selectedType);
 
         PublicWorksButton.StopFollowing();
         PublicWorksButton.lastSelectedButton?.HideFeedback();
     }
+
 
     private void AbortConstruction()
     {
@@ -205,7 +222,6 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
         constructionTime = GetConstructionTimeForType(type);
 
-        TriggerProgressBarAnimation();
         TriggerIdleAnimation(true);
         StartCoroutine(ConstructionTimer());
     }
@@ -256,17 +272,9 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private void TriggerIdleAnimation(bool state)
     {
-        if (progressBarParentAnimator != null)
+        if (progressBarParentAnimator != null && progressBarParentAnimator.isActiveAndEnabled)
         {
             progressBarParentAnimator.SetBool("isIdle", state);
-        }
-    }
-
-    private void TriggerProgressBarAnimation()
-    {
-        if (progressBarAnimator != null)
-        {
-            progressBarAnimator.SetTrigger("StartProgress");
         }
     }
 
@@ -323,7 +331,7 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     } 
 
 
-        private void SetTransportIcon(PublicWorksType type)
+    private void SetTransportIcon(PublicWorksType type)
     {
         switch (type)
         {

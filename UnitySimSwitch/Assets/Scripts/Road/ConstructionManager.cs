@@ -32,6 +32,10 @@ public class ConstructionManager : MonoBehaviour
         }
     }
 
+    public void ClearTransportTypes()
+    {
+        SelectedTransportTypes.Clear();
+    }
 
     public string GetSelectedTransportTypesAsString()
     {
