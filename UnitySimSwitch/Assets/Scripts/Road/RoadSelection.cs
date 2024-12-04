@@ -47,7 +47,8 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private Outline roadOutline;
     private PublicWorksType selectedType;
     private PublicWorksType? currentTransportType = null;
-
+    
+    private ParticleSystem _confettiParticles = null;
 
     [Header("Road Entries")]
     [SerializeField] private RoadsEntries bikeEntries;
@@ -77,6 +78,8 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                 transportGameObject = transportsIcon.gameObject;
             }
         }
+
+        _confettiParticles = gameObject.transform.GetChild(1).GetComponent<ParticleSystem>();
 
         _constructionOverlay.SetActive(false);
         roadImage = GetComponent<Image>();
@@ -266,6 +269,8 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             progressBarParent.SetActive(false);
             TriggerIdleAnimation(false);
         }
+
+        _confettiParticles.Play();
     }
 
     #endregion Construction

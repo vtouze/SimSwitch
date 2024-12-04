@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
-public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
+public class PublicWorksButton : MonoBehaviour
 {
     public Vector2 offset = new Vector2(20, 20);
     public PublicWorksType publicWorksType;
@@ -15,24 +14,31 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
 
     public static PublicWorksButton lastSelectedButton = null;
 
-    private void Start()
+    private Canvas canvas;
+    private Camera canvasCamera;
+
+    void Start()
     {
         if (cancelImage != null)
         {
             cancelImage.SetActive(false);
         }
+
+        canvas = GetComponentInParent<Canvas>();
+        canvasCamera = canvas.worldCamera;
     }
 
-    private void Update()
+    void Update()
     {
         if (isAnyImageFollowing && globalImageToMove != null)
         {
-            Vector3 pos = Input.mousePosition + new Vector3(offset.x, offset.y, 0);
-            globalImageToMove.transform.position = pos;
+            Vector3 worldPosition = Input.mousePosition + new Vector3(offset.x, offset.y, 0);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.GetComponent<RectTransform>(), worldPosition, canvasCamera, out Vector2 localPosition);
+            globalImageToMove.transform.localPosition = localPosition;
         }
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnButtonClick()
     {
         Image buttonImage = GetComponent<Image>();
 
@@ -50,8 +56,6 @@ public class PublicWorksButton : MonoBehaviour, IPointerClickHandler
 
         globalImageToMove = Instantiate(buttonImage.gameObject).GetComponent<Image>();
         globalImageToMove.raycastTarget = false;
-
-        Canvas canvas = GetComponentInParent<Canvas>();
 
         globalImageToMove.transform.SetParent(canvas.transform, false);
         globalImageToMove.sprite = buttonImage.sprite;

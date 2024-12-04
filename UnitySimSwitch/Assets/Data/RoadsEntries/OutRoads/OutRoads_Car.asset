@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: OutRoads_Car
   m_EditorClassIdentifier: 
   _cost: 350000
-  _duration: 0.5
+  _duration: 1

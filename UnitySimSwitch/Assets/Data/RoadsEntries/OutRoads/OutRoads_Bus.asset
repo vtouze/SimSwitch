@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: OutRoads_Bus
   m_EditorClassIdentifier: 
   _cost: 150000
-  _duration: 0.25
+  _duration: 0.5
