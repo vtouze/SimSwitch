@@ -12,80 +12,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
   m_Name: Pay_rises
   m_EditorClassIdentifier: 
-  _eventName: "Augmentation des salaires : Un signe positif dans un contexte \xE9conomique
-    incertain"
+  _eventName: 'Wage increases: A positive sign in an uncertain economic climate'
   _date: September 21, 2024
-  _subheading: "Cette ann\xE9e, le march\xE9 du travail conna\xEEt un ph\xE9nom\xE8ne
-    inattendu : une forte augmentation des salaires, qui semble marquer un tournant
-    dans un contexte \xE9conomique autrement complexe. Alors que l\u2019inflation,
-    la hausse des co\xFBts de l\u2019\xE9nergie et les d\xE9fis mondiaux li\xE9s
-    \xE0 la pand\xE9mie et aux tensions g\xE9opolitiques continuent d\u2019alimenter
-    les inqui\xE9tudes, les augmentations salariales offrent une lueur d\u2019espoir
-    aux travailleurs et suscitent de vifs d\xE9bats parmi les \xE9conomistes."
+  _subheading: 'This year, the labor market is experiencing an unexpected phenomenon:
+    a sharp rise in salaries, which seems to mark a turning point in an otherwise
+    complex economic context. While inflation, rising energy costs and the global
+    challenges of pandemics and geopolitical tensions continue to fuel worries, wage
+    increases offer a glimmer of hope to workers and spark lively debate among economists.'
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Une hausse g\xE9n\xE9rale, mais des disparit\xE9s selon les secteurs
-    : Selon les derni\xE8res donn\xE9es publi\xE9es par l\u2019Insee, les salaires
-    moyens ont enregistr\xE9 une progression significative cette ann\xE9e, avec une
-    augmentation de 3,5 % en moyenne dans l\u2019ensemble des secteurs \xE9conomiques.
-    Cette tendance se confirme aussi bien dans les grandes entreprises que dans les
-    PME, bien que les disparit\xE9s restent notables d\u2019un secteur \xE0 l\u2019autre.
-    Les secteurs les plus b\xE9n\xE9ficiaires de cette hausse sont notamment ceux
-    de la tech, de la sant\xE9, et des services financiers, o\xF9 des augmentations
-    d\xE9passent parfois les 5 %. La demande croissante de professionnels qualifi\xE9s
-    dans des domaines comme l\u2019informatique, les soins de sant\xE9 ou la finance
-    explique en grande partie cette dynamique. Parall\xE8lement, les secteurs plus
-    traditionnels, comme le commerce de d\xE9tail ou la restauration, enregistrent
-    des hausses plus mod\xE9r\xE9es, mais demeurent n\xE9anmoins sup\xE9rieures \xE0
-    la moyenne historique. Un tournant pour le pouvoir d'achat ? Pour de nombreux
-    salari\xE9s, cette augmentation des salaires arrive comme une bouff\xE9e d\u2019air
-    frais. Apr\xE8s plusieurs ann\xE9es marqu\xE9es par des hausses de prix et une
-    inflation galopante, notamment dans l\u2019alimentaire et l\u2019\xE9nergie,
-    cette revalorisation salariale repr\xE9sente une r\xE9ponse bienvenue au manque
-    de pouvoir d\u2019achat. Dans certaines professions, les ajustements salariaux
-    permettent de compenser une partie de la hausse des co\xFBts de la vie, en particulier
-    dans les grandes agglom\xE9rations o\xF9 les prix de l'immobilier et des loyers
-    continuent d\u2019augmenter. Pourtant, tous les travailleurs ne b\xE9n\xE9ficient
-    pas de mani\xE8re \xE9gale de cette dynamique. Si les cadres et les travailleurs
-    sp\xE9cialis\xE9s sont g\xE9n\xE9ralement les premiers \xE0 profiter de ces hausses,
-    les employ\xE9s moins qualifi\xE9s, notamment dans les secteurs moins en tension,
-    peinent \xE0 voir leur salaire progresser au m\xEAme rythme. Cette in\xE9galit\xE9
-    salariale pourrait, \xE0 terme, creuser encore davantage les \xE9carts entre
-    les diff\xE9rentes cat\xE9gories socio-professionnelles. Les raisons d'une telle
-    hausse : L'augmentation des salaires cette ann\xE9e est le fruit d'une conjonction
-    de facteurs. D\u2019une part, la reprise \xE9conomique post-COVID a entra\xEEn\xE9
-    une forte demande de main-d'\u0153uvre qualifi\xE9e, obligeant les entreprises
-    \xE0 revaloriser les r\xE9mun\xE9rations pour attirer et fid\xE9liser leurs talents.
-    D\u2019autre part, les syndicats ont jou\xE9 un r\xF4le cl\xE9 cette ann\xE9e,
-    en obtenant des augmentations substantielles lors des n\xE9gociations annuelles
-    obligatoires (NAO), notamment dans les secteurs publics et para-publics. Les
-    entreprises, bien que confront\xE9es \xE0 une inflation encore \xE9lev\xE9e et
-    \xE0 des co\xFBts de production accrus, ont \xE9galement compris que des salaires
-    plus \xE9lev\xE9s peuvent avoir un effet positif sur la motivation des employ\xE9s
-    et la productivit\xE9. Les talents deviennent plus mobiles et exigent une r\xE9mun\xE9ration
-    qui corresponde \xE0 leurs qualifications et \xE0 la r\xE9alit\xE9 du march\xE9
-    du travail. Les perspectives pour l\u2019ann\xE9e \xE0 venir : Les \xE9conomistes
-    pr\xE9voient que cette tendance pourrait se maintenir dans les mois \xE0 venir,
-    mais les perspectives restent partag\xE9es. D\u2019un c\xF4t\xE9, la croissance
-    des salaires pourrait se ralentir si l\u2019inflation venait \xE0 repartir \xE0
-    la hausse, ou si les entreprises commen\xE7aient \xE0 resserrer leur politique
-    salariale face \xE0 des pr\xE9visions \xE9conomiques incertaines. De l\u2019autre,
-    certaines entreprises pourraient maintenir des hausses salariales pour compenser
-    les risques de fuite des talents dans un march\xE9 de l'emploi encore tendu.
-    Les syndicats, de leur c\xF4t\xE9, continuent de plaider pour une r\xE9partition
-    plus \xE9quitable de cette richesse cr\xE9\xE9e par l\u2019augmentation des salaires,
-    en insistant sur la n\xE9cessit\xE9 de garantir des hausses qui b\xE9n\xE9ficient
-    \xE0 toutes les couches de la population active, et pas uniquement aux secteurs
-    en tension. Conclusion : L'augmentation des salaires observ\xE9e cette ann\xE9e
-    repr\xE9sente ind\xE9niablement un tournant dans le contexte \xE9conomique actuel,
-    et une bonne nouvelle pour de nombreux travailleurs. Toutefois, les disparit\xE9s
-    entre secteurs et cat\xE9gories de travailleurs, ainsi que les incertitudes \xE9conomiques
-    \xE0 moyen terme, rappellent qu\u2019il reste encore beaucoup \xE0 faire pour
-    garantir un v\xE9ritable pouvoir d\u2019achat pour tous. Reste \xE0 voir si cette
-    dynamique salariale pourra \xEAtre maintenue dans un contexte de fluctuations
-    \xE9conomiques et de tensions mondiales. //effet : augmentation du budget des
-    m\xE9nages"
+  _description: 'A general increase, but disparities depending on the sector: According
+    to the latest data published by INSEE, average salaries have recorded a significant
+    increase this year, with an increase of 3.5% on average in all economic sectors.
+    This trend is confirmed in both large companies and SMEs, although disparities
+    remain significant from one sector to another. The sectors that have benefited
+    the most from this increase are in particular tech, health, and financial services,
+    where increases sometimes exceed 5%. The growing demand for qualified professionals
+    in fields such as IT, health care, and finance largely explains this dynamic.
+    At the same time, more traditional sectors, such as retail and catering, have
+    recorded more moderate increases, but nevertheless remain above the historical
+    average. A turning point for purchasing power? For many employees, this increase
+    in salaries comes as a breath of fresh air. After several years marked by price
+    increases and galloping inflation, particularly in food and energy, this salary
+    increase represents a welcome response to the lack of purchasing power. In some
+    professions, salary adjustments make it possible to offset part of the increase
+    in the cost of living, particularly in large cities where real estate and rent
+    prices continue to rise. However, not all workers benefit equally from this dynamic.
+    While managers and specialized workers are generally the first to benefit from
+    these increases, less qualified employees, particularly in sectors with less
+    pressure, struggle to see their salaries increase at the same rate. This salary
+    inequality could, in the long term, further widen the gaps between the different
+    socio-professional categories. The reasons for such an increase: The increase
+    in salaries this year is the result of a combination of factors. On the one hand,
+    the post-COVID economic recovery has led to a strong demand for skilled labor,
+    forcing companies to increase salaries to attract and retain talent. On the other
+    hand, unions have played a key role this year, obtaining substantial increases
+    during the mandatory annual negotiations (NAO), particularly in the public and
+    parapublic sectors. Companies, although faced with still high inflation and increased
+    production costs, have also understood that higher salaries can have a positive
+    effect on employee motivation and productivity. Talent is becoming more mobile
+    and demands compensation that matches their qualifications and the reality of
+    the labor market. The outlook for the coming year: Economists predict that this
+    trend could continue in the coming months, but the outlook remains mixed. On
+    the one hand, wage growth could slow if inflation were to rise again, or if companies
+    began to tighten their wage policy in the face of uncertain economic forecasts.
+    On the other hand, some companies could maintain wage increases to compensate
+    for the risks of talent drain in a still tight job market. Unions, for their
+    part, continue to advocate for a fairer distribution of this wealth created by
+    wage increases, insisting on the need to guarantee increases that benefit all
+    sectors of the workforce, and not just sectors under pressure. Conclusion: The
+    wage increase observed this year undeniably represents a turning point in the
+    current economic context, and good news for many workers. However, the disparities
+    between sectors and categories of workers, as well as the economic uncertainties
+    in the medium term, remind us that much remains to be done to guarantee real
+    purchasing power for all. It remains to be seen whether this wage dynamic can
+    be maintained in a context of economic fluctuations and global tensions. //effect:
+    increase in household budgets'
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

@@ -12,43 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
   m_Name: Fuel_rise
   m_EditorClassIdentifier: 
-  _eventName: "Hausse du prix du carburant : une flamb\xE9e sans pr\xE9c\xE9dent"
+  _eventName: 'Fuel price hikes: an unprecedented surge'
   _date: September 26, 2024
-  _subheading: "Les automobilistes fran\xE7ais le constatent am\xE8rement \xE0 chaque
-    passage \xE0 la pompe : les prix de l\u2019essence et du diesel atteignent des
-    sommets in\xE9gal\xE9s. Avec une hausse de plusieurs centimes par litre chaque
-    semaine, les co\xFBts des carburants p\xE8sent de plus en plus lourd sur le budget
-    des m\xE9nages. Cette flamb\xE9e du p\xE9trole est li\xE9e aux tensions sur le
-    march\xE9 international, o\xF9 la demande croissante et les perturbations dans
-    l\u2019approvisionnement font grimper les prix."
+  _subheading: 'French motorists are bitterly reminded of this every time they go
+    to the pump: petrol and diesel prices are reaching unprecedented heights. With
+    an increase of several centimes per liter every week, fuel costs are weighing
+    ever more heavily on household budgets. The surge in oil prices is linked to
+    tensions on the international market, where growing demand and supply disruptions
+    are driving up prices.'
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Des cons\xE9quences lourdes pour les m\xE9nages et les entreprises
-    : La hausse des prix du carburant impacte directement le pouvoir d\u2019achat
-    des m\xE9nages, en particulier pour ceux vivant en zones rurales ou p\xE9riurbaines,
-    o\xF9 la voiture est souvent indispensable. \xAB Chaque plein me co\xFBte d\xE9sormais
-    pr\xE8s de 20 % de plus qu\u2019il y a un an, c\u2019est devenu difficile de
-    boucler le budget \xBB, confie un p\xE8re de famille. De nombreux travailleurs
-    ressentent la m\xEAme pression, d\u2019autant plus que les augmentations se r\xE9percutent
-    \xE9galement sur le co\xFBt des biens de consommation, via la hausse des co\xFBts
-    de transport. Des appels \xE0 l\u2019aide de la part des associations et des
-    syndicats : Face \xE0 cette situation, plusieurs associations de consommateurs
-    et syndicats demandent au gouvernement des mesures pour all\xE9ger la facture
-    des particuliers, tels que des aides cibl\xE9es ou une baisse temporaire des
-    taxes sur le carburant. Dans un contexte o\xF9 la transition \xE9cologique pousse
-    \xE0 envisager des solutions alternatives \xE0 la voiture thermique, beaucoup
-    plaident cependant pour un soutien accru au d\xE9veloppement des infrastructures
-    de transport en commun et des aides pour l\u2019achat de v\xE9hicules \xE9lectriques.
-    Un d\xE9fi pour la transition \xE9nerg\xE9tique : Cette flamb\xE9e des prix du
-    carburant rappelle l\u2019urgence de diversifier les sources d\u2019\xE9nergie
-    et de r\xE9duire la d\xE9pendance aux \xE9nergies fossiles. Mais en attendant
-    que les solutions alternatives soient accessibles \xE0 tous, les consommateurs
-    subissent les effets d\u2019un march\xE9 du p\xE9trole toujours plus instable.
-    Pour de nombreux Fran\xE7ais, cette flamb\xE9e reste un symbole de pr\xE9carit\xE9
-    \xE9nerg\xE9tique, les laissant suspendus aux fluctuations du march\xE9, dans
-    l\u2019espoir de retrouver une certaine stabilit\xE9 \xE0 la pompe. //effet :
-    augmentation du prix de l\u2019usage de la voiture"
+  _description: "Heavy consequences for households and businesses: The rise in fuel
+    prices has a direct impact on households\u2019 purchasing power, particularly
+    for those living in rural or peri-urban areas, where cars are often essential.
+    \u201CEach tank of fuel now costs me almost 20% more than a year ago, it\u2019s
+    become difficult to make ends meet,\u201D confides a father. Many workers are
+    feeling the same pressure, especially since the increases are also reflected
+    in the cost of consumer goods, via the rise in transport costs. Calls for help
+    from associations and unions: Faced with this situation, several consumer associations
+    and unions are asking the government for measures to reduce the bill for individuals,
+    such as targeted aid or a temporary reduction in fuel taxes. In a context where
+    the ecological transition is pushing people to consider alternative solutions
+    to the thermal car, many are nevertheless calling for increased support for the
+    development of public transport infrastructure and aid for the purchase of electric
+    vehicles. A challenge for the energy transition: This surge in fuel prices is
+    a reminder of the urgent need to diversify energy sources and reduce dependence
+    on fossil fuels. But while waiting for alternative solutions to become accessible
+    to all, consumers are suffering the effects of an increasingly unstable oil market.
+    For many French people, this surge remains a symbol of energy insecurity, leaving
+    them hanging on market fluctuations, in the hope of finding some stability at
+    the pump. //effect: increase in the price of car use"
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

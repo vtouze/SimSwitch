@@ -12,48 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
   m_Name: Epidemic_fear
   m_EditorClassIdentifier: 
-  _eventName: "Crainte d\u2019une nouvelle \xE9pid\xE9mie : un nouveau virus en Chine
-    inqui\xE8te l\u2019Europe"
+  _eventName: 'Fear of a new epidemic: a new virus in China worries Europe'
   _date: September 26, 2024
-  _subheading: "Alors que le monde s\u2019efforce encore de surmonter les s\xE9quelles
-    de la pand\xE9mie de COVID-19, des rumeurs inqui\xE9tantes circulent : un nouveau
-    virus aurait fait son apparition en Chine, et les experts craignent qu\u2019il
-    puisse bient\xF4t atteindre l\u2019Europe. Les autorit\xE9s sanitaires internationales
-    sont en alerte, et les premi\xE8res mesures de pr\xE9vention se mettent en place.
-    Pour les citoyens europ\xE9ens, encore marqu\xE9s par les confinements et les
-    restrictions li\xE9s au COVID, cette nouvelle annonce suscite inqui\xE9tudes
-    et interrogations."
+  _subheading: 'While the world is still struggling to overcome the after-effects
+    of the COVID-19 pandemic, worrying rumors are circulating: a new virus has appeared
+    in China, and experts fear it could soon reach Europe. International health authorities
+    are on the alert, and the first preventive measures are being put in place. For
+    European citizens, still marked by the confinements and restrictions associated
+    with COVID, this new announcement raises concerns and questions.'
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Un virus en circulation et des informations limit\xE9es : \xC0 ce
-    stade, peu d\u2019informations officielles ont filtr\xE9 sur la nature et la
-    dangerosit\xE9 de ce nouveau virus. Les autorit\xE9s chinoises et l\u2019Organisation
-    mondiale de la sant\xE9 (OMS) surveillent de pr\xE8s la situation et \xE9tudient
-    les premi\xE8res donn\xE9es, mais restent prudentes. Certains experts craignent
-    un virus respiratoire aux sympt\xF4mes proches de ceux du COVID-19, ce qui pourrait
-    compliquer son diagnostic et sa gestion. Les laboratoires de recherche intensifient
-    les analyses pour mieux comprendre son mode de transmission et son potentiel
-    de propagation. Retour de la vigilance sanitaire en Europe : En Europe, des protocoles
-    de pr\xE9caution sont d\xE9j\xE0 en discussion. Les a\xE9roports renforcent les
-    contr\xF4les sur les vols en provenance de Chine, et certains gouvernements \xE9voquent
-    la r\xE9introduction de mesures de d\xE9pistage et d\u2019isolement si n\xE9cessaire.
-    Les syst\xE8mes de sant\xE9 se pr\xE9parent \xE0 un \xE9ventuel afflux de patients
-    en cas de propagation du virus, m\xEAme si aucun cas n\u2019a pour le moment
-    \xE9t\xE9 d\xE9tect\xE9 sur le continent. Une population inqui\xE8te mais plus
-    pr\xE9par\xE9e : Pour les citoyens, l\u2019\xE9ventualit\xE9 d\u2019une nouvelle
-    \xE9pid\xE9mie ravive des souvenirs r\xE9cents et difficiles. Cependant, les
-    mentalit\xE9s ont \xE9volu\xE9, et les Europ\xE9ens sont d\xE9sormais plus familiaris\xE9s
-    avec les gestes barri\xE8res et les protocoles sanitaires. \xAB Nous avons appris
-    \xE0 vivre avec la menace sanitaire \xBB, confie une infirmi\xE8re parisienne,
-    \xAB mais l\u2019espoir de tourner la page s\u2019\xE9loigne avec ces nouvelles
-    inqui\xE9tantes. \xBB Face \xE0 cette situation, la prudence reste de mise. Les
-    autorit\xE9s recommandent d\u2019\xE9viter les d\xE9placements inutiles et de
-    suivre l\u2019\xE9volution des informations officielles. Si la menace d\u2019une
-    \xE9pid\xE9mie reste pour l\u2019instant hypoth\xE9tique, l\u2019Europe, \xE9chaud\xE9e
-    par le COVID-19, se tient pr\xEAte \xE0 r\xE9agir pour \xE9viter un nouveau sc\xE9nario
-    pand\xE9mique. //Effet : baisse de la popularit\xE9 des transports en commun
-    / diminution des d\xE9placements"
+  _description: 'A circulating virus and limited information: At this stage, little
+    official information has filtered through on the nature and danger of this new
+    virus. The Chinese authorities and the World Health Organization (WHO) are closely
+    monitoring the situation and studying the initial data, but remain cautious.
+    Some experts fear a respiratory virus with symptoms similar to those of COVID-19,
+    which could complicate its diagnosis and management. Research laboratories are
+    stepping up analyses to better understand its mode of transmission and its potential
+    for spread. Return of health vigilance in Europe: In Europe, precautionary protocols
+    are already under discussion. Airports are strengthening controls on flights
+    from China, and some governments are discussing the reintroduction of screening
+    and isolation measures if necessary. Health systems are preparing for a possible
+    influx of patients in the event of a spread of the virus, even if no cases have
+    been detected on the continent so far. A worried but more prepared population:
+    For citizens, the possibility of a new epidemic revives recent and difficult
+    memories. However, mentalities have changed, and Europeans are now more familiar
+    with barrier gestures and health protocols. "We have learned to live with the
+    health threat," confides a Parisian nurse, "but the hope of turning the page
+    is fading with this worrying news." Faced with this situation, caution remains
+    essential. The authorities recommend avoiding unnecessary travel and following
+    the evolution of official information. If the threat of an epidemic remains hypothetical
+    for the moment, Europe, scalded by COVID-19, is ready to react to avoid a new
+    pandemic scenario. //Effect: decrease in the popularity of public transport /
+    decrease in travel'
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

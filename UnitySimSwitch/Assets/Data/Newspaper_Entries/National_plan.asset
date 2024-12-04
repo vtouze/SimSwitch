@@ -12,46 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
   m_Name: National_plan
   m_EditorClassIdentifier: 
-  _eventName: "Grand plan de l\u2019\xC9tat pour des transports durables et r\xE9silients"
+  _eventName: The French government's major plan for sustainable and resilient transport
   _date: September 26, 2024
-  _subheading: "L\u2019\xC9tat a annonc\xE9 un plan ambitieux pour accompagner les
-    communes dans la modernisation de leurs syst\xE8mes de transport. L\u2019objectif
-    ? Rendre les transports publics plus \xE9cologiques, plus r\xE9silients face
-    aux d\xE9fis climatiques, et plus efficaces pour tous les usagers. Ce programme,
-    qui b\xE9n\xE9ficiera de financements substantiels, marque une nouvelle \xE9tape
-    dans la transition \xE9nerg\xE9tique et la mobilit\xE9 durable, avec des investissements
-    cibl\xE9s dans les infrastructures de transport urbain et rural."
+  _subheading: The French government has announced an ambitious plan to help local
+    authorities modernize their transport systems. The aim? To make public transport
+    greener, more resilient in the face of climate challenges, and more efficient
+    for all users. This program, which will benefit from substantial funding, marks
+    a new stage in the energy transition and sustainable mobility, with targeted
+    investments in urban and rural transport infrastructures.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Des investissements pour un avenir plus vert : Le plan pr\xE9voit
-    des aides financi\xE8res pour encourager les communes \xE0 d\xE9velopper des
-    r\xE9seaux de transport moins polluants, \xE0 installer des infrastructures de
-    recharge pour v\xE9hicules \xE9lectriques, et \xE0 encourager l\u2019utilisation
-    des transports collectifs. Les villes de toutes tailles sont concern\xE9es, de
-    la modernisation des flottes de bus urbains aux transports plus l\xE9gers dans
-    les zones rurales. L\u2019accent est mis sur l\u2019\xE9lectrification des lignes,
-    le d\xE9veloppement de pistes cyclables, et la cr\xE9ation de r\xE9seaux de bus
-    \xE0 haut niveau de service. Des transports plus r\xE9silients et mieux adapt\xE9s
-    aux besoins : Ce grand plan entend \xE9galement renforcer la r\xE9silience des
-    syst\xE8mes de transport face aux \xE9v\xE9nements climatiques de plus en plus
-    fr\xE9quents. Les communes recevront des fonds pour am\xE9liorer la s\xE9curit\xE9
-    des infrastructures face aux temp\xEAtes, aux inondations et aux vagues de chaleur.
-    \xAB Il ne s\u2019agit pas seulement de rendre nos transports plus verts, mais
-    aussi plus s\xFBrs et plus accessibles \xBB, explique la ministre des Transports.
-    Dans le cadre de ce projet, des solutions innovantes seront explor\xE9es pour
-    adapter les transports publics aux d\xE9fis de demain. Un engagement pour l\u2019efficacit\xE9
-    et le bien-\xEAtre des citoyens : Avec ce plan, l\u2019\xC9tat r\xE9affirme son
-    engagement \xE0 offrir aux citoyens un transport public de qualit\xE9, essentiel
-    \xE0 leur quotidien. Les \xE9lus locaux se r\xE9jouissent de cette aide, qui
-    permettra de soulager les budgets communaux souvent limit\xE9s. Pour de nombreux
-    citoyens, cette initiative repr\xE9sente l\u2019espoir de voir des transports
-    moins polluants, plus r\xE9guliers et mieux adapt\xE9s \xE0 leurs besoins. En
-    rendant les transports plus \xE9cologiques et plus efficaces, l\u2019\xC9tat
-    esp\xE8re que cette transformation encouragera davantage de citoyens \xE0 se
-    tourner vers des moyens de transport collectifs ou doux, pour un futur plus durable
-    et un quotidien plus agr\xE9able. //Effet : augmentation du budget pour l\u2019investissement
-    dans les transports"
+  _description: "Investments for a greener future: The plan provides financial support
+    to encourage municipalities to develop less polluting transport networks, install
+    charging infrastructure for electric vehicles, and encourage the use of public
+    transport. Cities of all sizes are concerned, from the modernization of urban
+    bus fleets to lighter transport in rural areas. The focus is on the electrification
+    of lines, the development of cycle paths, and the creation of high-level bus
+    networks. More resilient and better adapted transport: This major plan also aims
+    to strengthen the resilience of transport systems in the face of increasingly
+    frequent climatic events. Municipalities will receive funds to improve the safety
+    of infrastructure in the face of storms, floods and heat waves. \u201CIt is not
+    only about making our transport greener, but also safer and more accessible,\u201D
+    explains the Minister of Transport. As part of this project, innovative solutions
+    will be explored to adapt public transport to the challenges of tomorrow. A commitment
+    to efficiency and the well-being of citizens: With this plan, the State reaffirms
+    its commitment to providing citizens with quality public transport, essential
+    to their daily lives. Local elected officials are delighted with this aid, which
+    will relieve often limited municipal budgets. For many citizens, this initiative
+    represents the hope of seeing less polluting, more regular transport that is
+    better adapted to their needs. By making transport more ecological and more efficient,
+    the State hopes that this transformation will encourage more citizens to turn
+    to collective or soft means of transport, for a more sustainable future and a
+    more pleasant daily life. //Effect: increase in the budget for investment in
+    transport"
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

@@ -12,51 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
   m_Name: Electronic_tensions
   m_EditorClassIdentifier: 
-  _eventName: "Tensions sur les circuits \xE9lectroniques : la p\xE9nurie fait flamber
-    les prix des composants"
+  _eventName: 'Tensions over electronic circuits: shortages push up component prices'
   _date: September 26, 2024
-  _subheading: "Le secteur de l'\xE9lectronique fait face \xE0 une crise sans pr\xE9c\xE9dent
-    : les composants \xE9lectroniques se font rares et les prix s\u2019envolent.
-    En raison d'une demande exponentielle et d'une offre limit\xE9e, les entreprises
-    peinent \xE0 se procurer les puces, semi-conducteurs, et autres \xE9l\xE9ments
-    essentiels \xE0 la fabrication de produits allant des smartphones aux automobiles.
-    Cette p\xE9nurie frappe de plein fouet les industries technologiques, qui se
-    retrouvent dans l'incapacit\xE9 de r\xE9pondre aux besoins du march\xE9."
+  _subheading: 'The electronics industry is facing an unprecedented crisis: electronic
+    components are in short supply and prices are soaring. Due to exponential demand
+    and limited supply, companies are struggling to procure the chips, semiconductors
+    and other elements essential to the manufacture of products ranging from smartphones
+    to automobiles. This shortage is hitting technology industries hard, leaving
+    them unable to meet market needs.'
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Une demande en forte hausse et des capacit\xE9s de production limit\xE9es
-    : La crise a pour origine une combinaison de facteurs. La pand\xE9mie de COVID-19
-    a fait exploser la demande en appareils \xE9lectroniques, notamment pour le t\xE9l\xE9travail
-    et les loisirs num\xE9riques. Dans le m\xEAme temps, les usines de production,
-    concentr\xE9es principalement en Asie, ont \xE9t\xE9 ralenties par des mesures
-    sanitaires strictes et par des probl\xE8mes logistiques li\xE9s aux restrictions
-    de circulation. R\xE9sultat : une demande qui d\xE9passe largement la capacit\xE9
-    de production mondiale. Des secteurs industriels en difficult\xE9 : Les r\xE9percussions
-    de cette p\xE9nurie se font sentir dans divers secteurs. Les constructeurs automobiles,
-    fortement d\xE9pendants des composants \xE9lectroniques pour leurs v\xE9hicules,
-    ont d\xFB r\xE9duire leur production, certains allant m\xEAme jusqu'\xE0 suspendre
-    temporairement certaines lignes d\u2019assemblage. Les fabricants de t\xE9l\xE9phones,
-    d\u2019ordinateurs et de consoles de jeu sont \xE9galement touch\xE9s, ce qui
-    entra\xEEne des retards dans les sorties de nouveaux produits et des prix en
-    hausse pour les mod\xE8les existants.  Une flamb\xE9e des prix et des d\xE9lais
-    de livraison qui s\u2019allongent : Face \xE0 cette tension sur l\u2019offre,
-    les prix des composants ont consid\xE9rablement augment\xE9, ce qui pourrait
-    \xEAtre r\xE9percut\xE9 sur les consommateurs. Les d\xE9lais de livraison, autrefois
-    de quelques semaines, s'\xE9tendent d\xE9sormais sur plusieurs mois pour certains
-    composants. \xAB Les co\xFBts de production explosent, et il devient difficile
-    de garantir des d\xE9lais raisonnables \xBB, explique un responsable d\u2019une
-    entreprise technologique. Vers un r\xE9\xE9quilibrage du march\xE9 ? Les grands
-    fabricants de semi-conducteurs ont annonc\xE9 des investissements massifs pour
-    augmenter leurs capacit\xE9s de production, mais les experts estiment qu\u2019il
-    faudra attendre au moins un ou deux ans avant de voir un r\xE9\xE9quilibrage
-    du march\xE9. En attendant, la p\xE9nurie oblige les entreprises \xE0 revoir
-    leur production et \xE0 privil\xE9gier les composants pour leurs mod\xE8les les
-    plus rentables, en esp\xE9rant que le march\xE9 finira par retrouver sa stabilit\xE9.
-    Dans ce contexte tendu, les consommateurs risquent de voir les prix des produits
-    \xE9lectroniques grimper, tandis que les entreprises devront s\u2019adapter \xE0
-    cette nouvelle r\xE9alit\xE9 du march\xE9. //Effet : augmentation du prix des
-    projets technologiques / des v\xE9hicules de type voiture"
+  _description: "Surging demand and limited production capacity: The crisis is caused
+    by a combination of factors. The COVID-19 pandemic has caused demand for electronic
+    devices to explode, particularly for teleworking and digital entertainment. At
+    the same time, production plants, mainly concentrated in Asia, have been slowed
+    by strict health measures and logistical problems related to travel restrictions.
+    The result: demand that far exceeds global production capacity. Struggling industries:
+    The impact of this shortage is being felt across a range of sectors. Car manufacturers,
+    which rely heavily on electronic components for their vehicles, have had to reduce
+    production, with some even temporarily suspending assembly lines. Manufacturers
+    of telephones, computers and game consoles are also affected, leading to delays
+    in the release of new products and higher prices for existing models. Soaring
+    prices and longer delivery times: Faced with this supply squeeze, component prices
+    have increased significantly, which could be passed on to consumers. Delivery
+    times, once a few weeks, are now stretching to several months for some components.
+    \u201CProduction costs are exploding, and it is becoming difficult to guarantee
+    reasonable deadlines,\u201D explains a manager of a technology company. Towards
+    a rebalancing of the market? Major semiconductor manufacturers have announced
+    massive investments to increase their production capacities, but experts estimate
+    that it will be at least one or two years before seeing a rebalancing of the
+    market. In the meantime, the shortage is forcing companies to review their production
+    and to prioritize components for their most profitable models, hoping that the
+    market will eventually regain stability. In this tense context, consumers risk
+    seeing the prices of electronic products rise, while companies will have to adapt
+    to this new market reality. //Effect: increase in the price of technology projects
+    / car-type vehicles"
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

@@ -12,63 +12,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
   m_Name: Fuel_subsidy
   m_EditorClassIdentifier: 
-  _eventName: "Coup de pouce essence : L\u2019\xC9tat aide les m\xE9nages avec une
-    aide financi\xE8re pour l'achat de carburant"
+  _eventName: 'Coup de pouce essence: The French government helps households with
+    financial aid for fuel purchases'
   _date: September 21, 2024
-  _subheading: "Face \xE0 la hausse continue des prix de l\u2019essence et du diesel,
-    l\u2019\xC9tat a annonc\xE9 une nouvelle mesure visant \xE0 soutenir les m\xE9nages
-    fran\xE7ais. \xC0 partir du mois prochain, les automobilistes verront leur pouvoir
-    d\u2019achat renforc\xE9 gr\xE2ce \xE0 une aide financi\xE8re destin\xE9e \xE0
-    all\xE9ger le co\xFBt de leurs pleins de carburant."
+  _subheading: Faced with ever-rising gasoline and diesel prices, the French government
+    has announced a new measure to support French households. From next month, motorists
+    will see their purchasing power boosted thanks to financial aid designed to reduce
+    the cost of filling up with fuel.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Une aide directe pour les conducteurs : Le gouvernement a confirm\xE9
-    la mise en place d'un \"coup de pouce essence\", une aide ponctuelle de plusieurs
-    dizaines d'euros qui sera vers\xE9e directement aux foyers ayant des revenus
-    modestes ou moyens. Cette mesure, qui devrait b\xE9n\xE9ficier \xE0 des millions
-    de m\xE9nages, vise \xE0 compenser les effets de la flamb\xE9e des prix \xE0
-    la pompe, exacerb\xE9e par les tensions g\xE9opolitiques et les fluctuations
-    des march\xE9s mondiaux du p\xE9trole. Cette aide, vers\xE9e sous forme de bon
-    d'achat ou de transfert direct, sera accessible via une plateforme en ligne d\xE9di\xE9e,
-    o\xF9 les citoyens pourront s'enregistrer en fonction de leurs revenus et de
-    leur consommation annuelle de carburant. Les d\xE9tails pr\xE9cis du montant
-    de l\u2019aide et des crit\xE8res d\u2019\xE9ligibilit\xE9 seront pr\xE9cis\xE9s
-    dans les jours \xE0 venir, mais l'objectif est de venir en aide \xE0 ceux qui
-    d\xE9pendent le plus de leur v\xE9hicule pour leurs trajets quotidiens. Une r\xE9ponse
-    \xE0 la pression sur le pouvoir d\u2019achat : La d\xE9cision intervient dans
-    un contexte de forte pression sur le pouvoir d'achat des Fran\xE7ais. L'inflation
-    persistante, coupl\xE9e \xE0 la hausse des prix de l\u2019\xE9nergie, a mis \xE0
-    mal de nombreux budgets, notamment ceux des foyers situ\xE9s en zones rurales
-    ou p\xE9riurbaines, o\xF9 l\u2019utilisation de la voiture reste incontournable.
-    \xAB Cette mesure vise \xE0 r\xE9pondre aux pr\xE9occupations des Fran\xE7ais
-    qui subissent de plein fouet la hausse des carburants, tout en encourageant une
-    transition vers des modes de transport plus \xE9cologiques \xBB, a indiqu\xE9
-    le ministre de l\u2019\xC9conomie, pr\xE9cisant que l\u2019\xC9tat reste d\xE9termin\xE9
-    \xE0 soutenir les m\xE9nages les plus vuln\xE9rables face \xE0 cette crise \xE9nerg\xE9tique.
-    Un geste qui pourrait durer ? Bien que la mesure soit temporaire, le gouvernement
-    n'exclut pas de la prolonger si la situation des prix des carburants ne s\u2019am\xE9liore
-    pas dans les mois \xE0 venir. Les \xE9conomistes estiment que la flamb\xE9e des
-    prix pourrait persister jusqu\u2019au d\xE9but de l'ann\xE9e prochaine, ce qui
-    laisse pr\xE9sager d\u2019un soutien prolong\xE9 de la part de l'\xC9tat. De
-    nombreux citoyens accueillent cette initiative positivement, mais certains jugent
-    qu'elle ne fera qu'att\xE9nuer partiellement les effets de la hausse des prix.
-    \"C\u2019est un bon d\xE9but, mais cela reste insuffisant pour les familles qui
-    utilisent leur voiture tous les jours\", commente Claire, une m\xE8re de famille
-    habitant en p\xE9riph\xE9rie de Lyon. D'autres, comme Jean, un chauffeur-livreur,
-    estiment que cette aide pourrait apporter un soulagement dans le court terme
-    mais appellent \xE0 des r\xE9formes plus profondes sur la taxation des carburants.
-    Un soutien parmi d'autres mesures : Ce coup de pouce financier s'ajoute \xE0
-    une s\xE9rie de mesures d\xE9j\xE0 mises en place par l'\xC9tat pour faire face
-    \xE0 la crise \xE9nerg\xE9tique, telles que la remise carburant de l\u2019\xE9t\xE9
-    dernier et les aides exceptionnelles pour les travailleurs en situation pr\xE9caire.
-    Le gouvernement continue d'explorer diverses solutions pour limiter l'impact
-    \xE9conomique de la hausse des prix du p\xE9trole et encourager la transition
-    vers des \xE9nergies plus durables. Dans l\u2019attente des pr\xE9cisions sur
-    le dispositif, l\u2019annonce de ce coup de pouce essence a, au moins pour l\u2019instant,
-    apport\xE9 un peu de r\xE9confort aux Fran\xE7ais inquiets des co\xFBts de la
-    vie quotidienne. // Effet : hausse de popularit\xE9 de la voiture & diminution
-    du cout du transport pour les m\xE9nages"
+  _description: 'Direct assistance for drivers: The government has confirmed the
+    implementation of a "fuel boost", a one-off aid of several dozen euros that will
+    be paid directly to households with modest or average incomes. This measure,
+    which should benefit millions of households, aims to offset the effects of soaring
+    prices at the pump, exacerbated by geopolitical tensions and fluctuations in
+    global oil markets. This aid, paid in the form of a voucher or direct transfer,
+    will be accessible via a dedicated online platform, where citizens can register
+    according to their income and annual fuel consumption. The precise details of
+    the amount of aid and the eligibility criteria will be specified in the coming
+    days, but the aim is to help those who depend most on their vehicle for their
+    daily journeys. A response to pressure on purchasing power: The decision comes
+    at a time of strong pressure on the purchasing power of the French. Persistent
+    inflation, coupled with rising energy prices, has strained many budgets, particularly
+    those of households located in rural or peri-urban areas, where car use remains
+    essential. "This measure aims to address the concerns of French people who are
+    bearing the brunt of rising fuel prices, while encouraging a transition to more
+    environmentally friendly modes of transport," said the Minister of the Economy,
+    specifying that the State remains determined to support the most vulnerable households
+    in the face of this energy crisis. A gesture that could last? Although the measure
+    is temporary, the government has not ruled out extending it if the fuel price
+    situation does not improve in the coming months. Economists estimate that the
+    surge in prices could persist until the beginning of next year, which suggests
+    prolonged support from the State. Many citizens welcome this initiative, but
+    some believe that it will only partially mitigate the effects of the price increase.
+    "It''s a good start, but it''s still not enough for families who use their cars
+    every day," says Claire, a mother living on the outskirts of Lyon. Others, like
+    Jean, a delivery driver, believe that this aid could provide relief in the short
+    term but call for deeper reforms to fuel taxation. Support among other measures:
+    This financial boost is in addition to a series of measures already put in place
+    by the State to deal with the energy crisis, such as last summer''s fuel discount
+    and exceptional aid for workers in precarious situations. The government continues
+    to explore various solutions to limit the economic impact of rising oil prices
+    and encourage the transition to more sustainable energy sources. While waiting
+    for details on the scheme, the announcement of this fuel boost has, at least
+    for now, brought some comfort to French people worried about the costs of daily
+    living. // Effect: increased popularity of the car & reduced cost of transport
+    for households'
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

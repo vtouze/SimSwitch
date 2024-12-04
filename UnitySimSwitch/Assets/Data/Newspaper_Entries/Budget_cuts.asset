@@ -12,85 +12,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
   m_Name: Budget_cuts
   m_EditorClassIdentifier: 
-  _eventName: "Coupure budg\xE9taire : l\u2019\xC9tat baisse ses dotations aux collectivit\xE9s
-    locales"
+  _eventName: 'Budget cuts: the French government reduces its allocations to local
+    authorities'
   _date: September 22, 2024
-  _subheading: "Dans un contexte \xE9conomique difficile, le gouvernement a annonc\xE9
-    une nouvelle mesure d'aust\xE9rit\xE9 touchant directement les collectivit\xE9s
-    locales : une baisse significative des dotations financi\xE8res. Cette d\xE9cision
-    s\u2019inscrit dans une politique de r\xE9duction des d\xE9penses publiques visant
-    \xE0 all\xE9ger le budget de l\u2019\xC9tat, mais elle suscite une vive inqui\xE9tude
-    chez les \xE9lus locaux et les associations d\u2019\xE9lus. Alors que de nombreuses
-    villes et r\xE9gions sont d\xE9j\xE0 confront\xE9es \xE0 des difficult\xE9s financi\xE8res,
-    cette coupure budg\xE9taire pourrait accentuer les in\xE9galit\xE9s territoriales
-    et ralentir le d\xE9veloppement des services publics locaux."
+  _subheading: 'Against a difficult economic backdrop, the government has announced
+    a new austerity measure directly affecting local authorities: a significant reduction
+    in financial allocations. While this decision is part of a policy to reduce public
+    spending in order to lighten the state budget, it is also causing considerable
+    concern among local councillors and associations of councillors. At a time when
+    many towns and regions are already facing financial difficulties, this budget
+    cut could accentuate territorial inequalities and slow the development of local
+    public services.'
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Une baisse de 5 milliards d'euros : L'\xC9tat a confirm\xE9 une
-    r\xE9duction de 5 milliards d'euros sur les dotations allou\xE9es aux collectivit\xE9s
-    locales pour l\u2019ann\xE9e \xE0 venir. Ces fonds, destin\xE9s \xE0 financer
-    des projets d'infrastructures, l\u2019entretien des routes, la gestion des \xE9coles,
-    et les services publics de proximit\xE9, repr\xE9sentent une part importante
-    du budget des municipalit\xE9s, d\xE9partements et r\xE9gions. La mesure a \xE9t\xE9
-    annonc\xE9e par le ministre des Comptes publics dans le cadre du projet de loi
-    de finances pour l\u2019ann\xE9e prochaine, et vise \xE0 r\xE9pondre \xE0 la
-    n\xE9cessit\xE9 de contenir les d\xE9ficits publics. Si le gouvernement justifie
-    cette r\xE9duction par la volont\xE9 de rationaliser les finances publiques,
-    les cons\xE9quences sur le terrain risquent d\u2019\xEAtre importantes. Les collectivit\xE9s,
-    souvent contraintes de financer une grande partie de l\u2019action publique locale,
-    devront trouver des solutions pour compenser cette perte de ressources. Des impacts
-    concrets sur les territoires : Pour les \xE9lus locaux, cette baisse des dotations
-    sonne comme un coup dur. Nombre d\u2019entre eux soulignent qu\u2019elles surviennent
-    alors m\xEAme que la pression sur les services publics locaux est de plus en
-    plus forte, avec des besoins en infrastructures, en sant\xE9 et en \xE9ducation
-    qui ne cessent de cro\xEEtre. Dans les petites communes, qui d\xE9pendent largement
-    des financements de l'\xC9tat pour maintenir leurs services de proximit\xE9,
-    la situation est particuli\xE8rement pr\xE9occupante. Les maires redoutent des
-    fermetures d\u2019\xE9quipements publics, des r\xE9ductions d\u2019offres culturelles
-    et sportives, ou encore des hausses de taxes locales pour compenser cette diminution
-    des dotations. Certains \xE9lus appellent d\xE9j\xE0 \xE0 une revalorisation
-    des financements pour \xE9viter des \xAB d\xE9cisions cruelles \xBB qui p\xE9naliseront
-    les citoyens les plus vuln\xE9rables. Les d\xE9partements, qui financent notamment
-    l\u2019action sociale et la prise en charge des personnes \xE2g\xE9es ou en situation
-    de handicap, se retrouvent \xE9galement dans une position d\xE9licate. Les associations
-    d\u2019\xE9lus demandent des mesures d\u2019accompagnement pour maintenir la
-    qualit\xE9 des services et \xE9viter une remise en cause des politiques de solidarit\xE9.
-    L'inqui\xE9tude des associations d\u2019\xE9lus : Les associations repr\xE9sentant
-    les collectivit\xE9s locales, telles que l\u2019Association des Maires de France
-    (AMF) et l\u2019Assembl\xE9e des D\xE9partements de France (ADF), ont exprim\xE9
-    leur m\xE9contentement face \xE0 cette d\xE9cision. Elles soulignent qu'une telle
-    coupure pourrait aggraver les in\xE9galit\xE9s territoriales, en p\xE9nalisant
-    davantage les collectivit\xE9s les plus fragiles \xE9conomiquement. Dans un communiqu\xE9,
-    l\u2019AMF a d\xE9nonc\xE9 une mesure \xAB injuste \xBB qui va \xE0 l\u2019encontre
-    des promesses de d\xE9centralisation et de soutien aux territoires. Les \xE9lus
-    locaux estiment que, plut\xF4t que de diminuer les ressources attribu\xE9es aux
-    collectivit\xE9s, l\u2019\xC9tat devrait envisager d\u2019autres leviers de r\xE9duction
-    des d\xE9penses publiques, comme la rationalisation des d\xE9penses de l\u2019\xC9tat
-    central ou la lutte contre l\u2019\xE9vasion fiscale. Ils mettent en garde contre
-    les risques d\u2019une fracture territoriale accrue, o\xF9 les communes et r\xE9gions
-    les plus riches pourraient offrir des services de qualit\xE9, tandis que les
-    plus modestes seraient contraintes de r\xE9duire leurs prestations. Une mesure
-    dans un contexte plus large : Cette r\xE9duction des dotations s\u2019inscrit
-    dans un contexte de tensions budg\xE9taires globales, o\xF9 l\u2019\xC9tat cherche
-    \xE0 ma\xEEtriser ses d\xE9ficits tout en r\xE9pondant aux exigences de l\u2019Union
-    europ\xE9enne en mati\xE8re de finances publiques. Les pr\xE9visions \xE9conomiques
-    pour l\u2019ann\xE9e \xE0 venir restent incertaines, avec des risques li\xE9s
-    \xE0 l\u2019inflation, \xE0 la guerre en Ukraine et \xE0 la crise \xE9nerg\xE9tique.
-    Si le gouvernement justifie cette coupure par la n\xE9cessit\xE9 de restaurer
-    la cr\xE9dibilit\xE9 budg\xE9taire de la France, elle soul\xE8ve des interrogations
-    sur les cons\xE9quences sociales de ces \xE9conomies. Les collectivit\xE9s locales,
-    en premi\xE8re ligne dans la fourniture des services publics, pourraient se retrouver
-    dans l\u2019impossibilit\xE9 de r\xE9pondre aux besoins de leurs administr\xE9s.
-    Conclusion : une d\xE9cision \xE0 contre-courant ? Les r\xE9ductions budg\xE9taires
-    impos\xE9es aux collectivit\xE9s locales mettent en lumi\xE8re les tensions entre
-    rigueur financi\xE8re et maintien de la qualit\xE9 des services publics. Si l\u2019objectif
-    affich\xE9 par l\u2019\xC9tat est de r\xE9duire les d\xE9penses publiques, il
-    reste \xE0 savoir si cette coupe drastique ne p\xE9nalisera pas, \xE0 long terme,
-    la coh\xE9sion sociale et la solidarit\xE9 territoriale. Dans ce climat d\u2019incertitude
-    \xE9conomique, la question de l\u2019\xE9quilibre entre responsabilit\xE9 budg\xE9taire
-    et soutien aux territoires demeure un enjeu majeur pour l\u2019avenir.   //effet
-    : baisse de la capacit\xE9 d\u2019investissement (budget)"
+  _description: "A \u20AC5 billion reduction: The State has confirmed a \u20AC5 billion
+    reduction in grants allocated to local authorities for the coming year. These
+    funds, intended to finance infrastructure projects, road maintenance, school
+    management, and local public services, represent a significant portion of the
+    budgets of municipalities, departments, and regions. The measure was announced
+    by the Minister of Public Accounts as part of the draft finance bill for next
+    year, and aims to respond to the need to contain public deficits. While the government
+    justifies this reduction by the desire to rationalize public finances, the consequences
+    on the ground are likely to be significant. Local authorities, often forced to
+    finance a large part of local public action, will have to find solutions to compensate
+    for this loss of resources. Concrete impacts on the territories: For local elected
+    officials, this reduction in grants sounds like a hard blow. Many of them point
+    out that they are occurring at a time when pressure on local public services
+    is increasing, with ever-increasing needs in infrastructure, health and education.
+    In small municipalities, which depend largely on state funding to maintain their
+    local services, the situation is particularly worrying. Mayors fear closures
+    of public facilities, reductions in cultural and sports offerings, or even increases
+    in local taxes to compensate for this reduction in funding. Some elected officials
+    are already calling for an increase in funding to avoid \u201Ccruel decisions\u201D
+    that will penalize the most vulnerable citizens. Departments, which notably fund
+    social action and care for the elderly or people with disabilities, also find
+    themselves in a delicate position. Associations of elected officials are calling
+    for support measures to maintain the quality of services and avoid a challenge
+    to solidarity policies. Concern from elected representatives' associations: Associations
+    representing local authorities, such as the Association of Mayors of France (AMF)
+    and the Assembly of French Departments (ADF), have expressed their discontent
+    with this decision. They stress that such a cut could worsen territorial inequalities,
+    by further penalizing the most economically fragile communities. In a press release,
+    the AMF denounced an \"unfair\" measure that goes against the promises of decentralization
+    and support for territories. Local elected officials believe that, rather than
+    reducing the resources allocated to communities, the State should consider other
+    levers for reducing public spending, such as rationalizing central State spending
+    or combating tax evasion. They warn against the risks of an increased territorial
+    divide, where the richest municipalities and regions could offer quality services,
+    while the poorest would be forced to reduce their benefits. A measure in a broader
+    context: This reduction in allocations is part of a context of global budgetary
+    tensions, where the State is seeking to control its deficits while meeting the
+    requirements of the European Union in terms of public finances. The economic
+    forecasts for the coming year remain uncertain, with risks linked to inflation,
+    the war in Ukraine and the energy crisis. While the government justifies this
+    cut by the need to restore France's budgetary credibility, it raises questions
+    about the social consequences of these savings. Local authorities, on the front
+    line in the provision of public services, could find themselves unable to meet
+    the needs of their constituents. Conclusion: a decision that goes against the
+    grain? The budget cuts imposed on local authorities highlight the tensions between
+    financial rigour and maintaining the quality of public services. While the State's
+    stated objective is to reduce public spending, it remains to be seen whether
+    this drastic cut will not penalise social cohesion and territorial solidarity
+    in the long term. In this climate of economic uncertainty, the question of the
+    balance between budgetary responsibility and support for the territories remains
+    a major challenge for the future. //effect: reduction in investment capacity
+    (budget)"
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

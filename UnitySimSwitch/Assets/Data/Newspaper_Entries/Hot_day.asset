@@ -12,73 +12,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
   m_Name: Hot_day
   m_EditorClassIdentifier: 
-  _eventName: "Journ\xE9es de forte chaleur : Une ann\xE9e record pour les temp\xE9ratures
-    extr\xEAmes"
+  _eventName: 'Hot days: A record year for extreme temperatures'
   _date: September 21, 2024
-  _subheading: "Cet \xE9t\xE9 restera dans les m\xE9moires comme l\u2019un des plus
-    chauds de ces derni\xE8res d\xE9cennies. Le pays a enregistr\xE9 plusieurs journ\xE9es
-    de forte chaleur, avec des temp\xE9ratures d\xE9passant r\xE9guli\xE8rement les
-    35\xB0C dans de nombreuses r\xE9gions. Cette s\xE9rie de vagues de chaleur met
-    en lumi\xE8re les effets du r\xE9chauffement climatique et soul\xE8ve des inqui\xE9tudes
-    croissantes concernant les cons\xE9quences sur la sant\xE9, l\u2019environnement
-    et les infrastructures."
+  _subheading: "This summer will be remembered as one of the hottest in decades.
+    The country recorded several hot days, with temperatures regularly exceeding
+    35\xB0C in many regions. This series of heat waves highlights the effects of
+    global warming and raises growing concerns about the consequences for health,
+    the environment and infrastructure."
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Des temp\xE9ratures records : Depuis le mois de juin, la France
-    a \xE9t\xE9 frapp\xE9e par des vagues de chaleur successives. Les temp\xE9ratures
-    ont franchi des seuils exceptionnels, notamment dans le sud et l\u2019ouest du
-    pays, avec des pics d\xE9passant les 40\xB0C dans certaines zones. Paris, Bordeaux,
-    Toulouse et Marseille ont ainsi vu leurs thermom\xE8tres atteindre des niveaux
-    rarement observ\xE9s \xE0 cette p\xE9riode de l'ann\xE9e. Dans certaines r\xE9gions,
-    les temp\xE9ratures nocturnes n\u2019ont pas chut\xE9 sous les 25\xB0C, exacerbant
-    la chaleur ressentie pendant la journ\xE9e. Les m\xE9t\xE9orologues attribuent
-    cette intensification des vagues de chaleur \xE0 un ph\xE9nom\xE8ne climatique
-    global, o\xF9 le r\xE9chauffement de la plan\xE8te favorise la mont\xE9e en temp\xE9rature
-    des masses d\u2019air. \"Nous observons une tendance marqu\xE9e vers des \xE9v\xE9nements
-    climatiques extr\xEAmes, avec des vagues de chaleur plus fr\xE9quentes et plus
-    intenses\", explique Claire Durand, climatologue au CNRS. Cons\xE9quences sur
-    la sant\xE9 et les infrastructures : Les journ\xE9es de forte chaleur ont des
-    r\xE9percussions directes sur la sant\xE9 publique. Les h\xF4pitaux ont vu une
-    augmentation des admissions li\xE9es aux coups de chaleur, \xE0 la d\xE9shydratation
-    et aux probl\xE8mes respiratoires, en particulier parmi les populations vuln\xE9rables
-    : les personnes \xE2g\xE9es, les enfants et ceux souffrant de maladies chroniques.
-    Le Minist\xE8re de la Sant\xE9 a lanc\xE9 des campagnes de sensibilisation pour
-    rappeler l'importance de se prot\xE9ger de la chaleur, de boire r\xE9guli\xE8rement
-    et d'\xE9viter les efforts physiques en plein soleil. L'impact sur les infrastructures
-    est \xE9galement pr\xE9occupant. Les r\xE9seaux \xE9lectriques sont soumis \xE0
-    une pression intense, en raison de la demande \xE9lev\xE9e en climatisation et
-    en refroidissement. Certaines r\xE9gions ont m\xEAme connu des coupures temporaires
-    d\u2019\xE9lectricit\xE9, alors que le syst\xE8me de distribution peine \xE0
-    faire face \xE0 une consommation record. De plus, les fortes chaleurs ont accentu\xE9
-    le risque d\u2019incendies de for\xEAt, notamment dans le Var, la Gironde et
-    la Corse, o\xF9 plusieurs incendies d\xE9vastateurs ont n\xE9cessit\xE9 l\u2019intervention
-    des pompiers. Une prise de conscience sur le changement climatique : Face \xE0
-    ces journ\xE9es caniculaires r\xE9p\xE9t\xE9es, les appels \xE0 agir contre le
-    changement climatique se multiplient. Les autorit\xE9s, les scientifiques et
-    les associations \xE9cologistes insistent sur la n\xE9cessit\xE9 de r\xE9duire
-    les \xE9missions de gaz \xE0 effet de serre et d\u2019adopter des mesures d\u2019adaptation
-    face \xE0 ces ph\xE9nom\xE8nes de plus en plus fr\xE9quents. \"Les vagues de
-    chaleur ne sont qu\u2019un des signes visibles du r\xE9chauffement climatique.
-    Il est urgent d\u2019agir pour limiter les d\xE9g\xE2ts\", alerte Thierry Vives,
-    responsable d\u2019une ONG environnementale. En parall\xE8le, des initiatives
-    sont mises en place dans les villes pour lutter contre les effets de la chaleur
-    urbaine. Des projets de v\xE9g\xE9talisation, d\u2019ombrelle urbaine et de cr\xE9ation
-    d\u2019espaces verts sont \xE0 l\u2019\xE9tude pour limiter l\u2019effet des
-    \xEElots de chaleur dans les zones urbaines. Certaines municipalit\xE9s ont \xE9galement
-    \xE9tendu les horaires d\u2019ouverture des piscines municipales ou mis en place
-    des \"refuges climatiques\" pour offrir des espaces frais \xE0 la population.
-    L\u2019urgence d\u2019une adaptation : Si cette ann\xE9e a marqu\xE9 un tournant
-    en termes de chaleur, elle met \xE9galement en \xE9vidence l\u2019urgence d\u2019adapter
-    nos modes de vie \xE0 un climat qui change rapidement. L\u2019am\xE9nagement
-    des villes, la gestion des ressources en eau et la sensibilisation \xE0 la gestion
-    de la chaleur devront \xEAtre des priorit\xE9s dans les ann\xE9es \xE0 venir.
-    Alors que l\u2019\xE9t\xE9 2024 s\u2019ach\xE8ve, il est clair que les journ\xE9es
-    de forte chaleur deviendront de plus en plus fr\xE9quentes. La question reste
-    d\xE9sormais de savoir comment s\u2019y pr\xE9parer et comment prot\xE9ger la
-    sant\xE9 des Fran\xE7ais face \xE0 des temp\xE9ratures de plus en plus extr\xEAmes.
-    //Effet : baisse de popularit\xE9 des modes actifs & diminution de la qualit\xE9
-    d\u2019air"
+  _description: "Record temperatures: Since June, France has been hit by successive
+    heat waves. Temperatures have exceeded exceptional thresholds, particularly in
+    the south and west of the country, with peaks exceeding 40\xB0C in some areas.
+    Paris, Bordeaux, Toulouse and Marseille have seen their thermometers reach levels
+    rarely seen at this time of year. In some regions, nighttime temperatures have
+    not fallen below 25\xB0C, exacerbating the heat felt during the day. Meteorologists
+    attribute this intensification of heat waves to a global climate phenomenon,
+    where global warming promotes the rise in temperature of air masses. \"We are
+    observing a marked trend towards extreme weather events, with more frequent and
+    more intense heat waves,\" explains Claire Durand, a climatologist at the CNRS.
+    Consequences for health and infrastructure: Days of extreme heat have direct
+    repercussions on public health. Hospitals have seen an increase in admissions
+    related to heat stroke, dehydration and respiratory problems, particularly among
+    vulnerable populations: the elderly, children and those with chronic diseases.
+    The Ministry of Health has launched awareness campaigns to remind people of the
+    importance of protecting themselves from the heat, drinking regularly and avoiding
+    physical exertion in direct sunlight. The impact on infrastructure is also worrying.
+    Power grids are under intense pressure, due to high demand for air conditioning
+    and cooling. Some regions have even experienced temporary power outages, while
+    the distribution system is struggling to cope with record consumption. In addition,
+    the high temperatures have increased the risk of forest fires, particularly in
+    the Var, Gironde and Corsica, where several devastating fires have required the
+    intervention of firefighters. Awareness of climate change: Faced with these repeated
+    hot days, calls for action against climate change are increasing. Authorities,
+    scientists and environmental associations are stressing the need to reduce greenhouse
+    gas emissions and adopt adaptation measures in the face of these increasingly
+    frequent phenomena. \"Heat waves are just one of the visible signs of global
+    warming. Urgent action is needed to limit the damage,\" warns Thierry Vives,
+    head of an environmental NGO. At the same time, initiatives are being implemented
+    in cities to combat the effects of urban heat. Greening projects, urban umbrellas
+    and the creation of green spaces are being studied to limit the effect of heat
+    islands in urban areas. Some municipalities have also extended the opening hours
+    of municipal swimming pools or set up \"climate refuges\" to offer cool spaces
+    to the population. The urgency of adaptation: While this year has marked a turning
+    point in terms of heat, it also highlights the urgency of adapting our lifestyles
+    to a rapidly changing climate. Urban planning, water resource management and
+    heat management awareness will need to be priorities in the coming years. As
+    the summer of 2024 draws to a close, it is clear that extremely hot days will
+    become more frequent. The question now remains how to prepare for them and how
+    to protect the health of the French in the face of increasingly extreme temperatures.
+    //Effect: decline in popularity of active modes & decrease in air quality"
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0
