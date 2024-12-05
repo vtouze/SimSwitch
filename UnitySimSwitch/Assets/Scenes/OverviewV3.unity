@@ -593,9 +593,9 @@ MonoBehaviour:
   m_fontSize: 25
   m_fontSizeBase: 25
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15
+  m_fontSizeMax: 35
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -16177,6 +16177,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sizeUp: {x: 1.2, y: 1.2, z: 1}
   animationDuration: 0.1
+--- !u!1 &419304877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 419304878}
+  - component: {fileID: 419304880}
+  - component: {fileID: 419304879}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &419304878
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419304877}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 528446720}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -375.7, y: -91.7}
+  m_SizeDelta: {x: 135.95, y: 3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &419304879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419304877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 653c73a86cf2fff4fbac2079ad6f1397, type: 3}
+  m_Type: 2
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &419304880
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419304877}
+  m_CullTransparentMesh: 1
 --- !u!1 &423216763
 GameObject:
   m_ObjectHideFlags: 0
@@ -20221,6 +20296,7 @@ RectTransform:
   - {fileID: 1935820704}
   - {fileID: 474354605}
   - {fileID: 2107210832}
+  - {fileID: 419304878}
   m_Father: {fileID: 1978310429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -28330,7 +28406,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1e4e2148dfb7a46a56de253f8422be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderConstruction: 0
   constructionRoadSprite: {fileID: 0}
+  defaultRoadSprite: {fileID: 0}
   _constructionOverlay: {fileID: 0}
   constructionText: {fileID: 0}
   bikeSprite: {fileID: 21300000, guid: 77c65c126ae29b846a984b00b1f34262, type: 3}
@@ -30524,12 +30602,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _newspaperController: {fileID: 698924426}
   _events:
-  - {fileID: 11400000, guid: 1c047358ee12ed5bbbc51b3823119521, type: 2}
+  - {fileID: 11400000, guid: 49cacc128d4bd3049932dde955617dd6, type: 2}
   - {fileID: 11400000, guid: 1aba131f8095dfff9b5786d0c87e772e, type: 2}
-  - {fileID: 11400000, guid: 95e4ba8fd2c1b2c8195ca045f8a35217, type: 2}
+  - {fileID: 11400000, guid: b4958538690cf7f4189c47ca250991b8, type: 2}
+  - {fileID: 11400000, guid: 9c48d8e1ce5fe364282cf0fb2e4effbb, type: 2}
+  - {fileID: 11400000, guid: 7038e30f19b65074a81bc5a6606748c9, type: 2}
+  - {fileID: 11400000, guid: 7145349995e53424692a52261dbef6d4, type: 2}
+  - {fileID: 11400000, guid: 31195c130b32a1a418b4361e53fa0e44, type: 2}
+  - {fileID: 11400000, guid: cfbf96ef8f763bf4d857ce1c190d3ee1, type: 2}
+  - {fileID: 11400000, guid: 00443e9737cb48a4d814e0563de810bc, type: 2}
   - {fileID: 11400000, guid: 11c0ecb386a5955f9b874aeb1ddc2af7, type: 2}
-  - {fileID: 11400000, guid: a5a2ef5db75839cb38820372cd568529, type: 2}
+  - {fileID: 11400000, guid: f2c637b07f4471d4eaeca8443bf988ff, type: 2}
   - {fileID: 11400000, guid: f3af761c903ca5d1bbb958d147a13363, type: 2}
+  - {fileID: 11400000, guid: 5210e9f23694a9a4ca21663ee7069989, type: 2}
+  - {fileID: 11400000, guid: 84d1c253d03a6534faa23b3cb7961a3f, type: 2}
+  - {fileID: 11400000, guid: c51d006cec6c0724ebbc3c2e5e9012d9, type: 2}
+  - {fileID: 11400000, guid: a5a2ef5db75839cb38820372cd568529, type: 2}
+  - {fileID: 11400000, guid: 1c047358ee12ed5bbbc51b3823119521, type: 2}
+  - {fileID: 11400000, guid: 95e4ba8fd2c1b2c8195ca045f8a35217, type: 2}
   _readMore: {fileID: 1165662885488574490, guid: d32a9a5bbe2938101a9bcded8ac2f115, type: 3}
   _title: {fileID: 7248525186867386603, guid: 64d7c0871cd52a8c0a2f0c151844ea8b, type: 3}
   _content: {fileID: 2424293029384571308}
@@ -43810,7 +43900,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1e4e2148dfb7a46a56de253f8422be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderConstruction: 0
   constructionRoadSprite: {fileID: 21300000, guid: f1904c66de1f44c319460168af2c9e58, type: 3}
+  defaultRoadSprite: {fileID: 0}
   _constructionOverlay: {fileID: 1848687523}
   constructionText: {fileID: 189084103}
   bikeSprite: {fileID: 21300000, guid: 3a0af12017da70945b8f1f33c8aa1da6, type: 3}
@@ -57294,7 +57386,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1e4e2148dfb7a46a56de253f8422be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderConstruction: 0
   constructionRoadSprite: {fileID: 21300000, guid: a3e55a36f41fb020aac9d2a6a3486f93, type: 3}
+  defaultRoadSprite: {fileID: 0}
   _constructionOverlay: {fileID: 1848687523}
   constructionText: {fileID: 189084103}
   bikeSprite: {fileID: 21300000, guid: 61583099b6b8a334095528543ff010c2, type: 3}
@@ -59048,7 +59142,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1513629616}
   m_HandleRect: {fileID: 1513629615}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -68039,7 +68133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1781081501
 RectTransform:
   m_ObjectHideFlags: 0
@@ -78772,9 +78866,9 @@ MonoBehaviour:
   m_fontSize: 25
   m_fontSizeBase: 25
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 11
+  m_fontSizeMax: 30
   m_fontStyle: 1
   m_HorizontalAlignment: 16
   m_VerticalAlignment: 512
@@ -80225,7 +80319,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1e4e2148dfb7a46a56de253f8422be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnderConstruction: 0
   constructionRoadSprite: {fileID: 21300000, guid: b670052a11c97e6438b6c856b0fe2c77, type: 3}
+  defaultRoadSprite: {fileID: 0}
   _constructionOverlay: {fileID: 1848687523}
   constructionText: {fileID: 189084103}
   bikeSprite: {fileID: 21300000, guid: 2f25b964bbbe12a408ae10bb3d98940b, type: 3}

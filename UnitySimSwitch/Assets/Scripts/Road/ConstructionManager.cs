@@ -5,51 +5,66 @@ public class ConstructionManager : MonoBehaviour
 {
     public static ConstructionManager Instance { get; private set; }
 
-    public List<PublicWorksType> SelectedTransportTypes { get; private set; } = new List<PublicWorksType>();
+    private Dictionary<RoadSelection, PublicWorksType> roadTransportMapping = new Dictionary<RoadSelection, PublicWorksType>();
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            Debug.Log("ConstructionManager Instance assigned.");
         }
         else
         {
             Destroy(gameObject);
+            Debug.Log("Duplicate ConstructionManager instance destroyed.");
         }
     }
 
-    public void AddTransportType(PublicWorksType type)
+    public void AddTransportType(RoadSelection road, PublicWorksType type)
     {
-        SelectedTransportTypes.Add(type);
+        if (!road.isUnderConstruction)
+        {
+            roadTransportMapping[road] = type;
+            Debug.Log($"Added transport type: {type}, Is under construction: {road.isUnderConstruction}");
+        }
+        else
+        {
+            Debug.LogWarning($"Road is under construction and cannot be assigned a new transport type.");
+        }
     }
 
-    public void RemoveTransportType(PublicWorksType type)
+    public void RemoveTransportType(RoadSelection road)
     {
-        if (SelectedTransportTypes.Contains(type))
+        if (roadTransportMapping.ContainsKey(road))
         {
-            SelectedTransportTypes.Remove(type);
+            roadTransportMapping.Remove(road);
         }
     }
 
     public void ClearTransportTypes()
     {
-        SelectedTransportTypes.Clear();
+        roadTransportMapping.Clear();
+    }
+
+    public int GetSelectedTransportCount()
+    {
+        return roadTransportMapping.Count;
     }
 
     public string GetSelectedTransportTypesAsString()
     {
-        var transportCount = new Dictionary<PublicWorksType, int>();
+        Dictionary<PublicWorksType, int> transportCount = new Dictionary<PublicWorksType, int>();
 
-        foreach (var transport in SelectedTransportTypes)
+        foreach (var type in roadTransportMapping.Values)
         {
-            if (!transportCount.ContainsKey(transport))
+            if (!transportCount.ContainsKey(type))
             {
-                transportCount[transport] = 1;
+                transportCount[type] = 1;
             }
             else
             {
-                transportCount[transport]++;
+                transportCount[type]++;
             }
         }
 
@@ -64,13 +79,12 @@ public class ConstructionManager : MonoBehaviour
         return string.Join(" and ", transportNames);
     }
 
-
     public (float totalCost, float totalDuration) GetTotalCostAndDuration(Dictionary<PublicWorksType, RoadsEntries> transportEntries)
     {
         float totalCost = 0f;
         float totalDuration = 0f;
 
-        foreach (var type in SelectedTransportTypes)
+        foreach (var type in roadTransportMapping.Values)
         {
             if (transportEntries.ContainsKey(type))
             {

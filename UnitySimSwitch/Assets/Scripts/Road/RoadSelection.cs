@@ -12,12 +12,13 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private Image roadImage;
     private bool isSelected = false;
-    private bool isUnderConstruction = false;
+    [HideInInspector] public bool isUnderConstruction = false;
     private float constructionTime = 10f;
     private float currentConstructionTime = 0f;
 
     [Header("Construction")]
     [SerializeField] private Sprite constructionRoadSprite;
+    [SerializeField] private Sprite defaultRoadSprite;
     [SerializeField] private GameObject _constructionOverlay = null;
     [SerializeField] private TMP_Text constructionText;
     private Image progressBar;
@@ -45,7 +46,7 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private Color originalColor;
     private Sprite currentTransportSprite;
     private Outline roadOutline;
-    private PublicWorksType selectedType;
+    private PublicWorksType? selectedType = null;
     private PublicWorksType? currentTransportType = null;
     
     private ParticleSystem _confettiParticles = null;
@@ -97,6 +98,11 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             progressBarParent.SetActive(false);
         }
 
+        defaultRoadSprite = GetComponent<Image>().sprite;
+        isUnderConstruction = false;
+        selectedType = null;
+        currentTransportType = null;
+
         validateButton.onClick.AddListener(ValidateConstruction);
         abortButton.onClick.AddListener(AbortConstruction);
     }
@@ -130,37 +136,32 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (!isUnderConstruction && PublicWorksButton.selectedPublicWorksType != null)
         {
-            if (roadOutline != null)
+            if (isUnderConstruction)
             {
-                roadOutline.enabled = false;
+                CompleteConstruction();
             }
-            
+
             selectedType = (PublicWorksType)PublicWorksButton.selectedPublicWorksType;
-        
-            if (currentTransportType.HasValue)
+
+            if (!isUnderConstruction)
             {
-                ConstructionManager.Instance.RemoveTransportType(currentTransportType.Value);
+                ConstructionManager.Instance.RemoveTransportType(this);
+                ConstructionManager.Instance.AddTransportType(this, selectedType.Value);
+
+                _constructionOverlay.SetActive(true);
+                ShowPreConstructionUI(selectedType.Value);
+
+                Animator anim = _constructionOverlay.GetComponent<Animator>();
+                if (anim != null) anim.SetBool("isOpeningMenu", true);
+
+                UpdateConstructionText();
             }
 
-            currentTransportType = selectedType;
-            ConstructionManager.Instance.AddTransportType(selectedType);
-
-            _constructionOverlay.SetActive(true);
-            ShowPreConstructionUI(selectedType);
-        
-            Animator anim = _constructionOverlay.GetComponent<Animator>();
-            if (anim != null)
-            {
-                anim.SetBool("isOpeningMenu", true);
-            }
-
-            UpdateConstructionText();
+            isSelected = true;
+            DeselectAllOtherRoads();
         }
-
-        DeselectAllRoads();
-        isSelected = true;
     }
-
+ 
     #endregion PointerHandler
 
     #region OverlayActions
@@ -168,15 +169,20 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private void ValidateConstruction()
     {
         CloseConstructionOverlay();
-        currentTransportType = null;
-        ConstructionManager.Instance.ClearTransportTypes();
-        StartConstruction(selectedType);
+
+        if (selectedType.HasValue)
+        {
+            currentTransportType = selectedType.Value;
+            StartConstruction(selectedType.Value);
+        }
+        else
+        {
+            Debug.LogWarning("No transport type selected for construction.");
+        }
 
         PublicWorksButton.StopFollowing();
         PublicWorksButton.lastSelectedButton?.HideFeedback();
     }
-
-
     private void AbortConstruction()
     {
         CloseConstructionOverlay();
@@ -215,6 +221,8 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private void StartConstruction(PublicWorksType type)
     {
+        if (isUnderConstruction) return;
+
         isUnderConstruction = true;
         roadImage.sprite = constructionRoadSprite;
 
@@ -228,6 +236,7 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         TriggerIdleAnimation(true);
         StartCoroutine(ConstructionTimer());
     }
+
 
     private float GetConstructionTimeForType(PublicWorksType type)
     {
@@ -261,17 +270,33 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private void CompleteConstruction()
     {
-        roadImage.sprite = currentTransportSprite;
-        isUnderConstruction = false;
+        if (!isUnderConstruction) return;
 
-        if (progressBarParent != null)
+        if (selectedType.HasValue)
         {
-            progressBarParent.SetActive(false);
-            TriggerIdleAnimation(false);
+            if (currentTransportSprite != null)
+            {
+                roadImage.sprite = currentTransportSprite;
+            }
+            else
+            {
+                Debug.LogWarning($"Transport sprite for {selectedType.Value} is missing! Setting default sprite.");
+                roadImage.sprite = defaultRoadSprite;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No selected transport type for this construction.");
         }
 
+        isUnderConstruction = false;
+        isSelected = false;
+        progressBarParent.SetActive(false);
         _confettiParticles.Play();
+
+        ConstructionManager.Instance.RemoveTransportType(this);
     }
+
 
     #endregion Construction
 
@@ -283,14 +308,22 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         }
     }
 
-    private void DeselectAllRoads()
+    private void DeselectAllOtherRoads()
     {
         RoadSelection[] allRoads = FindObjectsOfType<RoadSelection>();
         foreach (RoadSelection road in allRoads)
         {
-            road.isSelected = false;
-            road.roadImage.color = road.originalColor;
-            road.roadOutline.enabled = false;
+            if (road != this)
+            {
+                road.isSelected = false;
+                road.roadImage.color = road.originalColor;
+                road.roadOutline.enabled = false;
+
+                if (road.isUnderConstruction)
+                {
+                    road.CompleteConstruction();
+                }
+            }
         }
     }
 
@@ -308,7 +341,7 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         string transportNames = ConstructionManager.Instance.GetSelectedTransportTypesAsString();
         string formattedCost = FormatCost(totalCost);
 
-        string constructionTextFormatted = (ConstructionManager.Instance.SelectedTransportTypes.Count > 1) ? "Construction" + "s" : "Construction";
+        string constructionTextFormatted = (ConstructionManager.Instance.GetSelectedTransportCount() > 1) ? "Constructions" : "Construction";
 
         string durationText = totalDuration > 1 ? "years" : "year";
 

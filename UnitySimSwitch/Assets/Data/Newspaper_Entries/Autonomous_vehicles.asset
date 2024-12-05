@@ -12,42 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
   m_Name: Autonomous_vehicles
   m_EditorClassIdentifier: 
-  _eventName: 'Autonomous vehicles authorized on the French market: a turning point
-    for mobility'
+  _eventName: 'Autonomous vehicles authorized on the French market: a turning point for mobility'
   _date: September 26, 2024
-  _subheading: 'France has reached a new milestone in the technological revolution
-    of transportation: autonomous vehicles are now authorized to circulate in cities.
-    This regulatory breakthrough marks a key moment for the automotive industry,
-    paving the way for smarter, safer and, ultimately, greener mobility. This green
-    light for driverless vehicles places France among the first countries in Europe
-    to officially adopt this innovation. _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081,
-    type: 3} _captionImage: Aenean malesuada gravida diam, non tempus eros elementum
-    vel. Phasellus pulvinar non nisl in sceler. _description: '
-  _coverImage: {fileID: 0}
-  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
-    pulvinar non nisl in sceler.
-  _description: 'A regulated technology with limited use: The authorization of autonomous
-    vehicles in France is strictly regulated by safety regulations and restrictions
-    on use, to ensure the safety of all concerned. Initially, only certain categories
-    of vehicle are authorized, notably in specific zones or for predefined routes.
-    For example, autonomous vehicles could be deployed for passenger transport in
-    well-defined urban areas, or on driverless bus routes in low-traffic areas. Manufacturers
-    will also have to prove that their vehicles meet extremely stringent safety standards
-    before being put on the road. Hope for safety and the environment: Promoters
-    of autonomous vehicles put forward a number of arguments in favor of this technology:
-    reducing accidents linked to human error, lowering greenhouse gas emissions through
-    optimized driving, and optimizing traffic flows. According to experts, autonomous
-    vehicles could help reduce the number of accidents on the roads by eliminating
-    factors linked to fatigue, distraction or speeding. A technological and social
-    challenge: While this authorization marks a step forward, it also raises questions
-    about the place of people in the vehicle, cybersecurity management and liability
-    in the event of an accident. What''s more, this costly technology remains inaccessible
-    to many, and its adoption could widen inequalities in access to mobility. The
-    first large-scale trials will enable us to observe how citizens will react to
-    these cars of the future. For the time being, France is paving the way for a
-    new era of mobility, between technological promises and social challenges to
-    be met so that these driverless vehicles find their place in everyday life. //Effect:
-    reduction in car accidents / opening up of new projects?'
+  _subheading: 'France now permits autonomous vehicles in cities, leading the way in smarter, greener mobility and establishing itself as a European pioneer in transport innovation.'
+  _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
+  _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus pulvinar non nisl in sceler.
+  _description: |
+    A regulated technology with limited use:
+    The authorization of autonomous vehicles in France is strictly regulated by safety regulations and restrictions on use, to ensure the safety of all concerned. 
+    
+    Initially, only certain categories of vehicles are authorized, notably in specific zones or for predefined routes. For example, autonomous vehicles could be deployed for passenger transport in well-defined urban areas, or on driverless bus routes in low-traffic areas. 
+    
+    Manufacturers will also have to prove that their vehicles meet extremely stringent safety standards before being put on the road.
+    
+    **Hope for safety and the environment:** Promoters of autonomous vehicles put forward several arguments in favor of this technology: reducing accidents linked to human error, lowering greenhouse gas emissions through optimized driving, and optimizing traffic flows. 
+    
+    According to experts, autonomous vehicles could help reduce the number of accidents on the roads by eliminating factors linked to fatigue, distraction, or speeding.
+    
+    **A technological and social challenge:** While this authorization marks a step forward, it also raises questions about the place of people in the vehicle, cybersecurity management, and liability in the event of an accident. 
+    
+    Moreover, this costly technology remains inaccessible to many, and its adoption could widen inequalities in access to mobility. The first large-scale trials will enable us to observe how citizens will react to these cars of the future. 
+    
+    For now, France is paving the way for a new era of mobility, between technological promises and social challenges to be met, so that these driverless vehicles find their place in everyday life. 
+    
+    //Effect: reduction in car accidents / opening up of new projects?
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0
