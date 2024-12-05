@@ -28,20 +28,9 @@ public class HUDController : MonoBehaviour
     
     // Tracks whether the quit-to-desktop animation has finished.
     private bool _hasFinishedQuitDesktopAnimation = false;
-
-    [SerializeField] private ParticleSystem particleSystem = null;
     #endregion Fields
 
     #region Methods
-
-    private void ActivateConfetti()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            particleSystem.Play();
-        }
-    }
-
     private void Start()
     {
         _hud.SetActive(true);
@@ -59,7 +48,6 @@ public class HUDController : MonoBehaviour
         QuickEscape();
         QuitToDesktopAnimation();
         QuitToMainMenuAnimation();
-        ActivateConfetti();
     }
     
     #region Menu

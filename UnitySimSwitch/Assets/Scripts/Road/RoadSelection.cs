@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 [RequireComponent(typeof(Image))]
 public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
@@ -13,6 +14,7 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private Image roadImage;
     private bool isSelected = false;
     [HideInInspector] public bool isUnderConstruction = false;
+    [HideInInspector] public bool hasBeenUnderConstruction = false;
     private float constructionTime = 10f;
     private float currentConstructionTime = 0f;
 
@@ -21,13 +23,8 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private Sprite defaultRoadSprite;
     [SerializeField] private GameObject _constructionOverlay = null;
     [SerializeField] private TMP_Text constructionText;
+    private Image _lineRoad = null;
     private Image progressBar;
-
-    [Header("Road Sprites")]
-    [SerializeField] private Sprite bikeSprite;
-    [SerializeField] private Sprite carSprite;
-    [SerializeField] private Sprite busSprite;
-
     private GameObject transportGameObject;
 
     [Header("Transports Icons")]
@@ -60,27 +57,28 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private void Start()
     {
-        Transform constructionBar = gameObject.transform.GetChild(0).transform;
+        Transform constructionBar = gameObject.transform.GetChild(1).transform;
         if (constructionBar != null)
         {
             progressBarParent = constructionBar.gameObject;
             progressBarAnimator = constructionBar.GetComponent<Animator>();
             progressBarParentAnimator = constructionBar.GetComponent<Animator>();
 
-            Transform pbFill = gameObject.transform.GetChild(0).GetChild(2).transform;
+            Transform pbFill = gameObject.transform.GetChild(1).GetChild(2).transform;
             if (pbFill != null)
             {
                 progressBar = pbFill.GetComponent<Image>();
             }
 
-            Transform transportsIcon = gameObject.transform.GetChild(0).GetChild(1).transform;
+            Transform transportsIcon = gameObject.transform.GetChild(1).GetChild(1).transform;
             if (transportsIcon != null)
             {
                 transportGameObject = transportsIcon.gameObject;
             }
         }
 
-        _confettiParticles = gameObject.transform.GetChild(1).GetComponent<ParticleSystem>();
+        _confettiParticles = gameObject.transform.GetChild(2).GetComponent<ParticleSystem>();
+        _lineRoad = gameObject.transform.GetChild(0).GetComponent<Image>();
 
         _constructionOverlay.SetActive(false);
         roadImage = GetComponent<Image>();
@@ -134,13 +132,13 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (!isUnderConstruction && PublicWorksButton.selectedPublicWorksType != null)
+        if (isUnderConstruction)
         {
-            if (isUnderConstruction)
-            {
-                CompleteConstruction();
-            }
+            CompleteConstruction();
+        }
 
+        if (!hasBeenUnderConstruction && !isUnderConstruction && PublicWorksButton.selectedPublicWorksType != null)
+        {
             selectedType = (PublicWorksType)PublicWorksButton.selectedPublicWorksType;
 
             if (!isUnderConstruction)
@@ -159,8 +157,11 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
             isSelected = true;
             DeselectAllOtherRoads();
+
+            hasBeenUnderConstruction = true;
         }
-    }
+    }   
+
  
     #endregion PointerHandler
 
@@ -170,7 +171,7 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         CloseConstructionOverlay();
 
-        if (selectedType.HasValue)
+        if (selectedType.HasValue && hasBeenUnderConstruction)
         {
             currentTransportType = selectedType.Value;
             StartConstruction(selectedType.Value);
@@ -208,7 +209,6 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private void ShowPreConstructionUI(PublicWorksType type)
     {
-        currentTransportSprite = GetTransportSprite(type);
         transportGameObject.GetComponent<Image>().sprite = currentTransportSprite;
         SetTransportIcon(type);
 
@@ -274,19 +274,7 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
         if (selectedType.HasValue)
         {
-            if (currentTransportSprite != null)
-            {
-                roadImage.sprite = currentTransportSprite;
-            }
-            else
-            {
-                Debug.LogWarning($"Transport sprite for {selectedType.Value} is missing! Setting default sprite.");
-                roadImage.sprite = defaultRoadSprite;
-            }
-        }
-        else
-        {
-            Debug.LogWarning("No selected transport type for this construction.");
+            roadImage.sprite = currentTransportSprite ?? defaultRoadSprite;
         }
 
         isUnderConstruction = false;
@@ -295,8 +283,22 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         _confettiParticles.Play();
 
         ConstructionManager.Instance.RemoveTransportType(this);
+
+        if (selectedType.HasValue)
+        {
+            _lineRoad = GetRoadLine(selectedType.Value);
+        }
+        
+        ResetConstructionStatus();
     }
 
+
+    private void ResetConstructionStatus()
+    {
+        hasBeenUnderConstruction = false;
+        isUnderConstruction = false;
+        isSelected = false;
+    }
 
     #endregion Construction
 
@@ -385,19 +387,31 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         }
     }
 
-    private Sprite GetTransportSprite(PublicWorksType type)
+    private Image GetRoadLine(PublicWorksType type)
     {
         switch (type)
         {
             case PublicWorksType.BIKE:
-                return bikeSprite;
-            case PublicWorksType.CAR:
-                return carSprite;
+                SetRoadLineProperties(2, Color.green);
+                break;
             case PublicWorksType.BUS:
-                return busSprite;
+                SetRoadLineProperties(1, Color.yellow);
+                break;
+            case PublicWorksType.CAR:
+                SetRoadLineProperties(0.5f, Color.red);
+                break;
             default:
-                return null;
+                Debug.LogWarning("Unsupported PublicWorksType");
+                break;
         }
+
+        return _lineRoad;
+    }
+
+    private void SetRoadLineProperties(float pixelsPerUnitMultiplier, Color color)
+    {
+        _lineRoad.pixelsPerUnitMultiplier = pixelsPerUnitMultiplier;
+        _lineRoad.color = color;
     }
     #endregion Misc
 }

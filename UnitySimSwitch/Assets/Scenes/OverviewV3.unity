@@ -15212,6 +15212,81 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &376434036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 376434037}
+  - component: {fileID: 376434039}
+  - component: {fileID: 376434038}
+  m_Layer: 5
+  m_Name: RoadLine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &376434037
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376434036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2085977469}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -11.3, y: -1.2}
+  m_SizeDelta: {x: 115, y: 2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &376434038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376434036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.90968007, g: 0.8705315, b: 0.8705315, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 653c73a86cf2fff4fbac2079ad6f1397, type: 3}
+  m_Type: 2
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &376434039
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376434036}
+  m_CullTransparentMesh: 1
 --- !u!1 &376706210
 GameObject:
   m_ObjectHideFlags: 0
@@ -16189,7 +16264,7 @@ GameObject:
   - component: {fileID: 419304880}
   - component: {fileID: 419304879}
   m_Layer: 5
-  m_Name: Image
+  m_Name: RoadLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16202,17 +16277,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419304877}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 528446720}
+  m_Father: {fileID: 1090275487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -375.7, y: -91.7}
-  m_SizeDelta: {x: 135.95, y: 3}
+  m_AnchoredPosition: {x: 0.7, y: -18.9}
+  m_SizeDelta: {x: 210, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419304879
 MonoBehaviour:
@@ -16227,7 +16302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.90968007, g: 0.8705315, b: 0.8705315, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -20296,7 +20371,6 @@ RectTransform:
   - {fileID: 1935820704}
   - {fileID: 474354605}
   - {fileID: 2107210832}
-  - {fileID: 419304878}
   m_Father: {fileID: 1978310429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -28407,13 +28481,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUnderConstruction: 0
+  hasBeenUnderConstruction: 0
   constructionRoadSprite: {fileID: 0}
   defaultRoadSprite: {fileID: 0}
   _constructionOverlay: {fileID: 0}
   constructionText: {fileID: 0}
-  bikeSprite: {fileID: 21300000, guid: 77c65c126ae29b846a984b00b1f34262, type: 3}
-  carSprite: {fileID: 21300000, guid: b4ad7465d954afd44ac862af81748e3a, type: 3}
-  busSprite: {fileID: 21300000, guid: 102af727fc5d36040afefacdab534200, type: 3}
   bikeIcon: {fileID: 0}
   carIcon: {fileID: 0}
   busIcon: {fileID: 0}
@@ -43879,6 +43951,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 419304878}
   - {fileID: 1626426686}
   - {fileID: 414444449}
   m_Father: {fileID: 500390835}
@@ -43901,13 +43974,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUnderConstruction: 0
+  hasBeenUnderConstruction: 0
   constructionRoadSprite: {fileID: 21300000, guid: f1904c66de1f44c319460168af2c9e58, type: 3}
-  defaultRoadSprite: {fileID: 0}
+  defaultRoadSprite: {fileID: 21300000, guid: 763345fcd9eacfb42948521676d88ce1, type: 3}
   _constructionOverlay: {fileID: 1848687523}
   constructionText: {fileID: 189084103}
-  bikeSprite: {fileID: 21300000, guid: 3a0af12017da70945b8f1f33c8aa1da6, type: 3}
-  carSprite: {fileID: 21300000, guid: a2494c60f6e0d5c4c8e0aa87e0eacd35, type: 3}
-  busSprite: {fileID: 21300000, guid: 92855b0cfcb27a44c8699b09ef93d9b6, type: 3}
   bikeIcon: {fileID: 21300000, guid: b34f7814ac69aa0cf9dee58af5c918c8, type: 3}
   carIcon: {fileID: 21300000, guid: e73d9d8a601f9fd38aff19b0694826a3, type: 3}
   busIcon: {fileID: 21300000, guid: abec4ab45b2120b23b8fb6b74903cf79, type: 3}
@@ -45949,11 +46020,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!198 &1137530246 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 301536697917072994, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-  m_PrefabInstance: {fileID: 4238757191957735413}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1139455206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57327,14 +57393,15 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1940687402}
   - {fileID: 549535100}
   - {fileID: 1120975556}
   m_Father: {fileID: 500390835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60.99511, y: 106.123215}
-  m_SizeDelta: {x: 167.0058, y: 55.7534}
+  m_AnchoredPosition: {x: 74.682, y: 106.123215}
+  m_SizeDelta: {x: 139.63, y: 55.7534}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470143152
 MonoBehaviour:
@@ -57387,13 +57454,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUnderConstruction: 0
+  hasBeenUnderConstruction: 0
   constructionRoadSprite: {fileID: 21300000, guid: a3e55a36f41fb020aac9d2a6a3486f93, type: 3}
-  defaultRoadSprite: {fileID: 0}
+  defaultRoadSprite: {fileID: 21300000, guid: 2a975665a6d155b4d850017b6921bd76, type: 3}
   _constructionOverlay: {fileID: 1848687523}
   constructionText: {fileID: 189084103}
-  bikeSprite: {fileID: 21300000, guid: 61583099b6b8a334095528543ff010c2, type: 3}
-  carSprite: {fileID: 21300000, guid: 416c1060e6dfc3a4c8d9c4e1b2f3d230, type: 3}
-  busSprite: {fileID: 21300000, guid: 2d40df3e8550b404cbefb63c81f31a6e, type: 3}
   bikeIcon: {fileID: 21300000, guid: b34f7814ac69aa0cf9dee58af5c918c8, type: 3}
   carIcon: {fileID: 21300000, guid: e73d9d8a601f9fd38aff19b0694826a3, type: 3}
   busIcon: {fileID: 21300000, guid: abec4ab45b2120b23b8fb6b74903cf79, type: 3}
@@ -74781,6 +74846,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sizeUp: {x: 1.2, y: 1.2, z: 1}
   animationDuration: 0.1
+--- !u!1 &1940687401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1940687402}
+  - component: {fileID: 1940687404}
+  - component: {fileID: 1940687403}
+  m_Layer: 5
+  m_Name: RoadLine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1940687402
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940687401}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1470143150}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -16.8, y: -0.6}
+  m_SizeDelta: {x: 160, y: 2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1940687403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940687401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.90968007, g: 0.8705315, b: 0.8705315, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 653c73a86cf2fff4fbac2079ad6f1397, type: 3}
+  m_Type: 2
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1940687404
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940687401}
+  m_CullTransparentMesh: 1
 --- !u!1 &1947764559
 GameObject:
   m_ObjectHideFlags: 0
@@ -76007,7 +76147,6 @@ MonoBehaviour:
   - {fileID: 1604923163}
   - {fileID: 1069813196}
   _fadeInCircle: {fileID: 986494448}
-  particleSystem: {fileID: 1137530246}
 --- !u!114 &1978310431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80298,6 +80437,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 376434037}
   - {fileID: 930632209}
   - {fileID: 1139455207}
   m_Father: {fileID: 500390835}
@@ -80320,13 +80460,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUnderConstruction: 0
+  hasBeenUnderConstruction: 0
   constructionRoadSprite: {fileID: 21300000, guid: b670052a11c97e6438b6c856b0fe2c77, type: 3}
-  defaultRoadSprite: {fileID: 0}
+  defaultRoadSprite: {fileID: 21300000, guid: 141a259b7293e6344befb4d30b4833f4, type: 3}
   _constructionOverlay: {fileID: 1848687523}
   constructionText: {fileID: 189084103}
-  bikeSprite: {fileID: 21300000, guid: 2f25b964bbbe12a408ae10bb3d98940b, type: 3}
-  carSprite: {fileID: 21300000, guid: 41ba80ccf7976e44391cf5d81236f168, type: 3}
-  busSprite: {fileID: 21300000, guid: 25a6100e6e2887947bbcd701d43da263, type: 3}
   bikeIcon: {fileID: 21300000, guid: b34f7814ac69aa0cf9dee58af5c918c8, type: 3}
   carIcon: {fileID: 21300000, guid: e73d9d8a601f9fd38aff19b0694826a3, type: 3}
   busIcon: {fileID: 21300000, guid: abec4ab45b2120b23b8fb6b74903cf79, type: 3}
@@ -85941,63 +86079,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 6}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &4238757191957735413
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2402388321805815523, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 426.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2402388321805815523, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 314.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2402388321805815523, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2402388321805815523, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2402388321805815523, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2402388321805815523, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2402388321805815523, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2402388321805815523, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2402388321805815523, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2402388321805815523, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355201050630306442, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
-      propertyPath: m_Name
-      value: ConfettiParticles
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 588af943d205bbb4aae0ddbe61cd1754, type: 3}
 --- !u!1 &4269934949272625601
 GameObject:
   m_ObjectHideFlags: 0
@@ -89030,4 +89111,3 @@ SceneRoots:
   - {fileID: 859616991}
   - {fileID: 813887981}
   - {fileID: 451760598}
-  - {fileID: 4238757191957735413}
