@@ -40,6 +40,8 @@ public class NewspaperHome : MonoBehaviour
     [Tooltip("Prefab for the cover image of an article.")]
     [SerializeField] private GameObject _cover;
 
+    public static NewspaperHome Instance;
+
     /// <summary>
     /// Instantiates the necessary UI elements for each newspaper event and sets up the UI hierarchy.
     /// It links each event's data to the appropriate UI components and sets up the "Read More" button
@@ -78,5 +80,32 @@ public class NewspaperHome : MonoBehaviour
             // Add a listener to the "Read More" button to display the full event content
             button.GetComponent<Button>().onClick.AddListener(() => _newspaperController.ShowEventContent(index));
         }
+    }
+
+    public void AddNewEvent(NewspaperEvent newEvent)
+    {
+        // Dynamically add a single event (reuse logic from `Start` method)
+        GameObject article = Instantiate(_article);
+        GameObject title = Instantiate(_title);
+        GameObject newsOverlay = Instantiate(_newsOverlay);
+        GameObject cover = Instantiate(_cover);
+        GameObject subtitleBackground = Instantiate(_subtitleBackground);
+        GameObject subtitle = Instantiate(_subtitle);
+        GameObject button = Instantiate(_readMore);
+
+        article.transform.SetParent(_content.transform, false);
+        title.transform.SetParent(article.transform, false);
+        newsOverlay.transform.SetParent(article.transform, false);
+        cover.transform.SetParent(newsOverlay.transform, false);
+        subtitleBackground.transform.SetParent(newsOverlay.transform, false);
+        subtitle.transform.SetParent(subtitleBackground.transform, false);
+        button.transform.SetParent(article.transform, false);
+
+        title.GetComponentInChildren<TMP_Text>().text = newEvent._eventName;
+        subtitle.GetComponent<TMP_Text>().text = newEvent._subheading;
+        cover.GetComponent<Image>().sprite = newEvent._coverImage;
+
+        button.GetComponent<Button>().onClick.AddListener(() =>
+            _newspaperController.ShowEventContent(System.Array.IndexOf(_events, newEvent)));
     }
 }

@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System.Collections;
 
 /// <summary>
 /// Controls the behavior of the newspaper UI, managing both the home menu (list of articles) 
@@ -36,8 +38,16 @@ public class NewspaperController : MonoBehaviour
     [Tooltip("Scrollbar component for the body menu content.")]
     [SerializeField] private Scrollbar _bodyScrollBar;
 
+    [Tooltip("The animation image component to display the event's cover image.")]
+    [SerializeField] private Image _animationImage;
+
+    [Tooltip("The animation text component to display the event's title.")]
+    [SerializeField] private TMP_Text _animationTitle;
+
     [Tooltip("The index of the currently selected event in the newspaper.")]
     private int _currentEventIndex = 0;
+
+    [SerializeField] private GameObject _newspaperUpdates = null;
     #endregion Fields
 
     #region Methods
@@ -115,6 +125,71 @@ public class NewspaperController : MonoBehaviour
     public void CloseMenu(GameObject gameObject)
     {
         gameObject.SetActive(false);
+    }
+    public void AddRandomEventWithAnimation()
+    {
+        if (_events.Length == 0) return; // Ensure there are events to add
+
+        // Select a random event from the array
+        NewspaperEvent randomEvent = _events[Random.Range(0, _events.Length)];
+
+        // Trigger newspaper animation
+        StartCoroutine(DisplayNewspaperAnimation(randomEvent));
+    }
+
+    private IEnumerator DisplayNewspaperAnimation(NewspaperEvent newEvent)
+    {
+        // Show the animation (assuming the animation logic is part of the UI)
+        _newspaperPanel.SetActive(true);
+        // Play animation (add your animation trigger logic here)
+    
+        yield return new WaitForSeconds(10); // Wait for the animation duration
+
+        // Add the event to the home menu
+        NewspaperHome.Instance.AddNewEvent(newEvent); // Assuming `NewspaperHome` has a static Instance
+
+        _newspaperPanel.SetActive(false); // Hide the panel after animation
+    }
+
+    /// <summary>
+    /// Updates the animation content with the given newspaper event data.
+    /// </summary>
+    /// <param name="newspaperEvent">The event data to display in the animation.</param>
+    public void UpdateAnimationContent(NewspaperEvent newspaperEvent)
+    {
+        // Update the image and title based on the event data
+        _animationImage.sprite = newspaperEvent._coverImage;
+        _animationTitle.text = newspaperEvent._eventName;
+    }
+
+    /// <summary>
+    /// Adds a new newspaper event to the timeline and triggers the animation.
+    /// </summary>
+    /// <param name="newspaperEvent">The new event to add.</param>
+    public void AddNewspaperEvent(NewspaperEvent newspaperEvent)
+    {
+        // Update animation content with the new event
+        UpdateAnimationContent(newspaperEvent);
+
+        // Trigger the animation (using Animator, Tweening, or Custom Logic)
+        PlayAnimation();
+    }
+
+    /// <summary>
+    /// Plays the newspaper animation.
+    /// </summary>
+    private void PlayAnimation()
+    {
+        Animator animator = _newspaperUpdates.GetComponent<Animator>();
+        if (animator != null)
+        {
+            Debug.Log("Animator found, playing animation.");
+            animator.SetBool("isOpening", true);
+        }
+        else
+        {
+            Debug.LogError("Animator not found on _newspaperUpdates.");
+        }
     }
     #endregion Methods
 }
