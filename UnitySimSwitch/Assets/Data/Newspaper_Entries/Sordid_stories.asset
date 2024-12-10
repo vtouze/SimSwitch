@@ -14,62 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eventName: 'Sordid incidents: A wave of violence disrupts the city''s atmosphere'
   _date: September 23, 2024
-  _subheading: For several weeks now, the metropolis has been rocked by a series
-    of incidents that have plunged the city into a climate of tension and concern.
-    Although these events are not the direct responsibility of the local authorities,
-    their impact on the general atmosphere is undeniable. Residents, often stunned
-    by the succession of tragedies, are beginning to wonder whether their town is
-    still as safe and welcoming as it once was.
+  _subheading: The city has been shaken by recent incidents, creating tension and
+    concern. While local authorities aren't directly responsible, residents are questioning
+    the safety and welcoming nature of their town.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "A succession of worrying incidents: The facts are diverse, but their
-    nature is alarming: violent assaults, armed burglaries, tragic road accidents,
-    and even racist incidents. These events, often reported in local and national
-    media, have given rise to a wave of fear, amplified by the proliferation of social
-    networks. Each new incident seems to fuel a cycle of fear and mistrust, particularly
-    in the affected neighborhoods. The authorities, although they have committed
-    to strengthening public security, point out that these facts are isolated and
-    should not be generalized to the entire city. However, the perception of danger
-    seems to be growing. Many residents, particularly those in the most affected
-    neighborhoods, feel helpless, uncertain of their daily safety. A climate of mistrust
-    is setting in: While most of these incidents are not linked to local management
-    issues, their accumulation nevertheless affects the image of the city as a whole.
-    Residents, even those who were not directly involved, are increasingly worried,
-    and this heavy atmosphere is starting to influence behavior. The streets, which
-    were once lively and vibrant, seem more deserted in the evening, the caf\xE9
-    terraces less crowded, and the community events less participatory. Online conversations,
-    discussions in shops and public places, reveal a latent malaise. The feeling
-    of security, often perceived as an acquired right in a large metropolis, is being
-    called into question. Many citizens are calling for an increased police presence,
-    while others are wondering about the root causes of these waves of aggression,
-    whether social, economic or related to behavioral deviations. The domino effect
-    on social life: The impact of these news items goes beyond the simple question
-    of security. They also affect the social fabric of the city. The conviviality
-    that made the reputation of certain neighborhoods is being shaken. Community
-    ties are weakening, and a climate of suspicion seems to be setting in between
-    different social groups. The successive tragic events are fueling a sense of
-    division, and public debates, which are crucial for urban cohesion, are sometimes
-    taking a more polarized turn. Some residents, worried about the evolution of
-    the situation, are opting for individual solutions: more locks, surveillance
-    cameras, and even neighborhood groups to support each other. The authorities,
-    although aware of the situation, are reminding us that they cannot intervene
-    in all aspects of daily life, emphasizing that crime prevention requires a comprehensive
-    approach involving both the police and social and community initiatives. A crisis
-    that calls for a collective response: Although these news items are, for the
-    most part, tragic and isolated events, their accumulation ends up affecting collective
-    well-being. While these incidents do not fall directly under the responsibility
-    of local authorities in terms of urban management, their impact on the overall
-    atmosphere of the city cannot be ignored. The question that now arises is how
-    the city will be able to overcome this crisis of confidence. To do this, a collective
-    response seems essential: strengthening social ties, improving police presence
-    without stigmatizing certain populations, and above all, restoring a climate
-    of serenity and solidarity between citizens. It is through these actions that
-    the city will be able, little by little, to regain its balance and give its residents
-    the feeling of security and confidence they deserve. In the meantime, we can
-    only hope that this cycle of news items will stop disrupting the spirit of the
-    city and allow residents to return to a more peaceful and united urban life.
-    // Effect: reduced security in the city / on public transport"
+  _description: ' A series of worrying incidents, including assaults, burglaries,
+    and accidents, has fueled fear and mistrust in the city. While authorities stress
+    these are isolated events, residents feel increasingly unsafe. Social life is
+    suffering, with public spaces becoming quieter and community ties weakening.
+    Many call for more police presence, while others point to deeper social causes.
+    The city''s response must strengthen both security and community solidarity to
+    restore confidence and peace, ensuring a safer environment for all.'
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

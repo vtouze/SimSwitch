@@ -14,35 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eventName: 'Fuel price hikes: an unprecedented surge'
   _date: September 26, 2024
-  _subheading: 'French motorists are bitterly reminded of this every time they go
-    to the pump: petrol and diesel prices are reaching unprecedented heights. With
-    an increase of several centimes per liter every week, fuel costs are weighing
-    ever more heavily on household budgets. The surge in oil prices is linked to
-    tensions on the international market, where growing demand and supply disruptions
-    are driving up prices.'
+  _subheading: Fuel prices in France are soaring, with weekly increases hitting household
+    budgets. The surge is driven by rising demand and supply disruptions in the international
+    oil market.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Heavy consequences for households and businesses: The rise in fuel
-    prices has a direct impact on households\u2019 purchasing power, particularly
-    for those living in rural or peri-urban areas, where cars are often essential.
-    \u201CEach tank of fuel now costs me almost 20% more than a year ago, it\u2019s
-    become difficult to make ends meet,\u201D confides a father. Many workers are
-    feeling the same pressure, especially since the increases are also reflected
-    in the cost of consumer goods, via the rise in transport costs. Calls for help
-    from associations and unions: Faced with this situation, several consumer associations
-    and unions are asking the government for measures to reduce the bill for individuals,
-    such as targeted aid or a temporary reduction in fuel taxes. In a context where
-    the ecological transition is pushing people to consider alternative solutions
-    to the thermal car, many are nevertheless calling for increased support for the
-    development of public transport infrastructure and aid for the purchase of electric
-    vehicles. A challenge for the energy transition: This surge in fuel prices is
-    a reminder of the urgent need to diversify energy sources and reduce dependence
-    on fossil fuels. But while waiting for alternative solutions to become accessible
-    to all, consumers are suffering the effects of an increasingly unstable oil market.
-    For many French people, this surge remains a symbol of energy insecurity, leaving
-    them hanging on market fluctuations, in the hope of finding some stability at
-    the pump. //effect: increase in the price of car use"
+  _description: Rising fuel prices are straining households and businesses, particularly
+    in rural areas. Consumer groups urge government action, while calls for better
+    public transport and electric vehicle support grow.
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

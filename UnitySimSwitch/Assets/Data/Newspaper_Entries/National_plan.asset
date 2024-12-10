@@ -14,38 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eventName: The French government's major plan for sustainable and resilient transport
   _date: September 26, 2024
-  _subheading: The French government has announced an ambitious plan to help local
-    authorities modernize their transport systems. The aim? To make public transport
-    greener, more resilient in the face of climate challenges, and more efficient
-    for all users. This program, which will benefit from substantial funding, marks
-    a new stage in the energy transition and sustainable mobility, with targeted
-    investments in urban and rural transport infrastructures.
+  _subheading: The French government has unveiled a plan to modernize local transport,
+    focusing on greener, more resilient, and efficient systems with significant funding
+    for urban and rural infrastructure.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Investments for a greener future: The plan provides financial support
-    to encourage municipalities to develop less polluting transport networks, install
-    charging infrastructure for electric vehicles, and encourage the use of public
-    transport. Cities of all sizes are concerned, from the modernization of urban
-    bus fleets to lighter transport in rural areas. The focus is on the electrification
-    of lines, the development of cycle paths, and the creation of high-level bus
-    networks. More resilient and better adapted transport: This major plan also aims
-    to strengthen the resilience of transport systems in the face of increasingly
-    frequent climatic events. Municipalities will receive funds to improve the safety
-    of infrastructure in the face of storms, floods and heat waves. \u201CIt is not
-    only about making our transport greener, but also safer and more accessible,\u201D
-    explains the Minister of Transport. As part of this project, innovative solutions
-    will be explored to adapt public transport to the challenges of tomorrow. A commitment
-    to efficiency and the well-being of citizens: With this plan, the State reaffirms
-    its commitment to providing citizens with quality public transport, essential
-    to their daily lives. Local elected officials are delighted with this aid, which
-    will relieve often limited municipal budgets. For many citizens, this initiative
-    represents the hope of seeing less polluting, more regular transport that is
-    better adapted to their needs. By making transport more ecological and more efficient,
-    the State hopes that this transformation will encourage more citizens to turn
-    to collective or soft means of transport, for a more sustainable future and a
-    more pleasant daily life. //Effect: increase in the budget for investment in
-    transport"
+  _description: The plan provides financial support to municipalities to develop
+    greener and more resilient transport systems. It focuses on electrifying lines,
+    creating cycle paths, and improving public transport for all areas. The initiative
+    aims to strengthen infrastructure against climate events like storms and floods,
+    ensuring safer, more accessible transport. Local governments welcome this aid,
+    which will relieve budgets, and citizens hope for less polluting, more reliable
+    transport. This transformation encourages more sustainable travel, fostering
+    a greener future and improving daily life.
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

@@ -15,42 +15,19 @@ MonoBehaviour:
   _eventName: 'Movement to defend the car: hard-hitting actions against the reduction
     of dedicated space'
   _date: September 26, 2024
-  _subheading: "Faced with the proliferation of bicycle paths, pedestrian zones and
-    spaces reserved for public transport, some motorists are voicing their discontent.
-    A movement dubbed \u201CD\xE9fense de la voiture\u201D (Defense of the car) has
-    recently been formed, bringing together enthusiasts who feel that their \u201Cliving
-    space\u201D is threatened by policies in favor of soft mobility. Their demand
-    is clear: give cars back the space they once occupied. But these sometimes virulent
-    actions are controversial."
+  _subheading: Some motorists, feeling threatened by soft mobility policies, formed
+    "Defense of the Car," demanding more space for cars. Their controversial actions
+    spark debate.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Targeted actions against soft mobility infrastructure: The movement
-    has already launched several shock operations. Some infrastructure dedicated
-    to bicycles or pedestrians has been vandalized, and charging stations for electric
-    vehicles have been damaged. The protesters believe that these infrastructures
-    encroach on their right to move freely and claim that public space has become
-    \u201Chostile\u201D to cars. These actions, which are intended to be symbolic,
-    are often carried out at night and mainly target large cities where pedestrianization
-    plans are most advanced. A debate between freedom of movement and ecological
-    transition: This increase in tension highlights the debate between two visions
-    of mobility. On the one hand, supporters of the ecological transition advocate
-    for less polluted cities and safer streets, by encouraging soft mobility such
-    as cycling or walking. On the other hand, defenders of the car believe that this
-    transformation is to the detriment of their freedom of movement. \u201CThe car
-    remains an essential tool, especially for those who live on the outskirts. We
-    cannot all switch to cycling or public transport,\u201D underlines a member of
-    the movement. Mixed reactions and calls for dialogue: These actions, although
-    in the minority, are generating mixed reactions in public opinion. Some motorists\u2019
-    associations are calling for more consultation and transition solutions that
-    take everyone\u2019s needs into account, while municipalities are pointing out
-    that reducing the number of cars is a response to the challenges of pollution
-    and urban safety. In response to the deterioration, mayors of large cities are
-    calling for dialogue and pointing out that soft mobility infrastructure is here
-    to stay. In this tense context, the challenge will be to find a balance between
-    the different road users and to make these visions of urban mobility coexist
-    without resorting to radical actions. //Effect: deterioration of active infrastructure
-    & public transport / increase in public transport and active infrastructure insecurity"
+  _description: 'Targeted actions against soft mobility: Protesters have vandalized
+    bike paths, pedestrian areas, and EV stations, claiming hostility toward cars.
+    This highlights tensions between ecological transition and freedom of movement.
+    While supporters seek cleaner, safer cities, car defenders argue for their essential
+    role, especially in suburban areas. Public reactions are mixed, with calls for
+    dialogue and balanced solutions. Mayors insist soft mobility is here to stay,
+    urging cooperation to avoid radical actions.'
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

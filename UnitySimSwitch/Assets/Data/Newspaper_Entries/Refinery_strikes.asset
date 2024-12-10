@@ -14,40 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eventName: 'Refinery strikes: France faces fuel shortages'
   _date: September 21, 2024
-  _subheading: For several days now, a series of strikes has been shaking up French
-    refineries, seriously disrupting fuel production and distribution throughout
-    the country. Initiated by unions to protest against working conditions and wage
-    policies, these industrial actions have already led to shortages at many service
-    stations.
+  _subheading: Strikes in French refineries have disrupted fuel production and distribution,
+    causing shortages at service stations. The unions are protesting working conditions
+    and wage policies, intensifying the crisis.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "A general strike: Refineries, the lifeblood of the country's energy
-    supply, are at the heart of the conflict. Several major industrial sites are
-    currently shut down or operating at reduced capacity, hampering the supply of
-    gasoline and diesel. Many regions, particularly in \xCEle-de-France and the south
-    of France, are facing fuel shortages, with queues outside gas stations that are
-    unable to meet demand. The unions, which are demanding wage increases and better
-    working conditions, are denouncing an increasingly tense situation in a rapidly
-    changing sector, marked by ecological issues and economic uncertainties. \"We
-    have no choice but to act to preserve our rights,\" said a union spokesperson,
-    stressing the need for recognition of the efforts made by workers in the oil
-    sector. Impact on the economy and daily life. The consequences of these strikes
-    are quickly being felt in the daily lives of the French. Motorists are facing
-    shortages at gas stations, with some having to travel long distances to find
-    fuel. Tensions are building in major cities, fueled by fears that the strikes
-    will continue. The government has already called for calm and negotiation, but
-    the situation remains tense. In addition to the immediate impact on fuel consumption,
-    these strikes could have effects on the entire economy. The drop in fuel supplies
-    affects not only individuals, but also public transport, delivery companies,
-    and industry in general. Towards a compromise or an intensification of the conflict?
-    The government, for its part, is closely monitoring the situation. While negotiations
-    have begun between unions and oil companies, no satisfactory outcome has yet
-    been found. The authorities hope for a return to normality in the coming days,
-    but the strikes could worsen if the workers' demands are not met. In an already
-    fragile economic climate, France seems to find itself once again at a crossroads,
-    where social dialogue and workers' demands must be balanced with the imperatives
-    of supply and national stability. //Effect: decline in popularity of the car"
+  _description: ' Strikes at French refineries, driven by demands for better wages
+    and working conditions, are disrupting fuel supplies, causing shortages and long
+    queues. The situation is impacting daily life, transport, and the economy. While
+    negotiations are ongoing, tensions remain high, with potential for further escalation.
+    The government is monitoring the situation, hoping for a return to normal. The
+    strikes could worsen if workers'' demands aren''t met.'
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

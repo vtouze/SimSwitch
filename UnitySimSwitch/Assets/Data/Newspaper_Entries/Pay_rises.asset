@@ -14,61 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eventName: 'Wage increases: A positive sign in an uncertain economic climate'
   _date: September 21, 2024
-  _subheading: 'This year, the labor market is experiencing an unexpected phenomenon:
-    a sharp rise in salaries, which seems to mark a turning point in an otherwise
-    complex economic context. While inflation, rising energy costs and the global
-    challenges of pandemics and geopolitical tensions continue to fuel worries, wage
-    increases offer a glimmer of hope to workers and spark lively debate among economists.'
+  _subheading: ' This year, despite inflation and global challenges, salaries have
+    sharply risen, offering hope to workers and sparking debate among economists
+    about the impact on the complex economic context.'
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: 'A general increase, but disparities depending on the sector: According
-    to the latest data published by INSEE, average salaries have recorded a significant
-    increase this year, with an increase of 3.5% on average in all economic sectors.
-    This trend is confirmed in both large companies and SMEs, although disparities
-    remain significant from one sector to another. The sectors that have benefited
-    the most from this increase are in particular tech, health, and financial services,
-    where increases sometimes exceed 5%. The growing demand for qualified professionals
-    in fields such as IT, health care, and finance largely explains this dynamic.
-    At the same time, more traditional sectors, such as retail and catering, have
-    recorded more moderate increases, but nevertheless remain above the historical
-    average. A turning point for purchasing power? For many employees, this increase
-    in salaries comes as a breath of fresh air. After several years marked by price
-    increases and galloping inflation, particularly in food and energy, this salary
-    increase represents a welcome response to the lack of purchasing power. In some
-    professions, salary adjustments make it possible to offset part of the increase
-    in the cost of living, particularly in large cities where real estate and rent
-    prices continue to rise. However, not all workers benefit equally from this dynamic.
-    While managers and specialized workers are generally the first to benefit from
-    these increases, less qualified employees, particularly in sectors with less
-    pressure, struggle to see their salaries increase at the same rate. This salary
-    inequality could, in the long term, further widen the gaps between the different
-    socio-professional categories. The reasons for such an increase: The increase
-    in salaries this year is the result of a combination of factors. On the one hand,
-    the post-COVID economic recovery has led to a strong demand for skilled labor,
-    forcing companies to increase salaries to attract and retain talent. On the other
-    hand, unions have played a key role this year, obtaining substantial increases
-    during the mandatory annual negotiations (NAO), particularly in the public and
-    parapublic sectors. Companies, although faced with still high inflation and increased
-    production costs, have also understood that higher salaries can have a positive
-    effect on employee motivation and productivity. Talent is becoming more mobile
-    and demands compensation that matches their qualifications and the reality of
-    the labor market. The outlook for the coming year: Economists predict that this
-    trend could continue in the coming months, but the outlook remains mixed. On
-    the one hand, wage growth could slow if inflation were to rise again, or if companies
-    began to tighten their wage policy in the face of uncertain economic forecasts.
-    On the other hand, some companies could maintain wage increases to compensate
-    for the risks of talent drain in a still tight job market. Unions, for their
-    part, continue to advocate for a fairer distribution of this wealth created by
-    wage increases, insisting on the need to guarantee increases that benefit all
-    sectors of the workforce, and not just sectors under pressure. Conclusion: The
-    wage increase observed this year undeniably represents a turning point in the
-    current economic context, and good news for many workers. However, the disparities
-    between sectors and categories of workers, as well as the economic uncertainties
-    in the medium term, remind us that much remains to be done to guarantee real
-    purchasing power for all. It remains to be seen whether this wage dynamic can
-    be maintained in a context of economic fluctuations and global tensions. //effect:
-    increase in household budgets'
+  _description: Salaries have risen by 3.5% on average this year, with tech, health,
+    and finance seeing increases above 5%. While this boosts purchasing power for
+    many, disparities remain between sectors. The rise is due to a combination of
+    post-COVID recovery, labor demand, and union negotiations, though some sectors,
+    like retail, saw more modest increases. Economists predict mixed outcomes for
+    next year, as inflation and economic uncertainties could affect wage growth.
+    Despite this, the trend offers a glimmer of hope for workers, though more action
+    is needed to ensure fair wage distribution.
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

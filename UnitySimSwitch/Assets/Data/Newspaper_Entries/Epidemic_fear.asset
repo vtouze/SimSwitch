@@ -14,38 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eventName: 'Fear of a new epidemic: a new virus in China worries Europe'
   _date: September 26, 2024
-  _subheading: 'While the world is still struggling to overcome the after-effects
-    of the COVID-19 pandemic, worrying rumors are circulating: a new virus has appeared
-    in China, and experts fear it could soon reach Europe. International health authorities
-    are on the alert, and the first preventive measures are being put in place. For
-    European citizens, still marked by the confinements and restrictions associated
-    with COVID, this new announcement raises concerns and questions.'
+  _subheading: A new virus has emerged in China, sparking fears it could spread to
+    Europe. With the pandemic's lingering effects, health authorities are on alert,
+    raising concerns among European citizens.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: 'A circulating virus and limited information: At this stage, little
-    official information has filtered through on the nature and danger of this new
-    virus. The Chinese authorities and the World Health Organization (WHO) are closely
-    monitoring the situation and studying the initial data, but remain cautious.
-    Some experts fear a respiratory virus with symptoms similar to those of COVID-19,
-    which could complicate its diagnosis and management. Research laboratories are
-    stepping up analyses to better understand its mode of transmission and its potential
-    for spread. Return of health vigilance in Europe: In Europe, precautionary protocols
-    are already under discussion. Airports are strengthening controls on flights
-    from China, and some governments are discussing the reintroduction of screening
-    and isolation measures if necessary. Health systems are preparing for a possible
-    influx of patients in the event of a spread of the virus, even if no cases have
-    been detected on the continent so far. A worried but more prepared population:
-    For citizens, the possibility of a new epidemic revives recent and difficult
-    memories. However, mentalities have changed, and Europeans are now more familiar
-    with barrier gestures and health protocols. "We have learned to live with the
-    health threat," confides a Parisian nurse, "but the hope of turning the page
-    is fading with this worrying news." Faced with this situation, caution remains
-    essential. The authorities recommend avoiding unnecessary travel and following
-    the evolution of official information. If the threat of an epidemic remains hypothetical
-    for the moment, Europe, scalded by COVID-19, is ready to react to avoid a new
-    pandemic scenario. //Effect: decrease in the popularity of public transport /
-    decrease in travel'
+  _description: ' A new virus with limited information is under scrutiny by Chinese
+    authorities and WHO. European airports are enhancing controls, and governments
+    are preparing for potential spread. While no cases are confirmed, citizens are
+    worried but more prepared, following past health protocols. Authorities advise
+    caution and avoiding unnecessary travel.'
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

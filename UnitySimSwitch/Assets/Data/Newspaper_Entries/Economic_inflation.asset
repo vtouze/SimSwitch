@@ -14,59 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eventName: 'Inflation: a year of economic pressure'
   _date: September 21, 2024
-  _subheading: The year 2024 is characterized by a particularly tense economic context,
-    marked by high inflation affecting household purchasing power and plunging part
-    of the population into uncertainty. While inflation is often a cyclical phenomenon,
-    this year's upsurge seems to have multiple causes, and its effects are being
-    felt in many areas of daily life.
+  _subheading: High inflation in 2024 is straining household purchasing power, causing
+    uncertainty. Its widespread effects stem from multiple factors beyond typical
+    cyclical patterns.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: 'Inflation hitting all sectors: Inflation, which reached an average
-    rate of 6.2% over the first six months of the year, is hitting consumers and
-    businesses hard. At the top of the most significant increases, food and energy
-    prices continue to rise at a sustained rate. Basic necessities, such as bread,
-    milk, and fruit and vegetables, are seeing their cost rise exponentially, weighing
-    heavily on household budgets. The energy sector is not spared, with a continuous
-    rise in the prices of gas, electricity, and fuel, fueled by persistent geopolitical
-    tensions and a still unstable global energy market. This increase has a direct
-    impact on production costs, which ultimately generates a vicious circle of price
-    increases. Added to this are housing costs, which are also experiencing an upward
-    trend. Rents and real estate prices continue to rise in many major cities, exacerbating
-    the difficulties of accessing decent housing for more and more French people.
-    The consequences on the daily lives of the French: Faced with this inflation,
-    households must adapt to cope with the increase in prices. For some, this translates
-    into a revision of budgetary priorities: leisure and non-essential purchases
-    are often put aside in favor of essential expenses. Low-income families, in particular,
-    are those who suffer the most from this increase in prices, sometimes to the
-    detriment of their quality of life. Economists agree that this inflation, although
-    partly linked to the post-COVID recovery and the war in Ukraine, is also rooted
-    in structural mechanisms. The global production chain remains fragile, transportation
-    costs are high, and disruptions in supply chains have still not been completely
-    resolved. Responses from public authorities: Faced with this situation, the government
-    has implemented several measures to mitigate the impact of inflation on households.
-    Direct aid, such as energy vouchers or the revaluation of social benefits, has
-    been strengthened. In addition, ceilings have been introduced on certain basic
-    necessities to prevent an uncontrollable surge in prices. However, these measures,
-    although beneficial, are not always enough to compensate for the drop in purchasing
-    power for a large part of the population. Trade unions and consumer associations
-    are calling for more ambitious measures, including a general increase in wages
-    to cope with the rise in prices. Short- and medium-term outlook: The biggest
-    challenge for the coming months will be to stabilize the situation without plunging
-    the economy into a recession. Experts expect a slight deceleration in inflation
-    by the end of the year, but pressures remain strong, particularly in the energy
-    and raw materials sectors. The monetary authorities, for their part, are continuing
-    their efforts to control inflation by gradually raising interest rates, a policy
-    that, although effective on paper, also has repercussions on access to credit
-    and can slow down consumption. Conclusion: a situation that is weakening. While
-    inflation is one of the cyclical economic phenomena, the current situation, marked
-    by strong pressure on prices, is weakening many families and fueling a climate
-    of economic uncertainty. While government responses have been put in place, it
-    remains to be seen whether they will be sufficient to stem this inflationary
-    spiral and restore purchasing power to the French. In the meantime, the population
-    continues to navigate in an uncertain economic environment, where daily management
-    is becoming a little more complicated every day. //Effect: increase in operating
-    costs and costs for users'
+  _description: " Inflation, averaging 6.2% in 2024, is impacting consumers and businesses,
+    especially with rising food, energy, and housing costs. Households are adjusting
+    budgets, prioritizing essentials. Low-income families suffer the most. While
+    the government has introduced aid measures, they\u2019re insufficient for many,
+    and trade unions call for wage increases. Experts predict inflation will decelerate
+    slightly, but challenges remain, especially in energy and raw materials. The
+    government's efforts to stabilize the economy may not fully restore purchasing
+    power."
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

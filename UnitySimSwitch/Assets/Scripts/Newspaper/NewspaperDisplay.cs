@@ -50,10 +50,10 @@ public class NewspaperDisplay : MonoBehaviour
     [SerializeField] private RectTransform _parentContainer;
 
     [Tooltip("Base height of the parent container before any dynamic elements.")]
-    [SerializeField] private float _baseHeight = 0;
+    private float _baseHeight = 0;
 
     [Tooltip("Height added for each active item in the event display.")]
-    [SerializeField] private float _heightPerItem = 100f;
+    private float _heightPerItem = 100f;
 
     [Tooltip("Sprite for the happy satisfaction icon.")]
     [SerializeField] private Sprite _happySatisfactionIcon;

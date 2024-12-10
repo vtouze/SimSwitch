@@ -15,52 +15,18 @@ MonoBehaviour:
   _eventName: 'Google invests in mobility: a commitment to the future, but at what
     price?'
   _date: September 24, 2024
-  _subheading: ' For several years now, Google has been positioning itself as a major
-    player in the field of mobility. Indeed, the tech giant recently announced a
-    strategic investment in mobility projects based on new technologies. The aim:
-    to subsidize innovative initiatives capable of transforming the way we get around.
-    But behind this stated desire to improve urban mobility, there''s a nagging question:
-    what''s Google''s real interest in this approach?'
+  _subheading: Google is investing in mobility projects to transform urban transport
+    with new technologies, raising questions about its true motives behind these
+    initiatives.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: 'Ambitious projects to rethink transportation: Google, through its
-    subsidiary Sidewalk Labs and partnerships with specialized companies, seeks to
-    encourage more ecological and intelligent solutions, such as autonomous vehicles,
-    shared mobility and intelligent public transportation systems. As part of this
-    program, the American giant offers subsidies to startups and research projects
-    that push the boundaries of technology to offer sustainable alternatives to the
-    individual car. Google''s stated ambition is to reduce congestion in cities,
-    promote energy efficiency, and enable smoother and less polluting travel. The
-    company sees these mobility technologies as a way to optimize urban infrastructure
-    while contributing to the fight against global warming. An investment tinged
-    with commercial intentions: However, far from being satisfied with a simple philanthropic
-    desire, Google is closely monitoring the development of these projects. While
-    the promise of transforming mobility is appealing, some observers point out that
-    these investments are also a way for Google to strengthen its dominant position
-    in urban data. Collecting information on transport flows, travel habits, and
-    the infrastructure of each city gives Google unprecedented power over citizens''
-    daily habits. The giant could thus enrich its mapping and geolocation services,
-    while consolidating its ecosystem of applications, such as Google Maps or Waze,
-    which would increasingly be at the heart of smart mobility. In addition, through
-    its initiatives, Google is ensuring that it plays a central role in the development
-    of tomorrow''s technological infrastructures, or even to be directly involved
-    in the implementation of these new transport solutions. While the project seems
-    in line with a sustainable vision of the future, it nonetheless perfectly aligns
-    Google''s commercial interests. Towards a future where mobility and technology
-    merge? There is no reason to believe that these investments in mobility will
-    be limited to one-off subsidies. In reality, Google seems well and truly determined
-    to take a leading role in the reconfiguration of urban transport modes. But while
-    we celebrate this evolution towards smarter and more interconnected cities, it
-    is worth asking ourselves to what extent we will be ready to accept such a degree
-    of technological control over our daily lives. While we can welcome the innovation
-    and potential offered by these new technologies, it is important to remain vigilant
-    about possible abuses. Google''s commitment to mobility could well redefine our
-    travels... but also our relationship with data, surveillance, and automation.
-    It remains to be seen whether this investment in mobility, presented as a step
-    towards the future, will primarily serve the public interest, or whether the
-    hidden intention is to make mobility a new source of profits for Google. //Effect:
-    lower cost of "technological" projects'
+  _description: Google, through Sidewalk Labs and partnerships, promotes eco-friendly,
+    intelligent transport solutions like autonomous vehicles and shared mobility.
+    However, some see these investments as a way for Google to expand its data collection
+    and control over urban infrastructure, enhancing services like Google Maps. While
+    aiming for sustainable mobility, Google's involvement also raises concerns about
+    data privacy and its commercial interests in shaping future transport technologies.
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

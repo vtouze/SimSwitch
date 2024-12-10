@@ -12,53 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae0012a5529826aea8ccae980eeebab, type: 3}
   m_Name: Fuel_subsidy
   m_EditorClassIdentifier: 
-  _eventName: 'Coup de pouce essence: The French government helps households with
-    financial aid for fuel purchases'
+  _eventName: 'Coup de pouce essence: The French government offers financial aid
+    to households for fuel purchases.'
   _date: September 21, 2024
-  _subheading: Faced with ever-rising gasoline and diesel prices, the French government
-    has announced a new measure to support French households. From next month, motorists
-    will see their purchasing power boosted thanks to financial aid designed to reduce
-    the cost of filling up with fuel.
+  _subheading: The French government will provide financial aid to support households
+    facing rising gasoline and diesel prices, boosting purchasing power starting
+    next month.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: 'Direct assistance for drivers: The government has confirmed the
-    implementation of a "fuel boost", a one-off aid of several dozen euros that will
-    be paid directly to households with modest or average incomes. This measure,
-    which should benefit millions of households, aims to offset the effects of soaring
-    prices at the pump, exacerbated by geopolitical tensions and fluctuations in
-    global oil markets. This aid, paid in the form of a voucher or direct transfer,
-    will be accessible via a dedicated online platform, where citizens can register
-    according to their income and annual fuel consumption. The precise details of
-    the amount of aid and the eligibility criteria will be specified in the coming
-    days, but the aim is to help those who depend most on their vehicle for their
-    daily journeys. A response to pressure on purchasing power: The decision comes
-    at a time of strong pressure on the purchasing power of the French. Persistent
-    inflation, coupled with rising energy prices, has strained many budgets, particularly
-    those of households located in rural or peri-urban areas, where car use remains
-    essential. "This measure aims to address the concerns of French people who are
-    bearing the brunt of rising fuel prices, while encouraging a transition to more
-    environmentally friendly modes of transport," said the Minister of the Economy,
-    specifying that the State remains determined to support the most vulnerable households
-    in the face of this energy crisis. A gesture that could last? Although the measure
-    is temporary, the government has not ruled out extending it if the fuel price
-    situation does not improve in the coming months. Economists estimate that the
-    surge in prices could persist until the beginning of next year, which suggests
-    prolonged support from the State. Many citizens welcome this initiative, but
-    some believe that it will only partially mitigate the effects of the price increase.
-    "It''s a good start, but it''s still not enough for families who use their cars
-    every day," says Claire, a mother living on the outskirts of Lyon. Others, like
-    Jean, a delivery driver, believe that this aid could provide relief in the short
-    term but call for deeper reforms to fuel taxation. Support among other measures:
-    This financial boost is in addition to a series of measures already put in place
-    by the State to deal with the energy crisis, such as last summer''s fuel discount
-    and exceptional aid for workers in precarious situations. The government continues
-    to explore various solutions to limit the economic impact of rising oil prices
-    and encourage the transition to more sustainable energy sources. While waiting
-    for details on the scheme, the announcement of this fuel boost has, at least
-    for now, brought some comfort to French people worried about the costs of daily
-    living. // Effect: increased popularity of the car & reduced cost of transport
-    for households'
+  _description: ' The government will offer a one-time "fuel boost" to low- and middle-income
+    households to offset rising fuel prices. This aid, accessible via an online platform,
+    aims to support those most reliant on their cars.'
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

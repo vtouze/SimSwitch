@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEditor;
 
 public class HouseholdsManager : MonoBehaviour
 {
@@ -27,16 +28,12 @@ public class HouseholdsManager : MonoBehaviour
     private int _currentIndex = 1;
     private Button _currentlySelectedButton;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(_prevButton);
-        DontDestroyOnLoad(_nextButton);
-    }
     private void Start()
     {
         UpdateCardUI(_currentIndex);
         UpdateNavigationButtons();
     }
+
 
     public void DisplayEntry(HouseholdsEntry entry)
     {
@@ -47,17 +44,26 @@ public class HouseholdsManager : MonoBehaviour
         _distribution.text = entry._distribution;
         _income.text = entry._income.ToString();
 
+        #if UNITY_EDITOR
+        EditorUtility.SetDirty(entry);
+        #endif
+
         Button clickedButton = EventSystem.current.currentSelectedGameObject?.GetComponent<Button>();
         if (clickedButton != null)
         {
-            if (_currentlySelectedButton != null && _currentlySelectedButton != clickedButton)
+            if (_currentlySelectedButton != clickedButton)
             {
-                _currentlySelectedButton.GetComponent<Image>().sprite = _unselectedSprite;
+                if (_currentlySelectedButton != null)
+                {
+                    _currentlySelectedButton.GetComponent<Image>().sprite = _unselectedSprite;
+                }
+
+                clickedButton.GetComponent<Image>().sprite = _selectedSprite;
+                _currentlySelectedButton = clickedButton;
             }
-            clickedButton.GetComponent<Image>().sprite = _selectedSprite;
-            _currentlySelectedButton = clickedButton;
         }
-    }
+    }   
+
 
     public void NavigateForward()
     {

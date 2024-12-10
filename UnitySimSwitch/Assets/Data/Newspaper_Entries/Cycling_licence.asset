@@ -14,39 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eventName: A points-based cycling license to regulate urban cycling
   _date: September 26, 2024
-  _subheading: In response to the increase in the number of cyclists and the number
-    of accidents involving them, the French government has taken the unprecedented
-    step of introducing a points-based cycling license for anyone wishing to cycle
-    on public roads. The aim of this scheme is to make cyclists more aware of their
-    responsibilities, guarantee road safety and provide a better framework for the
-    use of this rapidly expanding mode of transport.
+  _subheading: ' To improve safety, France introduced a points-based cycling license
+    for public road use, aiming to raise cyclist responsibility and better regulate
+    this growing transport mode.'
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: 'Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar '
-  _description: 'A license to supervise the safety of cyclists and pedestrians: This
-    points-based license, which will work in a similar way to that of motorists,
-    will initially assign a capital of points to each cyclist. In the event of infractions
-    such as not respecting red lights, riding on sidewalks, or using a phone while
-    riding, points will be withdrawn, along with possible fines. If the cyclist loses
-    all his points, he will be temporarily prohibited from riding his bike on public
-    roads until his points are recovered after an awareness course. A response to
-    the increase in bicycle accidents: The authorities justify this measure by the
-    increase in the number of accidents involving cyclists, who are increasingly
-    sharing the roads with motorists and pedestrians. By introducing this license,
-    the State hopes to raise awareness among cyclists of traffic rules and reduce
-    risky behavior. "The bicycle is an ecological and accessible means of transport,
-    but it must be used responsibly," explains the Ministry of Transport. Mixed reactions
-    in the cycling community: This new regulation has provoked mixed reactions. While
-    some welcome the desire to introduce better safety, others fear that it will
-    discourage the use of cycling and penalize an already fragile mode of transport.
-    Cyclists'' associations denounce an excessive measure and instead advocate for
-    the improvement of infrastructure, such as the creation of secure cycle paths
-    and reinforced signage, to better protect users. The points-based cycling license
-    will be tested in several large cities before potentially being generalized to
-    the entire territory. In the meantime, this new regulation marks a turning point
-    in the approach to soft mobility in France, with the ambition of making the roads
-    safer for everyone, including cyclists. //Effect: decrease in the popularity
-    of cycling / decrease in cycling accidents'
+  _description: "A safety-focused cycling license: Cyclists start with points deducted
+    for infractions like running red lights or riding on sidewalks, with potential
+    fines. Losing all points results in a temporary ban until completing an awareness
+    course. This measure, addressing rising bike accidents, aims to promote responsible
+    cycling. While some praise improved safety, others fear it discourages cycling.
+    Associations argue for better infrastructure over stricter rules. The license
+    will be tested in major cities before nationwide implementation, marking a shift
+    in France\u2019s soft mobility approach."
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

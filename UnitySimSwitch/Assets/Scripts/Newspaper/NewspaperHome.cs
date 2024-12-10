@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,7 +40,9 @@ public class NewspaperHome : MonoBehaviour
 
     [Tooltip("Prefab for the cover image of an article.")]
     [SerializeField] private GameObject _cover;
+    [SerializeField] private NewspaperEvent _default;
 
+    private List<NewspaperEvent> _addedEvents = new List<NewspaperEvent>();
     public static NewspaperHome Instance;
 
     /// <summary>
@@ -47,7 +50,7 @@ public class NewspaperHome : MonoBehaviour
     /// It links each event's data to the appropriate UI components and sets up the "Read More" button
     /// to navigate to the event's full content when clicked.
     /// </summary>
-    private void Start()
+    /*private void Start()
     {
         // Loop through each event and instantiate the necessary UI components
         for (int i = 0; i < _events.Length; i++)
@@ -80,11 +83,28 @@ public class NewspaperHome : MonoBehaviour
             // Add a listener to the "Read More" button to display the full event content
             button.GetComponent<Button>().onClick.AddListener(() => _newspaperController.ShowEventContent(index));
         }
+    }*/
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogError("More than one instance of NewspaperHome found.");
+        }
     }
+
+    private void Start()
+    {
+        AddNewEvent(_default);
+        AddNewEvent(_events[0]);
+    }
+
 
     public void AddNewEvent(NewspaperEvent newEvent)
     {
-        // Dynamically add a single event (reuse logic from `Start` method)
         GameObject article = Instantiate(_article);
         GameObject title = Instantiate(_title);
         GameObject newsOverlay = Instantiate(_newsOverlay);
@@ -107,5 +127,12 @@ public class NewspaperHome : MonoBehaviour
 
         button.GetComponent<Button>().onClick.AddListener(() =>
             _newspaperController.ShowEventContent(System.Array.IndexOf(_events, newEvent)));
+
+        article.transform.SetSiblingIndex(0);
+    }
+
+    public List<NewspaperEvent> GetAddedEvents()
+    {
+        return _addedEvents;
     }
 }

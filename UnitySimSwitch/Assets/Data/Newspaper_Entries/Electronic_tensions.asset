@@ -14,40 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eventName: 'Tensions over electronic circuits: shortages push up component prices'
   _date: September 26, 2024
-  _subheading: 'The electronics industry is facing an unprecedented crisis: electronic
-    components are in short supply and prices are soaring. Due to exponential demand
-    and limited supply, companies are struggling to procure the chips, semiconductors
-    and other elements essential to the manufacture of products ranging from smartphones
-    to automobiles. This shortage is hitting technology industries hard, leaving
-    them unable to meet market needs.'
+  _subheading: ' The electronics industry faces a crisis with shortages and rising
+    prices of components like chips and semiconductors, leaving tech companies struggling
+    to meet demand for products from smartphones to cars.'
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: "Surging demand and limited production capacity: The crisis is caused
-    by a combination of factors. The COVID-19 pandemic has caused demand for electronic
-    devices to explode, particularly for teleworking and digital entertainment. At
-    the same time, production plants, mainly concentrated in Asia, have been slowed
-    by strict health measures and logistical problems related to travel restrictions.
-    The result: demand that far exceeds global production capacity. Struggling industries:
-    The impact of this shortage is being felt across a range of sectors. Car manufacturers,
-    which rely heavily on electronic components for their vehicles, have had to reduce
-    production, with some even temporarily suspending assembly lines. Manufacturers
-    of telephones, computers and game consoles are also affected, leading to delays
-    in the release of new products and higher prices for existing models. Soaring
-    prices and longer delivery times: Faced with this supply squeeze, component prices
-    have increased significantly, which could be passed on to consumers. Delivery
-    times, once a few weeks, are now stretching to several months for some components.
-    \u201CProduction costs are exploding, and it is becoming difficult to guarantee
-    reasonable deadlines,\u201D explains a manager of a technology company. Towards
-    a rebalancing of the market? Major semiconductor manufacturers have announced
-    massive investments to increase their production capacities, but experts estimate
-    that it will be at least one or two years before seeing a rebalancing of the
-    market. In the meantime, the shortage is forcing companies to review their production
-    and to prioritize components for their most profitable models, hoping that the
-    market will eventually regain stability. In this tense context, consumers risk
-    seeing the prices of electronic products rise, while companies will have to adapt
-    to this new market reality. //Effect: increase in the price of technology projects
-    / car-type vehicles"
+  _description: ' The crisis stems from high demand, especially post-COVID, and limited
+    production capacity due to health measures and logistical issues. This affects
+    industries like automotive and tech, leading to higher prices and delays. Companies
+    are prioritizing profitable models, but experts expect market rebalancing in
+    one to two years. Meanwhile, consumers face rising prices, and companies must
+    adapt.'
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

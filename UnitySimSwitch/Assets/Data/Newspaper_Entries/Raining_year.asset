@@ -14,36 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eventName: 'A rainy year: bad weather in all seasons'
   _date: September 25, 2024
-  _subheading: "For several months now, Europe has been plagued by capricious weather:
-    incessant rain, grey skies and showers have followed one another over the seasons,
-    leaving the inhabitants with little respite. Precipitation records have been
-    broken in several regions, and \u201Cfine weather\u201D seems to have deserted
-    the forecast. This year, bad weather is definitely not taking a vacation, and
-    the consequences are mounting."
+  _subheading: ' Europe has faced months of unpredictable weather with heavy rain,
+    grey skies, and broken precipitation records, leaving residents with little respite
+    and growing consequences from the ongoing bad weather.'
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: 'A climate that disrupts daily life: This year''s persistent rains
-    are impacting many sectors. In agriculture, harvests have suffered from excess
-    water and lack of sunlight. Wheat, fruit, and vegetable crops are showing lower
-    yields, increasing the pressure on farmers already affected by rising costs.
-    On the tourism side, professionals are also seeing a drop in attendance: outdoor
-    destinations have looked gloomy this summer, and many vacationers have preferred
-    to cut short their stays or change their plans in the face of unpromising weather
-    forecasts. A phenomenon that raises questions: simple cycle or disruption? Meteorological
-    experts explain that this phenomenon may be linked to the climatic upheavals
-    that our planet is experiencing. Changes in atmospheric circulation, accentuated
-    by global warming, are causing more frequent extreme weather events, including
-    prolonged rain episodes. However, it is difficult to predict whether this year
-    is the start of a new trend or whether the climate cycle will gradually return
-    to "normal". A daily life to reinvent under the gray sky: The inhabitants, themselves,
-    adapt as they can. Umbrellas have become daily companions, waterproof clothing
-    is essential, and indoor activities have become part of daily life. While some
-    appreciate the charm of rainy days, many dream of finding a lasting ray of sunshine
-    again. Faced with this "year in the rain", everyone is wondering: will the good
-    weather return, or will we have to get used to this humid climate that is changing
-    our habits? // Effect: decline in popularity of active modes / shift to private
-    cars'
+  _description: Persistent rains this year are disrupting daily life, affecting agriculture
+    with lower crop yields and tourism with fewer visitors to outdoor destinations.
+    Experts link the weather to global warming, though it's unclear if this is a
+    long-term trend. People are adapting with umbrellas and waterproofs, but many
+    are left wondering whether the weather will improve or if the humid climate will
+    continue, forcing them to adjust their habits.
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

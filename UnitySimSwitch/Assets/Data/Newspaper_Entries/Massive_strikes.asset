@@ -15,57 +15,17 @@ MonoBehaviour:
   _eventName: 'Massive strikes: the country paralyzed, the population forced to find
     alternatives'
   _date: September 26, 2024
-  _subheading: For several days now, France has been rocked by a strike of historic
-    proportions. Trains, metros, buses and even some flights have ground to a halt,
-    while thousands of workers have taken to the streets to defend their rights in
-    the face of announced reforms. The country, which is literally at a standstill,
-    is plunged into a mobility crisis that is forcing everyone to improvise solutions
-    for getting around in other ways.
+  _subheading: France is facing a historic strike, halting trains, metros, buses,
+    and flights. Thousands are protesting against reforms, causing a mobility crisis
+    and forcing people to find alternative ways to travel.
   _coverImage: {fileID: 21300000, guid: 63e7cdb0f96db1612b9b3ce7e5ed8081, type: 3}
   _captionImage: Aenean malesuada gravida diam, non tempus eros elementum vel. Phasellus
     pulvinar non nisl in sceler.
-  _description: 'A reinvented daily life for workers: With public transport out of
-    service, the French are doubling their ingenuity to get to work. Cities are seeing
-    an explosion in travel by bike, scooter or even carpooling. In large cities,
-    VTC platforms and self-service bikes are full from the early hours of the day.
-    Some companies, anticipating the difficulties of their employees, have made their
-    hours more flexible and implemented teleworking to reduce travel. Traffic jams
-    and forced march in city centers: The roads are saturated, and traffic jams stretch
-    for kilometers on the outskirts of large cities, creating chaotic traffic. In
-    some neighborhoods, residents have no choice but to walk to reach their destination.
-    "I had to walk for an hour to get to my office," says a Parisian employee. Many
-    are organizing themselves into walking groups or taking turns to offer impromptu
-    carpooling, a solidarity that helps to overcome the situation. A major economic
-    and social impact: The strikes are having a severe impact on businesses and professionals,
-    with delivery delays and reduced traffic in commercial areas. Local authorities
-    are increasing their calls for patience and urging people to limit non-essential
-    travel. Meanwhile, discussions between unions and the government are intensifying,
-    but no agreement seems in sight yet. The country remains suspended, hoping for
-    a favorable outcome to end this blockage that weighs on society as a whole. In
-    the meantime, France continues to reinvent itself to the rhythm of demonstrations
-    and traffic jams, determined to face this unprecedented mobility crisis day after
-    day. For several days, an unprecedented wave of strikes has paralyzed France,
-    plunging the country into an unprecedented mobility crisis. Public transport
-    is almost at a standstill: trains, metros, buses, and even some tram lines are
-    no longer running. The unions, which are demanding better wages and improved
-    working conditions, have decided to toughen up the movement, forcing users to
-    look for alternatives. For workers and students, this strike poses daily challenges.
-    Traffic jams have intensified, bicycles and scooters have multiplied on the streets,
-    and carpooling is becoming an increasingly popular option. Some, who have no
-    other choice, are even patient and walk several kilometers to get to their workplace.
-    Companies, for their part, are adapting as best they can: widespread teleworking,
-    staggered hours, videoconference meetings, everything is in place to minimize
-    the impact of this paralysis. The current strikes are raising tensions, and users
-    are expressing a mixture of support and frustration. On the one hand, many understand
-    the demands of the strikers, often from public sectors that have been struggling
-    for a long time. On the other hand, the scale of the daily impact is pushing
-    some to express their exasperation in the face of this situation that has become
-    almost unsustainable. In this context, the authorities are trying to engage in
-    dialogue to avoid a stalemate, but the normal resumption of services still seems
-    far away. In the meantime, the daily lives of the French are adapting, demonstrating
-    once again their resilience, but also the fragility of our society when the wheels
-    of transport come to a standstill. //Effect: drop in popularity of public transport
-    / No public transport available (time over 2 weeks)'
+  _description: With public transport halted by strikes, the French are finding alternative
+    ways to commute, like bikes, scooters, and carpooling. Traffic jams and walking
+    are common. Businesses adapt with flexible hours and telework. Strikes are severely
+    affecting the economy, with delivery delays and reduced business activity. The
+    country remains in crisis, hoping for a resolution.
   _moneyChange: 0
   _satisfactionChange: 0
   _sustainabilityChange: 0

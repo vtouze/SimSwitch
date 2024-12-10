@@ -48,6 +48,7 @@ public class NewspaperController : MonoBehaviour
     private int _currentEventIndex = 0;
 
     [SerializeField] private GameObject _newspaperUpdates = null;
+
     #endregion Fields
 
     #region Methods
@@ -127,29 +128,65 @@ public class NewspaperController : MonoBehaviour
         gameObject.SetActive(false);
     }
     public void AddRandomEventWithAnimation()
-    {
-        if (_events.Length == 0) return; // Ensure there are events to add
+    {      
+        if (_events.Length == 0) return;
 
-        // Select a random event from the array
+        // Select a random event
         NewspaperEvent randomEvent = _events[Random.Range(0, _events.Length)];
 
-        // Trigger newspaper animation
+        // Check if the event has already been added
+        if (IsEventDuplicate(randomEvent))
+        {
+            Debug.Log("Event is a duplicate. Skipping.");
+            return; // Exit if the event is already added
+        }
+
+        // Trigger the newspaper animation
         StartCoroutine(DisplayNewspaperAnimation(randomEvent));
+
+        // Add the new event to the list of added events
+        NewspaperHome.Instance.AddNewEvent(randomEvent);
     }
 
     private IEnumerator DisplayNewspaperAnimation(NewspaperEvent newEvent)
     {
-        // Show the animation (assuming the animation logic is part of the UI)
+        if (_newspaperPanel == null)
+        {
+            Debug.LogError("_newspaperPanel is not assigned.");
+            yield break;
+        }
+
+        if (_newspaperUpdates == null)
+        {
+            Debug.LogError("_newspaperUpdates is not assigned.");
+            yield break;
+        }
+
         _newspaperPanel.SetActive(true);
-        // Play animation (add your animation trigger logic here)
-    
-        yield return new WaitForSeconds(10); // Wait for the animation duration
 
-        // Add the event to the home menu
-        NewspaperHome.Instance.AddNewEvent(newEvent); // Assuming `NewspaperHome` has a static Instance
+        UpdateAnimationContent(newEvent);  // Set the content for the animation
 
-        _newspaperPanel.SetActive(false); // Hide the panel after animation
-    }
+        // Trigger the animation without adding the event again
+        PlayAnimation();
+
+        yield return new WaitForSeconds(10);
+
+        Animator animator = _newspaperUpdates.GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.SetBool("isOpening", false);
+        }
+        else
+        {
+            Debug.LogError("Animator component not found on _newspaperUpdates.");
+        }
+
+        if (NewspaperHome.Instance == null)
+        {
+            Debug.LogError("NewspaperHome instance is null.");
+            yield break; // Exit coroutine to prevent further issues
+        }
+    }   
 
     /// <summary>
     /// Updates the animation content with the given newspaper event data.
@@ -184,12 +221,32 @@ public class NewspaperController : MonoBehaviour
         if (animator != null)
         {
             Debug.Log("Animator found, playing animation.");
-            animator.SetBool("isOpening", true);
+            animator.SetBool("isOpening", true); // Ensure this triggers the correct animation
         }
         else
         {
             Debug.LogError("Animator not found on _newspaperUpdates.");
         }
+    }
+
+    /// <summary>
+    /// Checks if the event has already been added to the newspaper timeline.
+    /// </summary>
+    /// <param name="newspaperEvent">The event to check for duplication.</param>
+    /// <returns>True if the event already exists; otherwise, false.</returns>
+    private bool IsEventDuplicate(NewspaperEvent newspaperEvent)
+    {
+        var addedEvents = NewspaperHome.Instance.GetAddedEvents();  // Get the list of added events
+
+        foreach (var eventItem in addedEvents)
+        {
+            if (eventItem._eventName == newspaperEvent._eventName)
+            {
+                return true; // Event already exists, so it's a duplicate
+            }
+        }
+
+        return false; // Event is unique
     }
     #endregion Methods
 }

@@ -16,43 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 3c6254dbfe5f4c375bdbef2edc85b0f0
-  m_SerializeEntries:
-  - m_GUID: 7831e6e630c2fd1468e621000ca63feb
-    m_Address: Couple-51+-NoChild
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fr
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 651f4721871e0374495d970b765fa9d6
-    m_Address: Couple-3150-Child
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fr
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ac74853a55a166645a1b251b7b6e221a
-    m_Address: Couple-3150-NoChild
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fr
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f526acdd300888949b2cd8441cc69c59
-    m_Address: Single-51+-NoChild
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fr
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 95efd871a90e9f548a444416a81919c4
-    m_Address: Single-51+-Child
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fr
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b0a1127b8128cc44886ea82807139b16
-    m_Address: Single-3150-NoChild
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fr
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 2502e5a585271f3a0a1dc2b7072843af, type: 2}
   m_SchemaSet:
