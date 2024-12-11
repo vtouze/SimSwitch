@@ -7239,19 +7239,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 161993557}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 39e30459046ef264b8e6dbb2e2b08a0e, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &163649829
 GameObject:
   m_ObjectHideFlags: 0
@@ -10394,6 +10382,153 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234581449}
+  m_CullTransparentMesh: 1
+--- !u!1 &234960395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 234960396}
+  - component: {fileID: 234960400}
+  - component: {fileID: 234960399}
+  - component: {fileID: 234960398}
+  - component: {fileID: 234960397}
+  m_Layer: 5
+  m_Name: Arrow_Forward
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &234960396
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234960395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1495587902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 121.25, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &234960397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234960395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424adfae285b2cc67a1a828ae1478eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sizeUp: {x: 1.2, y: 1.2, z: 1}
+  animationDuration: 0.1
+--- !u!114 &234960398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234960395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 234960399}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1069813200}
+        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
+        m_MethodName: NavigateForward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &234960399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234960395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: afb19a8330b0eb0fe9eb9043f371b861, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &234960400
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234960395}
   m_CullTransparentMesh: 1
 --- !u!1 &240710832
 GameObject:
@@ -16129,19 +16264,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 401774911}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 33dc6f00d99f0eb4d840b466329670c4, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &405659643
 GameObject:
   m_ObjectHideFlags: 0
@@ -16670,7 +16793,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423216763}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -23315,153 +23438,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576719859}
   m_CullTransparentMesh: 1
---- !u!1 &577223105
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 577223106}
-  - component: {fileID: 577223108}
-  - component: {fileID: 577223107}
-  - component: {fileID: 577223110}
-  - component: {fileID: 577223111}
-  m_Layer: 5
-  m_Name: Arrow_Forward
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &577223106
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577223105}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1495587902}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 803.75, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &577223107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577223105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a513e089ff894748ab9f44e7fb0a0b6, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &577223108
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577223105}
-  m_CullTransparentMesh: 1
---- !u!114 &577223110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577223105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 577223107}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: NavigateForward
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &577223111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 577223105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424adfae285b2cc67a1a828ae1478eea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sizeUp: {x: 1.2, y: 1.2, z: 1}
-  animationDuration: 0.1
 --- !u!1 &578290365
 GameObject:
   m_ObjectHideFlags: 0
@@ -25257,19 +25233,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 616269619}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 9472f4b369569e04eac6a73e62b4754f, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &617059216
 GameObject:
   m_ObjectHideFlags: 0
@@ -25707,7 +25671,6 @@ GameObject:
   - component: {fileID: 622924985}
   - component: {fileID: 622924984}
   - component: {fileID: 622924983}
-  - component: {fileID: 622924987}
   m_Layer: 5
   m_Name: Graph_Tab
   m_TagString: Untagged
@@ -25792,7 +25755,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 622924985}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1069813200}
+        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
+        m_MethodName: OpenTab
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &622924985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25831,77 +25806,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622924981}
   m_CullTransparentMesh: 1
---- !u!114 &622924987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622924981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjects:
-  - rid: 4360484543144132619
-  references:
-    version: 2
-    RefIds:
-    - rid: 4360484543144132619
-      type: {class: TrackedRectTransform, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
-      data:
-        m_Target: {fileID: 622924982}
-        m_TrackedProperties:
-          items:
-          - rid: 4360484543144132620
-          - rid: 4360484543144132621
-          - rid: 4360484543144132622
-          - rid: 4360484543144132623
-    - rid: 4360484543144132620
-      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_AnchorMin.y
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: 1
-        - localeIdentifier:
-            m_Code: fr
-          value: 0
-    - rid: 4360484543144132621
-      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_AnchorMax.y
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: 1
-        - localeIdentifier:
-            m_Code: fr
-          value: 0
-    - rid: 4360484543144132622
-      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_AnchoredPosition.x
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: 200
-        - localeIdentifier:
-            m_Code: fr
-          value: 0
-    - rid: 4360484543144132623
-      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_AnchoredPosition.y
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: -50
-        - localeIdentifier:
-            m_Code: fr
-          value: 0
 --- !u!1 &626102666
 GameObject:
   m_ObjectHideFlags: 0
@@ -26037,19 +25941,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 626102668}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: b6da1308daa42ae48a7f2d53294cdb72, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &626702081
 GameObject:
   m_ObjectHideFlags: 0
@@ -27514,19 +27406,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 652823106}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 0856b30337b7653479738209db689f5d, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &653049449
 GameObject:
   m_ObjectHideFlags: 0
@@ -32263,7 +32143,8 @@ RectTransform:
   - {fileID: 1495587902}
   - {fileID: 859364703}
   - {fileID: 423216764}
-  - {fileID: 1999501273}
+  - {fileID: 1280717391}
+  - {fileID: 834831322}
   m_Father: {fileID: 1236452851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -35613,6 +35494,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834263221}
   m_CullTransparentMesh: 1
+--- !u!1 &834831321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 834831322}
+  m_Layer: 5
+  m_Name: Graph_Card
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &834831322
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834831321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 738408555}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &835860217
 GameObject:
   m_ObjectHideFlags: 0
@@ -36861,7 +36777,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859364702}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41473,19 +41389,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 990377218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 0856b30337b7653479738209db689f5d, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &991919945
 GameObject:
   m_ObjectHideFlags: 0
@@ -44023,7 +43927,7 @@ MonoBehaviour:
   _distribution: {fileID: 701765279}
   _income: {fileID: 1309698772}
   _prevButton: {fileID: 1102012652}
-  _nextButton: {fileID: 577223110}
+  _nextButton: {fileID: 234960398}
   _entries:
   - {fileID: 11400000, guid: 33dc6f00d99f0eb4d840b466329670c4, type: 2}
   - {fileID: 11400000, guid: 5a8697077fb5ef04cb28a182ba7f0e48, type: 2}
@@ -44039,6 +43943,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 39e30459046ef264b8e6dbb2e2b08a0e, type: 2}
   _selectedSprite: {fileID: 21300000, guid: 3916f02fe262f224691a59bc0ed015b2, type: 3}
   _unselectedSprite: {fileID: 21300000, guid: 63201df56d28691438d527cd025490ba, type: 3}
+  _selectedTab: {fileID: 21300000, guid: d469c059b891c3841b062fc0ae753833, type: 3}
+  _unselectedTab: {fileID: 21300000, guid: 87939a3baca509541903d1b2d0d7c1f3, type: 3}
+  _selectionButtons:
+  - {fileID: 401774914}
+  - {fileID: 1094679605}
+  - {fileID: 2010591412}
+  - {fileID: 990377221}
+  - {fileID: 1513103529}
+  - {fileID: 652823109}
+  - {fileID: 616269622}
+  - {fileID: 626102671}
+  - {fileID: 1893368828}
+  - {fileID: 1860279437}
+  - {fileID: 1130927556}
+  - {fileID: 161993560}
+  _tabButtons:
+  - {fileID: 1689894342}
+  - {fileID: 622924984}
+  _tabPanels:
+  - {fileID: 1280717390}
+  - {fileID: 834831321}
 --- !u!1 &1070117081
 GameObject:
   m_ObjectHideFlags: 0
@@ -45017,9 +44942,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 419304878}
+  - {fileID: 1897267867}
   - {fileID: 1626426686}
   - {fileID: 414444449}
-  - {fileID: 1897267867}
   m_Father: {fileID: 500390835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -45241,19 +45166,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1094679602}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 5a8697077fb5ef04cb28a182ba7f0e48, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1095628021
 GameObject:
   m_ObjectHideFlags: 0
@@ -47111,19 +47024,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1130927553}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: b6da1308daa42ae48a7f2d53294cdb72, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1131186923
 GameObject:
   m_ObjectHideFlags: 0
@@ -47793,13 +47694,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1978310430}
-        m_TargetAssemblyTypeName: HUDController, Assembly-CSharp
-        m_MethodName: CloseMenuListener
-        m_Mode: 2
+      - m_Target: {fileID: 1114352103}
+        m_TargetAssemblyTypeName: NewspaperController, Assembly-CSharp
+        m_MethodName: ExitButton
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8912436121970620234}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -51061,7 +50962,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 150}
+  m_SizeDelta: {x: 200, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258989838
 MonoBehaviour:
@@ -51893,6 +51794,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277814460}
   m_CullTransparentMesh: 1
+--- !u!1 &1280717390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1280717391}
+  m_Layer: 5
+  m_Name: ID_Card
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1280717391
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280717390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1999501273}
+  m_Father: {fileID: 738408555}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1283049803
 GameObject:
   m_ObjectHideFlags: 0
@@ -59468,9 +59405,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1940687402}
+  - {fileID: 244520401}
   - {fileID: 549535100}
   - {fileID: 1120975556}
-  - {fileID: 244520401}
   m_Father: {fileID: 500390835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -60298,7 +60235,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1102012648}
-  - {fileID: 577223106}
+  - {fileID: 234960396}
   m_Father: {fileID: 738408555}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -60917,19 +60854,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1513103526}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 0856b30337b7653479738209db689f5d, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1513629614
 GameObject:
   m_ObjectHideFlags: 0
@@ -66758,7 +66683,6 @@ GameObject:
   - component: {fileID: 1689894343}
   - component: {fileID: 1689894342}
   - component: {fileID: 1689894341}
-  - component: {fileID: 1689894345}
   m_Layer: 5
   m_Name: IDCard_Tab
   m_TagString: Untagged
@@ -66843,7 +66767,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1689894343}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1069813200}
+        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
+        m_MethodName: OpenTab
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1689894343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66882,77 +66818,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689894339}
   m_CullTransparentMesh: 1
---- !u!114 &1689894345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689894339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjects:
-  - rid: 4360484543144132614
-  references:
-    version: 2
-    RefIds:
-    - rid: 4360484543144132614
-      type: {class: TrackedRectTransform, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
-      data:
-        m_Target: {fileID: 1689894340}
-        m_TrackedProperties:
-          items:
-          - rid: 4360484543144132615
-          - rid: 4360484543144132616
-          - rid: 4360484543144132617
-          - rid: 4360484543144132618
-    - rid: 4360484543144132615
-      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_AnchorMin.y
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: 1
-        - localeIdentifier:
-            m_Code: fr
-          value: 0
-    - rid: 4360484543144132616
-      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_AnchorMax.y
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: 1
-        - localeIdentifier:
-            m_Code: fr
-          value: 0
-    - rid: 4360484543144132617
-      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_AnchoredPosition.x
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: 80
-        - localeIdentifier:
-            m_Code: fr
-          value: 0
-    - rid: 4360484543144132618
-      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_AnchoredPosition.y
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: -50
-        - localeIdentifier:
-            m_Code: fr
-          value: 0
 --- !u!1 &1692571758
 GameObject:
   m_ObjectHideFlags: 0
@@ -73124,19 +72989,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1860279434}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: b6da1308daa42ae48a7f2d53294cdb72, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1860319882
 GameObject:
   m_ObjectHideFlags: 0
@@ -74677,19 +74530,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1893368825}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: b6da1308daa42ae48a7f2d53294cdb72, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1894378385
 GameObject:
   m_ObjectHideFlags: 0
@@ -75579,6 +75420,10 @@ PrefabInstance:
     - target: {fileID: 5442344370695116120, guid: c1420ec0fc06d5546b869eae5337aaaa, type: 3}
       propertyPath: m_Name
       value: LineGraph
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442344370695116120, guid: c1420ec0fc06d5546b869eae5337aaaa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5964843371585984231, guid: c1420ec0fc06d5546b869eae5337aaaa, type: 3}
       propertyPath: m_Pivot.x
@@ -79755,7 +79600,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999501272}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -79765,7 +79610,7 @@ RectTransform:
   - {fileID: 1220031423}
   - {fileID: 1073483356}
   - {fileID: 463410845}
-  m_Father: {fileID: 738408555}
+  m_Father: {fileID: 1280717391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -80307,19 +80152,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2010591409}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1069813200}
-        m_TargetAssemblyTypeName: HouseholdsManager, Assembly-CSharp
-        m_MethodName: DisplayEntry
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 5a8697077fb5ef04cb28a182ba7f0e48, type: 2}
-          m_ObjectArgumentAssemblyTypeName: HouseholdsEntry, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2012201476
 GameObject:
   m_ObjectHideFlags: 0
@@ -83162,9 +82995,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 376434037}
+  - {fileID: 1383975054}
   - {fileID: 930632209}
   - {fileID: 1139455207}
-  - {fileID: 1383975054}
   m_Father: {fileID: 500390835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

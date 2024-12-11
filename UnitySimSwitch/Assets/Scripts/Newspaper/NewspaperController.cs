@@ -150,18 +150,6 @@ public class NewspaperController : MonoBehaviour
 
     private IEnumerator DisplayNewspaperAnimation(NewspaperEvent newEvent)
     {
-        if (_newspaperPanel == null)
-        {
-            Debug.LogError("_newspaperPanel is not assigned.");
-            yield break;
-        }
-
-        if (_newspaperUpdates == null)
-        {
-            Debug.LogError("_newspaperUpdates is not assigned.");
-            yield break;
-        }
-
         _newspaperPanel.SetActive(true);
 
         UpdateAnimationContent(newEvent);  // Set the content for the animation
@@ -171,20 +159,20 @@ public class NewspaperController : MonoBehaviour
 
         yield return new WaitForSeconds(10);
 
+        ReverseUpdatesAnimation();
+    }
+
+    public void ExitButton()
+    {
+        ReverseUpdatesAnimation();
+    }
+
+    private void ReverseUpdatesAnimation()
+    {
         Animator animator = _newspaperUpdates.GetComponent<Animator>();
-        if (animator != null)
+        if(animator != null)
         {
             animator.SetBool("isOpening", false);
-        }
-        else
-        {
-            Debug.LogError("Animator component not found on _newspaperUpdates.");
-        }
-
-        if (NewspaperHome.Instance == null)
-        {
-            Debug.LogError("NewspaperHome instance is null.");
-            yield break; // Exit coroutine to prevent further issues
         }
     }   
 
@@ -222,10 +210,6 @@ public class NewspaperController : MonoBehaviour
         {
             Debug.Log("Animator found, playing animation.");
             animator.SetBool("isOpening", true); // Ensure this triggers the correct animation
-        }
-        else
-        {
-            Debug.LogError("Animator not found on _newspaperUpdates.");
         }
     }
 

@@ -21,6 +21,7 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private Sprite defaultRoadSprite;
     [SerializeField] private GameObject constructionOverlay;
     [SerializeField] private TMP_Text constructionText;
+    private Image _lineSprite = null;
     private Image _lineRoad = null;
     private Image progressBar;
     private GameObject transportGameObject;
@@ -46,6 +47,9 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private PublicWorksType? selectedType, currentTransportType;
     private ParticleSystem confettiParticles;
     private Image _transportsIcon;
+    private Sprite defaultLineSprite;
+    private Color defaultLineColor;
+    private float defaultPixelsPerUnitMultiplier;
 
     [Header("Colors")]
     private static readonly Color GreenColor = ParseHexColor("#01A800");
@@ -67,11 +71,18 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         roadImage = GetComponent<Image>();
         originalColor = roadImage.color;
         roadOutline = GetComponent<Outline>();
-        confettiParticles = transform.GetChild(2).GetComponent<ParticleSystem>();
+        confettiParticles = transform.GetChild(3).GetComponent<ParticleSystem>();
         _lineRoad = transform.GetChild(0).GetComponent<Image>();
-        _transportsIcon = transform.GetChild(3).GetComponent<Image>();
+        _transportsIcon = transform.GetChild(1).GetComponent<Image>();
 
-        Transform constructionBar = transform.GetChild(1);
+        if (_lineRoad != null)
+        {
+            defaultLineSprite = _lineRoad.sprite;
+            defaultLineColor = _lineRoad.color;
+            defaultPixelsPerUnitMultiplier = _lineRoad.pixelsPerUnitMultiplier;
+        }
+
+        Transform constructionBar = transform.GetChild(2);
         if (constructionBar != null)
         {
             progressBarParent = constructionBar.gameObject;
@@ -203,6 +214,14 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         roadOutline.enabled = false;
         constructionTime = GetConstructionTimeForType(selectedType.Value);
         TriggerIdleAnimation(true);
+
+        if (_lineRoad != null)
+        {
+            _lineRoad.sprite = defaultLineSprite;
+            _lineRoad.color = defaultLineColor;
+            _lineRoad.pixelsPerUnitMultiplier = defaultPixelsPerUnitMultiplier;
+        }
+
         StartCoroutine(ConstructionTimer());
     }
 

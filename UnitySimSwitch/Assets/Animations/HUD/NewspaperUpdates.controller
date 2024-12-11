@@ -85,7 +85,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NewsUpdates
+  m_Name: OpenNewsUpdates
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -112,8 +112,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Normal
-  m_Speed: 1
+  m_Name: CloseNewsUpdates
+  m_Speed: -1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 9038409195924680070}
@@ -126,7 +126,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 2b1155c4e861f3f42a8ee2bfd8348bab, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

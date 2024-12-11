@@ -33,7 +33,7 @@ public class EventManager : MonoBehaviour
     // Coroutine to trigger AddRandomEventWithAnimation at random intervals
     private IEnumerator RandomEventTimerCoroutine()
     {
-        while (true) // Run indefinitely (you can add a condition if needed)
+        while (true) // Run indefinitely
         {
             float randomInterval = Random.Range(minEventInterval, maxEventInterval); // Randomize the interval
             yield return new WaitForSeconds(randomInterval); // Wait for the random interval
