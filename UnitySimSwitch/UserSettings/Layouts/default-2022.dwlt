@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 719
     height: 342
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 18}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 52
+  controlID: 42
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -122,8 +122,8 @@ MonoBehaviour:
     y: 0
     width: 462
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -149,8 +149,8 @@ MonoBehaviour:
     y: 0
     width: 367
     height: 605
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 53
+  controlID: 43
   draggingID: 0
 --- !u!114 &12
 MonoBehaviour:
@@ -1337,7 +1337,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Laws
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1345,16 +1345,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 92
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/Laws
   m_LastFoldersGridSize: 92
   m_LastProjectPath: D:\GitHub\SimSwitch\UnitySimSwitch
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 143}
-    m_SelectedIDs: 58840000
-    m_LastClickedID: 33880
-    m_ExpandedIDs: 00000000588400007084000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 227}
+    m_SelectedIDs: a2840000
+    m_LastClickedID: 33954
+    m_ExpandedIDs: 000000005e840000608400008084000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1382,7 +1382,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000058840000
+    m_ExpandedIDs: 000000005e84000060840000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1522,7 +1522,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7c840000
+      m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 2efbffff
       m_RenameOverlay:

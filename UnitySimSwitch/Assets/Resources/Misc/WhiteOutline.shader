@@ -11,7 +11,7 @@ Shader "Unlit/WhiteOutline"
             Blend SrcAlpha OneMinusSrcAlpha
 
             Offset 10, 10
-            Color (1,1,1,1) // White outline color, modify this as needed
+            Color (1,1,1,1)
         }
     }
 }
