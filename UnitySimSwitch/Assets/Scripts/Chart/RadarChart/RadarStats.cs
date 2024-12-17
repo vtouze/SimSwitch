@@ -1,44 +1,61 @@
 using System;
 using UnityEngine;
 
-[System.Serializable]
-public class RadarStat {
-    public string Name;
-    public int Value;
+/// <summary>
+/// Represents a single stat for a radar chart.
+/// </summary>
+[Serializable]
+public class RadarStat
+{
+    public string Name; // Stat name.
+    public int Value;   // Stat value.
 }
 
-public class RadarStats : MonoBehaviour {
-
+/// <summary>
+/// Holds and manages radar chart statistics.
+/// </summary>
+public class RadarStats : MonoBehaviour
+{
     public RadarStat[] radarStats;
 
+    /// <summary>
+    /// Event triggered when radar stats change.
+    /// </summary>
     public event EventHandler OnStatsChanged;
 
-    private void Awake() {
-        // Initialize or handle any setup if necessary
-    }
-
-    public int GetEdgesCount() {
+    /// <summary>
+    /// Returns the number of stats (edges).
+    /// </summary>
+    public int GetEdgesCount()
+    {
         return radarStats.Length;
     }
 
-    public void SetStatAmount(int index, int statAmount) {
-        if (index >= 0 && index < radarStats.Length) {
+    /// <summary>
+    /// Sets the stat amount at a specific index.
+    /// </summary>
+    public void SetStatAmount(int index, int statAmount)
+    {
+        if (index >= 0 && index < radarStats.Length)
+        {
             radarStats[index].Value = Mathf.Clamp(statAmount, 0, 20);
             OnStatsChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 
-    public int GetStatAmount(int index) {
-        if (index >= 0 && index < radarStats.Length) {
-            return radarStats[index].Value;
-        }
-        return 0;
+    /// <summary>
+    /// Retrieves the stat amount for a specific index.
+    /// </summary>
+    public int GetStatAmount(int index)
+    {
+        return index >= 0 && index < radarStats.Length ? radarStats[index].Value : 0;
     }
 
-    public float GetStatAmountNormalized(int index) {
-        if (index >= 0 && index < radarStats.Length) {
-            return (float)radarStats[index].Value / 20; // Assuming 20 is the max value
-        }
-        return 0f;
+    /// <summary>
+    /// Retrieves the normalized stat amount for a specific index.
+    /// </summary>
+    public float GetStatAmountNormalized(int index)
+    {
+        return index >= 0 && index < radarStats.Length ? (float)radarStats[index].Value / 20 : 0f;
     }
 }

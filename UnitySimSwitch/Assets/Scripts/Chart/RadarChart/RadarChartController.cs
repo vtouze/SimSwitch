@@ -1,22 +1,25 @@
 using UnityEngine;
 
+/// <summary>
+/// Controls the initialization and setup of radar charts.
+/// </summary>
 public class RadarChartController : MonoBehaviour
 {
-    [SerializeField] private UIRadarChart[] uiRadarCharts; // Array to store multiple UIRadarCharts
+    [Tooltip("Array of radar charts to initialize and control.")]
+    [SerializeField] private UIRadarChart[] uiRadarCharts;
 
     private void Start()
     {
+        // Initialize radar charts with corresponding stats.
         foreach (UIRadarChart uiRadarChart in uiRadarCharts)
         {
-            int numberOfEdges = (int)GetNumberOfEdgesForRadarChart(uiRadarChart); // Explicit cast from enum to int
+            int numberOfEdges = (int)GetNumberOfEdgesForRadarChart(uiRadarChart);
 
-            // Create and initialize RadarStats
-            RadarStats stats = gameObject.AddComponent<RadarStats>(); // Dynamically adding RadarStats component
-
-            // Initialize the radarStats array with the correct number of edges
+            // Dynamically create and attach RadarStats component.
+            RadarStats stats = gameObject.AddComponent<RadarStats>();
             stats.radarStats = new RadarStat[numberOfEdges];
 
-            // Assign values according to the selected enum
+            // Initialize stats based on number of edges.
             switch (numberOfEdges)
             {
                 case 3:
@@ -33,18 +36,22 @@ public class RadarChartController : MonoBehaviour
                     break;
             }
 
-            // Set the stats to the UIRadarChart
+            // Assign stats to radar chart.
             uiRadarChart.SetStats(stats);
         }
     }
 
-    // Example function to determine the number of edges for each radar chart (customize as needed)
+    /// <summary>
+    /// Determines the number of edges for a radar chart.
+    /// </summary>
     private ERadarChart.NumberOfEdges GetNumberOfEdgesForRadarChart(UIRadarChart radarChart)
     {
-        return radarChart.numberOfEdges; // Assuming `UIRadarChart` has a numberOfEdges field of type `NumberOfEdges`
+        return radarChart.numberOfEdges;
     }
 
-    // Function to initialize stats with values from an enum
+    /// <summary>
+    /// Initializes radar stats based on the provided enum type.
+    /// </summary>
     private void InitializeStatsWithEnum(RadarStats stats, System.Type enumType)
     {
         int index = 0;
@@ -53,7 +60,7 @@ public class RadarChartController : MonoBehaviour
             stats.radarStats[index] = new RadarStat
             {
                 Name = enumValue.ToString(),
-                Value = (int)enumValue // Assigning the value from the enum
+                Value = (int)enumValue
             };
             index++;
         }
