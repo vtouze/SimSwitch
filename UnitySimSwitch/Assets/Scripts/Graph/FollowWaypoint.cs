@@ -53,7 +53,6 @@ public class FollowWaypoint : MonoBehaviour
     [SerializeField, Tooltip("Satisfaction bar controller to update user satisfaction.")]
     private SatisfactionBarController satisfactionUI;
 
-    private int _speedChangeCount = 0;
     private const int MaxSpeedChangeCount = 5;
 
     #endregion Fields
@@ -257,7 +256,6 @@ public class FollowWaypoint : MonoBehaviour
         if (closestVehicle != null)
         {
             Speed = closestVehicle.Speed;
-            _speedChangeCount = 0;
         }
         else
         {

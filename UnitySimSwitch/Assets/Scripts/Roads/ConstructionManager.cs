@@ -89,14 +89,14 @@ public class ConstructionManager : MonoBehaviour
     /// </summary>
     /// <param name="transportEntries">Dictionary containing cost and duration data for each public works type.</param>
     /// <returns>A tuple containing the total cost and duration.</returns>
-    public (float totalCost, float totalDuration) GetTotalCostAndDuration(Dictionary<PublicWorksType, RoadsEntries> transportEntries)
+    public (float totalCost, float totalDuration) GetTotalCostAndDuration(Dictionary<PublicWorksType, RoadsEntry> transportEntries)
     {
         float totalCost = 0f, totalDuration = 0f;
 
         // Iterate through all mapped types and sum up costs and durations.
         foreach (var type in roadTransportMapping.Values)
         {
-            if (transportEntries.TryGetValue(type, out RoadsEntries entry))
+            if (transportEntries.TryGetValue(type, out RoadsEntry entry))
             {
                 totalCost += entry._cost; // Accumulate cost for the type.
                 totalDuration += entry._duration; // Accumulate duration for the type.

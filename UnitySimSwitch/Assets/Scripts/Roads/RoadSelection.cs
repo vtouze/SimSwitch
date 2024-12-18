@@ -10,7 +10,6 @@ using System.Linq;
 public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     #region Fields
-
     private Image roadImage;
     private bool isSelected;
     [HideInInspector] public bool isUnderConstruction, hasBeenUnderConstruction;
@@ -36,9 +35,9 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private Button abortButton;
 
     [Header("Road Entries")]
-    [SerializeField] private RoadsEntries bikeEntries;
-    [SerializeField] private RoadsEntries carEntries;
-    [SerializeField] private RoadsEntries busEntries;
+    [SerializeField] private RoadsEntry bikeEntries;
+    [SerializeField] private RoadsEntry carEntries;
+    [SerializeField] private RoadsEntry busEntries;
 
     private GameObject progressBarParent;
     private Animator progressBarAnimator, progressBarParentAnimator;
@@ -117,7 +116,6 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         progressBarParent?.SetActive(false);
         selectedType = currentTransportType = null;
     }
-
     private void AddButtonListeners()
     {
         validateButton.onClick.AddListener(ValidateConstruction);
@@ -127,12 +125,10 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     #endregion Unity Lifecycle
 
     #region Pointer Handlers
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!isSelected && !isUnderConstruction) roadOutline.enabled = true;
-;
-    }
+    }   
 
     public void OnPointerExit(PointerEventData eventData)
     {
@@ -287,7 +283,7 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     private void UpdateConstructionText()
     {
-        var (totalCost, totalDuration) = ConstructionManager.Instance.GetTotalCostAndDuration(new Dictionary<PublicWorksType, RoadsEntries>
+        var (totalCost, totalDuration) = ConstructionManager.Instance.GetTotalCostAndDuration(new Dictionary<PublicWorksType, RoadsEntry>
         {
             { PublicWorksType.BIKE, bikeEntries },
             { PublicWorksType.CAR, carEntries },
@@ -366,9 +362,7 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             return color;
         }
-        Debug.LogWarning($"Invalid color hex: {hexColor}");
         return Color.white;
     }
-
     #endregion Utility
 }
