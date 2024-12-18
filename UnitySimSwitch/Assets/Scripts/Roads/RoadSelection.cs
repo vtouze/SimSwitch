@@ -21,8 +21,8 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private Sprite defaultRoadSprite;
     [SerializeField] private GameObject constructionOverlay;
     [SerializeField] private TMP_Text constructionText;
-    private Image _lineSprite = null;
     private Image _lineRoad = null;
+    private Image _lineRoad2 = null;
     private Image progressBar;
     private GameObject transportGameObject;
 
@@ -73,6 +73,16 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         roadOutline = GetComponent<Outline>();
         confettiParticles = transform.GetChild(3).GetComponent<ParticleSystem>();
         _lineRoad = transform.GetChild(0).GetComponent<Image>();
+
+        if (_lineRoad.transform.childCount > 0)
+        {
+            _lineRoad2 = _lineRoad.transform.GetChild(0).GetComponent<Image>();
+        }
+        else
+        {
+            _lineRoad2 = null;
+        }
+
         _transportsIcon = transform.GetChild(1).GetComponent<Image>();
 
         if (_lineRoad != null)
@@ -317,6 +327,14 @@ public class RoadSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                 SetRoadLineProperties(0.5f, RedColor);
                 break;
         }
+
+        if (_lineRoad2 != null)
+        {
+            _lineRoad2.pixelsPerUnitMultiplier = _lineRoad.pixelsPerUnitMultiplier;
+            _lineRoad2.color = _lineRoad.color;
+            _lineRoad2.sprite = _lineRoad.sprite;
+            _lineRoad2.transform.SetParent(_lineRoad.transform);
+        }   
 
         return _lineRoad;
     }
