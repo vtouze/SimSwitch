@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 5964843371585984231}
   - component: {fileID: 8320150005900172474}
   m_Layer: 0
-  m_Name: LineGraph
+  m_Name: BudgetLineGraph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
