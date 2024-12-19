@@ -137,8 +137,7 @@ public class NewspaperController : MonoBehaviour
         // Check if the event has already been added
         if (IsEventDuplicate(randomEvent))
         {
-            Debug.Log("Event is a duplicate. Skipping.");
-            return; // Exit if the event is already added
+            return;
         }
 
         // Trigger the newspaper animation
@@ -208,7 +207,6 @@ public class NewspaperController : MonoBehaviour
         Animator animator = _newspaperUpdates.GetComponent<Animator>();
         if (animator != null)
         {
-            Debug.Log("Animator found, playing animation.");
             animator.SetBool("isOpening", true); // Ensure this triggers the correct animation
         }
     }
